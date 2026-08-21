@@ -1,16 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import {
-  COOKIE_CONSENT_EVENT,
-  hasConsentFor,
-  type CookieConsentPreferences,
-} from "@/lib/cookie-consent";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { ADSENSE_CLIENT, type AdSenseSlotId } from "@/lib/adsense";
 
 declare global {
   interface Window {
-    adsbygoogle: unknown[];
+    adsbygoogle: Record<string, unknown>[];
   }
 }
 
@@ -19,13 +15,19 @@ type AdFormat = "auto" | "fluid" | "autorelaxed";
 interface AdUnitProps {
   slot: AdSenseSlotId;
   format?: AdFormat;
+  /** Required for In-article units from AdSense. */
   layout?: "in-article";
   className?: string;
 }
 
 /**
- * Manual AdSense unit. Site-wide adsbygoogle.js is already loaded in layout —
- * only render the <ins> and push once per mount when ads cookies are allowed.
+ * Manual AdSense ad unit (official pattern):
+ * 1. Load adsbygoogle.js once in the root layout
+ * 2. Place an <ins class="adsbygoogle"> where the ad should appear
+ * 3. Call adsbygoogle.push({}) after the element is in the DOM
+ *
+ * @see https://support.google.com/adsense/answer/9274634
+ * @see https://support.google.com/adsense/answer/3221666
  */
 export function AdUnit({
   slot,
@@ -33,36 +35,23 @@ export function AdUnit({
   layout,
   className = "",
 }: AdUnitProps) {
-  const pushed = useRef(false);
-  const [allowed, setAllowed] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    setAllowed(hasConsentFor("advertising"));
-
-    function onConsent(event: Event) {
-      const detail = (event as CustomEvent<CookieConsentPreferences>).detail;
-      setAllowed(Boolean(detail?.advertising));
-    }
-
-    window.addEventListener(COOKIE_CONSENT_EVENT, onConsent);
-    return () => window.removeEventListener(COOKIE_CONSENT_EVENT, onConsent);
-  }, []);
-
-  useEffect(() => {
-    if (!allowed || pushed.current) return;
     try {
       window.adsbygoogle = window.adsbygoogle || [];
       window.adsbygoogle.push({});
-      pushed.current = true;
     } catch {
-      // Ad blocker or script not ready yet — ignore.
+      // Ad blockers or script race — ignore.
     }
-  }, [allowed, slot]);
-
-  if (!allowed) return null;
+  }, [pathname, slot]);
 
   return (
-    <div className={`ad-unit no-print ${className}`.trim()} data-ad-slot={slot}>
+    <div
+      className={`ad-unit no-print ${className}`.trim()}
+      data-ad-slot={slot}
+      aria-hidden="true"
+    >
       <ins
         className="adsbygoogle"
         style={{
@@ -72,8 +61,10 @@ export function AdUnit({
         data-ad-client={ADSENSE_CLIENT}
         data-ad-slot={slot}
         data-ad-format={format}
-        data-ad-layout={layout}
-        data-full-width-responsive={format === "auto" ? "true" : undefined}
+        {...(layout ? { "data-ad-layout": layout } : {})}
+        {...(format === "auto"
+          ? { "data-full-width-responsive": "true" }
+          : {})}
       />
     </div>
   );

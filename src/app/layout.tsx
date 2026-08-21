@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${SITE.url}/`,
   },
+  other: {
+    "google-adsense-account": ADSENSE_CLIENT,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

@@ -266,7 +266,8 @@ a {
 }
 
 .ad-unit {
-  min-height: 90px;
+  min-height: 280px;
+  margin-block: 1.5rem;
   overflow: hidden;
 }
 
