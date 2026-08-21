@@ -276,7 +276,7 @@ a {
       rgba(255, 253, 249, 0.15) 55%,
       rgba(248, 242, 234, 0.45) 100%
     ),
-    url("https://www.grandmarecipe.com/wp-content/uploads/2025/06/elegant-background-with-white-marble-texture.webp");
+    url("/brand/marble.webp");
   background-size: cover;
   background-position: center;
 }

@@ -112,7 +112,7 @@ export function stripHtml(html: string): string {
 export function extractFeaturedImageFromHtml(html: string): string | undefined {
   const urls: string[] = [];
   const imgRegex =
-    /<img[^>]+src="(https:\/\/www\.grandmarecipe\.com\/wp-content\/uploads\/[^"]+\.(?:webp|jpg|jpeg|png))"/gi;
+    /<img[^>]+src="((?:https:\/\/www\.grandmarecipe\.com)?\/wp-content\/uploads\/[^"]+\.(?:webp|jpg|jpeg|png))"/gi;
   let match: RegExpExecArray | null;
 
   while ((match = imgRegex.exec(html)) !== null) {

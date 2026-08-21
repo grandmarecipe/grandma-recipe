@@ -12,8 +12,7 @@ export const metadata: Metadata = buildPageMetadata(
   "/contact-us/",
 );
 
-const HERO_IMAGE =
-  "https://www.grandmarecipe.com/wp-content/uploads/2025/06/Reflection-Cooking-Joy-www.garndmarecipe.com_.jpg";
+const HERO_IMAGE = "/brand/contact-hero.jpg";
 
 const reasons = [
   "Ask a question about a recipe",

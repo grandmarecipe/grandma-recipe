@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ContentImage } from "@/components/ContentImage";
 import type { RecipeMeta } from "@/lib/types";
 
 interface RecipeCardProps {
@@ -12,7 +12,7 @@ export function RecipeCard({ recipe }: RecipeCardProps) {
       <Link href={`/${recipe.slug}/`} className="block">
         <div className="relative aspect-[4/3] overflow-hidden bg-[#f3e8dc]">
           {recipe.featuredImage ? (
-            <Image
+            <ContentImage
               src={recipe.featuredImage}
               alt={recipe.featuredImageAlt || recipe.title}
               fill

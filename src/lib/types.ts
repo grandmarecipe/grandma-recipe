@@ -57,40 +57,35 @@ export const CATEGORIES: CategoryInfo[] = [
     description:
       "Start your day with cozy classics and quick morning favorites.",
     count: 42,
-    image:
-      "https://www.grandmarecipe.com/wp-content/uploads/2024/06/breakfast-category.jpg",
+    image: "/brand/category-breakfast.webp",
   },
   {
     slug: "lunch",
     name: "Lunch",
     description: "Light, satisfying midday meals made with love.",
     count: 64,
-    image:
-      "https://www.grandmarecipe.com/wp-content/uploads/2024/06/lunch-category.jpg",
+    image: "/brand/category-lunch.webp",
   },
   {
     slug: "dinner",
     name: "Dinner",
     description: "Hearty main courses and comforting family classics.",
     count: 255,
-    image:
-      "https://www.grandmarecipe.com/wp-content/uploads/2024/06/dinner-category.jpg",
+    image: "/brand/category-dinner.webp",
   },
   {
     slug: "snacks",
     name: "Snacks",
     description: "Savory crunch and sweet bites for any time of day.",
     count: 122,
-    image:
-      "https://www.grandmarecipe.com/wp-content/uploads/2024/06/snacks-category.jpg",
+    image: "/brand/category-snacks.webp",
   },
   {
     slug: "dessert",
     name: "Dessert",
     description: "Sweet treats and timeless bakes for every occasion.",
     count: 154,
-    image:
-      "https://www.grandmarecipe.com/wp-content/uploads/2024/06/dessert-category.jpg",
+    image: "/brand/category-dessert.webp",
   },
 ];
 
@@ -116,12 +111,11 @@ export const SITE = {
   description:
     "Discover easy grandma recipes and vintage comfort food your family will love. Find homemade breakfast, dinner, and dessert ideas just like Grandma used to cook.",
   email: "contact@grandmarecipe.com",
-  logo: "https://www.grandmarecipe.com/wp-content/uploads/2025/06/Logo-of-GrandmaRecipe.com-%E2%80%93-Warm-and-Welcoming-Recipe-Blog-150x150.webp",
+  logo: "/brand/logo.webp",
   logoAlt:
     "Illustration of a smiling grandma in a chef hat and apron, holding a wooden spoon, with the text GrandmaRecipe.com below her.",
   /** Default share image for home, categories, and pages without a recipe photo */
-  defaultOgImage:
-    "https://www.grandmarecipe.com/wp-content/uploads/2025/10/Warm-portrait-of-a-smiling-grandmother-in-a-cozy-kitchen.webp",
+  defaultOgImage: "/brand/grandma-millie.webp",
   sameAs: [
     "https://www.facebook.com/people/Grandma-Recipe/61584510173518/",
     "https://www.instagram.com/grandmarecipe_com/",
@@ -150,7 +144,6 @@ export const SITE = {
     name: "Grandma Millie",
     description:
       "Grandma Millie shares homestyle recipes passed down from flour-dusted counters and handwritten cards.",
-    image:
-      "https://www.grandmarecipe.com/wp-content/uploads/2025/10/Warm-portrait-of-a-smiling-grandmother-in-a-cozy-kitchen.webp",
+    image: "/brand/grandma-millie.webp",
   },
 };

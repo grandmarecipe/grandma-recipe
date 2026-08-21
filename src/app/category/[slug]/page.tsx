@@ -14,8 +14,7 @@ import { paginateItems } from "@/lib/pagination";
 import { buildCategoryPageJsonLd } from "@/lib/seo";
 import { CATEGORIES, SITE } from "@/lib/types";
 
-const GRANDMA_PORTRAIT =
-  "https://www.grandmarecipe.com/wp-content/uploads/2025/10/Warm-portrait-of-a-smiling-grandmother-in-a-cozy-kitchen-233x300.webp";
+const GRANDMA_PORTRAIT = "/brand/grandma-millie-233x300.webp";
 
 interface PageProps {
   params: Promise<{ slug: string }>;

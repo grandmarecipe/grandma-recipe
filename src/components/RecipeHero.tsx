@@ -1,10 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContentImage } from "@/components/ContentImage";
 import { formatRecipeDate, sameCalendarDay } from "@/lib/dates";
 import type { RecipeRatingAggregate } from "@/lib/ratings";
 import type { Recipe } from "@/lib/types";
 import { CATEGORIES, SITE } from "@/lib/types";
+import Image from "next/image";
 
 interface RecipeHeroProps {
   recipe: Recipe;
@@ -108,7 +109,7 @@ export function RecipeHero({ recipe, rating }: RecipeHeroProps) {
 
         {recipe.featuredImage && (
           <div className="relative order-2 aspect-[4/3] overflow-hidden rounded-3xl shadow-xl lg:col-start-2 lg:row-span-2 lg:row-start-1">
-            <Image
+            <ContentImage
               src={recipe.featuredImage}
               alt={recipe.featuredImageAlt || recipe.title}
               fill

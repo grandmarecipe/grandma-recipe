@@ -10,7 +10,8 @@
     "import:wp": "tsx scripts/import-from-wordpress.ts",
     "backfill:seo": "tsx scripts/backfill-seo-from-wordpress.ts",
     "backfill:recipe-meta": "tsx scripts/backfill-recipe-meta.ts",
-    "seed:convex-ugc": "tsx scripts/seed-convex-ugc.ts"
+    "seed:convex-ugc": "tsx scripts/seed-convex-ugc.ts",
+    "migrate:media": "tsx scripts/migrate-media.ts"
   },
   "dependencies": {
     "convex": "^1.44.0",

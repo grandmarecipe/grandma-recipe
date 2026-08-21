@@ -34,6 +34,14 @@ export const SCHEMA_IDS = {
   author: `${SITE.url}/about-us/#grandma-millie`,
 };
 
+/** Resolve site-relative paths (/wp-content/...) to absolute URLs for schema/OG. */
+export function absoluteUrl(pathOrUrl?: string | null) {
+  if (!pathOrUrl) return undefined;
+  if (/^https?:\/\//i.test(pathOrUrl)) return pathOrUrl;
+  const path = pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`;
+  return `${SITE.url}${path}`;
+}
+
 function recipeUrl(slug: string) {
   return `${SITE.url}/${slug}/`;
 }
@@ -51,7 +59,7 @@ export function buildOrganizationJsonLd() {
     email: SITE.email,
     logo: {
       "@type": "ImageObject",
-      url: SITE.logo,
+      url: absoluteUrl(SITE.logo),
       width: 512,
       height: 512,
     },
@@ -85,7 +93,7 @@ export function buildPersonJsonLd() {
     "@id": SCHEMA_IDS.author,
     name: SITE.author.name,
     description: SITE.author.description,
-    image: SITE.author.image,
+    image: absoluteUrl(SITE.author.image),
     url: `${SITE.url}/about-us/#grandma-millie`,
     worksFor: { "@id": SCHEMA_IDS.organization },
     sameAs: SITE.sameAs,
@@ -200,13 +208,14 @@ function buildRecipeImages(recipe: Recipe) {
   const description =
     recipe.featuredImageAlt?.trim() ||
     `${recipe.title} — homemade recipe from ${SITE.name}`;
+  const imageUrl = absoluteUrl(recipe.featuredImage);
 
   return [
     cleanSchema({
       "@type": "ImageObject",
       "@id": `${recipeUrl(recipe.slug)}#primaryimage`,
-      url: recipe.featuredImage,
-      contentUrl: recipe.featuredImage,
+      url: imageUrl,
+      contentUrl: imageUrl,
       name: recipe.title,
       description,
       caption: description,
@@ -329,7 +338,7 @@ export function buildRecipePageJsonLd(
       type: "WebPage",
       primaryImage: recipe.featuredImage
         ? {
-            url: recipe.featuredImage,
+            url: absoluteUrl(recipe.featuredImage)!,
             name: recipe.title,
             description:
               recipe.featuredImageAlt?.trim() ||

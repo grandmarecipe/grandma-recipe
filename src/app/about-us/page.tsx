@@ -11,8 +11,7 @@ export const metadata: Metadata = buildPageMetadata(
   "/about-us/",
 );
 
-const PORTRAIT =
-  "https://www.grandmarecipe.com/wp-content/uploads/2025/10/Warm-portrait-of-a-smiling-grandmother-in-a-cozy-kitchen.webp";
+const PORTRAIT = "/brand/grandma-millie.webp";
 
 const highlights = [
   {
