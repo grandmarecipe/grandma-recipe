@@ -90,6 +90,11 @@ export const STATIC_PAGE_SEO: Record<string, PageSeo> = {
     description:
       "Learn your GDPR and CCPA privacy rights at Grandma Recipe, including how to request access, deletion, or limits on how we use your personal information.",
   },
+  sitemap: {
+    title: "Sitemap | Pages, Categories & Recipes | Grandma Recipe",
+    description:
+      "HTML sitemap for Grandma Recipe — browse all site pages, recipe categories, and every homestyle recipe in one place.",
+  },
 };
 
 export const SEARCH_SEO: PageSeo = {

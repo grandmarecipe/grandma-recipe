@@ -126,6 +126,12 @@ export function getPagesSitemapEntries(): SitemapUrlEntry[] {
       changefreq: "yearly",
       priority: 0.4,
     },
+    {
+      loc: `${SITE.url}/sitemap/`,
+      lastmod: new Date().toISOString(),
+      changefreq: "weekly",
+      priority: 0.4,
+    },
   ];
 
   const contentPages = staticSlugs.map((slug) => ({

@@ -6,6 +6,7 @@ const footerLinks = [
   { href: "/about-us/", label: "About Us" },
   { href: "/how-we-test-recipes/", label: "How We Test Recipes" },
   { href: "/contact-us/", label: "Contact Us" },
+  { href: "/sitemap/", label: "Sitemap" },
   { href: "/privacy-policy/", label: "Privacy Policy" },
   { href: "/disclaimers/", label: "Disclaimers" },
   { href: "/affiliate-disclosure/", label: "Affiliate Disclosure" },
