@@ -1,0 +1,32 @@
+{
+  "name": "grandma-recipe",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "import:wp": "tsx scripts/import-from-wordpress.ts",
+    "backfill:seo": "tsx scripts/backfill-seo-from-wordpress.ts",
+    "backfill:recipe-meta": "tsx scripts/backfill-recipe-meta.ts",
+    "seed:convex-ugc": "tsx scripts/seed-convex-ugc.ts"
+  },
+  "dependencies": {
+    "convex": "^1.44.0",
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.5.0",
+    "tailwindcss": "^4.1.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.0.0"
+  }
+}
