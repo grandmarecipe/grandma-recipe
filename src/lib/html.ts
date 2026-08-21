@@ -109,6 +109,30 @@ export function stripHtml(html: string): string {
     .trim();
 }
 
+/** Split HTML after the Nth closing </p> (for in-article ad placement). */
+export function splitHtmlAfterParagraphs(
+  html: string,
+  paragraphCount: number,
+): [string, string] {
+  if (paragraphCount <= 0) return ["", html];
+
+  const re = /<\/p>/gi;
+  let match: RegExpExecArray | null;
+  let found = 0;
+  let cut = -1;
+
+  while ((match = re.exec(html)) !== null) {
+    found += 1;
+    if (found === paragraphCount) {
+      cut = match.index + match[0].length;
+      break;
+    }
+  }
+
+  if (cut < 0) return [html, ""];
+  return [html.slice(0, cut), html.slice(cut)];
+}
+
 export function extractFeaturedImageFromHtml(html: string): string | undefined {
   const urls: string[] = [];
   const imgRegex =

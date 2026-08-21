@@ -8,10 +8,9 @@ import { MobileBottomNav } from "@/components/MobileBottomNav";
 import { JsonLd } from "@/components/JsonLd";
 import { buildOrganizationJsonLd } from "@/lib/seo";
 import { HOME_SEO } from "@/lib/page-seo";
+import { ADSENSE_CLIENT } from "@/lib/adsense";
 import { SITE } from "@/lib/types";
 import "./globals.css";
-
-const ADSENSE_CLIENT = "ca-pub-2579283603529303";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),

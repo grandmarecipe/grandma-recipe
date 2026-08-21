@@ -3,6 +3,7 @@
 import {
   buildRecipeTableOfContents,
   normalizeRecipeToc,
+  splitHtmlAfterParagraphs,
   stripFaqBlockFromHtml,
   stripWprmMarkup,
 } from "@/lib/html";
@@ -13,6 +14,8 @@ import {
   extractNotesFromHtml,
 } from "@/lib/wprm";
 import type { RecipeRatingAggregate } from "@/lib/ratings";
+import { ADSENSE_SLOTS } from "@/lib/adsense";
+import { AdUnit } from "./AdUnit";
 import { RecipeAuthorCard } from "./RecipeAuthorCard";
 import { RecipeCardDetails } from "./RecipeCardDetails";
 import { RecipeComments } from "./RecipeComments";
@@ -41,6 +44,8 @@ export function RecipeBody({ recipe, rating, comments = [] }: RecipeBodyProps) {
   const articleHtml = stripFaqBlockFromHtml(
     stripWprmMarkup(recipe.contentHtml),
   );
+  const [storyStart, storyRest] = splitHtmlAfterParagraphs(articleHtml, 2);
+  const [storyMid, storyEnd] = splitHtmlAfterParagraphs(storyRest, 4);
   const equipment = extractEquipmentFromHtml(recipe.contentHtml);
   const notes = extractNotesFromHtml(recipe.contentHtml);
   const hasNutrition = Boolean(
@@ -51,7 +56,7 @@ export function RecipeBody({ recipe, rating, comments = [] }: RecipeBodyProps) {
     <>
       <RecipeJumpBar slug={recipe.slug} />
 
-      <div className="mx-auto max-w-6xl px-4 py-10 no-print">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-10 lg:grid-cols-[minmax(0,1fr)_300px] no-print">
         <article className="min-w-0">
           <RecipeTableOfContents items={tableOfContents} />
 
@@ -203,14 +208,47 @@ export function RecipeBody({ recipe, rating, comments = [] }: RecipeBodyProps) {
             id="story"
             className="prose-recipe mt-14 max-w-none scroll-mt-36"
           >
-            <div dangerouslySetInnerHTML={{ __html: articleHtml }} />
+            {storyStart ? (
+              <div dangerouslySetInnerHTML={{ __html: storyStart }} />
+            ) : null}
+            <AdUnit
+              slot={ADSENSE_SLOTS.inArticle02}
+              format="fluid"
+              layout="in-article"
+              className="my-8 not-prose"
+            />
+            {storyMid ? (
+              <div dangerouslySetInnerHTML={{ __html: storyMid }} />
+            ) : null}
+            <AdUnit
+              slot={ADSENSE_SLOTS.inArticle01}
+              format="fluid"
+              layout="in-article"
+              className="my-8 not-prose"
+            />
+            {storyEnd ? (
+              <div dangerouslySetInnerHTML={{ __html: storyEnd }} />
+            ) : null}
           </section>
 
           <RecipeFaqs faqs={faqs} />
           <RecipeKitchenNotes hasNutrition={hasNutrition} />
           <RecipeAuthorCard />
+
+          <AdUnit
+            slot={ADSENSE_SLOTS.multiplexBottom}
+            format="autorelaxed"
+            className="my-10"
+          />
+
           <RecipeComments slug={recipe.slug} initialComments={comments} />
         </article>
+
+        <aside className="hidden lg:block">
+          <div className="sticky top-28 space-y-6">
+            <AdUnit slot={ADSENSE_SLOTS.displaySidebar} format="auto" />
+          </div>
+        </aside>
       </div>
     </>
   );
