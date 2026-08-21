@@ -265,15 +265,6 @@ a {
   display: none;
 }
 
-.ad-slot {
-  min-height: 250px;
-  border: 1px dashed var(--border);
-  border-radius: 1rem;
-  background: linear-gradient(180deg, #fff 0%, #faf6f0 100%);
-  display: grid;
-  place-items: center;
-}
-
 .marble-hero {
   position: relative;
   overflow: hidden;
@@ -356,7 +347,6 @@ body:has(.recipe-print-page) {
   header,
   footer,
   .no-print,
-  .ad-slot,
   .print-toolbar,
   .site-cookie-consent,
   [data-recipe-jump-bar] {

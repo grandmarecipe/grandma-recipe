@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Script from "next/script";
+import { AdSenseConsent } from "@/components/AdSenseConsent";
 import { CookieConsent } from "@/components/CookieConsent";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -8,6 +10,8 @@ import { buildOrganizationJsonLd } from "@/lib/seo";
 import { HOME_SEO } from "@/lib/page-seo";
 import { SITE } from "@/lib/types";
 import "./globals.css";
+
+const ADSENSE_CLIENT = "ca-pub-2579283603529303";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -51,6 +55,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen antialiased">
+        <Script id="google-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              analytics_storage: 'denied',
+              wait_for_update: 500
+            });
+          `}
+        </Script>
+        <Script
+          id="adsense"
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        <AdSenseConsent />
         <JsonLd
           data={{
             "@context": "https://schema.org",

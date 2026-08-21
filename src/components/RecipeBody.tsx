@@ -13,7 +13,6 @@ import {
   extractNotesFromHtml,
 } from "@/lib/wprm";
 import type { RecipeRatingAggregate } from "@/lib/ratings";
-import { AdSlot } from "./AdSlot";
 import { RecipeAuthorCard } from "./RecipeAuthorCard";
 import { RecipeCardDetails } from "./RecipeCardDetails";
 import { RecipeComments } from "./RecipeComments";
@@ -52,7 +51,7 @@ export function RecipeBody({ recipe, rating, comments = [] }: RecipeBodyProps) {
     <>
       <RecipeJumpBar slug={recipe.slug} />
 
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-10 lg:grid-cols-[minmax(0,1fr)_320px] no-print">
+      <div className="mx-auto max-w-6xl px-4 py-10 no-print">
         <article className="min-w-0">
           <RecipeTableOfContents items={tableOfContents} />
 
@@ -212,14 +211,6 @@ export function RecipeBody({ recipe, rating, comments = [] }: RecipeBodyProps) {
           <RecipeAuthorCard />
           <RecipeComments slug={recipe.slug} initialComments={comments} />
         </article>
-
-        <aside className="space-y-6">
-          <AdSlot slot="recipe-sidebar" />
-        </aside>
-      </div>
-
-      <div className="mx-auto max-w-6xl px-4 pb-10 no-print">
-        <AdSlot slot="recipe-in-content" />
       </div>
     </>
   );
