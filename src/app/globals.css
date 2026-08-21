@@ -273,6 +273,8 @@ a {
 .ad-unit ins.adsbygoogle {
   display: block;
 }
+
+.marble-hero {
   position: relative;
   overflow: hidden;
   background-color: #faf6f0;
