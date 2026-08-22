@@ -1,8 +1,14 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { ADSENSE_READY_EVENT } from "@/components/AdSenseLoader";
 import { ADSENSE_CLIENT, type AdSenseSlotId } from "@/lib/adsense";
+import {
+  COOKIE_CONSENT_EVENT,
+  hasConsentFor,
+  type CookieConsentPreferences,
+} from "@/lib/cookie-consent";
 
 declare global {
   interface Window {
@@ -20,14 +26,18 @@ interface AdUnitProps {
   className?: string;
 }
 
+function pushAd() {
+  try {
+    window.adsbygoogle = window.adsbygoogle || [];
+    window.adsbygoogle.push({});
+  } catch {
+    // Ad blocker or script race — ignore.
+  }
+}
+
 /**
- * Manual AdSense ad unit (official pattern):
- * 1. Load adsbygoogle.js once in the root layout
- * 2. Place an <ins class="adsbygoogle"> where the ad should appear
- * 3. Call adsbygoogle.push({}) after the element is in the DOM
- *
- * @see https://support.google.com/adsense/answer/9274634
- * @see https://support.google.com/adsense/answer/3221666
+ * Manual AdSense unit. Script is loaded by AdSenseLoader after consent.
+ * Hidden until advertising cookies are accepted so LCP stays clean.
  */
 export function AdUnit({
   slot,
@@ -36,15 +46,40 @@ export function AdUnit({
   className = "",
 }: AdUnitProps) {
   const pathname = usePathname();
+  const [allowed, setAllowed] = useState(false);
 
   useEffect(() => {
-    try {
-      window.adsbygoogle = window.adsbygoogle || [];
-      window.adsbygoogle.push({});
-    } catch {
-      // Ad blockers or script race — ignore.
+    function sync(preferences?: CookieConsentPreferences | null) {
+      setAllowed(
+        preferences ? preferences.advertising : hasConsentFor("advertising"),
+      );
     }
-  }, [pathname, slot]);
+
+    sync(null);
+
+    function onConsent(event: Event) {
+      sync((event as CustomEvent<CookieConsentPreferences>).detail);
+    }
+
+    window.addEventListener(COOKIE_CONSENT_EVENT, onConsent);
+    return () => window.removeEventListener(COOKIE_CONSENT_EVENT, onConsent);
+  }, []);
+
+  useEffect(() => {
+    if (!allowed) return;
+
+    function tryPush() {
+      if (document.getElementById("adsense-script")) {
+        pushAd();
+      }
+    }
+
+    tryPush();
+    window.addEventListener(ADSENSE_READY_EVENT, tryPush);
+    return () => window.removeEventListener(ADSENSE_READY_EVENT, tryPush);
+  }, [allowed, pathname, slot]);
+
+  if (!allowed) return null;
 
   return (
     <div

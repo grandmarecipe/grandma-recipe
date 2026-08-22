@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { AdSenseConsent } from "@/components/AdSenseConsent";
+import { AdSenseLoader } from "@/components/AdSenseLoader";
 import { CookieConsent } from "@/components/CookieConsent";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -70,14 +71,8 @@ export default function RootLayout({
             });
           `}
         </Script>
-        <Script
-          id="adsense"
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
         <AdSenseConsent />
+        <AdSenseLoader />
         <JsonLd
           data={{
             "@context": "https://schema.org",

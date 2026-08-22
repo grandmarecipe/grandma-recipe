@@ -72,12 +72,13 @@ export default function HomePage() {
             Browse Our Categories
           </h2>
           <div className="mt-10 flex flex-wrap justify-center gap-8 sm:gap-10">
-            {CATEGORIES.map((category) => (
+            {CATEGORIES.map((category, index) => (
               <CategoryCircle
                 key={category.slug}
                 category={category}
                 image={categoryImages[category.slug]}
                 overlayLabel
+                priority={index < 3}
               />
             ))}
           </div>
@@ -122,6 +123,7 @@ export default function HomePage() {
         categoryHref="/category/breakfast/"
         categoryLabel="All breakfast recipes"
         recipes={getRecipesByCategory("breakfast").slice(0, 3)}
+        prioritizeFirstImage
       />
 
       <section className="border-y border-border bg-[#f8f2ea] py-10 text-center">

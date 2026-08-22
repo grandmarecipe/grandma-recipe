@@ -6,12 +6,15 @@ interface CategoryCircleProps {
   category: CategoryInfo;
   image?: string;
   overlayLabel?: boolean;
+  /** Prioritize image decode for above-the-fold category circles. */
+  priority?: boolean;
 }
 
 export function CategoryCircle({
   category,
   image,
   overlayLabel = false,
+  priority = false,
 }: CategoryCircleProps) {
   return (
     <Link
@@ -24,8 +27,9 @@ export function CategoryCircle({
             src={image}
             alt={category.name}
             fill
+            priority={priority}
             className="object-cover transition duration-500 group-hover:scale-110"
-            sizes="144px"
+            sizes="(max-width: 640px) 112px, 144px"
           />
         ) : (
           <div className="flex h-full items-center justify-center bg-gradient-to-br from-[#f6ebdf] to-[#e8c9a8] font-serif text-accent">

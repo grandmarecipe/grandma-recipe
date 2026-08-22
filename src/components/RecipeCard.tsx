@@ -4,9 +4,10 @@ import type { RecipeMeta } from "@/lib/types";
 
 interface RecipeCardProps {
   recipe: RecipeMeta;
+  priority?: boolean;
 }
 
-export function RecipeCard({ recipe }: RecipeCardProps) {
+export function RecipeCard({ recipe, priority = false }: RecipeCardProps) {
   return (
     <article className="group overflow-hidden rounded-2xl border border-border bg-surface shadow-sm transition hover:-translate-y-1 hover:shadow-md">
       <Link href={`/${recipe.slug}/`} className="block">
@@ -16,6 +17,7 @@ export function RecipeCard({ recipe }: RecipeCardProps) {
               src={recipe.featuredImage}
               alt={recipe.featuredImageAlt || recipe.title}
               fill
+              priority={priority}
               className="object-cover transition duration-500 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />

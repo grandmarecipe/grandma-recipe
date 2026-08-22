@@ -10,6 +10,10 @@ import {
   type CookieConsentPreferences,
 } from "@/lib/cookie-consent";
 
+/**
+ * Compact bottom-sheet cookie banner. Delayed slightly so LCP can paint
+ * before the overlay appears (helps mobile PageSpeed lab tests).
+ */
 export function CookieConsent() {
   const [visible, setVisible] = useState(false);
   const [showCustomise, setShowCustomise] = useState(false);
@@ -17,7 +21,10 @@ export function CookieConsent() {
   const [advertising, setAdvertising] = useState(false);
 
   useEffect(() => {
-    setVisible(!getStoredConsent());
+    if (getStoredConsent()) return;
+
+    const timer = window.setTimeout(() => setVisible(true), 1800);
+    return () => window.clearTimeout(timer);
   }, []);
 
   function applyConsent(preferences: CookieConsentPreferences) {
@@ -47,16 +54,16 @@ export function CookieConsent() {
 
   return (
     <div
-      className="site-cookie-consent fixed inset-0 z-[100] flex items-end justify-center bg-black/20 p-4 sm:items-center"
+      className="site-cookie-consent fixed inset-x-0 bottom-0 z-[100] flex justify-center p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] sm:p-4"
       role="dialog"
       aria-labelledby="cookie-consent-title"
       aria-describedby="cookie-consent-description"
     >
-      <div className="relative w-full max-w-xl rounded-2xl border border-border bg-surface p-6 shadow-xl">
+      <div className="relative w-full max-w-lg rounded-2xl border border-border bg-surface p-4 shadow-xl sm:p-5">
         <button
           type="button"
           onClick={handleClose}
-          className="absolute top-4 right-4 text-2xl leading-none text-muted transition hover:text-foreground"
+          className="absolute top-3 right-3 text-xl leading-none text-muted transition hover:text-foreground"
           aria-label="Close cookie banner"
         >
           ×
@@ -64,53 +71,36 @@ export function CookieConsent() {
 
         <h2
           id="cookie-consent-title"
-          className="pr-8 font-serif text-2xl text-foreground"
+          className="pr-8 font-serif text-xl text-foreground sm:text-2xl"
         >
-          We value your privacy
+          Cookies
         </h2>
 
         <p
           id="cookie-consent-description"
-          className="mt-3 text-sm leading-relaxed text-muted"
+          className="mt-2 text-sm leading-relaxed text-muted"
         >
-          We use cookies to enhance your browsing experience, serve personalised
-          ads or content, and analyse our traffic. By clicking &quot;Accept
-          All&quot;, you consent to our use of cookies. Read our{" "}
+          We use cookies for the site, optional analytics, and ads. See our{" "}
           <Link href="/privacy-policy/" className="text-accent underline">
             Privacy Policy
-          </Link>{" "}
-          and{" "}
-          <Link
-            href="/gdpr-ccpa-privacy-policy-for-grandma-recipe/"
-            className="text-accent underline"
-          >
-            GDPR &amp; CCPA policy
           </Link>
           .
         </p>
 
         {showCustomise ? (
-          <div className="mt-5 space-y-4 rounded-xl border border-border bg-background p-4">
+          <div className="mt-4 space-y-3 rounded-xl border border-border bg-background p-3">
             <label className="flex items-start justify-between gap-4">
               <span>
                 <span className="block text-sm font-semibold text-foreground">
                   Necessary
                 </span>
-                <span className="block text-xs text-muted">
-                  Required for the site to work.
-                </span>
+                <span className="block text-xs text-muted">Always on</span>
               </span>
-              <span className="text-xs font-semibold text-muted">Always on</span>
             </label>
 
             <label className="flex items-start justify-between gap-4">
-              <span>
-                <span className="block text-sm font-semibold text-foreground">
-                  Analytics
-                </span>
-                <span className="block text-xs text-muted">
-                  Helps us understand how visitors use the site.
-                </span>
+              <span className="block text-sm font-semibold text-foreground">
+                Analytics
               </span>
               <input
                 type="checkbox"
@@ -121,13 +111,8 @@ export function CookieConsent() {
             </label>
 
             <label className="flex items-start justify-between gap-4">
-              <span>
-                <span className="block text-sm font-semibold text-foreground">
-                  Advertising
-                </span>
-                <span className="block text-xs text-muted">
-                  Used to show relevant ads, including AdSense.
-                </span>
+              <span className="block text-sm font-semibold text-foreground">
+                Advertising
               </span>
               <input
                 type="checkbox"
@@ -147,25 +132,25 @@ export function CookieConsent() {
           </div>
         ) : null}
 
-        <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-4 flex flex-col gap-2 sm:flex-row">
           <button
             type="button"
             onClick={() => setShowCustomise((value) => !value)}
-            className="flex-1 rounded-full border border-[#d4a574] px-4 py-2.5 text-sm font-semibold text-[#b8860b] transition hover:bg-[#faf4eb]"
+            className="flex-1 rounded-full border border-[#d4a574] px-3 py-2.5 text-sm font-semibold text-[#b8860b] transition hover:bg-[#faf4eb]"
           >
             Customise
           </button>
           <button
             type="button"
             onClick={handleRejectAll}
-            className="flex-1 rounded-full border border-[#d4a574] px-4 py-2.5 text-sm font-semibold text-[#b8860b] transition hover:bg-[#faf4eb]"
+            className="flex-1 rounded-full border border-[#d4a574] px-3 py-2.5 text-sm font-semibold text-[#b8860b] transition hover:bg-[#faf4eb]"
           >
-            Reject All
+            Reject
           </button>
           <button
             type="button"
             onClick={handleAcceptAll}
-            className="flex-1 rounded-full bg-[#d4a574] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#c49563]"
+            className="flex-1 rounded-full bg-[#d4a574] px-3 py-2.5 text-sm font-semibold text-white transition hover:bg-[#c49563]"
           >
             Accept All
           </button>

@@ -61,6 +61,7 @@ const nextConfig: NextConfig = {
     return brandRedirects;
   },
   images: {
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",

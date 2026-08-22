@@ -108,12 +108,13 @@ export function RecipeHero({ recipe, rating }: RecipeHeroProps) {
         </div>
 
         {recipe.featuredImage && (
-          <div className="relative order-2 aspect-[4/3] overflow-hidden rounded-3xl shadow-xl lg:col-start-2 lg:row-span-2 lg:row-start-1">
+          <div className="relative order-2 aspect-[4/3] overflow-hidden rounded-3xl bg-[#f3e8dc] shadow-xl lg:col-start-2 lg:row-span-2 lg:row-start-1">
             <ContentImage
               src={recipe.featuredImage}
               alt={recipe.featuredImageAlt || recipe.title}
               fill
               priority
+              fetchPriority="high"
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 560px"
             />

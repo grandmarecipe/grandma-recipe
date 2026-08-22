@@ -8,6 +8,8 @@ interface HomeRecipeSectionProps {
   categoryHref: string;
   categoryLabel: string;
   recipes: RecipeMeta[];
+  /** Prioritize the first card image (above-the-fold sections). */
+  prioritizeFirstImage?: boolean;
 }
 
 export function HomeRecipeSection({
@@ -16,6 +18,7 @@ export function HomeRecipeSection({
   categoryHref,
   categoryLabel,
   recipes,
+  prioritizeFirstImage = false,
 }: HomeRecipeSectionProps) {
   return (
     <section className="mx-auto max-w-6xl px-4 py-14">
@@ -33,8 +36,12 @@ export function HomeRecipeSection({
       </div>
 
       <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {recipes.map((recipe) => (
-          <RecipeCard key={recipe.slug} recipe={recipe} />
+        {recipes.map((recipe, index) => (
+          <RecipeCard
+            key={recipe.slug}
+            recipe={recipe}
+            priority={prioritizeFirstImage && index === 0}
+          />
         ))}
       </div>
     </section>
