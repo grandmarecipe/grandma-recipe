@@ -69,6 +69,12 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
                   Articles
                 </Link>
                 <Link
+                  href="/admin/generate/"
+                  className="text-[#6b5b4f] hover:text-[#8b1a1a]"
+                >
+                  Generate
+                </Link>
+                <Link
                   href="/admin/articles/new/"
                   className="text-[#6b5b4f] hover:text-[#8b1a1a]"
                 >

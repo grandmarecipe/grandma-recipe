@@ -19,12 +19,20 @@ export default function AdminDashboardPage() {
             site and override matching file-based recipes.
           </p>
         </div>
-        <Link
-          href="/admin/articles/new/"
-          className="rounded-full bg-[#5a822b] px-4 py-2 text-sm font-semibold text-white"
-        >
-          New article
-        </Link>
+        <div className="flex flex-wrap gap-2">
+          <Link
+            href="/admin/generate/"
+            className="rounded-full border border-[#d4a574] px-4 py-2 text-sm font-semibold text-[#b8860b]"
+          >
+            Generate with AI
+          </Link>
+          <Link
+            href="/admin/articles/new/"
+            className="rounded-full bg-[#5a822b] px-4 py-2 text-sm font-semibold text-white"
+          >
+            New article
+          </Link>
+        </div>
       </div>
 
       {!token ? (
