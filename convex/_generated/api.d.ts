@@ -11,7 +11,7 @@
 import type * as adminAuth from "../adminAuth.js";
 import type * as articles from "../articles.js";
 import type * as comments from "../comments.js";
-import type * as lib_password from "../lib/password.js";
+import type * as passwordUtils from "../passwordUtils.js";
 import type * as ratings from "../ratings.js";
 
 import type {
@@ -24,7 +24,7 @@ declare const fullApi: ApiFromModules<{
   adminAuth: typeof adminAuth;
   articles: typeof articles;
   comments: typeof comments;
-  "lib/password": typeof lib_password;
+  passwordUtils: typeof passwordUtils;
   ratings: typeof ratings;
 }>;
 

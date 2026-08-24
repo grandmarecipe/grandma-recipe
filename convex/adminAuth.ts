@@ -5,7 +5,7 @@ import {
   type MutationCtx,
   type QueryCtx,
 } from "./_generated/server";
-import { hashPassword, randomToken, verifyPassword } from "./lib/password";
+import { hashPassword, randomToken, verifyPassword } from "./passwordUtils";
 
 const SESSION_MS = 30 * 24 * 60 * 60 * 1000;
 

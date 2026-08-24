@@ -24,7 +24,7 @@ export async function hashPassword(password: string): Promise<string> {
   const bits = await crypto.subtle.deriveBits(
     {
       name: "PBKDF2",
-      salt: salt.buffer as ArrayBuffer,
+      salt: salt as BufferSource,
       iterations: 120_000,
       hash: "SHA-256",
     },
@@ -38,28 +38,32 @@ export async function verifyPassword(
   password: string,
   stored: string,
 ): Promise<boolean> {
-  const [saltHex, hashHex] = stored.split(":");
-  if (!saltHex || !hashHex) return false;
+  try {
+    const [saltHex, hashHex] = stored.split(":");
+    if (!saltHex || !hashHex) return false;
 
-  const salt = fromHex(saltHex);
-  const keyMaterial = await crypto.subtle.importKey(
-    "raw",
-    new TextEncoder().encode(password),
-    "PBKDF2",
-    false,
-    ["deriveBits"],
-  );
-  const bits = await crypto.subtle.deriveBits(
-    {
-      name: "PBKDF2",
-      salt: salt.buffer as ArrayBuffer,
-      iterations: 120_000,
-      hash: "SHA-256",
-    },
-    keyMaterial,
-    256,
-  );
-  return toHex(new Uint8Array(bits)) === hashHex;
+    const salt = fromHex(saltHex);
+    const keyMaterial = await crypto.subtle.importKey(
+      "raw",
+      new TextEncoder().encode(password),
+      "PBKDF2",
+      false,
+      ["deriveBits"],
+    );
+    const bits = await crypto.subtle.deriveBits(
+      {
+        name: "PBKDF2",
+        salt: salt as BufferSource,
+        iterations: 120_000,
+        hash: "SHA-256",
+      },
+      keyMaterial,
+      256,
+    );
+    return toHex(new Uint8Array(bits)) === hashHex;
+  } catch {
+    return false;
+  }
 }
 
 export function randomToken(): string {
