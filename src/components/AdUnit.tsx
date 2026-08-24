@@ -1,14 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { ADSENSE_READY_EVENT } from "@/components/AdSenseLoader";
 import { ADSENSE_CLIENT, type AdSenseSlotId } from "@/lib/adsense";
-import {
-  COOKIE_CONSENT_EVENT,
-  hasConsentFor,
-  type CookieConsentPreferences,
-} from "@/lib/cookie-consent";
 
 declare global {
   interface Window {
@@ -36,8 +31,8 @@ function pushAd() {
 }
 
 /**
- * Manual AdSense unit. Script is loaded by AdSenseLoader after consent.
- * Hidden until advertising cookies are accepted so LCP stays clean.
+ * Manual AdSense unit. Always in the DOM so Google can fill;
+ * Consent Mode (not this component) controls personalization.
  */
 export function AdUnit({
   slot,
@@ -46,28 +41,8 @@ export function AdUnit({
   className = "",
 }: AdUnitProps) {
   const pathname = usePathname();
-  const [allowed, setAllowed] = useState(false);
 
   useEffect(() => {
-    function sync(preferences?: CookieConsentPreferences | null) {
-      setAllowed(
-        preferences ? preferences.advertising : hasConsentFor("advertising"),
-      );
-    }
-
-    sync(null);
-
-    function onConsent(event: Event) {
-      sync((event as CustomEvent<CookieConsentPreferences>).detail);
-    }
-
-    window.addEventListener(COOKIE_CONSENT_EVENT, onConsent);
-    return () => window.removeEventListener(COOKIE_CONSENT_EVENT, onConsent);
-  }, []);
-
-  useEffect(() => {
-    if (!allowed) return;
-
     function tryPush() {
       if (document.getElementById("adsense-script")) {
         pushAd();
@@ -77,9 +52,7 @@ export function AdUnit({
     tryPush();
     window.addEventListener(ADSENSE_READY_EVENT, tryPush);
     return () => window.removeEventListener(ADSENSE_READY_EVENT, tryPush);
-  }, [allowed, pathname, slot]);
-
-  if (!allowed) return null;
+  }, [pathname, slot]);
 
   return (
     <div

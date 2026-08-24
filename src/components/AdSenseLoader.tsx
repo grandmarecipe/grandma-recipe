@@ -1,12 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import {
-  COOKIE_CONSENT_EVENT,
-  getStoredConsent,
-  hasConsentFor,
-  type CookieConsentPreferences,
-} from "@/lib/cookie-consent";
+import { useEffect } from "react";
 import { ADSENSE_CLIENT } from "@/lib/adsense";
 
 export const ADSENSE_READY_EVENT = "grandma-recipe-adsense-ready";
@@ -44,35 +38,13 @@ function loadAdSenseScript() {
 }
 
 /**
- * Loads AdSense only after advertising consent — keeps it off the critical
- * path for First Contentful Paint / LCP on mobile.
+ * Loads AdSense on every visit (needed for Auto Ads + AdSense pageviews),
+ * but after first paint / idle so it stays off the LCP critical path.
+ * Personalization is controlled by Consent Mode (AdSenseConsent), not by
+ * withholding the script.
  */
 export function AdSenseLoader() {
-  const [shouldLoad, setShouldLoad] = useState(false);
-
   useEffect(() => {
-    function syncFromConsent(preferences?: CookieConsentPreferences | null) {
-      const allowed =
-        preferences?.advertising ?? hasConsentFor("advertising");
-      setShouldLoad(allowed);
-    }
-
-    syncFromConsent(getStoredConsent());
-
-    function onConsent(event: Event) {
-      syncFromConsent(
-        (event as CustomEvent<CookieConsentPreferences>).detail,
-      );
-    }
-
-    window.addEventListener(COOKIE_CONSENT_EVENT, onConsent);
-    return () => window.removeEventListener(COOKIE_CONSENT_EVENT, onConsent);
-  }, []);
-
-  useEffect(() => {
-    if (!shouldLoad) return;
-
-    // Wait until the browser is idle so hero/LCP can paint first.
     let cancelled = false;
     const start = () => {
       if (!cancelled) loadAdSenseScript();
@@ -99,7 +71,7 @@ export function AdSenseLoader() {
       cancelled = true;
       window.clearTimeout(timer);
     };
-  }, [shouldLoad]);
+  }, []);
 
   return null;
 }
