@@ -25,7 +25,7 @@ async function openaiJson<T>(messages: ChatMessage[]): Promise<T> {
     );
   }
 
-  const model = process.env.OPENAI_MODEL || "gpt-4o-mini";
+  const model = process.env.OPENAI_MODEL || "gpt-5.6-luna";
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
