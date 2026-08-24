@@ -7,11 +7,11 @@ import { RecipeHero } from "@/components/RecipeHero";
 import {
   getAllRecipeSlugs,
   getRelatedRecipes,
-  getRecipeBySlug,
   getStaticPage,
   getStaticPageSlugs,
   resolveSlug,
 } from "@/lib/content";
+import { getRecipeBySlugResolved } from "@/lib/cms-content";
 import { buildRecipePageJsonLd, buildWebPageJsonLd, resolveMetadataTitle, resolveSeoDescription } from "@/lib/seo";
 import { isLegalPage, prepareLegalPageHtml } from "@/lib/legal-pages";
 import { STATIC_PAGE_SEO, buildPageMetadata, buildSocialMetadata } from "@/lib/page-seo";
@@ -41,10 +41,11 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const kind = resolveSlug(slug);
+  const cmsRecipe = await getRecipeBySlugResolved(slug);
+  const kind = cmsRecipe ? "recipe" : resolveSlug(slug);
 
   if (kind === "recipe") {
-    const recipe = getRecipeBySlug(slug);
+    const recipe = cmsRecipe;
     if (!recipe) return {};
     const title = resolveMetadataTitle(recipe.seoTitle, recipe.title);
     const description = resolveSeoDescription(recipe);
@@ -96,12 +97,13 @@ export async function generateMetadata({
   return {};
 }
 
-export default async function SlugPage({ params }: PageProps) {
+export default async function ContSlugPage({ params }: PageProps) {
   const { slug } = await params;
-  const kind = resolveSlug(slug);
+  const cmsRecipe = await getRecipeBySlugResolved(slug);
+  const kind = cmsRecipe ? "recipe" : resolveSlug(slug);
 
   if (kind === "recipe") {
-    const recipe = getRecipeBySlug(slug);
+    const recipe = cmsRecipe;
     if (!recipe) notFound();
     const rating = await getRecipeRating(slug);
     const comments = await getRecipeComments(slug);
