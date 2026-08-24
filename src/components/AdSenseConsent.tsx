@@ -39,8 +39,10 @@ function applyGoogleConsent(preferences: CookieConsentPreferences | null) {
 }
 
 /**
- * Keeps Google Consent Mode in sync with the cookie banner so AdSense
- * Auto Ads respect advertising preference.
+ * Google Consent Mode v2 — what Google asks for (EEA/UK and similar).
+ * Cookie banner Accept → grant ad_storage / personalization.
+ * Reject or no choice → denied (non-personalized / restricted ads).
+ * This is the correct Google flow; hiding the AdSense script is not.
  */
 export function AdSenseConsent() {
   useEffect(() => {

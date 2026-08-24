@@ -56,9 +56,9 @@ const brandRedirects = [
 }));
 
 /**
- * CSP allows Next.js, Consent Mode, AdSense, and Convex — without opening
- * the door to arbitrary third-party scripts. `unsafe-inline` / `unsafe-eval`
- * are required for Next + AdSense; tightening further needs nonces.
+ * Security headers + CSP.
+ * AdSense must never be blocked by CSP — use broad Google advertising
+ * wildcards. Cookie Consent Mode (not CSP) controls personalization.
  */
 const contentSecurityPolicy = [
   "default-src 'self'",
@@ -67,64 +67,71 @@ const contentSecurityPolicy = [
   "frame-ancestors 'self'",
   "form-action 'self'",
   "upgrade-insecure-requests",
-  // Next.js + Consent Mode inline + AdSense
+  // Next.js + Consent Mode + full AdSense / Google Ads surface
   [
     "script-src",
     "'self'",
     "'unsafe-inline'",
     "'unsafe-eval'",
-    "https://pagead2.googlesyndication.com",
-    "https://www.googletagservices.com",
-    "https://www.google.com",
-    "https://www.gstatic.com",
-    "https://partner.googleadservices.com",
-    "https://adservice.google.com",
-    "https://tpc.googlesyndication.com",
+    "https://*.googlesyndication.com",
+    "https://*.googletagservices.com",
+    "https://*.googleadservices.com",
+    "https://*.googleapis.com",
+    "https://*.google.com",
+    "https://*.gstatic.com",
+    "https://*.doubleclick.net",
     "https://*.adtrafficquality.google",
+    "https://*.googletagmanager.com",
   ].join(" "),
   [
     "script-src-elem",
     "'self'",
     "'unsafe-inline'",
-    "https://pagead2.googlesyndication.com",
-    "https://www.googletagservices.com",
-    "https://www.google.com",
-    "https://www.gstatic.com",
-    "https://partner.googleadservices.com",
-    "https://adservice.google.com",
-    "https://tpc.googlesyndication.com",
+    "'unsafe-eval'",
+    "https://*.googlesyndication.com",
+    "https://*.googletagservices.com",
+    "https://*.googleadservices.com",
+    "https://*.googleapis.com",
+    "https://*.google.com",
+    "https://*.gstatic.com",
+    "https://*.doubleclick.net",
     "https://*.adtrafficquality.google",
+    "https://*.googletagmanager.com",
   ].join(" "),
-  "style-src 'self' 'unsafe-inline'",
+  "style-src 'self' 'unsafe-inline' https://*.googlesyndication.com https://*.googleapis.com https://fonts.googleapis.com",
   "img-src 'self' data: blob: https:",
-  "font-src 'self' data:",
+  "font-src 'self' data: https://fonts.gstatic.com https://*.gstatic.com",
   [
     "connect-src",
     "'self'",
     "https://*.convex.cloud",
     "wss://*.convex.cloud",
     "https://*.convex.site",
-    "https://pagead2.googlesyndication.com",
     "https://*.googlesyndication.com",
-    "https://*.google.com",
+    "https://*.googleadservices.com",
     "https://*.googleapis.com",
+    "https://*.google.com",
+    "https://*.gstatic.com",
     "https://*.doubleclick.net",
-    "https://*.adtrafficquality.google",
+    "https://*.g.doubleclick.net",
     "https://googleads.g.doubleclick.net",
+    "https://*.adtrafficquality.google",
     "https://fundingchoicesmessages.google.com",
   ].join(" "),
   [
     "frame-src",
     "'self'",
+    "https://*.googlesyndication.com",
+    "https://*.googleadservices.com",
+    "https://*.doubleclick.net",
+    "https://*.g.doubleclick.net",
     "https://googleads.g.doubleclick.net",
-    "https://tpc.googlesyndication.com",
-    "https://www.google.com",
-    "https://pagead2.googlesyndication.com",
+    "https://*.google.com",
     "https://*.adtrafficquality.google",
     "https://fundingchoicesmessages.google.com",
   ].join(" "),
-  "worker-src 'self' blob:",
-  "media-src 'self'",
+  "worker-src 'self' blob: https://*.googlesyndication.com",
+  "media-src 'self' https: data: blob:",
 ].join("; ");
 
 const securityHeaders = [

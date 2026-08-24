@@ -38,10 +38,13 @@ function loadAdSenseScript() {
 }
 
 /**
- * Loads AdSense on every visit (needed for Auto Ads + AdSense pageviews),
- * but after first paint / idle so it stays off the LCP critical path.
- * Personalization is controlled by Consent Mode (AdSenseConsent), not by
- * withholding the script.
+ * Loads AdSense on every visit (Auto Ads + pageviews), after idle so LCP
+ * stays clean.
+ *
+ * Google requires Consent Mode (see AdSenseConsent + cookie banner):
+ * - Before Accept → consent denied → limited / non-personalized ads where allowed
+ * - After Accept advertising → personalized ads
+ * Do not withhold this script until Accept — that wiped impressions earlier.
  */
 export function AdSenseLoader() {
   useEffect(() => {
