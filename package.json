@@ -11,9 +11,11 @@
     "backfill:seo": "tsx scripts/backfill-seo-from-wordpress.ts",
     "backfill:recipe-meta": "tsx scripts/backfill-recipe-meta.ts",
     "seed:convex-ugc": "tsx scripts/seed-convex-ugc.ts",
-    "migrate:media": "tsx scripts/migrate-media.ts"
+    "migrate:media": "tsx scripts/migrate-media.ts",
+    "migrate:r2": "tsx scripts/migrate-media-to-r2.ts"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1118.0",
     "@tiptap/extension-image": "^3.30.2",
     "@tiptap/extension-link": "^3.30.2",
     "@tiptap/extension-placeholder": "^3.30.2",

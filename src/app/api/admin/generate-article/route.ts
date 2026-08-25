@@ -5,12 +5,14 @@ import {
   buildArticleBodyPrompt,
   buildRecipeDataPrompt,
   slugifyTitle,
+  stripEmDashes,
 } from "@/lib/article-generate-prompts";
 import {
   buildRecipeEquipmentBlock,
   parseEquipmentItems,
   prependRecipeMetaBlocks,
 } from "@/lib/equipment";
+import { stripLeadingIntroParagraph } from "@/lib/html";
 import {
   buildRecipeNutritionBlock,
   caloriesFromNutrition,
@@ -77,8 +79,12 @@ function asStringArray(value: unknown): string[] {
 
 function cleanOptional(value: unknown): string | undefined {
   if (typeof value !== "string") return undefined;
-  const trimmed = value.trim();
+  const trimmed = stripEmDashes(value).trim();
   return trimmed ? trimmed : undefined;
+}
+
+function cleanStringList(value: unknown): string[] {
+  return asStringArray(value).map((item) => stripEmDashes(item));
 }
 
 const CATEGORIES = new Set([
@@ -105,7 +111,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    if (!CATEGORIES.has(body.category)) {
+    if (body.category && !CATEGORIES.has(body.category)) {
       return NextResponse.json({ error: "Invalid category" }, { status: 400 });
     }
 
@@ -126,15 +132,35 @@ export async function POST(request: NextRequest) {
     const input: GenerateArticleInput = {
       mode: body.mode,
       primaryKeyword: body.primaryKeyword?.trim() || "",
-      category: body.category as GenerateCategory,
+      category: body.category as GenerateCategory | undefined,
       notes: body.notes,
+      recipePaste: body.recipePaste,
       ingredientsText: body.ingredientsText,
       instructionsText: body.instructionsText,
       pastedDraft: body.pastedDraft,
     };
 
+    if (body.mode === "keyword_recipe") {
+      const paste = (
+        body.recipePaste?.trim() ||
+        body.ingredientsText?.trim() ||
+        body.instructionsText?.trim() ||
+        ""
+      );
+      if (!paste) {
+        return NextResponse.json(
+          {
+            error:
+              "Paste a recipe (ingredients at minimum). Instructions can be missing — AI will write them.",
+          },
+          { status: 400 },
+        );
+      }
+    }
+
     const recipeData = await openaiJson<{
       focusKeyword?: string;
+      category?: string;
       title?: string;
       excerpt?: string;
       ingredients?: unknown;
@@ -164,8 +190,17 @@ export async function POST(request: NextRequest) {
     const title =
       cleanOptional(recipeData.title) ||
       focusKeyword.replace(/\b\w/g, (c) => c.toUpperCase());
-    const ingredients = asStringArray(recipeData.ingredients);
-    const instructions = asStringArray(recipeData.instructions);
+    const ingredients = cleanStringList(recipeData.ingredients);
+    const instructions = cleanStringList(recipeData.instructions);
+
+    const detectedCategory = cleanOptional(recipeData.category)?.toLowerCase();
+    const category: GenerateCategory =
+      (input.category && CATEGORIES.has(input.category)
+        ? input.category
+        : undefined) ||
+      (detectedCategory && CATEGORIES.has(detectedCategory)
+        ? (detectedCategory as GenerateCategory)
+        : "dinner");
 
     if (ingredients.length === 0 || instructions.length === 0) {
       return NextResponse.json(
@@ -196,7 +231,7 @@ export async function POST(request: NextRequest) {
         content: buildArticleBodyPrompt({
           focusKeyword,
           title,
-          category: input.category,
+          category,
           excerpt,
           ingredients,
           instructions,
@@ -204,6 +239,8 @@ export async function POST(request: NextRequest) {
           cookTime: cleanOptional(recipeData.cookTime),
           totalTime: cleanOptional(recipeData.totalTime),
           servings: cleanOptional(recipeData.servings),
+          cuisine: cleanOptional(recipeData.cuisine),
+          course: cleanOptional(recipeData.course),
         }),
       },
     ]);
@@ -218,10 +255,15 @@ export async function POST(request: NextRequest) {
 
     const nutrition = parseNutritionRows(recipeData.nutrition);
     const equipment = parseEquipmentItems(recipeData.equipment);
-    const contentHtml = prependRecipeMetaBlocks(contentHtmlRaw, [
-      buildRecipeNutritionBlock(nutrition),
-      buildRecipeEquipmentBlock(equipment),
-    ]);
+    const contentHtml = stripEmDashes(
+      prependRecipeMetaBlocks(
+        stripLeadingIntroParagraph(contentHtmlRaw),
+        [
+          buildRecipeNutritionBlock(nutrition),
+          buildRecipeEquipmentBlock(equipment),
+        ],
+      ),
+    );
     const calories =
       cleanOptional(recipeData.calories) || caloriesFromNutrition(nutrition);
 
@@ -229,7 +271,7 @@ export async function POST(request: NextRequest) {
       title,
       slug: slugifyTitle(title),
       excerpt,
-      category: input.category,
+      category,
       contentHtml,
       ingredients,
       instructions,

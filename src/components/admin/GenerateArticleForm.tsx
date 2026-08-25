@@ -1,23 +1,15 @@
 "use client";
 
-import { FormEvent, useState } from "react";
-import { useMutation } from "convex/react";
+import { FormEvent, useDeferredValue, useState } from "react";
+import { useMutation, useQuery } from "convex/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { api } from "../../../convex/_generated/api";
 import { useAdminAuth } from "./AdminProviders";
 import type {
-  GenerateCategory,
   GenerateMode,
   GeneratedArticle,
 } from "@/lib/article-generate-types";
-
-const CATEGORIES: GenerateCategory[] = [
-  "breakfast",
-  "lunch",
-  "dinner",
-  "snacks",
-  "dessert",
-];
 
 export function GenerateArticleForm() {
   const { token } = useAdminAuth();
@@ -26,18 +18,31 @@ export function GenerateArticleForm() {
 
   const [mode, setMode] = useState<GenerateMode>("keyword");
   const [primaryKeyword, setPrimaryKeyword] = useState("");
-  const [category, setCategory] = useState<GenerateCategory>("dinner");
   const [notes, setNotes] = useState("");
-  const [ingredientsText, setIngredientsText] = useState("");
-  const [instructionsText, setInstructionsText] = useState("");
+  const [recipePaste, setRecipePaste] = useState("");
   const [pastedDraft, setPastedDraft] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<string | null>(null);
 
+  const deferredKeyword = useDeferredValue(primaryKeyword.trim());
+  const existingKeyword = useQuery(
+    api.articles.findByFocusKeyword,
+    token && deferredKeyword.length >= 2
+      ? { token, keyword: deferredKeyword }
+      : "skip",
+  );
+  const keywordAlreadyUsed = Boolean(existingKeyword);
+
   async function onSubmit(event: FormEvent) {
     event.preventDefault();
     if (!token) return;
+    if (keywordAlreadyUsed && existingKeyword) {
+      setError(
+        `Primary keyword already used by “${existingKeyword.title}”. Pick a different keyword.`,
+      );
+      return;
+    }
 
     setBusy(true);
     setError(null);
@@ -51,10 +56,8 @@ export function GenerateArticleForm() {
           token,
           mode,
           primaryKeyword,
-          category,
           notes,
-          ingredientsText,
-          instructionsText,
+          recipePaste,
           pastedDraft,
         }),
       });
@@ -82,6 +85,7 @@ export function GenerateArticleForm() {
         instructions: article.instructions,
         seoTitle: article.seoTitle,
         seoDescription: article.seoDescription,
+        focusKeyword: article.focusKeyword,
         prepTime: article.prepTime,
         cookTime: article.cookTime,
         totalTime: article.totalTime,
@@ -117,7 +121,7 @@ export function GenerateArticleForm() {
         {(
           [
             ["keyword", "Primary keyword only"],
-            ["keyword_recipe", "Keyword + ingredients & instructions"],
+            ["keyword_recipe", "Keyword + paste recipe"],
             ["paste", "Paste a ChatGPT draft"],
           ] as const
         ).map(([value, label]) => (
@@ -136,35 +140,47 @@ export function GenerateArticleForm() {
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block text-sm sm:col-span-2">
           <span className="mb-1.5 block font-semibold">
-            {mode === "paste" ? "Primary keyword (optional hint)" : "Primary keyword"}
+            {mode === "paste"
+              ? "Primary keyword (optional hint)"
+              : "Primary keyword"}
           </span>
           <input
-            className={inputClass}
+            className={`${inputClass} ${
+              keywordAlreadyUsed
+                ? "border-amber-500 focus:border-amber-600"
+                : ""
+            }`}
             value={primaryKeyword}
             onChange={(event) => setPrimaryKeyword(event.target.value)}
             placeholder="mini doughnut hot buttered cheerios"
             required={mode !== "paste"}
+            aria-invalid={keywordAlreadyUsed}
           />
+          {keywordAlreadyUsed && existingKeyword ? (
+            <p className="mt-2 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-900">
+              This primary keyword is already used by{" "}
+              <Link
+                href={`/admin/articles/${existingKeyword._id}/`}
+                className="font-semibold underline"
+              >
+                {existingKeyword.title}
+              </Link>{" "}
+              ({existingKeyword.status}
+              {existingKeyword.focusKeyword
+                ? ` · “${existingKeyword.focusKeyword}”`
+                : ""}
+              ). Choose a different keyword to avoid duplicates.
+            </p>
+          ) : deferredKeyword.length >= 2 &&
+            existingKeyword === null &&
+            deferredKeyword === primaryKeyword.trim() ? (
+            <p className="mt-1.5 text-xs text-[#5a822b]">
+              Keyword looks available.
+            </p>
+          ) : null}
         </label>
 
-        <label className="block text-sm">
-          <span className="mb-1.5 block font-semibold">Category</span>
-          <select
-            className={inputClass}
-            value={category}
-            onChange={(event) =>
-              setCategory(event.target.value as GenerateCategory)
-            }
-          >
-            {CATEGORIES.map((item) => (
-              <option key={item} value={item}>
-                {item}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        <label className="block text-sm">
+        <label className="block text-sm sm:col-span-2">
           <span className="mb-1.5 block font-semibold">Notes (optional)</span>
           <input
             className={inputClass}
@@ -172,34 +188,38 @@ export function GenerateArticleForm() {
             onChange={(event) => setNotes(event.target.value)}
             placeholder="No nuts, weeknight-friendly, etc."
           />
+          <span className="mt-1.5 block text-xs text-[#6b5b4f]">
+            Category is detected automatically (breakfast, lunch, dinner,
+            snacks, or dessert).
+          </span>
         </label>
       </div>
 
       {mode === "keyword_recipe" ? (
-        <div className="grid gap-4 sm:grid-cols-2">
-          <label className="block text-sm">
-            <span className="mb-1.5 block font-semibold">
-              Ingredients (one per line)
-            </span>
-            <textarea
-              className={`${inputClass} min-h-[180px] font-mono`}
-              value={ingredientsText}
-              onChange={(event) => setIngredientsText(event.target.value)}
-              placeholder={"2 cups flour\n1 tsp salt"}
-            />
-          </label>
-          <label className="block text-sm">
-            <span className="mb-1.5 block font-semibold">
-              Instructions (one step per line)
-            </span>
-            <textarea
-              className={`${inputClass} min-h-[180px] font-mono`}
-              value={instructionsText}
-              onChange={(event) => setInstructionsText(event.target.value)}
-              placeholder={"Mix dry ingredients.\nBake until golden."}
-            />
-          </label>
-        </div>
+        <label className="block text-sm">
+          <span className="mb-1.5 block font-semibold">
+            Paste recipe (messy OK)
+          </span>
+          <textarea
+            className={`${inputClass} min-h-[220px] font-mono`}
+            value={recipePaste}
+            onChange={(event) => setRecipePaste(event.target.value)}
+            required
+            placeholder={`🍫🥧 Chocolate Pie! Rich, creamy…
+
+Ingredients
+5 ounces chocolate pudding mix
+3 cups cold milk
+stabilized whipped cream
+1 baked pie crust (9 inch)
+
+(Instructions optional — AI will write them if missing)`}
+          />
+          <span className="mt-1.5 block text-xs text-[#6b5b4f]">
+            Paste title + ingredients as you copied them. Missing steps are fine
+            — the AI cleans the list and writes instructions.
+          </span>
+        </label>
       ) : null}
 
       {mode === "paste" ? (
@@ -228,10 +248,14 @@ export function GenerateArticleForm() {
 
       <button
         type="submit"
-        disabled={busy}
+        disabled={busy || keywordAlreadyUsed}
         className="rounded-full bg-[#5a822b] px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-60"
       >
-        {busy ? "Generating…" : "Generate draft article"}
+        {busy
+          ? "Generating…"
+          : keywordAlreadyUsed
+            ? "Keyword already used"
+            : "Generate draft article"}
       </button>
     </form>
   );

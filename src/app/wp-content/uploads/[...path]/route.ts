@@ -1,24 +1,48 @@
 import { NextRequest, NextResponse } from "next/server";
 import https from "node:https";
+import {
+  getR2Object,
+  isR2Configured,
+  mimeFromKey,
+  uploadsPathToR2Key,
+} from "@/lib/r2";
 
 export const runtime = "nodejs";
 
 const OLD_HOST_IP = process.env.WP_MEDIA_IP || "72.60.93.62";
 
 /**
- * Temporary fallback while media is copied into public/:
- * serve /wp-content/uploads/* from the old Hostinger host.
- * Files present in public/wp-content/uploads/ are served first by Next.
+ * Serve /wp-content/uploads/* with same public URLs for SEO.
+ * Order: public/ (static) → R2 → legacy Hostinger fallback.
  */
 export async function GET(
   _request: NextRequest,
   context: { params: Promise<{ path: string[] }> },
 ) {
   const { path } = await context.params;
-  const objectPath = path.map((segment) => encodeURIComponent(segment)).join("/");
+  const objectPath = path.join("/");
+  const r2Key = uploadsPathToR2Key(objectPath);
+
+  if (isR2Configured()) {
+    try {
+      const object = await getR2Object(r2Key);
+      if (object) {
+        const headers = new Headers();
+        headers.set(
+          "content-type",
+          object.contentType || mimeFromKey(r2Key) || "application/octet-stream",
+        );
+        headers.set("cache-control", "public, max-age=31536000, immutable");
+        return new NextResponse(object.body, { status: 200, headers });
+      }
+    } catch {
+      // fall through to Hostinger
+    }
+  }
 
   try {
-    const upstreamResponse = await fetchFromOldHost(objectPath);
+    const encodedPath = path.map((segment) => encodeURIComponent(segment)).join("/");
+    const upstreamResponse = await fetchFromOldHost(encodedPath);
     if (upstreamResponse.status >= 400 || !upstreamResponse.body) {
       return new NextResponse("Not found", { status: 404 });
     }

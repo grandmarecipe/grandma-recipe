@@ -98,6 +98,29 @@ a {
   margin-bottom: 0.5rem;
 }
 
+/* Round accent bullets for tip/serve/storage lists (and other story uls) */
+.prose-recipe ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.prose-recipe ul > li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: var(--muted);
+}
+
+.prose-recipe ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.72em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: var(--accent);
+}
+
 /* Why You'll Love — orange hearts instead of bullets */
 .prose-recipe h2[id^="why-youll-love"] + ul {
   list-style: none;
@@ -109,11 +132,17 @@ a {
   align-items: flex-start;
   gap: 0.45rem;
   list-style: none;
+  padding-left: 0;
   color: var(--muted);
 }
 
 .prose-recipe h2[id^="why-youll-love"] + ul > li::before {
   content: "♥";
+  position: static;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
   flex-shrink: 0;
   color: #e07a3d;
   font-size: 0.9em;

@@ -4,15 +4,20 @@ export interface TocItem {
 }
 
 export function extractIntroFromHtml(html: string): string | undefined {
-  const match = html.match(/<p class="wp-block-paragraph">([\s\S]*?)<\/p>/i);
+  const match = html.match(/<p\b[^>]*>([\s\S]*?)<\/p>/i);
   if (!match) return undefined;
   return stripHtml(match[1]);
 }
 
+/** Drop leading <p> blocks so story HTML can start at the first <h2>. */
 export function stripLeadingIntroParagraph(html: string): string {
-  return html
-    .replace(/^\s*<p class="wp-block-paragraph">[\s\S]*?<\/p>\s*/i, "")
-    .trimStart();
+  let out = html.trimStart();
+  while (/^<p\b/i.test(out)) {
+    const next = out.replace(/^<p\b[^>]*>[\s\S]*?<\/p>\s*/i, "").trimStart();
+    if (next === out) break;
+    out = next;
+  }
+  return out;
 }
 
 export function slugifyHeading(text: string): string {

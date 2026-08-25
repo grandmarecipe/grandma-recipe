@@ -35,6 +35,7 @@ type ArticleFormState = {
   featuredImageStorageId?: Id<"_storage">;
   seoTitle: string;
   seoDescription: string;
+  focusKeyword: string;
   prepTime: string;
   cookTime: string;
   totalTime: string;
@@ -61,6 +62,7 @@ const emptyForm = (): ArticleFormState => ({
   featuredImageDescription: "",
   seoTitle: "",
   seoDescription: "",
+  focusKeyword: "",
   prepTime: "",
   cookTime: "",
   totalTime: "",
@@ -126,6 +128,7 @@ export function ArticleEditor({ articleId }: Props) {
       featuredImageStorageId: existing.featuredImageStorageId,
       seoTitle: existing.seoTitle ?? "",
       seoDescription: existing.seoDescription ?? "",
+      focusKeyword: existing.focusKeyword ?? "",
       prepTime: existing.prepTime ?? "",
       cookTime: existing.cookTime ?? "",
       totalTime: existing.totalTime ?? "",
@@ -243,6 +246,7 @@ export function ArticleEditor({ articleId }: Props) {
         featuredImageStorageId: current.featuredImageStorageId,
         seoTitle: current.seoTitle || undefined,
         seoDescription: current.seoDescription || undefined,
+        focusKeyword: current.focusKeyword || undefined,
         prepTime: current.prepTime || undefined,
         cookTime: current.cookTime || undefined,
         totalTime: current.totalTime || undefined,
@@ -515,6 +519,16 @@ export function ArticleEditor({ articleId }: Props) {
               Aim ~50–60 chars title, ~150–160 description.
             </p>
             <div className="mt-3 space-y-3">
+              <Field label="Primary keyword">
+                <input
+                  className={inputClass}
+                  value={current.focusKeyword}
+                  onChange={(event) =>
+                    patch("focusKeyword", event.target.value)
+                  }
+                  placeholder="banana pancakes"
+                />
+              </Field>
               <Field label={`Meta title (${seoTitleLen})`}>
                 <input
                   className={inputClass}

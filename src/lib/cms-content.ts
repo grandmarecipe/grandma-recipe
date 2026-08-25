@@ -101,8 +101,17 @@ function getCachedCmsArticle(slug: string) {
 async function listPublishedCmsArticles(): Promise<CmsArticle[]> {
   try {
     const client = getConvexClient();
-    const rows = await client.query(api.articles.listPublished, {});
-    return rows as CmsArticle[];
+    const all: CmsArticle[] = [];
+    let cursor: string | null = null;
+    for (;;) {
+      const page = await client.query(api.articles.listPublishedPage, {
+        paginationOpts: { numItems: 40, cursor },
+      });
+      all.push(...(page.page as CmsArticle[]));
+      if (page.isDone) break;
+      cursor = page.continueCursor;
+    }
+    return all;
   } catch {
     return [];
   }

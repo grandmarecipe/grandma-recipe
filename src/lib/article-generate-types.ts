@@ -10,11 +10,18 @@ export type GenerateMode = "keyword" | "keyword_recipe" | "paste";
 export interface GenerateArticleInput {
   mode: GenerateMode;
   primaryKeyword: string;
-  category: GenerateCategory;
+  /** Optional override — if omitted, AI detects from keyword/recipe */
+  category?: GenerateCategory;
   /** Optional notes / extra context */
   notes?: string;
-  /** For keyword_recipe mode */
+  /**
+   * For keyword_recipe mode — paste a messy recipe blob
+   * (title + ingredients, instructions optional). AI cleans and fills gaps.
+   */
+  recipePaste?: string;
+  /** @deprecated Prefer recipePaste — kept for older clients */
   ingredientsText?: string;
+  /** @deprecated Prefer recipePaste */
   instructionsText?: string;
   /** For paste mode — full ChatGPT draft */
   pastedDraft?: string;

@@ -42,7 +42,7 @@ export default defineSchema({
 
   /**
    * CMS articles. Published ones override/add to filesystem recipes
-   * on the public site.
+   * on the public site. Heavy body fields live in articleBodies.
    */
   articles: defineTable({
     slug: v.string(),
@@ -50,6 +50,7 @@ export default defineSchema({
     excerpt: v.string(),
     category: categorySlug,
     categories: v.array(categorySlug),
+    /** @deprecated Prefer articleBodies; kept empty/short after migration. */
     contentHtml: v.string(),
     ingredients: v.array(v.string()),
     instructions: v.array(v.string()),
@@ -60,6 +61,7 @@ export default defineSchema({
     featuredImageStorageId: v.optional(v.id("_storage")),
     seoTitle: v.optional(v.string()),
     seoDescription: v.optional(v.string()),
+    focusKeyword: v.optional(v.string()),
     prepTime: v.optional(v.string()),
     cookTime: v.optional(v.string()),
     totalTime: v.optional(v.string()),
@@ -75,4 +77,12 @@ export default defineSchema({
     .index("by_slug", ["slug"])
     .index("by_status", ["status"])
     .index("by_modified", ["modifiedAt"]),
+
+  /** Full recipe body for a CMS article (kept separate so list queries stay small). */
+  articleBodies: defineTable({
+    articleId: v.id("articles"),
+    contentHtml: v.string(),
+    ingredients: v.array(v.string()),
+    instructions: v.array(v.string()),
+  }).index("by_article", ["articleId"]),
 });

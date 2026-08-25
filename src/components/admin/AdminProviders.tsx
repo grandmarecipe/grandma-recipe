@@ -17,7 +17,6 @@ const AdminAuthContext = createContext<AdminAuthState | null>(null);
 let convexClient: ConvexReactClient | null = null;
 
 function getConvexClient() {
-  if (typeof window === "undefined") return null;
   const url = process.env.NEXT_PUBLIC_CONVEX_URL;
   if (!url) return null;
   if (!convexClient) convexClient = new ConvexReactClient(url);
