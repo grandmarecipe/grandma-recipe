@@ -103,13 +103,18 @@ async function listPublishedCmsArticles(): Promise<CmsArticle[]> {
     const client = getConvexClient();
     const all: CmsArticle[] = [];
     let cursor: string | null = null;
-    for (;;) {
-      const page = await client.query(api.articles.listPublishedPage, {
+    let isDone = false;
+    while (!isDone) {
+      const result: {
+        page: CmsArticle[];
+        isDone: boolean;
+        continueCursor: string;
+      } = await client.query(api.articles.listPublishedPage, {
         paginationOpts: { numItems: 40, cursor },
       });
-      all.push(...(page.page as CmsArticle[]));
-      if (page.isDone) break;
-      cursor = page.continueCursor;
+      all.push(...result.page);
+      isDone = result.isDone;
+      cursor = result.continueCursor;
     }
     return all;
   } catch {
