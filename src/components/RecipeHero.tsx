@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { preload } from "react-dom";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContentImage } from "@/components/ContentImage";
 import { formatRecipeDate, sameCalendarDay } from "@/lib/dates";
@@ -13,6 +14,10 @@ interface RecipeHeroProps {
 }
 
 export function RecipeHero({ recipe, rating }: RecipeHeroProps) {
+  if (recipe.featuredImage) {
+    preload(recipe.featuredImage, { as: "image", fetchPriority: "high" });
+  }
+
   const category = CATEGORIES.find((item) => item.slug === recipe.category);
   const published = formatRecipeDate(recipe.publishedAt);
   const updated = formatRecipeDate(recipe.modifiedAt);

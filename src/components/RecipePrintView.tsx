@@ -85,7 +85,7 @@ export function RecipePrintView({ recipe }: RecipePrintViewProps) {
     [recipe.contentHtml],
   );
   const notes = useMemo(
-    () => extractNotesFromHtml(recipe.contentHtml),
+    () => extractNotesFromHtml(recipe.contentHtml, { calories: recipe.calories }),
     [recipe.contentHtml],
   );
 

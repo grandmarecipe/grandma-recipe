@@ -1,3 +1,5 @@
+import { cache } from "react";
+import { unstable_cache } from "next/cache";
 import { getConvexClient } from "@/lib/convex";
 import { api } from "../../convex/_generated/api";
 import type { CategorySlug, Recipe, RecipeMeta } from "@/lib/types";
@@ -78,6 +80,24 @@ function articleToMeta(article: CmsArticle): RecipeMeta {
   };
 }
 
+async function fetchCmsArticleBySlug(slug: string): Promise<CmsArticle | null> {
+  try {
+    const client = getConvexClient();
+    const cms = await client.query(api.articles.getPublishedBySlug, { slug });
+    return (cms as CmsArticle | null) ?? null;
+  } catch {
+    return null;
+  }
+}
+
+function getCachedCmsArticle(slug: string) {
+  return unstable_cache(
+    async () => fetchCmsArticleBySlug(slug),
+    ["cms-article-by-slug", slug],
+    { revalidate: 300, tags: [`cms-article-${slug}`] },
+  )();
+}
+
 async function listPublishedCmsArticles(): Promise<CmsArticle[]> {
   try {
     const client = getConvexClient();
@@ -88,18 +108,21 @@ async function listPublishedCmsArticles(): Promise<CmsArticle[]> {
   }
 }
 
-export async function getRecipeBySlugResolved(
-  slug: string,
-): Promise<Recipe | null> {
-  try {
-    const client = getConvexClient();
-    const cms = await client.query(api.articles.getPublishedBySlug, { slug });
-    if (cms) return articleToRecipe(cms as CmsArticle);
-  } catch {
-    // Fall through to filesystem recipes if Convex is unavailable.
-  }
-  return getFileRecipeBySlug(slug);
-}
+/**
+ * Resolve a recipe for public pages.
+ * File recipes (WordPress import) return immediately — no Convex wait.
+ * CMS-only published articles still load from cached Convex.
+ * Deduped per request so metadata + page share one lookup.
+ */
+export const getRecipeBySlugResolved = cache(
+  async (slug: string): Promise<Recipe | null> => {
+    const fileRecipe = getFileRecipeBySlug(slug);
+    if (fileRecipe) return fileRecipe;
+
+    const cms = await getCachedCmsArticle(slug);
+    return cms ? articleToRecipe(cms) : null;
+  },
+);
 
 export async function getAllRecipeMetaResolved(): Promise<RecipeMeta[]> {
   const files = getAllRecipeMeta();

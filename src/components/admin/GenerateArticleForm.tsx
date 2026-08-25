@@ -44,7 +44,7 @@ export function GenerateArticleForm() {
     setStatus("Generating recipe data and article with OpenAI…");
 
     try {
-      const response = await fetch("/api/admin/generate-article", {
+      const response = await fetch("/api/admin/generate-article/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

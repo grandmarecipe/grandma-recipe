@@ -6,6 +6,16 @@ import {
   buildRecipeDataPrompt,
   slugifyTitle,
 } from "@/lib/article-generate-prompts";
+import {
+  buildRecipeEquipmentBlock,
+  parseEquipmentItems,
+  prependRecipeMetaBlocks,
+} from "@/lib/equipment";
+import {
+  buildRecipeNutritionBlock,
+  caloriesFromNutrition,
+  parseNutritionRows,
+} from "@/lib/nutrition";
 import type {
   GenerateArticleInput,
   GenerateCategory,
@@ -34,7 +44,6 @@ async function openaiJson<T>(messages: ChatMessage[]): Promise<T> {
     },
     body: JSON.stringify({
       model,
-      temperature: 0.7,
       response_format: { type: "json_object" },
       messages,
     }),
@@ -137,6 +146,8 @@ export async function POST(request: NextRequest) {
       calories?: string;
       cuisine?: string;
       course?: string;
+      nutrition?: unknown;
+      equipment?: unknown;
     }>([
       {
         role: "system",
@@ -197,13 +208,22 @@ export async function POST(request: NextRequest) {
       },
     ]);
 
-    const contentHtml = cleanOptional(articleBody.contentHtml);
-    if (!contentHtml) {
+    const contentHtmlRaw = cleanOptional(articleBody.contentHtml);
+    if (!contentHtmlRaw) {
       return NextResponse.json(
         { error: "Generation did not produce article HTML. Try again." },
         { status: 502 },
       );
     }
+
+    const nutrition = parseNutritionRows(recipeData.nutrition);
+    const equipment = parseEquipmentItems(recipeData.equipment);
+    const contentHtml = prependRecipeMetaBlocks(contentHtmlRaw, [
+      buildRecipeNutritionBlock(nutrition),
+      buildRecipeEquipmentBlock(equipment),
+    ]);
+    const calories =
+      cleanOptional(recipeData.calories) || caloriesFromNutrition(nutrition);
 
     const result: GeneratedArticle = {
       title,
@@ -221,7 +241,7 @@ export async function POST(request: NextRequest) {
       cookTime: cleanOptional(recipeData.cookTime),
       totalTime: cleanOptional(recipeData.totalTime),
       servings: cleanOptional(recipeData.servings),
-      calories: cleanOptional(recipeData.calories),
+      calories,
       cuisine: cleanOptional(recipeData.cuisine),
       course: cleanOptional(recipeData.course),
       focusKeyword,

@@ -1,4 +1,4 @@
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import {
@@ -6,7 +6,7 @@ import {
   commentedCookieName,
   getRecipeComments,
 } from "@/lib/comments";
-import { getRecipeBySlug } from "@/lib/content";
+import { getRecipeBySlugResolved } from "@/lib/cms-content";
 
 interface RouteContext {
   params: Promise<{ slug: string }>;
@@ -16,7 +16,7 @@ const COMMENT_COOLDOWN_SECONDS = 60 * 10;
 
 export async function GET(_request: Request, context: RouteContext) {
   const { slug } = await context.params;
-  if (!getRecipeBySlug(slug)) {
+  if (!(await getRecipeBySlugResolved(slug))) {
     return NextResponse.json({ error: "Recipe not found." }, { status: 404 });
   }
 
@@ -29,7 +29,7 @@ export async function GET(_request: Request, context: RouteContext) {
 
 export async function POST(request: Request, context: RouteContext) {
   const { slug } = await context.params;
-  if (!getRecipeBySlug(slug)) {
+  if (!(await getRecipeBySlugResolved(slug))) {
     return NextResponse.json({ error: "Recipe not found." }, { status: 404 });
   }
 
@@ -74,6 +74,7 @@ export async function POST(request: Request, context: RouteContext) {
       maxAge: COMMENT_COOLDOWN_SECONDS,
     });
 
+    revalidateTag(`comments-${slug}`);
     revalidatePath(`/${slug}`);
     revalidatePath(`/${slug}/`);
 

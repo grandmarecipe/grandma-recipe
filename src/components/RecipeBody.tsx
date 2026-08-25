@@ -2,9 +2,12 @@
 
 import {
   buildRecipeTableOfContents,
+  ensureHeadingIds,
   normalizeRecipeToc,
   splitHtmlAfterParagraphs,
+  stripEquipmentBlockFromHtml,
   stripFaqBlockFromHtml,
+  stripNutritionBlockFromHtml,
   stripWprmMarkup,
 } from "@/lib/html";
 import { extractFaqsFromHtml } from "@/lib/schema-data";
@@ -34,27 +37,40 @@ interface RecipeBodyProps {
     body: string;
     createdAt: string;
   }>;
+  /** Admin preview: hide ads, comments, and interactive widgets. */
+  preview?: boolean;
 }
 
-export function RecipeBody({ recipe, rating, comments = [] }: RecipeBodyProps) {
+export function RecipeBody({
+  recipe,
+  rating,
+  comments = [],
+  preview = false,
+}: RecipeBodyProps) {
   const faqs = extractFaqsFromHtml(recipe.contentHtml);
   const tableOfContents = normalizeRecipeToc(
     buildRecipeTableOfContents(recipe.contentHtml),
   );
-  const articleHtml = stripFaqBlockFromHtml(
-    stripWprmMarkup(recipe.contentHtml),
+  const articleHtml = ensureHeadingIds(
+    stripFaqBlockFromHtml(
+      stripNutritionBlockFromHtml(
+        stripEquipmentBlockFromHtml(stripWprmMarkup(recipe.contentHtml)),
+      ),
+    ),
   );
   const [storyStart, storyRest] = splitHtmlAfterParagraphs(articleHtml, 2);
   const [storyMid, storyEnd] = splitHtmlAfterParagraphs(storyRest, 4);
   const equipment = extractEquipmentFromHtml(recipe.contentHtml);
-  const notes = extractNotesFromHtml(recipe.contentHtml);
+  const notes = extractNotesFromHtml(recipe.contentHtml, {
+    calories: recipe.calories,
+  });
   const hasNutrition = Boolean(
     recipe.calories || (notes?.nutrition && notes.nutrition.length > 0),
   );
 
   return (
     <>
-      <RecipeJumpBar slug={recipe.slug} />
+      {!preview ? <RecipeJumpBar slug={recipe.slug} /> : null}
 
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-10 lg:grid-cols-[minmax(0,1fr)_300px] no-print">
         <article className="min-w-0">
@@ -69,13 +85,19 @@ export function RecipeBody({ recipe, rating, comments = [] }: RecipeBodyProps) {
               {recipe.title}
             </p>
 
-            <div className="mt-4">
-              <RecipeRating
-                slug={recipe.slug}
-                initialRatingValue={rating?.ratingValue}
-                initialRatingCount={rating?.ratingCount}
-              />
-            </div>
+            {!preview ? (
+              <div className="mt-4">
+                <RecipeRating
+                  slug={recipe.slug}
+                  initialRatingValue={rating?.ratingValue}
+                  initialRatingCount={rating?.ratingCount}
+                />
+              </div>
+            ) : (
+              <p className="mt-4 text-sm text-[#6b5b4f]">
+                Ratings appear here on the live site.
+              </p>
+            )}
 
             <RecipeCardDetails
               recipe={recipe}
@@ -211,21 +233,25 @@ export function RecipeBody({ recipe, rating, comments = [] }: RecipeBodyProps) {
             {storyStart ? (
               <div dangerouslySetInnerHTML={{ __html: storyStart }} />
             ) : null}
-            <AdUnit
-              slot={ADSENSE_SLOTS.inArticle02}
-              format="fluid"
-              layout="in-article"
-              className="my-8 not-prose"
-            />
+            {!preview ? (
+              <AdUnit
+                slot={ADSENSE_SLOTS.inArticle02}
+                format="fluid"
+                layout="in-article"
+                className="my-8 not-prose"
+              />
+            ) : null}
             {storyMid ? (
               <div dangerouslySetInnerHTML={{ __html: storyMid }} />
             ) : null}
-            <AdUnit
-              slot={ADSENSE_SLOTS.inArticle01}
-              format="fluid"
-              layout="in-article"
-              className="my-8 not-prose"
-            />
+            {!preview ? (
+              <AdUnit
+                slot={ADSENSE_SLOTS.inArticle01}
+                format="fluid"
+                layout="in-article"
+                className="my-8 not-prose"
+              />
+            ) : null}
             {storyEnd ? (
               <div dangerouslySetInnerHTML={{ __html: storyEnd }} />
             ) : null}
@@ -235,20 +261,26 @@ export function RecipeBody({ recipe, rating, comments = [] }: RecipeBodyProps) {
           <RecipeKitchenNotes hasNutrition={hasNutrition} />
           <RecipeAuthorCard />
 
-          <AdUnit
-            slot={ADSENSE_SLOTS.multiplexBottom}
-            format="autorelaxed"
-            className="my-10"
-          />
+          {!preview ? (
+            <AdUnit
+              slot={ADSENSE_SLOTS.multiplexBottom}
+              format="autorelaxed"
+              className="my-10"
+            />
+          ) : null}
 
-          <RecipeComments slug={recipe.slug} initialComments={comments} />
+          {!preview ? (
+            <RecipeComments slug={recipe.slug} initialComments={comments} />
+          ) : null}
         </article>
 
-        <aside className="hidden lg:block">
-          <div className="sticky top-28 space-y-6">
-            <AdUnit slot={ADSENSE_SLOTS.displaySidebar} format="auto" />
-          </div>
-        </aside>
+        {!preview ? (
+          <aside className="hidden lg:block">
+            <div className="sticky top-28 space-y-6">
+              <AdUnit slot={ADSENSE_SLOTS.displaySidebar} format="auto" />
+            </div>
+          </aside>
+        ) : null}
       </div>
     </>
   );

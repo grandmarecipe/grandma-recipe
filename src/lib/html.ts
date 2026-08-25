@@ -15,35 +15,75 @@ export function stripLeadingIntroParagraph(html: string): string {
     .trimStart();
 }
 
-export function extractTableOfContents(html: string): TocItem[] {
-  const match = html.match(
-    /<div class="wp-block-rank-math-toc-block"[\s\S]*?<nav>([\s\S]*?)<\/nav>/i,
+export function slugifyHeading(text: string): string {
+  return (
+    text
+      .trim()
+      .toLowerCase()
+      .replace(/['']/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 80) || "section"
   );
-  if (!match) return [];
+}
 
+export function extractHeadingsTableOfContents(html: string): TocItem[] {
   const items: TocItem[] = [];
-  const linkRegex = /<a href="([^"]+)">([\s\S]*?)<\/a>/gi;
-  let linkMatch: RegExpExecArray | null;
+  const seen = new Set<string>();
+  const h2Regex = /<h2(\s[^>]*)?>([\s\S]*?)<\/h2>/gi;
+  let match: RegExpExecArray | null;
 
-  while ((linkMatch = linkRegex.exec(match[1])) !== null) {
-    const label = stripHtml(linkMatch[2]);
-    if (label) {
-      items.push({ href: linkMatch[1], label });
+  while ((match = h2Regex.exec(html)) !== null) {
+    const attrs = match[1] || "";
+    const label = stripHtml(match[2]);
+    if (!label || /^table of contents$/i.test(label)) continue;
+    // Skip legacy WP Recipe Maker card headings if any remain in HTML.
+    if (/\bwprm-/i.test(attrs)) continue;
+
+    const idMatch = attrs.match(/\sid=["']([^"']+)["']/i);
+    let href = idMatch ? `#${idMatch[1]}` : `#${slugifyHeading(label)}`;
+
+    if (/^faqs?$/i.test(label.trim()) || idMatch?.[1] === "fa-qs") {
+      href = "#faqs";
     }
+
+    if (seen.has(href)) continue;
+    seen.add(href);
+
+    items.push({
+      href,
+      label: /^faqs?$/i.test(label.trim()) ? "FAQs" : label,
+    });
   }
 
   return items;
 }
 
-export function buildRecipeTableOfContents(html: string): TocItem[] {
-  const items = extractTableOfContents(html);
-  const recipeCard: TocItem = { href: "#recipe", label: "Recipe card" };
+/** Add id attributes to story h2 headings so TOC anchors scroll correctly. */
+export function ensureHeadingIds(html: string): string {
+  return html.replace(
+    /<h2(\s[^>]*)?>([\s\S]*?)<\/h2>/gi,
+    (full, attrs = "", inner) => {
+      const label = stripHtml(inner);
+      if (/^table of contents$/i.test(label)) return full;
+      if (/\sid=["']/i.test(attrs)) return full;
 
-  if (items.some((item) => item.href === "#recipe")) {
-    return items;
+      const id = /^faqs?$/i.test(label.trim()) ? "faqs" : slugifyHeading(label);
+      return `<h2${attrs} id="${id}">${inner}</h2>`;
+    },
+  );
+}
+
+export function buildRecipeTableOfContents(html: string): TocItem[] {
+  const recipeCard: TocItem = { href: "#recipe", label: "Recipe card" };
+  // Always derive TOC from story h2 headings (CMS + migrated WP articles).
+  const sectionItems = extractHeadingsTableOfContents(stripWprmMarkup(html));
+
+  if (sectionItems.some((item) => item.href === "#recipe")) {
+    return sectionItems;
   }
 
-  return [recipeCard, ...items];
+  return [recipeCard, ...sectionItems];
 }
 
 export function stripWprmMarkup(html: string): string {
@@ -88,6 +128,26 @@ export function stripFaqBlockFromHtml(html: string): string {
     )
     .replace(
       /<div[^>]*\sid=["']rank-math-faq["'][^>]*>[\s\S]*?<\/div>\s*<\/div>\s*<\/div>/i,
+      "",
+    )
+    .trim();
+}
+
+/** Remove CMS equipment block from story HTML (shown in recipe card). */
+export function stripEquipmentBlockFromHtml(html: string): string {
+  return html
+    .replace(
+      /<div[^>]*id=["']recipe-equipment["'][^>]*>[\s\S]*?<\/div>/i,
+      "",
+    )
+    .trim();
+}
+
+/** Remove CMS nutrition block from story HTML (shown in recipe card Notes). */
+export function stripNutritionBlockFromHtml(html: string): string {
+  return html
+    .replace(
+      /<div[^>]*id=["']recipe-nutrition["'][^>]*>[\s\S]*?<\/div>/i,
       "",
     )
     .trim();

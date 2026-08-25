@@ -1,7 +1,7 @@
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
-import { getRecipeBySlug } from "@/lib/content";
+import { getRecipeBySlugResolved } from "@/lib/cms-content";
 import {
   addRecipeRating,
   getRecipeRating,
@@ -14,7 +14,7 @@ interface RouteContext {
 
 export async function GET(_request: Request, context: RouteContext) {
   const { slug } = await context.params;
-  if (!getRecipeBySlug(slug)) {
+  if (!(await getRecipeBySlugResolved(slug))) {
     return NextResponse.json({ error: "Recipe not found." }, { status: 404 });
   }
 
@@ -27,7 +27,7 @@ export async function GET(_request: Request, context: RouteContext) {
 
 export async function POST(request: Request, context: RouteContext) {
   const { slug } = await context.params;
-  if (!getRecipeBySlug(slug)) {
+  if (!(await getRecipeBySlugResolved(slug))) {
     return NextResponse.json({ error: "Recipe not found." }, { status: 404 });
   }
 
@@ -70,6 +70,7 @@ export async function POST(request: Request, context: RouteContext) {
       maxAge: 60 * 60 * 24 * 365,
     });
 
+    revalidateTag(`rating-${slug}`);
     revalidatePath(`/${slug}`);
     revalidatePath(`/${slug}/`);
 

@@ -1,3 +1,4 @@
+import { unstable_cache } from "next/cache";
 import { api } from "../../convex/_generated/api";
 import { getConvexClient } from "./convex";
 
@@ -7,10 +8,28 @@ export interface RecipeRatingAggregate {
   ratingSum: number;
 }
 
+const EMPTY_RATING: RecipeRatingAggregate = {
+  ratingValue: 0,
+  ratingCount: 0,
+  ratingSum: 0,
+};
+
+async function fetchRecipeRating(slug: string): Promise<RecipeRatingAggregate> {
+  try {
+    return await getConvexClient().query(api.ratings.getBySlug, { slug });
+  } catch {
+    return EMPTY_RATING;
+  }
+}
+
 export async function getRecipeRating(
   slug: string,
 ): Promise<RecipeRatingAggregate> {
-  return getConvexClient().query(api.ratings.getBySlug, { slug });
+  return unstable_cache(
+    async () => fetchRecipeRating(slug),
+    ["recipe-rating", slug],
+    { revalidate: 300, tags: [`rating-${slug}`] },
+  )();
 }
 
 export async function addRecipeRating(

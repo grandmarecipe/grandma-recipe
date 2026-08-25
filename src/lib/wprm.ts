@@ -1,4 +1,9 @@
 import { stripHtml } from "./html";
+import {
+  nutritionFallbackFromCalories,
+  parseNutritionTableHtml,
+} from "./nutrition";
+import { parseEquipmentListHtml } from "./equipment";
 
 export interface RecipeEquipmentItem {
   name: string;
@@ -33,6 +38,14 @@ function decodeHtml(text: string): string {
 }
 
 export function extractEquipmentFromHtml(html: string): RecipeEquipmentItem[] {
+  const cmsMatch = html.match(
+    /<div[^>]*id=["']recipe-equipment["'][^>]*>([\s\S]*?)<\/div>/i,
+  );
+  if (cmsMatch) {
+    const cmsItems = parseEquipmentListHtml(cmsMatch[1]);
+    if (cmsItems.length > 0) return cmsItems;
+  }
+
   const items: RecipeEquipmentItem[] = [];
   const itemRegex =
     /<li class="[^"]*wprm-recipe-equipment-item[^"]*"[^>]*>([\s\S]*?)<\/li>/gi;
@@ -55,42 +68,48 @@ export function extractEquipmentFromHtml(html: string): RecipeEquipmentItem[] {
   return items;
 }
 
-export function extractNotesFromHtml(html: string): RecipeNotes | null {
-  const notesMatch = html.match(
-    /<div class="[^"]*wprm-recipe-notes\b[^"]*"[^>]*>([\s\S]*?)<\/div>/i,
+export function extractNotesFromHtml(
+  html: string,
+  options?: { calories?: string },
+): RecipeNotes | null {
+  const cmsMatch = html.match(
+    /<div[^>]*id=["']recipe-nutrition["'][^>]*>([\s\S]*?)<\/div>/i,
   );
-  if (!notesMatch) return null;
-
-  const body = notesMatch[1].trim();
-  if (!body) return null;
-
-  const nutrition: RecipeNutritionRow[] = [];
-  const rowRegex =
-    /<tr>\s*<td[^>]*>([\s\S]*?)<\/td>\s*<td[^>]*>([\s\S]*?)<\/td>\s*<\/tr>/gi;
-  let row: RegExpExecArray | null;
-  while ((row = rowRegex.exec(body)) !== null) {
-    const nutrient = decodeHtml(stripHtml(row[1]));
-    const amount = decodeHtml(stripHtml(row[2]));
-    if (
-      nutrient &&
-      amount &&
-      !/^nutrient$/i.test(nutrient) &&
-      !/^amount/i.test(nutrient)
-    ) {
-      nutrition.push({ nutrient, amount });
+  if (cmsMatch) {
+    const nutrition = parseNutritionTableHtml(cmsMatch[1]);
+    if (nutrition.length > 0) {
+      return { nutrition };
     }
   }
 
+  const notesMatch = html.match(
+    /<div class="[^"]*wprm-recipe-notes\b[^"]*"[^>]*>([\s\S]*?)<\/div>/i,
+  );
+  if (!notesMatch) {
+    const fallback = nutritionFallbackFromCalories(options?.calories);
+    return fallback.length > 0 ? { nutrition: fallback } : null;
+  }
+
+  const body = notesMatch[1].trim();
+  if (!body) {
+    const fallback = nutritionFallbackFromCalories(options?.calories);
+    return fallback.length > 0 ? { nutrition: fallback } : null;
+  }
+
+  const nutrition = parseNutritionTableHtml(body);
   if (nutrition.length > 0) {
     return { nutrition };
   }
 
   const text = decodeHtml(stripHtml(body));
-  if (!text) return null;
+  if (text) {
+    return {
+      nutrition: [],
+      html: body,
+      text,
+    };
+  }
 
-  return {
-    nutrition: [],
-    html: body,
-    text,
-  };
+  const fallback = nutritionFallbackFromCalories(options?.calories);
+  return fallback.length > 0 ? { nutrition: fallback } : null;
 }

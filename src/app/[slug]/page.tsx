@@ -20,8 +20,11 @@ import { getRecipeComments } from "@/lib/comments";
 import { CATEGORIES, SITE } from "@/lib/types";
 import { RelatedRecipes } from "@/components/RelatedRecipes";
 
-/** Allow recipe pages to refresh after new ratings. */
-export const revalidate = 300;
+/**
+ * Long ISR window for HTML TTFB. Ratings/comments still refresh via
+ * revalidatePath / revalidateTag on UGC writes.
+ */
+export const revalidate = 3600;
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -105,8 +108,10 @@ export default async function ContSlugPage({ params }: PageProps) {
   if (kind === "recipe") {
     const recipe = cmsRecipe;
     if (!recipe) notFound();
-    const rating = await getRecipeRating(slug);
-    const comments = await getRecipeComments(slug);
+    const [rating, comments] = await Promise.all([
+      getRecipeRating(slug),
+      getRecipeComments(slug),
+    ]);
     const related = getRelatedRecipes(slug, recipe.category, 3);
     const categoryName =
       CATEGORIES.find((item) => item.slug === recipe.category)?.name ||

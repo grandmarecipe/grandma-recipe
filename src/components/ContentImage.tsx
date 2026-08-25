@@ -1,9 +1,10 @@
 import Image, { type ImageProps } from "next/image";
 
 /**
- * Recipe media under /wp-content/ is served via public files or the
- * Hostinger fallback route. Skip the optimizer so missing local files
- * still load through that same-origin path.
+ * Recipe media under /wp-content/ is served from public/ locally, or via
+ * the Hostinger fallback route until Cloudflare R2 is wired up.
+ * Skip the optimizer by default so missing local files still load
+ * through that same-origin path.
  */
 export function ContentImage({ src, unoptimized, ...props }: ImageProps) {
   const isWpUpload =

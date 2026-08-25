@@ -7,6 +7,7 @@ import { api } from "../../../convex/_generated/api";
 import type { Id } from "../../../convex/_generated/dataModel";
 import { useAdminAuth } from "./AdminProviders";
 import { RichTextEditor } from "./RichTextEditor";
+import { ArticlePreview } from "./ArticlePreview";
 
 const CATEGORIES = [
   "breakfast",
@@ -100,6 +101,7 @@ export function ArticleEditor({ articleId }: Props) {
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [ready, setReady] = useState(!articleId);
+  const [previewOpen, setPreviewOpen] = useState(false);
 
   useEffect(() => {
     if (!articleId) {
@@ -281,9 +283,20 @@ export function ArticleEditor({ articleId }: Props) {
 
   const seoTitleLen = (current.seoTitle || current.title).length;
   const seoDescLen = (current.seoDescription || current.excerpt).length;
+  const liveUrl =
+    current.status === "published" && current.slug.trim()
+      ? `/${current.slug}/`
+      : undefined;
 
   return (
     <div className="space-y-8">
+      {previewOpen ? (
+        <ArticlePreview
+          input={current}
+          liveUrl={liveUrl}
+          onClose={() => setPreviewOpen(false)}
+        />
+      ) : null}
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="font-serif text-3xl text-[#8b1a1a]">
@@ -294,6 +307,13 @@ export function ArticleEditor({ articleId }: Props) {
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => setPreviewOpen(true)}
+            className="rounded-full border border-[#8b1a1a] px-4 py-2 text-sm font-semibold text-[#8b1a1a]"
+          >
+            Preview
+          </button>
           <button
             type="button"
             disabled={saving}

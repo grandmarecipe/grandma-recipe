@@ -1,3 +1,4 @@
+import { unstable_cache } from "next/cache";
 import { api } from "../../convex/_generated/api";
 import { getConvexClient } from "./convex";
 
@@ -8,10 +9,22 @@ export interface RecipeComment {
   createdAt: string;
 }
 
+async function fetchRecipeComments(slug: string): Promise<RecipeComment[]> {
+  try {
+    return await getConvexClient().query(api.comments.listBySlug, { slug });
+  } catch {
+    return [];
+  }
+}
+
 export async function getRecipeComments(
   slug: string,
 ): Promise<RecipeComment[]> {
-  return getConvexClient().query(api.comments.listBySlug, { slug });
+  return unstable_cache(
+    async () => fetchRecipeComments(slug),
+    ["recipe-comments", slug],
+    { revalidate: 300, tags: [`comments-${slug}`] },
+  )();
 }
 
 export async function addRecipeComment(

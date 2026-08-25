@@ -22,7 +22,8 @@
 .DS_Store
 *.pem
 
-# Migrated WordPress media (large). Use proxy or local public/wp-content.
+# Migrated WordPress media (large). Keep local; serve via Hostinger
+# proxy until Cloudflare R2 is ready.
 /public/wp-content/
 
 # debug
