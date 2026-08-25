@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   buildRecipeTableOfContents,
   ensureHeadingIds,
@@ -80,7 +81,17 @@ export function RecipeBody({
             id="recipe"
             className={`scroll-mt-36 rounded-3xl border border-border bg-white p-6 sm:p-8${tableOfContents.length > 0 ? " mt-8" : ""}`}
           >
-            <h2 className="font-serif text-3xl text-[#8b1a1a]">Recipe card</h2>
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <h2 className="font-serif text-3xl text-[#8b1a1a]">Recipe card</h2>
+              {!preview ? (
+                <Link
+                  href={`/print/${recipe.slug}/`}
+                  className="rounded-full border border-border bg-[#fffdf9] px-4 py-2 text-sm font-semibold text-accent transition hover:border-accent hover:text-accent-dark"
+                >
+                  Print / PDF
+                </Link>
+              ) : null}
+            </div>
             <p className="mt-2 font-serif text-2xl text-accent-dark">
               {recipe.title}
             </p>

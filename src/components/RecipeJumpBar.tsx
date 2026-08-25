@@ -7,6 +7,9 @@ interface RecipeJumpBarProps {
   slug: string;
 }
 
+const pillClass =
+  "shrink-0 rounded-full border border-border px-3 py-1.5 text-muted hover:text-accent sm:px-4 sm:py-2";
+
 export function RecipeJumpBar({ slug }: RecipeJumpBarProps) {
   function handleAnchorClick(
     event: React.MouseEvent<HTMLAnchorElement>,
@@ -21,39 +24,29 @@ export function RecipeJumpBar({ slug }: RecipeJumpBarProps) {
       data-recipe-jump-bar
       className="no-print sticky top-[4.5rem] z-40 border-b border-border bg-background/95 backdrop-blur sm:top-[5.5rem]"
     >
-      <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-3 py-2 text-xs whitespace-nowrap sm:gap-3 sm:px-4 sm:py-3 sm:text-sm">
+      <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-2 px-3 py-2 text-xs sm:gap-3 sm:px-4 sm:py-3 sm:text-sm">
         <a
           href="#recipe"
-          className="rounded-full bg-accent px-3 py-1.5 font-semibold !text-white hover:bg-accent-dark hover:!text-white sm:px-4 sm:py-2"
+          className="shrink-0 rounded-full bg-accent px-3 py-1.5 font-semibold !text-white hover:bg-accent-dark hover:!text-white sm:px-4 sm:py-2"
           onClick={(event) => handleAnchorClick(event, "recipe")}
         >
           Jump to Recipe
         </a>
         <a
           href="#story"
-          className="rounded-full border border-border px-3 py-1.5 text-muted hover:text-accent sm:px-4 sm:py-2"
+          className={pillClass}
           onClick={(event) => handleAnchorClick(event, "story")}
         >
           Full recipe
         </a>
         <a
-          href="#faqs"
-          className="rounded-full border border-border px-3 py-1.5 text-muted hover:text-accent sm:px-4 sm:py-2"
-          onClick={(event) => handleAnchorClick(event, "faqs")}
-        >
-          FAQs
-        </a>
-        <a
           href="#comments"
-          className="rounded-full border border-border px-3 py-1.5 text-muted hover:text-accent sm:px-4 sm:py-2"
+          className={pillClass}
           onClick={(event) => handleAnchorClick(event, "comments")}
         >
           Comments
         </a>
-        <Link
-          href={`/print/${slug}/`}
-          className="rounded-full border border-border px-3 py-1.5 text-muted hover:text-accent sm:px-4 sm:py-2"
-        >
+        <Link href={`/print/${slug}/`} className={pillClass}>
           Print / PDF
         </Link>
       </div>
