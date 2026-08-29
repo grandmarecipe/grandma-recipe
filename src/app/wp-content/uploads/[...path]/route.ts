@@ -43,7 +43,10 @@ export async function GET(
             "application/octet-stream",
         );
         headers.set("cache-control", "public, max-age=31536000, immutable");
-        return new NextResponse(optimized.buffer, { status: 200, headers });
+        return new NextResponse(new Uint8Array(optimized.buffer), {
+          status: 200,
+          headers,
+        });
       }
     } catch {
       // fall through to Hostinger
