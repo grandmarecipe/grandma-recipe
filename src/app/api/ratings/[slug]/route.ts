@@ -1,6 +1,7 @@
 import { revalidatePath, revalidateTag } from "next/cache";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
+import { jsonCached } from "@/lib/api-cache";
 import { getRecipeBySlugResolved } from "@/lib/cms-content";
 import {
   addRecipeRating,
@@ -14,15 +15,11 @@ interface RouteContext {
 
 export async function GET(_request: Request, context: RouteContext) {
   const { slug } = await context.params;
-  if (!(await getRecipeBySlugResolved(slug))) {
-    return NextResponse.json({ error: "Recipe not found." }, { status: 404 });
-  }
-
   const rating = await getRecipeRating(slug);
   const jar = await cookies();
   const alreadyRated = jar.has(ratedCookieName(slug));
 
-  return NextResponse.json({ ...rating, alreadyRated });
+  return jsonCached({ ...rating, alreadyRated });
 }
 
 export async function POST(request: Request, context: RouteContext) {

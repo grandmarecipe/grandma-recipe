@@ -14,6 +14,9 @@ const EMPTY_RATING: RecipeRatingAggregate = {
   ratingSum: 0,
 };
 
+/** Align with recipe page ISR; UGC writes still call revalidateTag. */
+const UGC_CACHE_SECONDS = 3600;
+
 async function fetchRecipeRating(slug: string): Promise<RecipeRatingAggregate> {
   try {
     return await getConvexClient().query(api.ratings.getBySlug, { slug });
@@ -28,7 +31,7 @@ export async function getRecipeRating(
   return unstable_cache(
     async () => fetchRecipeRating(slug),
     ["recipe-rating", slug],
-    { revalidate: 300, tags: [`rating-${slug}`] },
+    { revalidate: UGC_CACHE_SECONDS, tags: [`rating-${slug}`] },
   )();
 }
 

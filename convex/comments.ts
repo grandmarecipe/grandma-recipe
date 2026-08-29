@@ -30,18 +30,15 @@ export const listBySlug = query({
     const rows = await ctx.db
       .query("recipeComments")
       .withIndex("by_slug", (q) => q.eq("slug", slug))
-      .collect();
+      .order("desc")
+      .take(50);
 
-    return rows
-      .map((row) => ({
-        id: row._id,
-        name: row.name,
-        body: row.body,
-        createdAt: row.createdAt,
-      }))
-      .sort((a, b) =>
-        a.createdAt < b.createdAt ? 1 : a.createdAt > b.createdAt ? -1 : 0,
-      );
+    return rows.map((row) => ({
+      id: row._id,
+      name: row.name,
+      body: row.body,
+      createdAt: row.createdAt,
+    }));
   },
 });
 

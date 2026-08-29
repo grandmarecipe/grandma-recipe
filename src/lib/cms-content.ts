@@ -94,7 +94,7 @@ function getCachedCmsArticle(slug: string) {
   return unstable_cache(
     async () => fetchCmsArticleBySlug(slug),
     ["cms-article-by-slug", slug],
-    { revalidate: 300, tags: [`cms-article-${slug}`] },
+    { revalidate: 3600, tags: [`cms-article-${slug}`] },
   )();
 }
 

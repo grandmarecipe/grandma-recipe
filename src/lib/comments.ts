@@ -9,6 +9,9 @@ export interface RecipeComment {
   createdAt: string;
 }
 
+/** Align with recipe page ISR; UGC writes still call revalidateTag. */
+const UGC_CACHE_SECONDS = 3600;
+
 async function fetchRecipeComments(slug: string): Promise<RecipeComment[]> {
   try {
     return await getConvexClient().query(api.comments.listBySlug, { slug });
@@ -23,7 +26,7 @@ export async function getRecipeComments(
   return unstable_cache(
     async () => fetchRecipeComments(slug),
     ["recipe-comments", slug],
-    { revalidate: 300, tags: [`comments-${slug}`] },
+    { revalidate: UGC_CACHE_SECONDS, tags: [`comments-${slug}`] },
   )();
 }
 

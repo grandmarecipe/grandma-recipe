@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export interface RecipeCommentItem {
   id: string;
@@ -37,28 +37,6 @@ export function RecipeComments({
   const [pending, setPending] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    async function load() {
-      try {
-        const response = await fetch(`/api/comments/${slug}/`);
-        if (!response.ok) return;
-        const data = (await response.json()) as { comments: RecipeCommentItem[] };
-        if (!cancelled && Array.isArray(data.comments)) {
-          setComments(data.comments);
-        }
-      } catch {
-        // Keep SSR comments if API fails.
-      }
-    }
-
-    void load();
-    return () => {
-      cancelled = true;
-    };
-  }, [slug]);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();

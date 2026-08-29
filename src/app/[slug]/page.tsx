@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { cookies } from "next/headers";
 import { preload } from "react-dom";
 import { JsonLd } from "@/components/JsonLd";
 import { LegalPage } from "@/components/LegalPage";
@@ -17,7 +18,7 @@ import { getHeroImagePreloadHref } from "@/lib/hero-image";
 import { buildRecipePageJsonLd, buildWebPageJsonLd, resolveMetadataTitle, resolveSeoDescription } from "@/lib/seo";
 import { isLegalPage, prepareLegalPageHtml } from "@/lib/legal-pages";
 import { STATIC_PAGE_SEO, buildPageMetadata, buildSocialMetadata } from "@/lib/page-seo";
-import { getRecipeRating } from "@/lib/ratings";
+import { getRecipeRating, ratedCookieName } from "@/lib/ratings";
 import { getRecipeComments } from "@/lib/comments";
 import { CATEGORIES, SITE } from "@/lib/types";
 import { RelatedRecipes } from "@/components/RelatedRecipes";
@@ -122,6 +123,8 @@ export default async function ContSlugPage({ params }: PageProps) {
       getRecipeRating(slug),
       getRecipeComments(slug),
     ]);
+    const jar = await cookies();
+    const alreadyRated = jar.has(ratedCookieName(slug));
     const related = getRelatedRecipes(slug, recipe.category, 3);
     const categoryName =
       CATEGORIES.find((item) => item.slug === recipe.category)?.name ||
@@ -131,7 +134,12 @@ export default async function ContSlugPage({ params }: PageProps) {
       <>
         <JsonLd data={buildRecipePageJsonLd(recipe, rating, comments)} />
         <RecipeHero recipe={recipe} rating={rating} />
-        <RecipeBody recipe={recipe} rating={rating} comments={comments} />
+        <RecipeBody
+          recipe={recipe}
+          rating={rating}
+          comments={comments}
+          initialAlreadyRated={alreadyRated}
+        />
         <RelatedRecipes
           recipes={related}
           categoryName={categoryName}

@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface RecipeRatingProps {
   slug: string;
   initialRatingValue?: number;
   initialRatingCount?: number;
+  initialAlreadyRated?: boolean;
   compact?: boolean;
 }
 
@@ -28,41 +29,15 @@ export function RecipeRating({
   slug,
   initialRatingValue = 0,
   initialRatingCount = 0,
+  initialAlreadyRated = false,
   compact = false,
 }: RecipeRatingProps) {
   const [ratingValue, setRatingValue] = useState(initialRatingValue);
   const [ratingCount, setRatingCount] = useState(initialRatingCount);
   const [hover, setHover] = useState(0);
-  const [alreadyRated, setAlreadyRated] = useState(false);
+  const [alreadyRated, setAlreadyRated] = useState(initialAlreadyRated);
   const [pending, setPending] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    async function load() {
-      try {
-        const response = await fetch(`/api/ratings/${slug}/`);
-        if (!response.ok) return;
-        const data = (await response.json()) as {
-          ratingValue: number;
-          ratingCount: number;
-          alreadyRated: boolean;
-        };
-        if (cancelled) return;
-        setRatingValue(data.ratingValue);
-        setRatingCount(data.ratingCount);
-        setAlreadyRated(data.alreadyRated);
-      } catch {
-        // Keep SSR defaults if the API is unavailable.
-      }
-    }
-
-    void load();
-    return () => {
-      cancelled = true;
-    };
-  }, [slug]);
 
   async function submitRating(stars: number) {
     if (alreadyRated || pending) return;

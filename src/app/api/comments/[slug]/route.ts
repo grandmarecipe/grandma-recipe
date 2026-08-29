@@ -1,6 +1,7 @@
 import { revalidatePath, revalidateTag } from "next/cache";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
+import { jsonCached } from "@/lib/api-cache";
 import {
   addRecipeComment,
   commentedCookieName,
@@ -16,12 +17,8 @@ const COMMENT_COOLDOWN_SECONDS = 60 * 10;
 
 export async function GET(_request: Request, context: RouteContext) {
   const { slug } = await context.params;
-  if (!(await getRecipeBySlugResolved(slug))) {
-    return NextResponse.json({ error: "Recipe not found." }, { status: 404 });
-  }
-
   const jar = await cookies();
-  return NextResponse.json({
+  return jsonCached({
     comments: await getRecipeComments(slug),
     alreadyCommented: jar.has(commentedCookieName(slug)),
   });

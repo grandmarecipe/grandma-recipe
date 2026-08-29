@@ -38,6 +38,7 @@ interface RecipeBodyProps {
     body: string;
     createdAt: string;
   }>;
+  initialAlreadyRated?: boolean;
   /** Admin preview: hide ads, comments, and interactive widgets. */
   preview?: boolean;
 }
@@ -46,6 +47,7 @@ export function RecipeBody({
   recipe,
   rating,
   comments = [],
+  initialAlreadyRated = false,
   preview = false,
 }: RecipeBodyProps) {
   const faqs = extractFaqsFromHtml(recipe.contentHtml);
@@ -102,6 +104,7 @@ export function RecipeBody({
                   slug={recipe.slug}
                   initialRatingValue={rating?.ratingValue}
                   initialRatingCount={rating?.ratingCount}
+                  initialAlreadyRated={initialAlreadyRated}
                 />
               </div>
             ) : (
