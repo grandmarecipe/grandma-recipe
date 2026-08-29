@@ -1,6 +1,7 @@
 import { unstable_cache } from "next/cache";
 import { api } from "../../convex/_generated/api";
 import { getConvexClient } from "./convex";
+import { recipeHasComments } from "./ugc-active";
 
 export interface RecipeComment {
   id: string;
@@ -22,7 +23,15 @@ async function fetchRecipeComments(slug: string): Promise<RecipeComment[]> {
 
 export async function getRecipeComments(
   slug: string,
+  options?: { force?: boolean },
 ): Promise<RecipeComment[]> {
+  if (options?.force) {
+    return fetchRecipeComments(slug);
+  }
+  if (!(await recipeHasComments(slug))) {
+    return [];
+  }
+
   return unstable_cache(
     async () => fetchRecipeComments(slug),
     ["recipe-comments", slug],

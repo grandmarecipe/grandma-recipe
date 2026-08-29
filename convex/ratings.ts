@@ -25,6 +25,15 @@ export const getBySlug = query({
   },
 });
 
+/** Slugs that have at least one rating — used to skip empty reads on the free tier. */
+export const listActiveSlugs = query({
+  args: {},
+  handler: async (ctx) => {
+    const rows = await ctx.db.query("recipeRatings").collect();
+    return rows.filter((row) => row.count > 0).map((row) => row.slug);
+  },
+});
+
 export const add = mutation({
   args: {
     slug: v.string(),

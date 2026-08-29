@@ -8,6 +8,7 @@ import {
   getRecipeComments,
 } from "@/lib/comments";
 import { getRecipeBySlugResolved } from "@/lib/cms-content";
+import { UGC_COMMENT_SLUGS_TAG } from "@/lib/ugc-active";
 
 interface RouteContext {
   params: Promise<{ slug: string }>;
@@ -36,7 +37,7 @@ export async function POST(request: Request, context: RouteContext) {
     return NextResponse.json(
       {
         error: "Please wait a bit before posting another comment on this recipe.",
-        comments: await getRecipeComments(slug),
+        comments: await getRecipeComments(slug, { force: true }),
         alreadyCommented: true,
       },
       { status: 429 },
@@ -57,7 +58,10 @@ export async function POST(request: Request, context: RouteContext) {
       website: typeof body.website === "string" ? body.website : "",
     });
 
-    const comments = await getRecipeComments(slug);
+    revalidateTag(UGC_COMMENT_SLUGS_TAG);
+    revalidateTag(`comments-${slug}`);
+
+    const comments = await getRecipeComments(slug, { force: true });
     const response = NextResponse.json({
       comment,
       comments,
@@ -71,7 +75,6 @@ export async function POST(request: Request, context: RouteContext) {
       maxAge: COMMENT_COOLDOWN_SECONDS,
     });
 
-    revalidateTag(`comments-${slug}`);
     revalidatePath(`/${slug}`);
     revalidatePath(`/${slug}/`);
 

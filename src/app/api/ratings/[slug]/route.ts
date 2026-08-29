@@ -8,6 +8,7 @@ import {
   getRecipeRating,
   ratedCookieName,
 } from "@/lib/ratings";
+import { UGC_RATING_SLUGS_TAG } from "@/lib/ugc-active";
 
 interface RouteContext {
   params: Promise<{ slug: string }>;
@@ -31,7 +32,7 @@ export async function POST(request: Request, context: RouteContext) {
   const jar = await cookies();
   const cookieKey = ratedCookieName(slug);
   if (jar.has(cookieKey)) {
-    const rating = await getRecipeRating(slug);
+    const rating = await getRecipeRating(slug, { force: true });
     return NextResponse.json(
       {
         error: "You already rated this recipe.",
@@ -67,6 +68,7 @@ export async function POST(request: Request, context: RouteContext) {
       maxAge: 60 * 60 * 24 * 365,
     });
 
+    revalidateTag(UGC_RATING_SLUGS_TAG);
     revalidateTag(`rating-${slug}`);
     revalidatePath(`/${slug}`);
     revalidatePath(`/${slug}/`);

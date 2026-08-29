@@ -1,6 +1,7 @@
 import { unstable_cache } from "next/cache";
 import { api } from "../../convex/_generated/api";
 import { getConvexClient } from "./convex";
+import { recipeHasRatings } from "./ugc-active";
 
 export interface RecipeRatingAggregate {
   ratingValue: number;
@@ -27,7 +28,15 @@ async function fetchRecipeRating(slug: string): Promise<RecipeRatingAggregate> {
 
 export async function getRecipeRating(
   slug: string,
+  options?: { force?: boolean },
 ): Promise<RecipeRatingAggregate> {
+  if (options?.force) {
+    return fetchRecipeRating(slug);
+  }
+  if (!(await recipeHasRatings(slug))) {
+    return EMPTY_RATING;
+  }
+
   return unstable_cache(
     async () => fetchRecipeRating(slug),
     ["recipe-rating", slug],

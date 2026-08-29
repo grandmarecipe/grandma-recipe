@@ -42,6 +42,15 @@ export const listBySlug = query({
   },
 });
 
+/** Slugs that have at least one comment — used to skip empty reads on the free tier. */
+export const listActiveSlugs = query({
+  args: {},
+  handler: async (ctx) => {
+    const rows = await ctx.db.query("recipeComments").collect();
+    return [...new Set(rows.map((row) => row.slug))];
+  },
+});
+
 export const add = mutation({
   args: {
     slug: v.string(),
