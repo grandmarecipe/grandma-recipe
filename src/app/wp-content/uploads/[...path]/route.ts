@@ -1,11 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import https from "node:https";
 import {
-  getR2Object,
+  getR2ObjectBuffer,
   isR2Configured,
   mimeFromKey,
+  putR2Object,
   uploadsPathToR2Key,
 } from "@/lib/r2";
+import { resizeStoredImageIfNeeded } from "@/lib/r2-image-optimize";
 
 export const runtime = "nodejs";
 
@@ -25,15 +27,23 @@ export async function GET(
 
   if (isR2Configured()) {
     try {
-      const object = await getR2Object(r2Key);
+      const object = await getR2ObjectBuffer(r2Key);
       if (object) {
+        const optimized = await resizeStoredImageIfNeeded(r2Key, object.body);
+        if (optimized.changed) {
+          await putR2Object(r2Key, optimized.buffer, optimized.contentType);
+        }
+
         const headers = new Headers();
         headers.set(
           "content-type",
-          object.contentType || mimeFromKey(r2Key) || "application/octet-stream",
+          optimized.contentType ||
+            object.contentType ||
+            mimeFromKey(r2Key) ||
+            "application/octet-stream",
         );
         headers.set("cache-control", "public, max-age=31536000, immutable");
-        return new NextResponse(object.body, { status: 200, headers });
+        return new NextResponse(optimized.buffer, { status: 200, headers });
       }
     } catch {
       // fall through to Hostinger

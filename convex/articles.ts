@@ -17,6 +17,60 @@ const categorySlug = v.union(
   v.literal("dessert"),
 );
 
+const featureImagePromptResult = v.object({
+  prompt: v.string(),
+  alt_text_1: v.string(),
+  title_1: v.string(),
+  caption_1: v.string(),
+  description_1: v.string(),
+  alt_text_2: v.string(),
+  title_2: v.string(),
+  caption_2: v.string(),
+  description_2: v.string(),
+});
+
+const sectionImagePromptResult = v.object({
+  prompt: v.string(),
+  alt_text: v.string(),
+  title: v.string(),
+  caption: v.string(),
+  description: v.string(),
+});
+
+const imageAssetRecord = v.object({
+  publicPath: v.string(),
+  r2Key: v.string(),
+  alt: v.string(),
+  title: v.string(),
+  caption: v.string(),
+  description: v.string(),
+  uploadedAt: v.string(),
+  width: v.optional(v.number()),
+  height: v.optional(v.number()),
+});
+
+const imageAssetsBundle = v.object({
+  feature: v.optional(imageAssetRecord),
+  ingredients: v.optional(imageAssetRecord),
+  how_to_make: v.optional(imageAssetRecord),
+  how_to_serve: v.optional(imageAssetRecord),
+});
+
+const imagePromptSection = v.union(
+  v.literal("feature"),
+  v.literal("ingredients"),
+  v.literal("how_to_make"),
+  v.literal("how_to_serve"),
+);
+
+const imagePromptBundle = v.object({
+  focusKeyword: v.string(),
+  feature: v.optional(featureImagePromptResult),
+  ingredients: v.optional(sectionImagePromptResult),
+  how_to_make: v.optional(sectionImagePromptResult),
+  how_to_serve: v.optional(sectionImagePromptResult),
+});
+
 const articleFields = {
   slug: v.string(),
   title: v.string(),
@@ -94,6 +148,79 @@ type ArticleDoc = {
   publishedAt: string;
   modifiedAt: string;
   updatedBy?: string;
+  imagePrompts?: {
+    focusKeyword: string;
+    feature?: {
+      prompt: string;
+      alt_text_1: string;
+      title_1: string;
+      caption_1: string;
+      description_1: string;
+      alt_text_2: string;
+      title_2: string;
+      caption_2: string;
+      description_2: string;
+    };
+    ingredients?: {
+      prompt: string;
+      alt_text: string;
+      title: string;
+      caption: string;
+      description: string;
+    };
+    how_to_make?: {
+      prompt: string;
+      alt_text: string;
+      title: string;
+      caption: string;
+      description: string;
+    };
+    how_to_serve?: {
+      prompt: string;
+      alt_text: string;
+      title: string;
+      caption: string;
+      description: string;
+    };
+  };
+  imageAssets?: {
+    feature?: {
+      publicPath: string;
+      r2Key: string;
+      alt: string;
+      title: string;
+      caption: string;
+      description: string;
+      uploadedAt: string;
+    };
+    ingredients?: {
+      publicPath: string;
+      r2Key: string;
+      alt: string;
+      title: string;
+      caption: string;
+      description: string;
+      uploadedAt: string;
+    };
+    how_to_make?: {
+      publicPath: string;
+      r2Key: string;
+      alt: string;
+      title: string;
+      caption: string;
+      description: string;
+      uploadedAt: string;
+    };
+    how_to_serve?: {
+      publicPath: string;
+      r2Key: string;
+      alt: string;
+      title: string;
+      caption: string;
+      description: string;
+      uploadedAt: string;
+    };
+  };
 };
 
 async function getBody(ctx: QueryCtx | MutationCtx, articleId: Id<"articles">) {
@@ -468,6 +595,53 @@ export const update = mutation({
     );
 
     return { id: args.id, slug };
+  },
+});
+
+export const saveImagePrompts = mutation({
+  args: {
+    token: v.string(),
+    id: v.id("articles"),
+    imagePrompts: imagePromptBundle,
+  },
+  handler: async (ctx, { token, id, imagePrompts }) => {
+    const admin = await requireAdmin(ctx, token);
+    const current = await ctx.db.get(id);
+    if (!current) throw new Error("Article not found.");
+
+    await ctx.db.patch(id, {
+      imagePrompts,
+      modifiedAt: new Date().toISOString(),
+      updatedBy: admin.email,
+    });
+
+    return { ok: true as const };
+  },
+});
+
+export const saveImageAsset = mutation({
+  args: {
+    token: v.string(),
+    id: v.id("articles"),
+    section: imagePromptSection,
+    asset: imageAssetRecord,
+  },
+  handler: async (ctx, { token, id, section, asset }) => {
+    const admin = await requireAdmin(ctx, token);
+    const current = await ctx.db.get(id);
+    if (!current) throw new Error("Article not found.");
+
+    const existing = current.imageAssets ?? {};
+    await ctx.db.patch(id, {
+      imageAssets: {
+        ...existing,
+        [section]: asset,
+      },
+      modifiedAt: new Date().toISOString(),
+      updatedBy: admin.email,
+    });
+
+    return { ok: true as const };
   },
 });
 

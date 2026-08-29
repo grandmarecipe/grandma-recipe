@@ -8,6 +8,9 @@ import type { Id } from "../../../convex/_generated/dataModel";
 import { useAdminAuth } from "./AdminProviders";
 import { RichTextEditor } from "./RichTextEditor";
 import { ArticlePreview } from "./ArticlePreview";
+import { ArticleImagePromptsPanel } from "./ArticleImagePromptsPanel";
+import type { ImageAssetRecord, ImagePromptBundle, ImagePromptSection } from "@/lib/image-prompt-types";
+import { insertRecipeImageIntoArticle, getRecipeSectionImageSrc } from "@/lib/article-image-insert";
 
 const CATEGORIES = [
   "breakfast",
@@ -104,14 +107,21 @@ export function ArticleEditor({ articleId }: Props) {
   const [saving, setSaving] = useState(false);
   const [ready, setReady] = useState(!articleId);
   const [previewOpen, setPreviewOpen] = useState(false);
+  const [editorTab, setEditorTab] = useState<"edit" | "image-prompts">("edit");
+  const [loadedArticleId, setLoadedArticleId] = useState<Id<"articles"> | null>(
+    null,
+  );
 
   useEffect(() => {
     if (!articleId) {
       setForm(emptyForm());
       setReady(true);
+      setLoadedArticleId(null);
       return;
     }
     if (!existing) return;
+    if (loadedArticleId === articleId) return;
+
     setForm({
       slug: existing.slug,
       title: existing.title,
@@ -140,7 +150,8 @@ export function ArticleEditor({ articleId }: Props) {
       publishedAt: existing.publishedAt.slice(0, 10),
     });
     setReady(true);
-  }, [articleId, existing]);
+    setLoadedArticleId(articleId);
+  }, [articleId, existing, loadedArticleId]);
 
   if (articleId && existing === undefined) {
     return <p className="text-sm text-[#6b5b4f]">Loading article…</p>;
@@ -219,58 +230,137 @@ export function ArticleEditor({ articleId }: Props) {
     }
   }
 
+  function buildSavePayload(
+    state: ArticleFormState,
+    status?: "draft" | "published",
+  ) {
+    return {
+      token: token!,
+      slug: state.slug,
+      title: state.title,
+      excerpt: state.excerpt,
+      category: state.category,
+      categories:
+        state.categories.length > 0 ? state.categories : [state.category],
+      contentHtml: state.contentHtml,
+      ingredients: linesToList(state.ingredientsText),
+      instructions: linesToList(state.instructionsText),
+      featuredImage: state.featuredImage || undefined,
+      featuredImageAlt: state.featuredImageAlt || undefined,
+      featuredImageCaption: state.featuredImageCaption || undefined,
+      featuredImageDescription: state.featuredImageDescription || undefined,
+      featuredImageStorageId: state.featuredImageStorageId,
+      seoTitle: state.seoTitle || undefined,
+      seoDescription: state.seoDescription || undefined,
+      focusKeyword: state.focusKeyword || undefined,
+      prepTime: state.prepTime || undefined,
+      cookTime: state.cookTime || undefined,
+      totalTime: state.totalTime || undefined,
+      servings: state.servings || undefined,
+      calories: state.calories || undefined,
+      cuisine: state.cuisine || undefined,
+      course: state.course || undefined,
+      status: status ?? state.status,
+      publishedAt: state.publishedAt
+        ? new Date(state.publishedAt).toISOString()
+        : undefined,
+    };
+  }
+
+  async function persistForm(
+    state: ArticleFormState,
+    status?: "draft" | "published",
+  ) {
+    if (!token) throw new Error("Not signed in.");
+    const payload = buildSavePayload(state, status);
+
+    if (articleId) {
+      const result = await updateArticle({ id: articleId, ...payload });
+      return { id: articleId, slug: result.slug, status: payload.status };
+    }
+
+    const result = await createArticle(payload);
+    router.replace(`/admin/articles/${result.id}/`);
+    return { id: result.id, slug: result.slug, status: payload.status };
+  }
+
   async function save(status?: "draft" | "published") {
     if (!token) return;
     setSaving(true);
     setError(null);
     setMessage(null);
     try {
-      const payload = {
-        token,
-        slug: current.slug,
-        title: current.title,
-        excerpt: current.excerpt,
-        category: current.category,
-        categories:
-          current.categories.length > 0
-            ? current.categories
-            : [current.category],
-        contentHtml: current.contentHtml,
-        ingredients: linesToList(current.ingredientsText),
-        instructions: linesToList(current.instructionsText),
-        featuredImage: current.featuredImage || undefined,
-        featuredImageAlt: current.featuredImageAlt || undefined,
-        featuredImageCaption: current.featuredImageCaption || undefined,
-        featuredImageDescription:
-          current.featuredImageDescription || undefined,
-        featuredImageStorageId: current.featuredImageStorageId,
-        seoTitle: current.seoTitle || undefined,
-        seoDescription: current.seoDescription || undefined,
-        focusKeyword: current.focusKeyword || undefined,
-        prepTime: current.prepTime || undefined,
-        cookTime: current.cookTime || undefined,
-        totalTime: current.totalTime || undefined,
-        servings: current.servings || undefined,
-        calories: current.calories || undefined,
-        cuisine: current.cuisine || undefined,
-        course: current.course || undefined,
-        status: status ?? current.status,
-        publishedAt: current.publishedAt
-          ? new Date(current.publishedAt).toISOString()
-          : undefined,
-      };
-
-      if (articleId) {
-        const result = await updateArticle({ id: articleId, ...payload });
-        setMessage(`Saved "${result.slug}" as ${payload.status}.`);
-        patch("status", payload.status);
-      } else {
-        const result = await createArticle(payload);
-        setMessage(`Created "${result.slug}".`);
-        router.replace(`/admin/articles/${result.id}/`);
-      }
+      const result = await persistForm(form, status);
+      setMessage(`Saved "${result.slug}" as ${result.status}.`);
+      patch("status", result.status);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Save failed.");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function insertImageIntoArticle(
+    section: ImagePromptSection,
+    asset: ImageAssetRecord,
+  ) {
+    if (!token) {
+      setError("Sign in to insert images.");
+      return;
+    }
+    if (!articleId) {
+      setError("Save the article first, then insert images.");
+      return;
+    }
+
+    setSaving(true);
+    setError(null);
+    setMessage(null);
+
+    try {
+      const previousSrc =
+        section === "feature"
+          ? form.featuredImage || undefined
+          : getRecipeSectionImageSrc(form.contentHtml, section);
+
+      let nextForm: ArticleFormState;
+
+      if (section === "feature") {
+        nextForm = {
+          ...form,
+          featuredImage: asset.publicPath,
+          featuredImageAlt: asset.alt,
+          featuredImageCaption: asset.caption,
+          featuredImageDescription: asset.description,
+          featuredImageStorageId: undefined,
+          seoTitle: asset.title || form.seoTitle,
+        };
+      } else {
+        nextForm = {
+          ...form,
+          contentHtml: insertRecipeImageIntoArticle({
+            contentHtml: form.contentHtml,
+            section,
+            src: asset.publicPath,
+            alt: asset.alt,
+            caption: asset.caption,
+            previousSrc,
+            width: asset.width,
+            height: asset.height,
+          }),
+        };
+      }
+
+      setForm(nextForm);
+      const result = await persistForm(nextForm, form.status);
+      setMessage(
+        section === "feature"
+          ? `Featured image saved on "${result.slug}".`
+          : `${section.replace(/_/g, " ")} image inserted and saved on "${result.slug}".`,
+      );
+      setEditorTab("edit");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Insert failed.");
     } finally {
       setSaving(false);
     }
@@ -357,6 +447,63 @@ export function ArticleEditor({ articleId }: Props) {
         </p>
       ) : null}
 
+      <div className="flex flex-wrap gap-2 border-b border-[#e5d8c8] pb-3">
+        <button
+          type="button"
+          onClick={() => setEditorTab("edit")}
+          className={`rounded-full px-4 py-2 text-sm font-semibold ${
+            editorTab === "edit"
+              ? "bg-[#8b1a1a] text-white"
+              : "bg-white text-[#6b5b4f] ring-1 ring-[#e5d8c8]"
+          }`}
+        >
+          Edit article
+        </button>
+        <button
+          type="button"
+          onClick={() => setEditorTab("image-prompts")}
+          className={`rounded-full px-4 py-2 text-sm font-semibold ${
+            editorTab === "image-prompts"
+              ? "bg-[#8b1a1a] text-white"
+              : "bg-white text-[#6b5b4f] ring-1 ring-[#e5d8c8]"
+          }`}
+        >
+          Image prompts
+        </button>
+      </div>
+
+      {editorTab === "image-prompts" ? (
+        <ArticleImagePromptsPanel
+          articleId={articleId}
+          slug={current.slug}
+          savedPrompts={
+            existing?.imagePrompts as ImagePromptBundle | undefined
+          }
+          savedAssets={existing?.imageAssets ?? null}
+          article={{
+            title: current.title,
+            excerpt: current.excerpt,
+            focusKeyword: current.focusKeyword,
+            ingredientsText: current.ingredientsText,
+            instructionsText: current.instructionsText,
+            contentHtml: current.contentHtml,
+          }}
+          onApplyFeature={(meta) => {
+            setForm((prev) => ({
+              ...prev,
+              featuredImageAlt: meta.alt,
+              featuredImageCaption: meta.caption,
+              featuredImageDescription: meta.description,
+              seoTitle: meta.title || prev.seoTitle,
+            }));
+            setMessage(
+              "Applied selected feature metadata. Switch to Edit article to review.",
+            );
+            setEditorTab("edit");
+          }}
+          onInsertImage={(section, asset) => insertImageIntoArticle(section, asset)}
+        />
+      ) : (
       <section className="grid gap-6 lg:grid-cols-[1.4fr_0.8fr]">
         <div className="space-y-5">
           <Field label="Title">
@@ -576,6 +723,7 @@ export function ArticleEditor({ articleId }: Props) {
           </section>
         </aside>
       </section>
+      )}
     </div>
   );
 }

@@ -26,9 +26,10 @@ export function CategoryCircle({
           <Image
             src={image}
             alt={category.name}
-            fill
+            width={144}
+            height={144}
             priority={priority}
-            className="object-cover transition duration-500 group-hover:scale-110"
+            className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
             sizes="(max-width: 640px) 112px, 144px"
           />
         ) : (

@@ -168,10 +168,15 @@ a {
 
 .prose-recipe img {
   display: block;
-  max-width: 100%;
+  max-width: min(100%, 42rem);
   height: auto;
   margin: 1.5rem auto;
   border-radius: 1rem;
+}
+
+.prose-recipe figure.size-large img,
+.prose-recipe figure.size-full img {
+  max-width: min(100%, 42rem);
 }
 
 .prose-recipe figure {

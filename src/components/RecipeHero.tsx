@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { preload } from "react-dom";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContentImage } from "@/components/ContentImage";
 import { formatRecipeDate, sameCalendarDay } from "@/lib/dates";
 import type { RecipeRatingAggregate } from "@/lib/ratings";
 import type { Recipe } from "@/lib/types";
+import { HERO_IMAGE_SIZES } from "@/lib/hero-image";
 import { CATEGORIES, SITE } from "@/lib/types";
 import Image from "next/image";
 
@@ -14,10 +14,6 @@ interface RecipeHeroProps {
 }
 
 export function RecipeHero({ recipe, rating }: RecipeHeroProps) {
-  if (recipe.featuredImage) {
-    preload(recipe.featuredImage, { as: "image", fetchPriority: "high" });
-  }
-
   const category = CATEGORIES.find((item) => item.slug === recipe.category);
   const published = formatRecipeDate(recipe.publishedAt);
   const updated = formatRecipeDate(recipe.modifiedAt);
@@ -118,10 +114,11 @@ export function RecipeHero({ recipe, rating }: RecipeHeroProps) {
               src={recipe.featuredImage}
               alt={recipe.featuredImageAlt || recipe.title}
               fill
+              optimize
               priority
               fetchPriority="high"
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 560px"
+              sizes={HERO_IMAGE_SIZES}
             />
           </div>
         )}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { preload } from "react-dom";
 import { JsonLd } from "@/components/JsonLd";
 import { LegalPage } from "@/components/LegalPage";
 import { RecipeBody } from "@/components/RecipeBody";
@@ -12,6 +13,7 @@ import {
   resolveSlug,
 } from "@/lib/content";
 import { getRecipeBySlugResolved } from "@/lib/cms-content";
+import { getHeroImagePreloadHref } from "@/lib/hero-image";
 import { buildRecipePageJsonLd, buildWebPageJsonLd, resolveMetadataTitle, resolveSeoDescription } from "@/lib/seo";
 import { isLegalPage, prepareLegalPageHtml } from "@/lib/legal-pages";
 import { STATIC_PAGE_SEO, buildPageMetadata, buildSocialMetadata } from "@/lib/page-seo";
@@ -53,6 +55,14 @@ export async function generateMetadata({
     const title = resolveMetadataTitle(recipe.seoTitle, recipe.title);
     const description = resolveSeoDescription(recipe);
     const pageUrl = `${SITE.url}/${slug}/`;
+
+    if (recipe.featuredImage) {
+      preload(getHeroImagePreloadHref(recipe.featuredImage), {
+        as: "image",
+        fetchPriority: "high",
+      });
+    }
+
     return {
       title,
       description,

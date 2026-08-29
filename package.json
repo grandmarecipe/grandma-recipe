@@ -12,7 +12,8 @@
     "backfill:recipe-meta": "tsx scripts/backfill-recipe-meta.ts",
     "seed:convex-ugc": "tsx scripts/seed-convex-ugc.ts",
     "migrate:media": "tsx scripts/migrate-media.ts",
-    "migrate:r2": "tsx scripts/migrate-media-to-r2.ts"
+    "migrate:r2": "tsx scripts/migrate-media-to-r2.ts",
+    "resize:r2": "tsx scripts/resize-r2-images.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1118.0",
@@ -25,7 +26,8 @@
     "convex": "^1.44.0",
     "next": "^15.5.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "sharp": "^0.35.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.0",

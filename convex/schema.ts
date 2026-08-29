@@ -10,6 +10,53 @@ const categorySlug = v.union(
   v.literal("dessert"),
 );
 
+const featureImagePromptResult = v.object({
+  prompt: v.string(),
+  alt_text_1: v.string(),
+  title_1: v.string(),
+  caption_1: v.string(),
+  description_1: v.string(),
+  alt_text_2: v.string(),
+  title_2: v.string(),
+  caption_2: v.string(),
+  description_2: v.string(),
+});
+
+const sectionImagePromptResult = v.object({
+  prompt: v.string(),
+  alt_text: v.string(),
+  title: v.string(),
+  caption: v.string(),
+  description: v.string(),
+});
+
+const imagePromptBundle = v.object({
+  focusKeyword: v.string(),
+  feature: v.optional(featureImagePromptResult),
+  ingredients: v.optional(sectionImagePromptResult),
+  how_to_make: v.optional(sectionImagePromptResult),
+  how_to_serve: v.optional(sectionImagePromptResult),
+});
+
+const imageAssetRecord = v.object({
+  publicPath: v.string(),
+  r2Key: v.string(),
+  alt: v.string(),
+  title: v.string(),
+  caption: v.string(),
+  description: v.string(),
+  uploadedAt: v.string(),
+  width: v.optional(v.number()),
+  height: v.optional(v.number()),
+});
+
+const imageAssetsBundle = v.object({
+  feature: v.optional(imageAssetRecord),
+  ingredients: v.optional(imageAssetRecord),
+  how_to_make: v.optional(imageAssetRecord),
+  how_to_serve: v.optional(imageAssetRecord),
+});
+
 export default defineSchema({
   recipeRatings: defineTable({
     slug: v.string(),
@@ -73,6 +120,8 @@ export default defineSchema({
     publishedAt: v.string(),
     modifiedAt: v.string(),
     updatedBy: v.optional(v.string()),
+    imagePrompts: v.optional(imagePromptBundle),
+    imageAssets: v.optional(imageAssetsBundle),
   })
     .index("by_slug", ["slug"])
     .index("by_status", ["status"])
