@@ -2,12 +2,12 @@ import type { ImagePromptSection } from "./image-prompt-types";
 
 export type RecipeImageSection = ImagePromptSection;
 
-/** Max pixel width when uploading — keeps files small for LCP / lazy body images. */
+/** Max pixel width when uploading — keeps files small for in-article lazy-loaded images. */
 export const RECIPE_IMAGE_MAX_WIDTH: Record<RecipeImageSection, number> = {
   feature: 1200,
-  ingredients: 800,
-  how_to_make: 800,
-  how_to_serve: 800,
+  ingredients: 400,
+  how_to_make: 400,
+  how_to_serve: 400,
 };
 
 export const RECIPE_IMAGE_WEBP_QUALITY: Record<RecipeImageSection, number> = {

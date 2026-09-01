@@ -168,7 +168,7 @@ a {
 
 .prose-recipe img {
   display: block;
-  max-width: min(100%, 42rem);
+  max-width: min(100%, 25rem);
   height: auto;
   margin: 1.5rem auto;
   border-radius: 1rem;
@@ -176,7 +176,7 @@ a {
 
 .prose-recipe figure.size-large img,
 .prose-recipe figure.size-full img {
-  max-width: min(100%, 42rem);
+  max-width: min(100%, 25rem);
 }
 
 .prose-recipe figure {
