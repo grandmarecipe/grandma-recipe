@@ -13,7 +13,8 @@
     "seed:convex-ugc": "tsx scripts/seed-convex-ugc.ts",
     "migrate:media": "tsx scripts/migrate-media.ts",
     "migrate:r2": "tsx scripts/migrate-media-to-r2.ts",
-    "resize:r2": "tsx scripts/resize-r2-images.ts"
+    "resize:r2": "tsx scripts/resize-r2-images.ts",
+    "sync:cms-prod": "tsx scripts/sync-cms-dev-to-prod.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1118.0",

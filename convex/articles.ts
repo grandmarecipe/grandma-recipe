@@ -682,6 +682,186 @@ export const resolveStorageUrl = mutation({
   },
 });
 
+async function authorizeImportOrAdmin(
+  ctx: MutationCtx | QueryCtx,
+  token: string | undefined,
+  secret: string | undefined,
+) {
+  const importSecret = process.env.CMS_IMPORT_SECRET;
+  const secretOk =
+    Boolean(importSecret) && Boolean(secret) && secret === importSecret;
+  if (secretOk) return { email: "import-script" as const };
+  const admin = await requireAdmin(ctx, token);
+  return { email: admin.email };
+}
+
+const syncArticlePayload = v.object({
+  slug: v.string(),
+  title: v.string(),
+  excerpt: v.string(),
+  category: categorySlug,
+  categories: v.array(categorySlug),
+  contentHtml: v.string(),
+  ingredients: v.array(v.string()),
+  instructions: v.array(v.string()),
+  featuredImage: v.optional(v.string()),
+  featuredImageAlt: v.optional(v.string()),
+  featuredImageCaption: v.optional(v.string()),
+  featuredImageDescription: v.optional(v.string()),
+  seoTitle: v.optional(v.string()),
+  seoDescription: v.optional(v.string()),
+  focusKeyword: v.optional(v.string()),
+  prepTime: v.optional(v.string()),
+  cookTime: v.optional(v.string()),
+  totalTime: v.optional(v.string()),
+  servings: v.optional(v.string()),
+  calories: v.optional(v.string()),
+  cuisine: v.optional(v.string()),
+  course: v.optional(v.string()),
+  status: v.union(v.literal("draft"), v.literal("published")),
+  publishedAt: v.string(),
+  modifiedAt: v.string(),
+  imagePrompts: v.optional(imagePromptBundle),
+  imageAssets: v.optional(imageAssetsBundle),
+});
+
+/** List CMS article ids for dev→prod sync (lightweight). */
+export const listIdsForSync = query({
+  args: {
+    token: v.optional(v.string()),
+    secret: v.optional(v.string()),
+  },
+  handler: async (ctx, { token, secret }) => {
+    await authorizeImportOrAdmin(ctx, token, secret);
+    const rows = await ctx.db.query("articles").collect();
+    return rows.map((row) => ({
+      id: row._id,
+      slug: row.slug,
+      status: row.status,
+      title: row.title,
+    }));
+  },
+});
+
+/** Export one CMS article with body — for dev→prod sync scripts. */
+export const exportOneForSync = query({
+  args: {
+    token: v.optional(v.string()),
+    secret: v.optional(v.string()),
+    id: v.id("articles"),
+  },
+  handler: async (ctx, { token, secret, id }) => {
+    await authorizeImportOrAdmin(ctx, token, secret);
+    const row = await ctx.db.get(id);
+    const full = await withBody(ctx, row);
+    if (!full) return null;
+    return {
+      slug: full.slug,
+      title: full.title,
+      excerpt: full.excerpt,
+      category: full.category,
+      categories: full.categories,
+      contentHtml: full.contentHtml,
+      ingredients: full.ingredients,
+      instructions: full.instructions,
+      featuredImage: full.featuredImage,
+      featuredImageAlt: full.featuredImageAlt,
+      featuredImageCaption: full.featuredImageCaption,
+      featuredImageDescription: full.featuredImageDescription,
+      seoTitle: full.seoTitle,
+      seoDescription: full.seoDescription,
+      focusKeyword: full.focusKeyword,
+      prepTime: full.prepTime,
+      cookTime: full.cookTime,
+      totalTime: full.totalTime,
+      servings: full.servings,
+      calories: full.calories,
+      cuisine: full.cuisine,
+      course: full.course,
+      status: full.status,
+      publishedAt: full.publishedAt,
+      modifiedAt: full.modifiedAt,
+      imagePrompts: full.imagePrompts,
+      imageAssets: full.imageAssets,
+    };
+  },
+});
+
+/** Full upsert for dev→prod CMS sync (overwrites existing slug). */
+export const syncArticleFull = mutation({
+  args: {
+    token: v.optional(v.string()),
+    secret: v.optional(v.string()),
+    article: syncArticlePayload,
+  },
+  handler: async (ctx, { token, secret, article }) => {
+    const actor = await authorizeImportOrAdmin(ctx, token, secret);
+    const slug = slugify(article.slug || article.title);
+    if (!slug) throw new Error("Slug is required.");
+
+    const categories =
+      article.categories.length > 0 ? article.categories : [article.category];
+
+    const payload = {
+      slug,
+      title: article.title.trim(),
+      excerpt: article.excerpt.trim(),
+      category: article.category,
+      categories,
+      contentHtml: "",
+      ingredients: [] as string[],
+      instructions: [] as string[],
+      featuredImage: cleanOptional(article.featuredImage),
+      featuredImageAlt: cleanOptional(article.featuredImageAlt),
+      featuredImageCaption: cleanOptional(article.featuredImageCaption),
+      featuredImageDescription: cleanOptional(article.featuredImageDescription),
+      seoTitle: cleanOptional(article.seoTitle),
+      seoDescription: cleanOptional(article.seoDescription),
+      focusKeyword: cleanOptional(article.focusKeyword),
+      prepTime: cleanOptional(article.prepTime),
+      cookTime: cleanOptional(article.cookTime),
+      totalTime: cleanOptional(article.totalTime),
+      servings: cleanOptional(article.servings),
+      calories: cleanOptional(article.calories),
+      cuisine: cleanOptional(article.cuisine),
+      course: cleanOptional(article.course),
+      status: article.status,
+      publishedAt: article.publishedAt.trim(),
+      modifiedAt: article.modifiedAt.trim(),
+      updatedBy: actor.email,
+      imagePrompts: article.imagePrompts,
+      imageAssets: article.imageAssets,
+    };
+
+    const existing = await ctx.db
+      .query("articles")
+      .withIndex("by_slug", (q) => q.eq("slug", slug))
+      .unique();
+
+    let id: Id<"articles">;
+    let action: "insert" | "update";
+
+    if (existing) {
+      await ctx.db.patch(existing._id, payload);
+      id = existing._id;
+      action = "update";
+    } else {
+      id = await ctx.db.insert("articles", payload);
+      action = "insert";
+    }
+
+    await upsertBody(
+      ctx,
+      id,
+      article.contentHtml,
+      article.ingredients.map((item) => item.trim()).filter(Boolean),
+      article.instructions.map((item) => item.trim()).filter(Boolean),
+    );
+
+    return { action, id, slug };
+  },
+});
+
 /**
  * Import one filesystem/WP recipe into the CMS as published.
  * Auth: admin token, or CMS_IMPORT_SECRET (Convex env) for bulk scripts.
