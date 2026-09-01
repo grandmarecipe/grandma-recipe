@@ -24,7 +24,23 @@ export function RecipeHero({ recipe, rating }: RecipeHeroProps) {
   return (
     <section className="no-print border-b border-border bg-[linear-gradient(180deg,#fffdf9_0%,#f8f2ea_100%)]">
       <div className="mx-auto grid max-w-6xl gap-6 px-4 py-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-8">
-        <div className="order-1 lg:col-start-1 lg:row-start-1">
+        {recipe.featuredImage && (
+          <div className="relative order-1 aspect-[4/3] overflow-hidden rounded-3xl bg-[#f3e8dc] shadow-xl lg:col-start-2 lg:row-span-2 lg:row-start-1">
+            <ContentImage
+              src={recipe.featuredImage}
+              alt={recipe.featuredImageAlt || recipe.title}
+              fill
+              optimize
+              priority
+              fetchPriority="high"
+              quality={75}
+              className="object-cover"
+              sizes={HERO_IMAGE_SIZES}
+            />
+          </div>
+        )}
+
+        <div className="order-2 lg:col-start-1 lg:row-start-1">
           <Breadcrumbs
             className="mb-4"
             items={[
@@ -107,21 +123,6 @@ export function RecipeHero({ recipe, rating }: RecipeHeroProps) {
             </p>
           )}
         </div>
-
-        {recipe.featuredImage && (
-          <div className="relative order-2 aspect-[4/3] overflow-hidden rounded-3xl bg-[#f3e8dc] shadow-xl lg:col-start-2 lg:row-span-2 lg:row-start-1">
-            <ContentImage
-              src={recipe.featuredImage}
-              alt={recipe.featuredImageAlt || recipe.title}
-              fill
-              optimize
-              priority
-              fetchPriority="high"
-              className="object-cover"
-              sizes={HERO_IMAGE_SIZES}
-            />
-          </div>
-        )}
 
         <div className="order-3 lg:col-start-1 lg:row-start-2">
           <p className="max-w-2xl text-xl leading-relaxed text-muted">

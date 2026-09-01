@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ContentImage } from "@/components/ContentImage";
 import type { CategoryInfo } from "@/lib/types";
 
 interface CategoryCircleProps {
@@ -23,12 +23,14 @@ export function CategoryCircle({
     >
       <div className="relative h-28 w-28 overflow-hidden rounded-full border-4 border-white shadow-lg ring-2 ring-[#d9c4a8] sm:h-36 sm:w-36">
         {image ? (
-          <Image
+          <ContentImage
             src={image}
             alt={category.name}
             width={144}
             height={144}
+            optimize
             priority={priority}
+            fetchPriority={priority ? "high" : undefined}
             className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
             sizes="(max-width: 640px) 112px, 144px"
           />
