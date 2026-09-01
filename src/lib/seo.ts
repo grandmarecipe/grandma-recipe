@@ -176,6 +176,16 @@ export function buildFaqJsonLd(faqs: FaqItem[], pageUrl: string) {
   });
 }
 
+function buildHowToStepName(index: number, text: string): string {
+  const trimmed = text.trim();
+  const labeled = trimmed.match(/^step\s+\d+\s*[:\-.]?\s*/i);
+  if (labeled) {
+    const rest = trimmed.slice(labeled[0].length).trim();
+    if (rest.length > 0 && rest.length <= 80) return rest;
+  }
+  return `Step ${index + 1}`;
+}
+
 function buildCommentFields(
   comments: RecipeComment[] | undefined,
   pageUrl: string,
@@ -308,6 +318,7 @@ function buildRecipeEntity(
     recipeInstructions: recipe.instructions.map((text, index) => ({
       "@type": "HowToStep",
       position: index + 1,
+      name: buildHowToStepName(index, text),
       text,
       url: `${pageUrl}#step-${index + 1}`,
     })),
