@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Suspense } from "react";
 import { AdSenseConsent } from "@/components/AdSenseConsent";
 import { AdSenseLoader } from "@/components/AdSenseLoader";
 import { CookieConsent } from "@/components/CookieConsent";
+import { GoogleTagManager } from "@/components/GoogleTagManager";
+import { GtmPageView } from "@/components/GtmPageView";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileBottomNav } from "@/components/MobileBottomNav";
@@ -72,6 +75,10 @@ export default function RootLayout({
           `}
         </Script>
         <AdSenseConsent />
+        <GoogleTagManager />
+        <Suspense fallback={null}>
+          <GtmPageView />
+        </Suspense>
         <AdSenseLoader />
         <JsonLd
           data={{
