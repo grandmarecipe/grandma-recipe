@@ -7,6 +7,7 @@ import {
   slugifyTitle,
   stripEmDashes,
 } from "@/lib/article-generate-prompts";
+import { getRecipeBySlug } from "@/lib/content";
 import {
   buildRecipeEquipmentBlock,
   parseEquipmentItems,
@@ -127,6 +128,46 @@ export async function POST(request: NextRequest) {
         { error: "Primary keyword is required." },
         { status: 400 },
       );
+    }
+
+    if (body.mode !== "paste" && body.primaryKeyword?.trim()) {
+      const existing = await convex.query(api.articles.findExistingForGenerate, {
+        token: body.token,
+        input: body.primaryKeyword,
+      });
+      if (existing) {
+        const label =
+          existing.matchType === "slug" ? "URL slug" : "Primary keyword";
+        return NextResponse.json(
+          {
+            error: `${label} already used by “${existing.title}” (/${existing.slug}/). Open it in Admin → Articles instead of generating a duplicate.`,
+            existing: {
+              id: existing._id,
+              slug: existing.slug,
+              title: existing.title,
+              status: existing.status,
+              matchType: existing.matchType,
+            },
+          },
+          { status: 409 },
+        );
+      }
+
+      const fileSlug = slugifyTitle(body.primaryKeyword);
+      const fileRecipe = fileSlug ? getRecipeBySlug(fileSlug) : null;
+      if (fileRecipe) {
+        return NextResponse.json(
+          {
+            error: `A live recipe already exists at /${fileRecipe.slug}/ (“${fileRecipe.title}”). Import or edit it in the CMS instead of generating a duplicate.`,
+            existing: {
+              slug: fileRecipe.slug,
+              title: fileRecipe.title,
+              source: "file",
+            },
+          },
+          { status: 409 },
+        );
+      }
     }
 
     const input: GenerateArticleInput = {

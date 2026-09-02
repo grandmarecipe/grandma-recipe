@@ -1,15 +1,26 @@
 "use client";
 
-import { FormEvent, useDeferredValue, useState } from "react";
+import { FormEvent, useDeferredValue, useEffect, useState } from "react";
 import { useConvex, useMutation, useQuery } from "convex/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { api } from "../../../convex/_generated/api";
+import type { Id } from "../../../convex/_generated/dataModel";
 import { useAdminAuth } from "./AdminProviders";
 import type {
   GenerateMode,
   GeneratedArticle,
 } from "@/lib/article-generate-types";
+
+type GenerateConflict = {
+  exists: true;
+  source: "cms" | "file";
+  matchType: "slug" | "keyword";
+  slug: string;
+  title: string;
+  status?: "draft" | "published";
+  cmsId?: Id<"articles">;
+};
 
 function formatClientError(err: unknown): string {
   if (err instanceof Error) {
@@ -39,22 +50,91 @@ export function GenerateArticleForm() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<string | null>(null);
+  const [fileConflict, setFileConflict] = useState<GenerateConflict | null>(
+    null,
+  );
 
   const deferredKeyword = useDeferredValue(primaryKeyword.trim());
-  const existingKeyword = useQuery(
-    api.articles.findByFocusKeyword,
-    token && deferredKeyword.length >= 2
-      ? { token, keyword: deferredKeyword }
+  const existingCms = useQuery(
+    api.articles.findExistingForGenerate,
+    token && deferredKeyword.length >= 2 && mode !== "paste"
+      ? { token, input: deferredKeyword }
       : "skip",
   );
-  const keywordAlreadyUsed = Boolean(existingKeyword);
+
+  useEffect(() => {
+    if (
+      !token ||
+      mode === "paste" ||
+      deferredKeyword.length < 2 ||
+      existingCms !== null
+    ) {
+      setFileConflict(null);
+      return;
+    }
+
+    if (existingCms === undefined) return;
+
+    const controller = new AbortController();
+    const timer = window.setTimeout(async () => {
+      try {
+        const params = new URLSearchParams({
+          token,
+          q: deferredKeyword,
+        });
+        const response = await fetch(
+          `/api/admin/recipe-slug-check/?${params.toString()}`,
+          { signal: controller.signal },
+        );
+        if (!response.ok) return;
+        const payload = (await response.json()) as
+          | { exists: false }
+          | GenerateConflict;
+        if (payload.exists && payload.source === "file") {
+          setFileConflict(payload);
+        } else {
+          setFileConflict(null);
+        }
+      } catch {
+        /* ignore aborted / network */
+      }
+    }, 250);
+
+    return () => {
+      controller.abort();
+      window.clearTimeout(timer);
+    };
+  }, [token, deferredKeyword, existingCms, mode]);
+
+  const conflict: GenerateConflict | null = existingCms
+    ? {
+        exists: true,
+        source: "cms",
+        matchType: existingCms.matchType,
+        slug: existingCms.slug,
+        title: existingCms.title,
+        status: existingCms.status,
+        cmsId: existingCms._id,
+      }
+    : fileConflict;
+
+  const keywordAlreadyUsed = Boolean(conflict);
 
   async function onSubmit(event: FormEvent) {
     event.preventDefault();
     if (!token) return;
-    if (keywordAlreadyUsed && existingKeyword) {
+    if (conflict) {
+      if (conflict.source === "cms" && conflict.cmsId) {
+        setError(
+          conflict.matchType === "slug"
+            ? `URL slug /${conflict.slug}/ is already used by “${conflict.title}”. Opening the existing article.`
+            : `Primary keyword already used by “${conflict.title}”. Opening the existing article.`,
+        );
+        router.push(`/admin/articles/${conflict.cmsId}/`);
+        return;
+      }
       setError(
-        `Primary keyword already used by “${existingKeyword.title}”. Pick a different keyword.`,
+        `A live recipe already exists at /${conflict.slug}/ (“${conflict.title}”). Generate a new keyword or edit the existing recipe.`,
       );
       return;
     }
@@ -80,7 +160,14 @@ export function GenerateArticleForm() {
       const payload = (await response.json()) as {
         article?: GeneratedArticle;
         error?: string;
+        existing?: { id?: Id<"articles">; slug: string; title: string };
       };
+
+      if (response.status === 409 && payload.existing?.id) {
+        setError(payload.error || "This recipe already exists in the CMS.");
+        router.push(`/admin/articles/${payload.existing.id}/`);
+        return;
+      }
 
       if (!response.ok || !payload.article) {
         throw new Error(payload.error || "Generation failed.");
@@ -96,7 +183,7 @@ export function GenerateArticleForm() {
       if (existingSlug) {
         setStatus(null);
         setError(
-          `“${existingSlug.title}” already exists in the CMS (synced from dev or a previous import). Opening the editor instead of creating a duplicate.`,
+          `“${existingSlug.title}” already exists in the CMS. Opening the editor instead of creating a duplicate.`,
         );
         router.push(`/admin/articles/${existingSlug._id}/`);
         return;
@@ -181,28 +268,55 @@ export function GenerateArticleForm() {
             }`}
             value={primaryKeyword}
             onChange={(event) => setPrimaryKeyword(event.target.value)}
-            placeholder="mini doughnut hot buttered cheerios"
+            placeholder="chocolate peanut butter no bake cookies"
             required={mode !== "paste"}
             aria-invalid={keywordAlreadyUsed}
           />
-          {keywordAlreadyUsed && existingKeyword ? (
+          {keywordAlreadyUsed && conflict ? (
             <p className="mt-2 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-900">
-              This primary keyword is already used by{" "}
-              <Link
-                href={`/admin/articles/${existingKeyword._id}/`}
-                className="font-semibold underline"
-              >
-                {existingKeyword.title}
-              </Link>{" "}
-              ({existingKeyword.status}
-              {existingKeyword.focusKeyword
-                ? ` · “${existingKeyword.focusKeyword}”`
-                : ""}
-              ). Choose a different keyword to avoid duplicates.
+              {conflict.matchType === "slug" ? (
+                <>
+                  URL slug{" "}
+                  <span className="font-mono text-xs">/{conflict.slug}/</span>{" "}
+                  already exists
+                </>
+              ) : (
+                <>Primary keyword already used</>
+              )}{" "}
+              by{" "}
+              {conflict.source === "cms" && conflict.cmsId ? (
+                <Link
+                  href={`/admin/articles/${conflict.cmsId}/`}
+                  className="font-semibold underline"
+                >
+                  {conflict.title}
+                </Link>
+              ) : (
+                <Link
+                  href={`/${conflict.slug}/`}
+                  className="font-semibold underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {conflict.title}
+                </Link>
+              )}
+              {conflict.status ? (
+                <>
+                  {" "}
+                  ({conflict.status}
+                  {conflict.source === "cms" ? " in CMS" : " on live site"})
+                </>
+              ) : (
+                <> (live site recipe)</>
+              )}
+              . Choose a different keyword or open the existing article.
             </p>
           ) : deferredKeyword.length >= 2 &&
-            existingKeyword === null &&
-            deferredKeyword === primaryKeyword.trim() ? (
+            existingCms === null &&
+            !fileConflict &&
+            deferredKeyword === primaryKeyword.trim() &&
+            mode !== "paste" ? (
             <p className="mt-1.5 text-xs text-[#5a822b]">
               Keyword looks available.
             </p>
@@ -275,17 +389,27 @@ stabilized whipped cream
         </p>
       ) : null}
 
-      <button
-        type="submit"
-        disabled={busy || keywordAlreadyUsed}
-        className="rounded-full bg-[#5a822b] px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-60"
-      >
-        {busy
-          ? "Generating…"
-          : keywordAlreadyUsed
-            ? "Keyword already used"
-            : "Generate draft article"}
-      </button>
+      <div className="flex flex-wrap gap-3">
+        <button
+          type="submit"
+          disabled={busy || keywordAlreadyUsed}
+          className="rounded-full bg-[#5a822b] px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-60"
+        >
+          {busy
+            ? "Generating…"
+            : keywordAlreadyUsed
+              ? "Recipe already exists"
+              : "Generate draft article"}
+        </button>
+        {keywordAlreadyUsed && conflict?.source === "cms" && conflict.cmsId ? (
+          <Link
+            href={`/admin/articles/${conflict.cmsId}/`}
+            className="rounded-full border border-[#d4a574] px-5 py-2.5 text-sm font-semibold text-[#b8860b]"
+          >
+            Open existing article
+          </Link>
+        ) : null}
+      </div>
     </form>
   );
 }

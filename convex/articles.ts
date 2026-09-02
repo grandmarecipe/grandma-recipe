@@ -316,6 +316,57 @@ export const get = query({
   },
 });
 
+/** CMS duplicate check for Generate — matches slug or primary keyword. */
+export const findExistingForGenerate = query({
+  args: {
+    token: v.string(),
+    input: v.string(),
+  },
+  handler: async (ctx, { token, input }) => {
+    await requireAdmin(ctx, token);
+    const trimmed = input.trim();
+    if (trimmed.length < 2) return null;
+
+    const slugCandidate = slugify(trimmed);
+    if (slugCandidate) {
+      const bySlug = await ctx.db
+        .query("articles")
+        .withIndex("by_slug", (q) => q.eq("slug", slugCandidate))
+        .unique();
+      if (bySlug) {
+        return {
+          _id: bySlug._id,
+          slug: bySlug.slug,
+          title: bySlug.title,
+          status: bySlug.status,
+          focusKeyword: bySlug.focusKeyword,
+          matchType: "slug" as const,
+        };
+      }
+    }
+
+    const needle = normalizeFocusKeyword(trimmed);
+    if (!needle) return null;
+
+    const rows = await ctx.db.query("articles").collect();
+    const byKeyword = rows.find(
+      (row) =>
+        row.focusKeyword &&
+        normalizeFocusKeyword(row.focusKeyword) === needle,
+    );
+    if (!byKeyword) return null;
+
+    return {
+      _id: byKeyword._id,
+      slug: byKeyword.slug,
+      title: byKeyword.title,
+      status: byKeyword.status,
+      focusKeyword: byKeyword.focusKeyword,
+      matchType: "keyword" as const,
+    };
+  },
+});
+
 /** Find an existing article using the same primary keyword (case/spacing-insensitive). */
 export const findByFocusKeyword = query({
   args: {
