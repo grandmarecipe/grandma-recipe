@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useDeferredValue, useState } from "react";
-import { useMutation, useQuery } from "convex/react";
+import { useConvex, useMutation, useQuery } from "convex/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { api } from "../../../convex/_generated/api";
@@ -11,9 +11,24 @@ import type {
   GeneratedArticle,
 } from "@/lib/article-generate-types";
 
+function formatClientError(err: unknown): string {
+  if (err instanceof Error) {
+    const message = err.message.trim();
+    if (message.includes("Slug") && message.includes("already exists")) {
+      return message;
+    }
+    if (message.includes("Server Error")) {
+      return "Convex server error — try again in a minute. If it persists, check Convex usage limits or open an existing article with this slug in Admin → Articles.";
+    }
+    return message || "Request failed.";
+  }
+  return "Request failed.";
+}
+
 export function GenerateArticleForm() {
   const { token } = useAdminAuth();
   const router = useRouter();
+  const convex = useConvex();
   const createArticle = useMutation(api.articles.create);
 
   const [mode, setMode] = useState<GenerateMode>("keyword");
@@ -73,6 +88,20 @@ export function GenerateArticleForm() {
 
       setStatus("Saving draft in CMS…");
       const article = payload.article;
+
+      const existingSlug = await convex.query(api.articles.getSlugMeta, {
+        token,
+        slug: article.slug,
+      });
+      if (existingSlug) {
+        setStatus(null);
+        setError(
+          `“${existingSlug.title}” already exists in the CMS (synced from dev or a previous import). Opening the editor instead of creating a duplicate.`,
+        );
+        router.push(`/admin/articles/${existingSlug._id}/`);
+        return;
+      }
+
       const created = await createArticle({
         token,
         slug: article.slug,
@@ -99,7 +128,7 @@ export function GenerateArticleForm() {
       setStatus("Draft ready — opening editor…");
       router.push(`/admin/articles/${created.id}/`);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Generation failed.");
+      setError(formatClientError(err));
       setStatus(null);
     } finally {
       setBusy(false);

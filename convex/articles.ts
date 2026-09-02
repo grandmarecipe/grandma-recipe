@@ -361,6 +361,30 @@ export const getBySlug = query({
   },
 });
 
+/** Lightweight slug check before create — avoids loading full body. */
+export const getSlugMeta = query({
+  args: {
+    token: v.string(),
+    slug: v.string(),
+  },
+  handler: async (ctx, { token, slug }) => {
+    await requireAdmin(ctx, token);
+    const normalized = slugify(slug);
+    if (!normalized) return null;
+    const row = await ctx.db
+      .query("articles")
+      .withIndex("by_slug", (q) => q.eq("slug", normalized))
+      .unique();
+    if (!row) return null;
+    return {
+      _id: row._id,
+      slug: row.slug,
+      title: row.title,
+      status: row.status,
+    };
+  },
+});
+
 /** Public: published CMS article by slug (no auth). */
 export const getPublishedBySlug = query({
   args: { slug: v.string() },
