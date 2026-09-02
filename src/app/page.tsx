@@ -72,13 +72,13 @@ export default function HomePage() {
             Browse Our Categories
           </h2>
           <div className="mt-10 flex flex-wrap justify-center gap-8 sm:gap-10">
-            {CATEGORIES.map((category) => (
+            {CATEGORIES.map((category, index) => (
               <CategoryCircle
                 key={category.slug}
                 category={category}
                 image={categoryImages[category.slug]}
                 overlayLabel
-                priority
+                priority={index < 3}
               />
             ))}
           </div>
