@@ -185,7 +185,9 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
-    formats: ["image/avif", "image/webp"],
+    // Hobby free tier: 5K Image Optimization Transformations / month.
+    // Recipe media is already WebP on R2 — skip Vercel transforms entirely.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",

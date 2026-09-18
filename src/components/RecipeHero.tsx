@@ -114,10 +114,8 @@ export function RecipeHero({ recipe, rating }: RecipeHeroProps) {
               src={recipe.featuredImage}
               alt={recipe.featuredImageAlt || recipe.title}
               fill
-              optimize
               priority
               fetchPriority="high"
-              quality={75}
               className="object-cover"
               sizes={HERO_IMAGE_SIZES}
             />

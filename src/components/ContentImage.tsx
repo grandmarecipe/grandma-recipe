@@ -1,29 +1,23 @@
 import Image, { type ImageProps } from "next/image";
 
 type ContentImageProps = ImageProps & {
-  /** Run through `/_next/image` (e.g. recipe hero LCP). */
+  /**
+   * @deprecated Ignored — Vercel Image Optimization is off site-wide
+   * (`images.unoptimized` in next.config) to stay under Hobby free limits.
+   */
   optimize?: boolean;
 };
 
 /**
- * Recipe media under /wp-content/ is served from public/ locally, then R2,
- * then the Hostinger fallback route. Skip the optimizer by default so
- * missing local files still load through that same-origin path.
+ * Recipe media under /wp-content/ is served from R2 (via the same-origin
+ * route) or Hostinger fallback. Always unoptimized so we never bill
+ * Vercel Image Optimization Transformations.
  */
 export function ContentImage({
   src,
   unoptimized,
-  optimize = false,
+  optimize: _optimize,
   ...props
 }: ContentImageProps) {
-  const isWpUpload =
-    typeof src === "string" && src.startsWith("/wp-content/uploads/");
-
-  return (
-    <Image
-      {...props}
-      src={src}
-      unoptimized={unoptimized ?? (isWpUpload && !optimize)}
-    />
-  );
+  return <Image {...props} src={src} unoptimized={unoptimized ?? true} />;
 }

@@ -4,10 +4,8 @@ import {
   getR2ObjectBuffer,
   isR2Configured,
   mimeFromKey,
-  putR2Object,
   uploadsPathToR2Key,
 } from "@/lib/r2";
-import { resizeStoredImageIfNeeded } from "@/lib/r2-image-optimize";
 
 export const runtime = "nodejs";
 
@@ -15,7 +13,13 @@ const OLD_HOST_IP = process.env.WP_MEDIA_IP || "72.60.93.62";
 
 /**
  * Serve /wp-content/uploads/* with same public URLs for SEO.
- * Order: public/ (static) → R2 → legacy Hostinger fallback.
+ * Order: R2 → legacy Hostinger fallback.
+ *
+ * Do NOT run sharp/resize here — every image hit was burning Vercel
+ * Fluid Active CPU. Resize offline via `npm run resize:r2` instead.
+ *
+ * Optional: set R2_PUBLIC_BASE_URL (e.g. https://media.grandmarecipe.com)
+ * to 308-redirect and skip the Vercel function entirely (saves Origin Transfer + CPU).
  */
 export async function GET(
   _request: NextRequest,
@@ -25,25 +29,22 @@ export async function GET(
   const objectPath = path.join("/");
   const r2Key = uploadsPathToR2Key(objectPath);
 
+  const publicBase = process.env.R2_PUBLIC_BASE_URL?.trim().replace(/\/$/, "");
+  if (publicBase) {
+    return NextResponse.redirect(`${publicBase}/${r2Key}`, 308);
+  }
+
   if (isR2Configured()) {
     try {
       const object = await getR2ObjectBuffer(r2Key);
       if (object) {
-        const optimized = await resizeStoredImageIfNeeded(r2Key, object.body);
-        if (optimized.changed) {
-          await putR2Object(r2Key, optimized.buffer, optimized.contentType);
-        }
-
         const headers = new Headers();
         headers.set(
           "content-type",
-          optimized.contentType ||
-            object.contentType ||
-            mimeFromKey(r2Key) ||
-            "application/octet-stream",
+          object.contentType || mimeFromKey(r2Key) || "application/octet-stream",
         );
         headers.set("cache-control", "public, max-age=31536000, immutable");
-        return new NextResponse(new Uint8Array(optimized.buffer), {
+        return new NextResponse(new Uint8Array(object.body), {
           status: 200,
           headers,
         });

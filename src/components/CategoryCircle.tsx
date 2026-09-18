@@ -28,7 +28,6 @@ export function CategoryCircle({
             alt={category.name}
             width={144}
             height={144}
-            optimize
             priority={priority}
             fetchPriority={priority ? "high" : undefined}
             className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
