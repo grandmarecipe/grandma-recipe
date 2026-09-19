@@ -1,6 +1,19 @@
 {
   "recipes": [
     {
+      "slug": "slow-cooker-style-beef-barbacoa",
+      "title": "Slow Cooker-Style Beef Barbacoa",
+      "excerpt": "There is something wonderfully comforting about a pot of barbacoa simmering in the kitchen, filling the house with the warm scent of chiles, garlic, and cumin. This tender beef is the kind of supper Grandma would set out with warm tortillas, bright lime, and plenty of napkins for a happy family gathering.",
+      "category": "dinner",
+      "categories": [
+        "dinner"
+      ],
+      "publishedAt": "2026-09-19T00:00:00.000Z",
+      "modifiedAt": "2026-09-19T01:24:28.737Z",
+      "featuredImage": "/wp-content/uploads/2026/09/Slow-Cooker-Beef-Barbacoa-With-Warm-Tortillas.webp",
+      "featuredImageAlt": "A bowl of tender beef barbacoa with tortillas, lime wedges, cilantro, onion, and radishes on a rustic table"
+    },
+    {
       "slug": "homemade-banana-pancakes",
       "title": "Homemade Banana Pancakes",
       "excerpt": "On sleepy mornings, the sweet smell of pancakes turning golden in the skillet can bring everyone to the kitchen, just like it did at Grandma’s house. These tender banana pancakes are made with ripe fruit, a little cinnamon, and plenty of cozy homemade goodness for a breakfast worth lingering over.",
