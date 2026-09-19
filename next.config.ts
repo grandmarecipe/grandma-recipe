@@ -59,7 +59,12 @@ const brandRedirects = [
 const recipeSlugRedirects = [
   {
     source: "/what-is-a-light-roast-coffee-a-bright-gentle-brew",
-    destination: "/what-is-a-light-roast-coffee",
+    destination: "/what-is-a-light-roast-coffee/",
+    permanent: true,
+  },
+  {
+    source: "/what-is-a-light-roast-coffee-a-bright-gentle-brew/",
+    destination: "/what-is-a-light-roast-coffee/",
     permanent: true,
   },
 ];
