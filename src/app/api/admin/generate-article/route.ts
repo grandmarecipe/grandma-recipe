@@ -13,6 +13,7 @@ import {
   parseEquipmentItems,
   prependRecipeMetaBlocks,
 } from "@/lib/equipment";
+import { findExistingForGenerate } from "@/lib/find-existing-for-generate";
 import { stripLeadingIntroParagraph } from "@/lib/html";
 import {
   buildRecipeNutritionBlock,
@@ -131,10 +132,11 @@ export async function POST(request: NextRequest) {
     }
 
     if (body.mode !== "paste" && body.primaryKeyword?.trim()) {
-      const existing = await convex.query(api.articles.findExistingForGenerate, {
-        token: body.token,
-        input: body.primaryKeyword,
-      });
+      const existing = await findExistingForGenerate(
+        convex,
+        body.token,
+        body.primaryKeyword,
+      );
       if (existing) {
         const label =
           existing.matchType === "slug" ? "URL slug" : "Primary keyword";

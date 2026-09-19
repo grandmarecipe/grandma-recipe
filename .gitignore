@@ -53,3 +53,6 @@ next-env.d.ts
 /src/components/admin/KeywordsResearchPanel.tsx
 /src/app/admin/keywords-research/
 /src/app/api/admin/keywords-research/
+
+# Complete-article agent signal (local only)
+/.cursor/signals/

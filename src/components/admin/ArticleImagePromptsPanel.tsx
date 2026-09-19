@@ -74,6 +74,7 @@ export function ArticleImagePromptsPanel({
     savedPrompts ?? null,
   );
   const [busy, setBusy] = useState(false);
+  const [completing, setCompleting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<string | null>(null);
 
@@ -159,6 +160,47 @@ export function ArticleImagePromptsPanel({
     }
   }
 
+  const promptsReady = Boolean(
+    bundle?.feature &&
+      bundle.ingredients &&
+      bundle.how_to_make &&
+      bundle.how_to_serve,
+  );
+
+  async function completeArticle() {
+    if (!token || !articleId || !promptsReady) return;
+    setCompleting(true);
+    setError(null);
+    setStatus("Queuing Complete article for Cursor GenerateImage…");
+    try {
+      const response = await fetch("/api/admin/complete-article/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          token,
+          articleId,
+        }),
+      });
+      const payload = (await response.json()) as {
+        error?: string;
+        message?: string;
+      };
+      if (!response.ok) {
+        throw new Error(payload.error || "Complete article failed.");
+      }
+      onSaved?.();
+      setStatus(
+        payload.message ||
+          "Queued. Cursor agent will generate images (not DALL·E).",
+      );
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Complete article failed.");
+      setStatus(null);
+    } finally {
+      setCompleting(false);
+    }
+  }
+
   const activeResult =
     activeTab === "feature" ? bundle?.feature : bundle?.[activeTab];
 
@@ -205,17 +247,27 @@ export function ArticleImagePromptsPanel({
       <div className="flex flex-wrap gap-3">
         <button
           type="button"
-          disabled={busy}
+          disabled={busy || completing}
           onClick={() => void generate("all", null)}
           className="rounded-full bg-[#5a822b] px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-60"
         >
           {busy ? "Generating…" : "Generate all prompts"}
         </button>
+        {promptsReady && articleId ? (
+          <button
+            type="button"
+            disabled={busy || completing}
+            onClick={() => void completeArticle()}
+            className="rounded-full bg-[#8b1a1a] px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-60"
+          >
+            {completing ? "Queuing…" : "Complete article"}
+          </button>
+        ) : null}
         {TABS.map((tab) => (
           <button
             key={tab.id}
             type="button"
-            disabled={busy}
+            disabled={busy || completing}
             onClick={() => void generate(tab.id, bundle)}
             className="rounded-full border border-[#d4a574] px-4 py-2 text-sm font-semibold text-[#b8860b] disabled:opacity-60"
           >
@@ -223,6 +275,15 @@ export function ArticleImagePromptsPanel({
           </button>
         ))}
       </div>
+
+      {promptsReady ? (
+        <p className="text-sm text-[#6b5b4f]">
+          <strong className="text-[#8b1a1a]">Complete article</strong> signals
+          the Cursor agent to generate feature (16:9) + in-article (3:4) images
+          with Cursor GenerateImage (not DALL·E), upload to R2, and apply
+          metadata. Keep Agent chat open after clicking.
+        </p>
+      ) : null}
 
       {error ? (
         <p className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">

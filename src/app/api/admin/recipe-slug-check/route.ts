@@ -3,6 +3,7 @@ import { getConvexClient } from "@/lib/convex";
 import { api } from "../../../../../convex/_generated/api";
 import { getRecipeBySlug } from "@/lib/content";
 import { slugifyTitle } from "@/lib/article-generate-prompts";
+import { findExistingForGenerate } from "@/lib/find-existing-for-generate";
 
 export const runtime = "nodejs";
 
@@ -24,10 +25,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const cms = await convex.query(api.articles.findExistingForGenerate, {
-    token,
-    input,
-  });
+  const cms = await findExistingForGenerate(convex, token, input);
   if (cms) {
     return NextResponse.json({
       exists: true,

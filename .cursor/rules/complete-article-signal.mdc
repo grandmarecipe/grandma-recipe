@@ -1,0 +1,20 @@
+---
+description: When Complete article signal is pending, finish with Cursor GenerateImage — never DALL·E
+alwaysApply: true
+---
+
+# Complete article signal
+
+If `.cursor/signals/complete-article.json` exists with `"status": "pending"`:
+
+1. Treat it as an explicit user request to finish that CMS draft — do not ask for confirmation.
+2. **Image engine: Cursor `GenerateImage` only. Never OpenAI DALL·E / images generations API.**
+3. Generate four images from the article’s saved prompts:
+   - feature → aspect `16:9`
+   - ingredients / how_to_make / how_to_serve → aspect `3:4` portrait (not square, not landscape)
+4. Save PNGs under Cursor assets as `{basename}-{section}.png`, then run:
+   `COMPLETE_ARTICLE_SLUG=… COMPLETE_ARTICLE_BASENAME=… npx tsx scripts/complete-article-from-assets.ts`
+5. Keep status as draft unless the user already asked to publish. Do not push to prod unless asked.
+6. Mark the signal `"status": "done"` (or delete it) and reply with the admin URL.
+
+Never call `/api/admin/complete-article` with an OpenAI image path — that route only queues this signal.

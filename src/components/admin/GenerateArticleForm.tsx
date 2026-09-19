@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useDeferredValue, useEffect, useState } from "react";
-import { useConvex, useMutation, useQuery } from "convex/react";
+import { useConvex, useMutation } from "convex/react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { api } from "../../../convex/_generated/api";
@@ -53,9 +53,8 @@ export function GenerateArticleForm() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<string | null>(null);
-  const [fileConflict, setFileConflict] = useState<GenerateConflict | null>(
-    null,
-  );
+  const [conflict, setConflict] = useState<GenerateConflict | null>(null);
+  const [conflictLoading, setConflictLoading] = useState(false);
 
   // Keep the field in sync when arriving from Keywords research (?keyword=…).
   useEffect(() => {
@@ -65,27 +64,16 @@ export function GenerateArticleForm() {
   }, [keywordFromUrl]);
 
   const deferredKeyword = useDeferredValue(primaryKeyword.trim());
-  const existingCms = useQuery(
-    api.articles.findExistingForGenerate,
-    token && deferredKeyword.length >= 2 && mode !== "paste"
-      ? { token, input: deferredKeyword }
-      : "skip",
-  );
 
   useEffect(() => {
-    if (
-      !token ||
-      mode === "paste" ||
-      deferredKeyword.length < 2 ||
-      existingCms !== null
-    ) {
-      setFileConflict(null);
+    if (!token || mode === "paste" || deferredKeyword.length < 2) {
+      setConflict(null);
+      setConflictLoading(false);
       return;
     }
 
-    if (existingCms === undefined) return;
-
     const controller = new AbortController();
+    setConflictLoading(true);
     const timer = window.setTimeout(async () => {
       try {
         const params = new URLSearchParams({
@@ -96,17 +84,18 @@ export function GenerateArticleForm() {
           `/api/admin/recipe-slug-check/?${params.toString()}`,
           { signal: controller.signal },
         );
-        if (!response.ok) return;
+        if (!response.ok) {
+          setConflict(null);
+          return;
+        }
         const payload = (await response.json()) as
           | { exists: false }
           | GenerateConflict;
-        if (payload.exists && payload.source === "file") {
-          setFileConflict(payload);
-        } else {
-          setFileConflict(null);
-        }
+        setConflict(payload.exists ? payload : null);
       } catch {
         /* ignore aborted / network */
+      } finally {
+        if (!controller.signal.aborted) setConflictLoading(false);
       }
     }, 250);
 
@@ -114,19 +103,7 @@ export function GenerateArticleForm() {
       controller.abort();
       window.clearTimeout(timer);
     };
-  }, [token, deferredKeyword, existingCms, mode]);
-
-  const conflict: GenerateConflict | null = existingCms
-    ? {
-        exists: true,
-        source: "cms",
-        matchType: existingCms.matchType,
-        slug: existingCms.slug,
-        title: existingCms.title,
-        status: existingCms.status,
-        cmsId: existingCms._id,
-      }
-    : fileConflict;
+  }, [token, deferredKeyword, mode]);
 
   const keywordAlreadyUsed = Boolean(conflict);
 
@@ -186,7 +163,7 @@ export function GenerateArticleForm() {
       setStatus("Saving draft in CMS…");
       const article = payload.article;
 
-      const existingSlug = await convex.query(api.articles.getSlugMeta, {
+      const existingSlug = await convex.query(api.articles.getBySlug, {
         token,
         slug: article.slug,
       });
@@ -331,8 +308,8 @@ export function GenerateArticleForm() {
               . Choose a different keyword or open the existing article.
             </p>
           ) : deferredKeyword.length >= 2 &&
-            existingCms === null &&
-            !fileConflict &&
+            !conflict &&
+            !conflictLoading &&
             deferredKeyword === primaryKeyword.trim() &&
             mode !== "paste" ? (
             <p className="mt-1.5 text-xs text-[#5a822b]">
