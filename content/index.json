@@ -1,6 +1,19 @@
 {
   "recipes": [
     {
+      "slug": "what-is-a-light-roast-coffee-a-bright-gentle-brew",
+      "title": "What Is a Light Roast Coffee? A Bright, Gentle Brew",
+      "excerpt": "Light roast coffee brings to mind quiet mornings, a warm mug between both hands, and the bright aroma drifting through Grandma's kitchen. This simple pour-over method lets the beans shine with delicate floral notes, a lively citrus touch, and a clean finish worth savoring slowly.",
+      "category": "breakfast",
+      "categories": [
+        "breakfast"
+      ],
+      "publishedAt": "2026-09-19T17:39:24.920Z",
+      "modifiedAt": "2026-09-19T21:50:36.271Z",
+      "featuredImage": "/wp-content/uploads/2026/09/What-Is-A-Light-Roast-Coffee-A-Bright-Pour-over-Guide.webp",
+      "featuredImageAlt": "what is a light roast coffee shown as a pale golden pour-over brew with coffee beans in a cozy kitchen"
+    },
+    {
       "slug": "slow-cooker-style-beef-barbacoa",
       "title": "Slow Cooker-Style Beef Barbacoa",
       "excerpt": "There is something wonderfully comforting about a pot of barbacoa simmering in the kitchen, filling the house with the warm scent of chiles, garlic, and cumin. This tender beef is the kind of supper Grandma would set out with warm tortillas, bright lime, and plenty of napkins for a happy family gathering.",
