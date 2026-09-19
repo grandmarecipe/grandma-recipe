@@ -55,6 +55,15 @@ const brandRedirects = [
   permanent: true,
 }));
 
+/** Old recipe URLs → keyword slugs (SEO). */
+const recipeSlugRedirects = [
+  {
+    source: "/what-is-a-light-roast-coffee-a-bright-gentle-brew",
+    destination: "/what-is-a-light-roast-coffee",
+    permanent: true,
+  },
+];
+
 /**
  * Security headers + CSP.
  * AdSense must never be blocked by CSP — use broad Google advertising
@@ -174,13 +183,32 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   trailingSlash: true,
   async redirects() {
-    return brandRedirects;
+    return [...brandRedirects, ...recipeSlugRedirects];
   },
   async headers() {
+    const isDev = process.env.NODE_ENV === "development";
+    // Local browsers (and Cursor Simple Browser) hit ERR_TOO_MANY_REDIRECTS if we
+    // advertise HSTS / upgrade-insecure-requests on http://localhost.
+    const headers = isDev
+      ? securityHeaders
+          .filter((header) => header.key !== "Strict-Transport-Security")
+          .map((header) =>
+            header.key === "Content-Security-Policy"
+              ? {
+                  ...header,
+                  value: header.value.replace(
+                    /;?\s*upgrade-insecure-requests/,
+                    "",
+                  ),
+                }
+              : header,
+          )
+      : securityHeaders;
+
     return [
       {
         source: "/:path*",
-        headers: securityHeaders,
+        headers,
       },
     ];
   },
