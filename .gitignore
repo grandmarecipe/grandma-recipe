@@ -38,3 +38,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local scratch / screenshots
+/.tmp/
+/vercel/
+
+# ---------------------------------------------------------------------------
+# Keywords Research — LOCAL ONLY. Never commit / never push / never deploy.
+# ---------------------------------------------------------------------------
+/keywords/
+/scripts/organize-keywords.ts
+/src/lib/keywords-research.ts
+/src/lib/keywords-research-types.ts
+/src/components/admin/KeywordsResearchPanel.tsx
+/src/app/admin/keywords-research/
+/src/app/api/admin/keywords-research/
