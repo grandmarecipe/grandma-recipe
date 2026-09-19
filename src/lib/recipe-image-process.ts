@@ -2,6 +2,7 @@ import sharp from "sharp";
 import { sanitizeR2MetadataValue } from "@/lib/r2";
 import type { RecipeImageSection } from "./recipe-image-upload";
 import {
+  RECIPE_IMAGE_ASPECT,
   RECIPE_IMAGE_MAX_WIDTH,
   RECIPE_IMAGE_WEBP_QUALITY,
 } from "./recipe-image-upload";
@@ -12,7 +13,7 @@ export type ProcessedRecipeImage = {
   height: number;
 };
 
-/** Strip EXIF, resize for web, and encode WebP tuned for LCP / in-article use. */
+/** Strip EXIF, crop to section aspect, resize for web, encode WebP. */
 export async function convertRecipeImageToWebp(
   inputBuffer: Buffer,
   subjectName: string,
@@ -31,15 +32,18 @@ export async function convertRecipeImageToWebp(
 
   const maxWidth = RECIPE_IMAGE_MAX_WIDTH[section];
   const quality = RECIPE_IMAGE_WEBP_QUALITY[section];
+  const aspect = RECIPE_IMAGE_ASPECT[section];
+  const targetHeight = Math.round((maxWidth * aspect.h) / aspect.w);
 
-  let pipeline = sharp(inputBuffer).rotate();
-  const meta = await pipeline.metadata();
-
-  if (meta.width && meta.width > maxWidth) {
-    pipeline = pipeline.resize({ width: maxWidth, withoutEnlargement: true });
-  }
-
-  const { data, info } = await pipeline
+  const { data, info } = await sharp(inputBuffer)
+    .rotate()
+    .resize({
+      width: maxWidth,
+      height: targetHeight,
+      fit: "cover",
+      position: "centre",
+      withoutEnlargement: false,
+    })
     .withExif({ IFD0: exif })
     .webp({ quality, effort: 4 })
     .toBuffer({ resolveWithObject: true });

@@ -53,7 +53,7 @@ export function buildFeatureImagePrompt(input: {
 - recipe: ${input.focusKeyword}
 - details: ${input.recipeDetails}
 
-Generate one single complete feature image prompt with clear, specific details to visually represent the recipe. One image only — no split screen. Do not use these banned words; use safe substitutes instead: ${BANNED_WORDS}.
+Generate one single complete feature image prompt with clear, specific details to visually represent the recipe. One image only — no split screen. Frame for a wide 16:9 landscape photo. Do not use these banned words; use safe substitutes instead: ${BANNED_WORDS}.
 
 2. For the prompt above, give 2 alt texts, 2 titles, 2 captions, and 2 short descriptions. Include this exact focus keyword in each text field: ${input.focusKeyword}
 
@@ -80,7 +80,7 @@ export function buildIngredientsImagePrompt(input: {
   return `1. Create a realistic image prompt for the ingredients section of ${input.focusKeyword}:
 ${input.ingredientsContent}
 
-Provide clear, specific details to visually represent the ingredients on a kitchen table. Do not add numbers of ingredients or any text in the image — photo only, no text or numbers.
+Provide clear, specific details to visually represent the ingredients on a kitchen table. Frame for a tall 3:4 portrait photo (not square, not landscape). Do not add numbers of ingredients or any text in the image — photo only, no text or numbers.
 
 Obligatory: do not use these banned words; use safe substitutes instead: ${BANNED_WORDS}.
 
@@ -108,7 +108,7 @@ export function buildHowToMakeImagePrompt(input: {
   return `1. Create a realistic image prompt for this section (How to make ${input.focusKeyword}):
 ${input.howToMakeContent}
 
-Provide a real-photo style prompt with clear, specific details showing the steps for preparing ${input.focusKeyword}. Divide the screen into 3 or 4 parts. Include in the prompt: no text or numbers in the photo — images only.
+Provide a real-photo style prompt with clear, specific details showing the steps for preparing ${input.focusKeyword}. Divide the screen into 3 or 4 parts. Frame for a tall 3:4 portrait collage (not square, not landscape). Include in the prompt: no text or numbers in the photo — images only.
 
 Do not use these banned words; use safe substitutes instead: ${BANNED_WORDS}.
 
@@ -136,7 +136,7 @@ export function buildHowToServeImagePrompt(input: {
   return `1. Create a realistic image prompt for the serving section of ${input.focusKeyword}:
 ${input.howToServeContent}
 
-Show the finished dish beautifully plated and ready to serve — warm, inviting, homestyle presentation on a kitchen table or dining setting. One cohesive photo (not a split screen). No text or numbers in the image — photo only.
+Show the finished dish beautifully plated and ready to serve — warm, inviting, homestyle presentation on a kitchen table or dining setting. One cohesive photo (not a split screen). Frame for a tall 3:4 portrait photo (not square, not landscape). No text or numbers in the image — photo only.
 
 Do not use these banned words; use safe substitutes instead: ${BANNED_WORDS}.
 

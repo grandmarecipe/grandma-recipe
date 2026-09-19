@@ -2,6 +2,21 @@ import type { ImagePromptSection } from "./image-prompt-types";
 
 export type RecipeImageSection = ImagePromptSection;
 
+/**
+ * Site standard (matches older WordPress articles):
+ * - feature: 16:9 landscape
+ * - in-article (ingredients / how_to_make / how_to_serve): 3:4 portrait — never square
+ */
+export const RECIPE_IMAGE_ASPECT: Record<
+  RecipeImageSection,
+  { w: number; h: number }
+> = {
+  feature: { w: 16, h: 9 },
+  ingredients: { w: 3, h: 4 },
+  how_to_make: { w: 3, h: 4 },
+  how_to_serve: { w: 3, h: 4 },
+};
+
 /** Max pixel width when uploading — keeps files small for in-article lazy-loaded images. */
 export const RECIPE_IMAGE_MAX_WIDTH: Record<RecipeImageSection, number> = {
   feature: 1200,
