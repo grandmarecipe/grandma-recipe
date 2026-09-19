@@ -3,7 +3,7 @@
 import { FormEvent, useDeferredValue, useEffect, useState } from "react";
 import { useConvex, useMutation, useQuery } from "convex/react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { api } from "../../../convex/_generated/api";
 import type { Id } from "../../../convex/_generated/dataModel";
 import { useAdminAuth } from "./AdminProviders";
@@ -39,11 +39,14 @@ function formatClientError(err: unknown): string {
 export function GenerateArticleForm() {
   const { token } = useAdminAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const convex = useConvex();
   const createArticle = useMutation(api.articles.create);
 
+  const keywordFromUrl = searchParams.get("keyword")?.trim() ?? "";
+
   const [mode, setMode] = useState<GenerateMode>("keyword");
-  const [primaryKeyword, setPrimaryKeyword] = useState("");
+  const [primaryKeyword, setPrimaryKeyword] = useState(keywordFromUrl);
   const [notes, setNotes] = useState("");
   const [recipePaste, setRecipePaste] = useState("");
   const [pastedDraft, setPastedDraft] = useState("");
@@ -53,6 +56,13 @@ export function GenerateArticleForm() {
   const [fileConflict, setFileConflict] = useState<GenerateConflict | null>(
     null,
   );
+
+  // Keep the field in sync when arriving from Keywords research (?keyword=…).
+  useEffect(() => {
+    if (!keywordFromUrl) return;
+    setPrimaryKeyword(keywordFromUrl);
+    setMode("keyword");
+  }, [keywordFromUrl]);
 
   const deferredKeyword = useDeferredValue(primaryKeyword.trim());
   const existingCms = useQuery(
@@ -268,10 +278,18 @@ export function GenerateArticleForm() {
             }`}
             value={primaryKeyword}
             onChange={(event) => setPrimaryKeyword(event.target.value)}
-            placeholder="chocolate peanut butter no bake cookies"
+            placeholder="e.g. homemade banana pancakes"
             required={mode !== "paste"}
             aria-invalid={keywordAlreadyUsed}
           />
+          {keywordFromUrl &&
+          primaryKeyword.trim().toLowerCase() ===
+            keywordFromUrl.toLowerCase() ? (
+            <p className="mt-1.5 text-xs text-[#5a822b]">
+              Filled from Keywords research. Duplicate check runs automatically
+              below.
+            </p>
+          ) : null}
           {keywordAlreadyUsed && conflict ? (
             <p className="mt-2 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-900">
               {conflict.matchType === "slug" ? (
