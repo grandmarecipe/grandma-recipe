@@ -88,11 +88,23 @@ export default function AdminDashboardPage() {
                         className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
                           article.status === "published"
                             ? "bg-green-100 text-green-800"
-                            : "bg-amber-100 text-amber-800"
+                            : article.scheduledPublishAt
+                              ? "bg-sky-100 text-sky-800"
+                              : "bg-amber-100 text-amber-800"
                         }`}
                       >
-                        {article.status}
+                        {article.status === "published"
+                          ? "published"
+                          : article.scheduledPublishAt
+                            ? "scheduled"
+                            : "draft"}
                       </span>
+                      {article.status !== "published" &&
+                      article.scheduledPublishAt ? (
+                        <div className="mt-1 text-xs text-[#6b5b4f]">
+                          {new Date(article.scheduledPublishAt).toLocaleString()}
+                        </div>
+                      ) : null}
                     </td>
                     <td className="px-4 py-3 text-[#6b5b4f]">
                       {article.modifiedAt.slice(0, 10)}

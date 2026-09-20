@@ -11,8 +11,10 @@
 import type * as adminAuth from "../adminAuth.js";
 import type * as articles from "../articles.js";
 import type * as comments from "../comments.js";
+import type * as crons from "../crons.js";
 import type * as passwordUtils from "../passwordUtils.js";
 import type * as ratings from "../ratings.js";
+import type * as scheduledPublish from "../scheduledPublish.js";
 
 import type {
   ApiFromModules,
@@ -24,8 +26,10 @@ declare const fullApi: ApiFromModules<{
   adminAuth: typeof adminAuth;
   articles: typeof articles;
   comments: typeof comments;
+  crons: typeof crons;
   passwordUtils: typeof passwordUtils;
   ratings: typeof ratings;
+  scheduledPublish: typeof scheduledPublish;
 }>;
 
 /**

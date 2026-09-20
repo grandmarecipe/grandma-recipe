@@ -48,6 +48,8 @@ type ArticleFormState = {
   course: string;
   status: "draft" | "published";
   publishedAt: string;
+  /** datetime-local value (local), empty = none */
+  scheduledPublishAt: string;
 };
 
 const emptyForm = (): ArticleFormState => ({
@@ -75,7 +77,24 @@ const emptyForm = (): ArticleFormState => ({
   course: "",
   status: "draft",
   publishedAt: new Date().toISOString().slice(0, 10),
+  scheduledPublishAt: "",
 });
+
+function toDatetimeLocalValue(iso: string | undefined) {
+  if (!iso?.trim()) return "";
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return "";
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
+}
+
+function fromDatetimeLocalValue(value: string) {
+  const trimmed = value.trim();
+  if (!trimmed) return undefined;
+  const date = new Date(trimmed);
+  if (Number.isNaN(date.getTime())) return undefined;
+  return date.toISOString();
+}
 
 function linesToList(text: string) {
   return text
@@ -148,6 +167,7 @@ export function ArticleEditor({ articleId }: Props) {
       course: existing.course ?? "",
       status: existing.status,
       publishedAt: existing.publishedAt.slice(0, 10),
+      scheduledPublishAt: toDatetimeLocalValue(existing.scheduledPublishAt),
     });
     setReady(true);
     setLoadedArticleId(articleId);
@@ -264,6 +284,7 @@ export function ArticleEditor({ articleId }: Props) {
       publishedAt: state.publishedAt
         ? new Date(state.publishedAt).toISOString()
         : undefined,
+      scheduledPublishAt: fromDatetimeLocalValue(state.scheduledPublishAt),
     };
   }
 
@@ -291,8 +312,15 @@ export function ArticleEditor({ articleId }: Props) {
     setMessage(null);
     try {
       const result = await persistForm(form, status);
-      setMessage(`Saved "${result.slug}" as ${result.status}.`);
+      const scheduleNote =
+        status !== "published" && form.scheduledPublishAt.trim()
+          ? ` Scheduled for ${new Date(form.scheduledPublishAt).toLocaleString()}.`
+          : "";
+      setMessage(`Saved "${result.slug}" as ${result.status}.${scheduleNote}`);
       patch("status", result.status);
+      if (status === "published") {
+        patch("scheduledPublishAt", "");
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Save failed.");
     } finally {
@@ -719,7 +747,27 @@ export function ArticleEditor({ articleId }: Props) {
                   />
                 </Field>
               ))}
+              <Field label="Schedule publish (optional)">
+                <input
+                  className={inputClass}
+                  type="datetime-local"
+                  value={current.scheduledPublishAt}
+                  onChange={(event) =>
+                    patch("scheduledPublishAt", event.target.value)
+                  }
+                />
+              </Field>
             </div>
+            {current.scheduledPublishAt.trim() && current.status !== "published" ? (
+              <p className="mt-3 text-xs text-[#6b5b4f]">
+                Stays draft until this time. After saving, push scheduled drafts
+                to production with{" "}
+                <code className="rounded bg-[#f5efe6] px-1">
+                  npm run push:scheduled
+                </code>
+                .
+              </p>
+            ) : null}
           </section>
         </aside>
       </section>

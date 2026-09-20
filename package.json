@@ -15,6 +15,7 @@
     "migrate:r2": "tsx scripts/migrate-media-to-r2.ts",
     "resize:r2": "tsx scripts/resize-r2-images.ts",
     "sync:cms-prod": "tsx scripts/sync-cms-dev-to-prod.ts",
+    "push:scheduled": "tsx scripts/push-scheduled-to-prod.ts",
     "sync:prod": "npx convex deploy --yes && npm run sync:cms-prod"
   },
   "dependencies": {

@@ -118,6 +118,8 @@ export default defineSchema({
     course: v.optional(v.string()),
     status: v.union(v.literal("draft"), v.literal("published")),
     publishedAt: v.string(),
+    /** ISO datetime — cron publishes draft when this time is reached. */
+    scheduledPublishAt: v.optional(v.string()),
     modifiedAt: v.string(),
     updatedBy: v.optional(v.string()),
     imagePrompts: v.optional(imagePromptBundle),

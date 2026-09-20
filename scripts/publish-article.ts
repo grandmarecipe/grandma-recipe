@@ -75,6 +75,7 @@ async function main() {
     status: "published" as const,
     publishedAt: existing.publishedAt?.trim() || now,
     modifiedAt: now,
+    scheduledPublishAt: undefined,
   };
 
   console.log("Publishing on DEV…");

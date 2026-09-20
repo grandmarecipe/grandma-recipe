@@ -1,6 +1,7 @@
 import { v } from "convex/values";
 import { paginationOptsValidator } from "convex/server";
 import {
+  internalMutation,
   mutation,
   query,
   type MutationCtx,
@@ -97,6 +98,7 @@ const articleFields = {
   course: v.optional(v.string()),
   status: v.union(v.literal("draft"), v.literal("published")),
   publishedAt: v.optional(v.string()),
+  scheduledPublishAt: v.optional(v.string()),
 };
 
 function slugify(input: string) {
@@ -146,6 +148,7 @@ type ArticleDoc = {
   course?: string;
   status: "draft" | "published";
   publishedAt: string;
+  scheduledPublishAt?: string;
   modifiedAt: string;
   updatedBy?: string;
   imagePrompts?: {
@@ -298,6 +301,7 @@ export const list = query({
         focusKeyword: row.focusKeyword,
         status: row.status,
         publishedAt: row.publishedAt,
+        scheduledPublishAt: row.scheduledPublishAt,
         modifiedAt: row.modifiedAt,
         updatedBy: row.updatedBy,
       })),
@@ -566,6 +570,11 @@ export const create = mutation({
     const categories =
       args.categories.length > 0 ? args.categories : [args.category];
 
+    const scheduledPublishAt =
+      args.status === "published"
+        ? undefined
+        : cleanOptional(args.scheduledPublishAt);
+
     const id = await ctx.db.insert("articles", {
       slug,
       title: args.title.trim(),
@@ -592,6 +601,7 @@ export const create = mutation({
       course: cleanOptional(args.course),
       status: args.status,
       publishedAt: args.publishedAt?.trim() || now,
+      ...(scheduledPublishAt ? { scheduledPublishAt } : {}),
       modifiedAt: now,
       updatedBy: admin.email,
     });
@@ -657,6 +667,10 @@ export const update = mutation({
       course: cleanOptional(args.course),
       status: args.status,
       publishedAt: args.publishedAt?.trim() || current.publishedAt,
+      scheduledPublishAt:
+        args.status === "published"
+          ? undefined
+          : cleanOptional(args.scheduledPublishAt),
       modifiedAt: now,
       updatedBy: admin.email,
     });
@@ -795,6 +809,7 @@ const syncArticlePayload = v.object({
   course: v.optional(v.string()),
   status: v.union(v.literal("draft"), v.literal("published")),
   publishedAt: v.string(),
+  scheduledPublishAt: v.optional(v.string()),
   modifiedAt: v.string(),
   imagePrompts: v.optional(imagePromptBundle),
   imageAssets: v.optional(imageAssetsBundle),
@@ -814,6 +829,7 @@ export const listIdsForSync = query({
       slug: row.slug,
       status: row.status,
       title: row.title,
+      scheduledPublishAt: row.scheduledPublishAt,
     }));
   },
 });
@@ -855,6 +871,7 @@ export const exportOneForSync = query({
       course: full.course,
       status: full.status,
       publishedAt: full.publishedAt,
+      scheduledPublishAt: full.scheduledPublishAt,
       modifiedAt: full.modifiedAt,
       imagePrompts: full.imagePrompts,
       imageAssets: full.imageAssets,
@@ -876,6 +893,11 @@ export const syncArticleFull = mutation({
 
     const categories =
       article.categories.length > 0 ? article.categories : [article.category];
+
+    const scheduledPublishAt =
+      article.status === "published"
+        ? undefined
+        : cleanOptional(article.scheduledPublishAt);
 
     const payload = {
       slug,
@@ -917,11 +939,17 @@ export const syncArticleFull = mutation({
     let action: "insert" | "update";
 
     if (existing) {
-      await ctx.db.patch(existing._id, payload);
+      await ctx.db.patch(existing._id, {
+        ...payload,
+        scheduledPublishAt,
+      });
       id = existing._id;
       action = "update";
     } else {
-      id = await ctx.db.insert("articles", payload);
+      id = await ctx.db.insert("articles", {
+        ...payload,
+        ...(scheduledPublishAt ? { scheduledPublishAt } : {}),
+      });
       action = "insert";
     }
 
@@ -1075,5 +1103,43 @@ export const upsertPublishedImport = mutation({
     );
 
     return { action: "insert" as const, id, slug };
+  },
+});
+
+/**
+ * Publish drafts whose scheduledPublishAt is due.
+ * Skips articles without a featured image.
+ */
+export const publishDueScheduled = internalMutation({
+  args: {},
+  handler: async (ctx) => {
+    const now = new Date().toISOString();
+    const drafts = await ctx.db
+      .query("articles")
+      .withIndex("by_status", (q) => q.eq("status", "draft"))
+      .collect();
+
+    const publishedSlugs: string[] = [];
+    const skipped: Array<{ slug: string; reason: string }> = [];
+
+    for (const row of drafts) {
+      const scheduled = row.scheduledPublishAt?.trim();
+      if (!scheduled || scheduled > now) continue;
+
+      if (!row.featuredImage?.trim()) {
+        skipped.push({ slug: row.slug, reason: "missing featured image" });
+        continue;
+      }
+
+      await ctx.db.patch(row._id, {
+        status: "published",
+        publishedAt: row.publishedAt?.trim() || scheduled,
+        modifiedAt: now,
+        scheduledPublishAt: undefined,
+      });
+      publishedSlugs.push(row.slug);
+    }
+
+    return { now, publishedSlugs, skipped };
   },
 });
