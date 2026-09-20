@@ -4,7 +4,8 @@ import {
   xmlResponse,
 } from "@/lib/sitemap-xml";
 
-/** Recipe posts only — add this URL in Search Console if you want posts separate. */
-export function GET() {
-  return xmlResponse(buildUrlSetXml(getPostsSitemapEntries()));
+/** Recipe posts — includes file recipes + published CMS articles. */
+export async function GET() {
+  const entries = await getPostsSitemapEntries();
+  return xmlResponse(buildUrlSetXml(entries));
 }

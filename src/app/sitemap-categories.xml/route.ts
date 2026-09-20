@@ -4,7 +4,8 @@ import {
   xmlResponse,
 } from "@/lib/sitemap-xml";
 
-/** Category archives only. */
-export function GET() {
-  return xmlResponse(buildUrlSetXml(getCategoriesSitemapEntries()));
+/** Category archives — page counts include published CMS articles. */
+export async function GET() {
+  const entries = await getCategoriesSitemapEntries();
+  return xmlResponse(buildUrlSetXml(entries));
 }

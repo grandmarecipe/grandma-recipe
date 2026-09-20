@@ -40,8 +40,11 @@ export async function POST(request: NextRequest) {
     revalidatePath(`/${slug}/`);
     revalidatePath("/sitemap.xml");
     revalidatePath("/sitemap-posts.xml");
+    revalidatePath("/sitemap-categories.xml");
+    revalidatePath("/sitemap/");
   }
 
+  revalidateTag("cms-recipes-list");
   revalidatePath("/");
   for (const category of [
     "breakfast",

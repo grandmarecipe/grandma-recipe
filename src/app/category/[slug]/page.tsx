@@ -8,7 +8,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { RecipeCard } from "@/components/RecipeCard";
 import { getCategoryContent } from "@/lib/categories";
-import { getRecipesByCategory, isCategorySlug } from "@/lib/content";
+import { isCategorySlug } from "@/lib/content";
+import { getRecipesByCategoryResolved } from "@/lib/cms-content";
 import { CATEGORY_SEO, buildPageMetadata } from "@/lib/page-seo";
 import { paginateItems } from "@/lib/pagination";
 import { buildCategoryPageJsonLd } from "@/lib/seo";
@@ -47,7 +48,7 @@ export default async function CategoryPage({ params }: PageProps) {
   if (!category) notFound();
 
   const content = getCategoryContent(slug);
-  const allRecipes = getRecipesByCategory(slug);
+  const allRecipes = await getRecipesByCategoryResolved(slug);
   const { items, page, totalPages, totalItems, startIndex } = paginateItems(
     allRecipes,
     1,

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { getStaticPage } from "@/lib/content";
 import {
-  getAllRecipeMeta,
-  getRecipesByCategory,
-  getStaticPage,
-} from "@/lib/content";
+  getAllRecipeMetaResolved,
+  getRecipesByCategoryResolved,
+} from "@/lib/cms-content";
 import { STATIC_PAGE_SEO, buildPageMetadata } from "@/lib/page-seo";
 import { CATEGORIES, SITE } from "@/lib/types";
 
@@ -34,8 +34,8 @@ function pageTitle(slug: string, fallback: string) {
   return getStaticPage(slug)?.title || fallback;
 }
 
-export default function HtmlSitemapPage() {
-  const recipes = getAllRecipeMeta().sort((a, b) =>
+export default async function HtmlSitemapPage() {
+  const recipes = (await getAllRecipeMetaResolved()).sort((a, b) =>
     a.title.localeCompare(b.title),
   );
 
@@ -48,6 +48,14 @@ export default function HtmlSitemapPage() {
     };
   });
 
+  const recipesByCategory = await Promise.all(
+    CATEGORIES.map(async (category) => ({
+      category,
+      items: (await getRecipesByCategoryResolved(category.slug)).sort((a, b) =>
+        a.title.localeCompare(b.title),
+      ),
+    })),
+  );
   return (
     <div className="bg-[#fffdf9]">
       <section className="border-b border-border bg-[radial-gradient(circle_at_top,#fff7ef_0%,#fffdf9_55%,#f8f2ea_100%)]">
@@ -112,24 +120,21 @@ export default function HtmlSitemapPage() {
         <section id="categories" className="scroll-mt-28">
           <h2 className="font-serif text-3xl text-[#8b1a1a]">Categories</h2>
           <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {CATEGORIES.map((category) => {
-              const count = getRecipesByCategory(category.slug).length;
-              return (
-                <li key={category.slug}>
-                  <Link
-                    href={`/category/${category.slug}/`}
-                    className="block rounded-2xl border border-border bg-white p-5 transition hover:border-accent"
-                  >
-                    <span className="font-serif text-xl text-accent">
-                      {category.name}
-                    </span>
-                    <span className="mt-1 block text-sm text-muted">
-                      {count} recipes
-                    </span>
-                  </Link>
-                </li>
-              );
-            })}
+            {recipesByCategory.map(({ category, items }) => (
+              <li key={category.slug}>
+                <Link
+                  href={`/category/${category.slug}/`}
+                  className="block rounded-2xl border border-border bg-white p-5 transition hover:border-accent"
+                >
+                  <span className="font-serif text-xl text-accent">
+                    {category.name}
+                  </span>
+                  <span className="mt-1 block text-sm text-muted">
+                    {items.length} recipes
+                  </span>
+                </Link>
+              </li>
+            ))}
           </ul>
         </section>
 
@@ -140,10 +145,7 @@ export default function HtmlSitemapPage() {
           </p>
 
           <div className="mt-8 space-y-10">
-            {CATEGORIES.map((category) => {
-              const items = getRecipesByCategory(category.slug).sort((a, b) =>
-                a.title.localeCompare(b.title),
-              );
+            {recipesByCategory.map(({ category, items }) => {
               if (items.length === 0) return null;
 
               return (

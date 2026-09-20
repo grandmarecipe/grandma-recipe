@@ -122,6 +122,14 @@ async function listPublishedCmsArticles(): Promise<CmsArticle[]> {
   }
 }
 
+function getCachedPublishedCmsArticles() {
+  return unstable_cache(
+    async () => listPublishedCmsArticles(),
+    ["cms-published-articles"],
+    { revalidate: 3600, tags: ["cms-recipes-list"] },
+  )();
+}
+
 /**
  * Resolve a recipe for public pages.
  * File recipes (WordPress import) return immediately — no Convex wait.
@@ -140,7 +148,7 @@ export const getRecipeBySlugResolved = cache(
 
 export async function getAllRecipeMetaResolved(): Promise<RecipeMeta[]> {
   const files = getAllRecipeMeta();
-  const cms = await listPublishedCmsArticles();
+  const cms = await getCachedPublishedCmsArticles();
   const bySlug = new Map(files.map((recipe) => [recipe.slug, recipe]));
   for (const article of cms) {
     bySlug.set(article.slug, articleToMeta(article));

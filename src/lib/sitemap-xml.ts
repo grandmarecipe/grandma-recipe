@@ -1,8 +1,8 @@
+import { getStaticPageSlugs } from "@/lib/content";
 import {
-  getAllRecipeMeta,
-  getRecipesByCategory,
-  getStaticPageSlugs,
-} from "@/lib/content";
+  getAllRecipeMetaResolved,
+  getRecipesByCategoryResolved,
+} from "@/lib/cms-content";
 import { getTotalPages } from "@/lib/pagination";
 import { CATEGORIES, SITE } from "@/lib/types";
 
@@ -75,34 +75,37 @@ export function xmlResponse(xml: string) {
   });
 }
 
-export function getPostsSitemapEntries(): SitemapUrlEntry[] {
-  return getAllRecipeMeta().map((recipe) => ({
+/** File recipes + published CMS articles (cron publish shows up here after revalidate). */
+export async function getPostsSitemapEntries(): Promise<SitemapUrlEntry[]> {
+  const recipes = await getAllRecipeMetaResolved();
+  return recipes.map((recipe) => ({
     loc: `${SITE.url}/${recipe.slug}/`,
     lastmod: new Date(recipe.modifiedAt).toISOString(),
-    changefreq: "monthly",
+    changefreq: "monthly" as const,
     priority: 0.7,
   }));
 }
 
-export function getCategoriesSitemapEntries(): SitemapUrlEntry[] {
-  return CATEGORIES.flatMap((category) => {
-    const totalPages = getTotalPages(
-      getRecipesByCategory(category.slug).length,
-    );
+export async function getCategoriesSitemapEntries(): Promise<SitemapUrlEntry[]> {
+  const entries: SitemapUrlEntry[] = [];
+  for (const category of CATEGORIES) {
+    const recipes = await getRecipesByCategoryResolved(category.slug);
+    const totalPages = getTotalPages(recipes.length);
 
-    return Array.from({ length: totalPages }, (_, index) => {
+    for (let index = 0; index < totalPages; index += 1) {
       const page = index + 1;
-      return {
+      entries.push({
         loc:
           page === 1
             ? `${SITE.url}/category/${category.slug}/`
             : `${SITE.url}/category/${category.slug}/page/${page}/`,
         lastmod: new Date().toISOString(),
-        changefreq: "weekly" as const,
+        changefreq: "weekly",
         priority: page === 1 ? 0.8 : 0.6,
-      };
-    });
-  });
+      });
+    }
+  }
+  return entries;
 }
 
 export function getPagesSitemapEntries(): SitemapUrlEntry[] {

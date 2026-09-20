@@ -6,7 +6,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { RecipeCard } from "@/components/RecipeCard";
 import { getCategoryContent } from "@/lib/categories";
-import { getRecipesByCategory, isCategorySlug } from "@/lib/content";
+import { isCategorySlug } from "@/lib/content";
+import { getRecipesByCategoryResolved } from "@/lib/cms-content";
 import { CATEGORY_SEO, buildPageMetadata } from "@/lib/page-seo";
 import {
   categoryPagePath,
@@ -16,11 +17,13 @@ import {
 } from "@/lib/pagination";
 import { buildCategoryPageJsonLd } from "@/lib/seo";
 import { CATEGORIES, type CategorySlug } from "@/lib/types";
+import { getRecipesByCategory } from "@/lib/content";
 
 interface PageProps {
   params: Promise<{ slug: string; page: string }>;
 }
 
+/** Static params from files only; CMS extras still resolve at request time. */
 function getCategoryPages(slug: CategorySlug) {
   const total = getRecipesByCategory(slug).length;
   return getTotalPages(total);
@@ -76,7 +79,7 @@ export default async function CategoryPagedPage({ params }: PageProps) {
   if (!category) notFound();
 
   const content = getCategoryContent(slug);
-  const allRecipes = getRecipesByCategory(slug);
+  const allRecipes = await getRecipesByCategoryResolved(slug);
   const totalPages = getTotalPages(allRecipes.length);
 
   if (pageNumber > totalPages) notFound();
