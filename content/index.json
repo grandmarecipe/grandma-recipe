@@ -1,6 +1,19 @@
 {
   "recipes": [
     {
+      "slug": "how-to-cook-jasmine-rice",
+      "title": "How to Cook Jasmine Rice",
+      "excerpt": "There is something comforting about a pot of jasmine rice gently steaming on the stove, just like the simple sides Grandma made for family suppers. This foolproof method gives you tender, fragrant grains with a lovely, fluffy texture, ready to welcome curries, vegetables, beans, or any favorite homemade meal.",
+      "category": "dinner",
+      "categories": [
+        "dinner"
+      ],
+      "publishedAt": "2026-09-20T00:00:00.000Z",
+      "modifiedAt": "2026-09-20T01:59:28.453Z",
+      "featuredImage": "/wp-content/uploads/2026/09/How-To-Cook-Jasmine-Rice-For-Fluffy-Fragrant-Grains.webp",
+      "featuredImageAlt": "How to cook jasmine rice in a white pot with fluffy grains and gentle steam"
+    },
+    {
       "slug": "what-is-a-light-roast-coffee",
       "title": "What Is a Light Roast Coffee? A Bright, Gentle Brew",
       "excerpt": "Light roast coffee brings to mind quiet mornings, a warm mug between both hands, and the bright aroma drifting through Grandma's kitchen. This simple pour-over method lets the beans shine with delicate floral notes, a lively citrus touch, and a clean finish worth savoring slowly.",
