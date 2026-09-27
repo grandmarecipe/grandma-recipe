@@ -79,16 +79,22 @@ export function ensureHeadingIds(html: string): string {
   );
 }
 
-export function buildRecipeTableOfContents(html: string): TocItem[] {
+export function buildRecipeTableOfContents(
+  html: string,
+  options?: { includeRecipeCard?: boolean },
+): TocItem[] {
+  const includeRecipeCard = options?.includeRecipeCard !== false;
   const recipeCard: TocItem = { href: "#recipe", label: "Recipe card" };
   // Always derive TOC from story h2 headings (CMS + migrated WP articles).
   const sectionItems = extractHeadingsTableOfContents(stripWprmMarkup(html));
 
   if (sectionItems.some((item) => item.href === "#recipe")) {
-    return sectionItems;
+    return includeRecipeCard
+      ? sectionItems
+      : sectionItems.filter((item) => item.href !== "#recipe");
   }
 
-  return [recipeCard, ...sectionItems];
+  return includeRecipeCard ? [recipeCard, ...sectionItems] : sectionItems;
 }
 
 export function stripWprmMarkup(html: string): string {

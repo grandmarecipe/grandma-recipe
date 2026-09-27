@@ -1,6 +1,19 @@
 {
   "recipes": [
     {
+      "slug": "easy-chicken-recipes",
+      "title": "Easy Chicken Recipes",
+      "excerpt": "Find easy chicken recipes for weeknights and Sunday supper—baked chicken, ground chicken, pasta, casseroles, wings, and slow cooker dinners, all gathered in one cozy guide.",
+      "category": "dinner",
+      "categories": [
+        "dinner"
+      ],
+      "publishedAt": "2026-09-27T16:29:04.678Z",
+      "modifiedAt": "2026-09-27T17:09:31.470Z",
+      "featuredImage": "/wp-content/uploads/2026/09/Easy-Chicken-Recipes-Homestyle-Dinner-Spread.webp",
+      "featuredImageAlt": "Easy chicken recipes featuring roast chicken, baked chicken, pasta, and family dinner sides"
+    },
+    {
       "slug": "how-to-cook-jasmine-rice",
       "title": "How to Cook Jasmine Rice",
       "excerpt": "There is something comforting about a pot of jasmine rice gently steaming on the stove, just like the simple sides Grandma made for family suppers. This foolproof method gives you tender, fragrant grains with a lovely, fluffy texture, ready to welcome curries, vegetables, beans, or any favorite homemade meal.",
