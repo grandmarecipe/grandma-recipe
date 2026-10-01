@@ -3,6 +3,7 @@ import { SITE } from "./types";
 import type { RecipeRatingAggregate } from "./ratings";
 import type { RecipeComment } from "./comments";
 import { HOME_FAQS } from "./home-faqs";
+import { toMediaUrl } from "./media-url";
 import {
   cleanSchema,
   extractFaqsFromHtml,
@@ -37,6 +38,9 @@ export const SCHEMA_IDS = {
 /** Resolve site-relative paths (/wp-content/...) to absolute URLs for schema/OG. */
 export function absoluteUrl(pathOrUrl?: string | null) {
   if (!pathOrUrl) return undefined;
+  // Prefer R2 public host for recipe media (avoids Vercel function hits).
+  const media = toMediaUrl(pathOrUrl);
+  if (media && /^https?:\/\//i.test(media)) return media;
   if (/^https?:\/\//i.test(pathOrUrl)) return pathOrUrl;
   const path = pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`;
   return `${SITE.url}${path}`;

@@ -232,6 +232,10 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "media.grandmarecipe.com",
+      },
+      {
+        protocol: "https",
         hostname: "**.convex.cloud",
       },
     ],

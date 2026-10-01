@@ -7,6 +7,7 @@ import {
   getAllRecipeMeta,
   getRecipeBySlug as getFileRecipeBySlug,
 } from "@/lib/content";
+import { withPublicMediaUrls } from "@/lib/media-url";
 
 type CmsArticle = {
   slug: string;
@@ -33,7 +34,7 @@ type CmsArticle = {
 };
 
 function articleToRecipe(article: CmsArticle): Recipe {
-  return {
+  return withPublicMediaUrls({
     slug: article.slug,
     title: article.title,
     excerpt: article.excerpt,
@@ -55,7 +56,7 @@ function articleToRecipe(article: CmsArticle): Recipe {
     course: article.course,
     publishedAt: article.publishedAt,
     modifiedAt: article.modifiedAt,
-  };
+  });
 }
 
 function articleToMeta(article: CmsArticle): RecipeMeta {
@@ -94,7 +95,7 @@ function getCachedCmsArticle(slug: string) {
   return unstable_cache(
     async () => fetchCmsArticleBySlug(slug),
     ["cms-article-by-slug", slug],
-    { revalidate: 3600, tags: [`cms-article-${slug}`] },
+    { revalidate: 86400, tags: [`cms-article-${slug}`] },
   )();
 }
 
@@ -126,7 +127,7 @@ function getCachedPublishedCmsArticles() {
   return unstable_cache(
     async () => listPublishedCmsArticles(),
     ["cms-published-articles"],
-    { revalidate: 3600, tags: ["cms-recipes-list"] },
+    { revalidate: 86400, tags: ["cms-recipes-list"] },
   )();
 }
 

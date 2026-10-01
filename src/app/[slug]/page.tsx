@@ -24,10 +24,10 @@ import { CATEGORIES, SITE } from "@/lib/types";
 import { RelatedRecipes } from "@/components/RelatedRecipes";
 
 /**
- * Long ISR window for HTML TTFB. Ratings/comments still refresh via
- * revalidatePath / revalidateTag on UGC writes.
+ * Long ISR window for HTML TTFB (cuts Fluid Active CPU vs hourly regen).
+ * Publish/UGC still refresh via revalidatePath / revalidateTag.
  */
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 interface PageProps {
   params: Promise<{ slug: string }>;

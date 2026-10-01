@@ -19,7 +19,8 @@ const OLD_HOST_IP = process.env.WP_MEDIA_IP || "72.60.93.62";
  * Fluid Active CPU. Resize offline via `npm run resize:r2` instead.
  *
  * Optional: set R2_PUBLIC_BASE_URL (e.g. https://media.grandmarecipe.com)
- * to 308-redirect and skip the Vercel function entirely (saves Origin Transfer + CPU).
+ * to 308-redirect. Public pages also rewrite img src to that host via
+ * `toMediaUrl` so most traffic never hits this function.
  */
 export async function GET(
   _request: NextRequest,

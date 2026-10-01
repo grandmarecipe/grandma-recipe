@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import type { CategorySlug, Recipe, RecipeMeta, StaticPage } from "./types";
 import { extractFeaturedImageFromHtml, extractIntroFromHtml } from "./html";
+import { withPublicMediaUrls } from "./media-url";
 import { CATEGORY_SLUGS } from "./types";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
@@ -46,7 +47,7 @@ function withResolvedIntro<T extends Pick<Recipe, "excerpt" | "contentHtml">>(
 }
 
 function enrichRecipe<T extends Recipe>(recipe: T): T {
-  return withResolvedIntro(withResolvedImage(recipe));
+  return withPublicMediaUrls(withResolvedIntro(withResolvedImage(recipe)));
 }
 
 export function getAllRecipeMeta(): RecipeMeta[] {
