@@ -2,18 +2,44 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useMutation } from "convex/react";
+import { useEffect } from "react";
+import { useMutation, useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import { useAdminAuth } from "./AdminProviders";
 
+function normalizeAdminPath(pathname: string) {
+  if (!pathname) return "/";
+  return pathname.endsWith("/") ? pathname : `${pathname}/`;
+}
+
 export function AdminShell({ children }: { children: React.ReactNode }) {
   const { token, email, setSession, ready } = useAdminAuth();
-  const pathname = usePathname();
+  const pathname = normalizeAdminPath(usePathname() || "/");
   const router = useRouter();
   const logout = useMutation(api.adminAuth.logout);
+  // Validate stored token against Convex — stale sessions used to crash
+  // articles.list with an uncaught Unauthorized error.
+  const me = useQuery(api.adminAuth.me, token ? { token } : "skip");
 
   const isAuthPage =
     pathname === "/admin/login/" || pathname === "/admin/signup/";
+  const sessionInvalid = Boolean(token && me === null);
+
+  useEffect(() => {
+    if (!ready) return;
+    if (sessionInvalid) {
+      setSession(null);
+      if (!isAuthPage) router.replace("/admin/login/");
+      return;
+    }
+    if (!token && !isAuthPage) {
+      router.replace("/admin/login/");
+      return;
+    }
+    if (token && me && isAuthPage) {
+      router.replace("/admin/");
+    }
+  }, [ready, token, me, sessionInvalid, isAuthPage, router, setSession]);
 
   async function handleLogout() {
     if (token) {
@@ -27,7 +53,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
     router.replace("/admin/login/");
   }
 
-  if (!ready) {
+  if (!ready || (token && me === undefined && !isAuthPage)) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-[#f7f1e8] text-sm text-[#6b5b4f]">
         Loading admin…
@@ -35,10 +61,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
     );
   }
 
-  if (!token && !isAuthPage) {
-    if (typeof window !== "undefined") {
-      router.replace("/admin/login/");
-    }
+  if ((!token || sessionInvalid) && !isAuthPage) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-[#f7f1e8] text-sm text-[#6b5b4f]">
         Redirecting to sign in…
@@ -46,10 +69,12 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
     );
   }
 
-  if (token && isAuthPage) {
-    if (typeof window !== "undefined") {
-      router.replace("/admin/");
-    }
+  if (token && me && isAuthPage) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-[#f7f1e8] text-sm text-[#6b5b4f]">
+        Redirecting…
+      </div>
+    );
   }
 
   return (
@@ -74,6 +99,14 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
                 >
                   Generate
                 </Link>
+                {process.env.NODE_ENV === "development" ? (
+                  <Link
+                    href="/admin/keywords-research/"
+                    className="text-[#6b5b4f] hover:text-[#8b1a1a]"
+                  >
+                    Keywords research
+                  </Link>
+                ) : null}
                 <Link
                   href="/admin/articles/new/"
                   className="text-[#6b5b4f] hover:text-[#8b1a1a]"

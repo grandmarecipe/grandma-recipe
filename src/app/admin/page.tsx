@@ -12,6 +12,7 @@ export default function AdminDashboardPage() {
     token ? { token } : "skip",
     { initialNumItems: 40 },
   );
+  const rows = results ?? [];
 
   return (
     <div className="space-y-6">
@@ -43,7 +44,7 @@ export default function AdminDashboardPage() {
         <p className="text-sm text-[#6b5b4f]">Sign in to manage articles.</p>
       ) : status === "LoadingFirstPage" ? (
         <p className="text-sm text-[#6b5b4f]">Loading…</p>
-      ) : results.length === 0 ? (
+      ) : rows.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-[#d4a574] bg-white px-6 py-10 text-center">
           <p className="text-[#6b5b4f]">No CMS articles yet.</p>
           <Link
@@ -67,7 +68,7 @@ export default function AdminDashboardPage() {
                 </tr>
               </thead>
               <tbody>
-                {results.map((article) => (
+                {rows.map((article) => (
                   <tr
                     key={article._id}
                     className="border-b border-[#f0e6da] last:border-0"
@@ -107,7 +108,7 @@ export default function AdminDashboardPage() {
                       ) : null}
                     </td>
                     <td className="px-4 py-3 text-[#6b5b4f]">
-                      {article.modifiedAt.slice(0, 10)}
+                      {article.modifiedAt?.slice(0, 10) || "—"}
                     </td>
                     <td className="px-4 py-3 text-right">
                       <Link
