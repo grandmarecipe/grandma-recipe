@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   description: HOME_SEO.description,
   alternates: {
     canonical: `${SITE.url}/`,
+    types: {
+      "application/rss+xml": `${SITE.url}/feed/`,
+    },
   },
   other: {
     "google-adsense-account": ADSENSE_CLIENT,

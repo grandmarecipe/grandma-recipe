@@ -42,6 +42,8 @@ export async function POST(request: NextRequest) {
     revalidatePath("/sitemap-posts.xml");
     revalidatePath("/sitemap-categories.xml");
     revalidatePath("/sitemap/");
+    revalidatePath("/feed");
+    revalidatePath("/feed/");
   }
 
   revalidateTag("cms-recipes-list");
