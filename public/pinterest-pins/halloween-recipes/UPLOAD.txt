@@ -1,0 +1,27 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+halloween-recipes-pin.jpg
+
+TITLE
+Easy Halloween Recipes for Parties and Fall Baking
+
+DESCRIPTION
+Easy Halloween recipes for party trays, pumpkin bakes, and cozy fall tables.
+
+This pin covers:
+- Pumpkin pie, bread, muffins, and roll
+- Caramel popcorn and Halloween cookies
+- Mummy hot dogs, sherbet punch, and pumpkin soup
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/halloween-recipes/
+
+ALT TEXT
+Homestyle Halloween recipes spread with pumpkin pie, muffins, caramel popcorn, and festive treats

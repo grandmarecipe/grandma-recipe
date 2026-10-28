@@ -1,0 +1,13 @@
+---
+description: Never create pork or alcohol-related recipe content
+alwaysApply: true
+---
+
+# Content bans: pork and alcohol
+
+Never create, suggest, generate, publish, or expand content involving:
+
+- **Pork** or pork-derived ingredients — including pork loin, pork belly, bacon, ham, sausage (pork), prosciutto, pancetta, pulled pork, carnitas, etc.
+- **Alcohol** — wine, beer, spirits, cooking wine, rum extract used as alcohol, “drunken” recipes, cocktails, etc.
+
+When suggesting clusters, keywords, ingredients, substitutions, or image prompts: skip these entirely. Prefer beef, chicken, turkey, fish, seafood, vegetarian, or other non-pork proteins. For recipes that traditionally use wine/beer, use non-alcoholic substitutes (broth, juice, vinegar, etc.) without calling for alcohol.

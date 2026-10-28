@@ -1,0 +1,27 @@
+BOARD
+Grandma breakfast recipe
+
+BOARD_ID
+1137229412095780949
+
+IMAGE FILE
+egg-recipes-pin.jpg
+
+TITLE
+Easy Egg Recipes for Breakfast and Brunch
+
+DESCRIPTION
+Easy egg recipes for busy mornings, brunch tables, and potluck plates.
+
+This pin covers:
+- Breakfast bakes, muffins, and omelettes
+- Quiche for company
+- Egg salad and party eggs
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/egg-recipes/
+
+ALT TEXT
+Homestyle egg recipes brunch spread with baked eggs, quiche, omelette, and muffins

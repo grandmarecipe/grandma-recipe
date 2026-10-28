@@ -35,6 +35,9 @@ yarn-error.log*
 # env files
 .env*.local
 
+# Pinterest OAuth token (never commit)
+.pinterest-token.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -94,11 +94,30 @@ export async function POST(request: NextRequest) {
       note: "Use Cursor GenerateImage only — never OpenAI DALL·E.",
     });
 
+    // Nudge macOS + focus this Cursor workspace (cannot start another project's agent).
+    try {
+      const { spawn } = await import("node:child_process");
+      spawn(
+        "osascript",
+        [
+          "-e",
+          `display notification "Open the Grandma Recipe Agent chat and send any message (or start a new Agent chat here)." with title "Complete article: ${article.slug}"`,
+        ],
+        { detached: true, stdio: "ignore" },
+      ).unref();
+      spawn("cursor", ["-r", process.cwd()], {
+        detached: true,
+        stdio: "ignore",
+      }).unref();
+    } catch {
+      // best-effort only
+    }
+
     return NextResponse.json({
       ok: true,
       mode: "cursor-agent",
       message:
-        "Queued for Cursor agent (GenerateImage — not DALL·E). Keep Agent chat open or send any message; it will finish images + metadata from the signal.",
+        "Queued. Switch to this project's Cursor Agent chat (not another project) and send any message — or open a new Agent chat here. The agent cannot wake while you are working in a different Cursor window.",
       signalPath: ".cursor/signals/complete-article.json",
       slug: article.slug,
       articleId,

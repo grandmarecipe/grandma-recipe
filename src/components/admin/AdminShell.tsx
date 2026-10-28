@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
 import { useMutation, useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import { useAdminAuth } from "./AdminProviders";
@@ -12,34 +12,47 @@ function normalizeAdminPath(pathname: string) {
   return pathname.endsWith("/") ? pathname : `${pathname}/`;
 }
 
+/** Hard nav avoids App Router soft-nav + trailingSlash redirect loops. */
+function hardRedirect(path: string) {
+  if (typeof window === "undefined") return;
+  const target = path.endsWith("/") ? path : `${path}/`;
+  if (normalizeAdminPath(window.location.pathname) === target) return;
+  window.location.href = `${window.location.origin}${target}`;
+}
+
 export function AdminShell({ children }: { children: React.ReactNode }) {
   const { token, email, setSession, ready } = useAdminAuth();
   const pathname = normalizeAdminPath(usePathname() || "/");
-  const router = useRouter();
   const logout = useMutation(api.adminAuth.logout);
   // Validate stored token against Convex — stale sessions used to crash
   // articles.list with an uncaught Unauthorized error.
   const me = useQuery(api.adminAuth.me, token ? { token } : "skip");
+  const redirectingRef = useRef(false);
 
   const isAuthPage =
     pathname === "/admin/login/" || pathname === "/admin/signup/";
   const sessionInvalid = Boolean(token && me === null);
 
   useEffect(() => {
-    if (!ready) return;
+    if (!ready || redirectingRef.current) return;
     if (sessionInvalid) {
       setSession(null);
-      if (!isAuthPage) router.replace("/admin/login/");
+      if (!isAuthPage) {
+        redirectingRef.current = true;
+        hardRedirect("/admin/login/");
+      }
       return;
     }
     if (!token && !isAuthPage) {
-      router.replace("/admin/login/");
+      redirectingRef.current = true;
+      hardRedirect("/admin/login/");
       return;
     }
     if (token && me && isAuthPage) {
-      router.replace("/admin/");
+      redirectingRef.current = true;
+      hardRedirect("/admin/home/");
     }
-  }, [ready, token, me, sessionInvalid, isAuthPage, router, setSession]);
+  }, [ready, token, me, sessionInvalid, isAuthPage, setSession]);
 
   async function handleLogout() {
     if (token) {
@@ -50,7 +63,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
       }
     }
     setSession(null);
-    router.replace("/admin/login/");
+    hardRedirect("/admin/login/");
   }
 
   if (!ready || (token && me === undefined && !isAuthPage)) {
@@ -83,12 +96,15 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
         <header className="border-b border-[#e5d8c8] bg-[#fffdf9]">
           <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3">
             <div className="flex items-center gap-4">
-              <Link href="/admin/" className="font-serif text-xl text-[#8b1a1a]">
+              <Link
+                href="/admin/home/"
+                className="font-serif text-xl text-[#8b1a1a]"
+              >
                 Grandma Recipe Admin
               </Link>
               <nav className="flex gap-3 text-sm">
                 <Link
-                  href="/admin/"
+                  href="/admin/home/"
                   className="text-[#6b5b4f] hover:text-[#8b1a1a]"
                 >
                   Articles

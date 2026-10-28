@@ -4,6 +4,11 @@ import { AdminShell } from "@/components/admin/AdminShell";
 
 export const metadata: Metadata = {
   title: "Admin",
+  // Do not inherit the marketing homepage canonical — that confused
+  // some embedded browsers on /admin/ (ERR_TOO_MANY_REDIRECTS).
+  alternates: {
+    canonical: "/admin/home/",
+  },
   robots: {
     index: false,
     follow: false,

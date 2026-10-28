@@ -93,12 +93,22 @@ async function main() {
         id: item.id as Id<"articles">,
       });
       if (!article) throw new Error("Article not found in DEV.");
-      if (!article.featuredImage?.trim()) {
+
+      const featuredImage =
+        article.featuredImage?.trim() ||
+        article.imageAssets?.feature?.publicPath?.trim() ||
+        "";
+      if (!featuredImage) {
         throw new Error("Missing featured image — complete images first.");
       }
 
       const payload = {
         ...article,
+        featuredImage,
+        featuredImageAlt:
+          article.featuredImageAlt?.trim() ||
+          article.imageAssets?.feature?.alt ||
+          article.featuredImageAlt,
         status: "draft" as const,
         scheduledPublishAt: article.scheduledPublishAt,
       };

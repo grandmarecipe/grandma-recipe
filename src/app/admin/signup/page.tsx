@@ -3,14 +3,12 @@
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { useMutation } from "convex/react";
-import { useRouter } from "next/navigation";
 import { api } from "../../../../convex/_generated/api";
 import { useAdminAuth } from "@/components/admin/AdminProviders";
 
 export default function AdminSignupPage() {
   const signup = useMutation(api.adminAuth.signup);
   const { setSession } = useAdminAuth();
-  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -23,7 +21,7 @@ export default function AdminSignupPage() {
     try {
       const result = await signup({ email, password });
       setSession(result);
-      router.replace("/admin/");
+      window.location.assign("/admin/home/");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Signup failed.");
     } finally {

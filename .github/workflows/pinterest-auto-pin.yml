@@ -1,0 +1,80 @@
+name: Pinterest auto-pin
+
+on:
+  # New recipe + pack publish: pin immediately on that push
+  push:
+    branches: [main]
+    paths:
+      - "pinterest-pins/**"
+      - "content/recipes/**"
+      - "scripts/pinterest/**"
+      - ".github/workflows/pinterest-auto-pin.yml"
+  # Catch-up: 2 pins/day, one hour apart (1 pin per run)
+  schedule:
+    - cron: "20 8 * * *"
+    - cron: "20 9 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "publish = new packs only; catch-up = scheduled backlog"
+        required: false
+        default: "publish"
+        type: choice
+        options:
+          - "publish"
+          - "catch-up"
+      dry_run:
+        description: "Dry run (no pins created)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+permissions:
+  contents: write
+
+jobs:
+  pin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Auto-pin
+        env:
+          PINTEREST_APP_ID: ${{ secrets.PINTEREST_APP_ID }}
+          PINTEREST_APP_SECRET: ${{ secrets.PINTEREST_APP_SECRET }}
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+          PINTEREST_REFRESH_TOKEN: ${{ secrets.PINTEREST_REFRESH_TOKEN }}
+          PINTEREST_DEFAULT_BOARD_ID: ${{ secrets.PINTEREST_DEFAULT_BOARD_ID }}
+          NEXT_PUBLIC_SITE_URL: https://www.grandmarecipe.com
+          CI: "true"
+        run: |
+          ARGS="--refresh"
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event.inputs.mode }}" = "catch-up" ]; then
+            ARGS="$ARGS --catch-up --only-today --per-run=1"
+          fi
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          node scripts/pinterest/auto-pin.mjs $ARGS
+
+      - name: Commit posted log
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          if git diff --quiet -- pinterest-pins/.posted.json; then
+            echo "No .posted.json changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pinterest-pins/.posted.json
+          git commit -m "Record auto-posted Pinterest pins."
+          git push

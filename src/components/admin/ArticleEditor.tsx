@@ -150,8 +150,16 @@ export function ArticleEditor({ articleId }: Props) {
       contentHtml: existing.contentHtml,
       ingredientsText: existing.ingredients.join("\n"),
       instructionsText: existing.instructions.join("\n"),
-      featuredImage: existing.featuredImage ?? "",
-      featuredImageAlt: existing.featuredImageAlt ?? "",
+      featuredImage:
+        existing.featuredImage ??
+        (existing.imageAssets as { feature?: { publicPath?: string } } | undefined)
+          ?.feature?.publicPath ??
+        "",
+      featuredImageAlt:
+        existing.featuredImageAlt ??
+        (existing.imageAssets as { feature?: { alt?: string } } | undefined)
+          ?.feature?.alt ??
+        "",
       featuredImageCaption: existing.featuredImageCaption ?? "",
       featuredImageDescription: existing.featuredImageDescription ?? "",
       featuredImageStorageId: existing.featuredImageStorageId,
@@ -194,10 +202,12 @@ export function ArticleEditor({ articleId }: Props) {
     setForm((prev) => ({ ...prev, [key]: value }));
   }
 
-  function syncSlugFromTitle() {
+  function syncSlugFromFocusKeyword() {
     if (articleId) return;
     if (current.slug.trim()) return;
-    const slug = current.title
+    const source = current.focusKeyword.trim() || current.title.trim();
+    if (!source) return;
+    const slug = source
       .toLowerCase()
       .trim()
       .replace(/['']/g, "")
@@ -400,7 +410,7 @@ export function ArticleEditor({ articleId }: Props) {
       return;
     }
     await removeArticle({ token, id: articleId });
-    router.replace("/admin/");
+    window.location.assign("/admin/home/");
   }
 
   const seoTitleLen = (current.seoTitle || current.title).length;
@@ -539,7 +549,6 @@ export function ArticleEditor({ articleId }: Props) {
               className={inputClass}
               value={current.title}
               onChange={(event) => patch("title", event.target.value)}
-              onBlur={syncSlugFromTitle}
             />
           </Field>
 
@@ -701,6 +710,7 @@ export function ArticleEditor({ articleId }: Props) {
                   onChange={(event) =>
                     patch("focusKeyword", event.target.value)
                   }
+                  onBlur={syncSlugFromFocusKeyword}
                   placeholder="banana pancakes"
                 />
               </Field>

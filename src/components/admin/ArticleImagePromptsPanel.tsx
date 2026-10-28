@@ -278,10 +278,12 @@ export function ArticleImagePromptsPanel({
 
       {promptsReady ? (
         <p className="text-sm text-[#6b5b4f]">
-          <strong className="text-[#8b1a1a]">Complete article</strong> signals
-          the Cursor agent to generate feature (16:9) + in-article (3:4) images
-          with Cursor GenerateImage (not DALL·E), upload to R2, and apply
-          metadata. Keep Agent chat open after clicking.
+          <strong className="text-[#8b1a1a]">Complete article</strong> writes a
+          signal for{" "}
+          <strong className="text-[#3d2b1f]">this</strong> Cursor project’s
+          Agent chat (GenerateImage — not DALL·E). It cannot wake an agent in
+          another Cursor window. After clicking: stay in Grandma Recipe Agent
+          chat and send any message, or open a new Agent chat here.
         </p>
       ) : null}
 

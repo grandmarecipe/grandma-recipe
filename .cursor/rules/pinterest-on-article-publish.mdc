@@ -1,0 +1,40 @@
+---
+description: Generate a Pinterest pin pack with every new or newly published recipe so GitHub Actions can auto-pin on push.
+alwaysApply: true
+---
+
+# Pinterest Pack With Every Recipe
+
+When creating or publishing a Grandma Recipe article, **always ship a Pinterest pack in the same change** so the GitHub Action can pin on push.
+
+## Required with the article
+
+1. `pinterest-pins/<slug>/UPLOAD.txt` + pin image (`.jpg` or `.png` only for API upload)
+2. Mirror the same folder under `public/pinterest-pins/<slug>/`
+3. Do **not** leave pin creation as a follow-up after publish
+
+## UPLOAD.txt rules
+
+- Include `BOARD`, `BOARD_ID`, `IMAGE FILE`, `TITLE`, `DESCRIPTION`, `DESTINATION LINK`, `ALT TEXT`
+- `DESTINATION LINK` must be `https://www.grandmarecipe.com/<slug>/`
+- End `DESCRIPTION` with exactly:
+  ```
+  Get the full recipe on Grandma Recipe.
+  ```
+- Do **not** append the recipe URL at the end of the description (the destination link field already carries the URL)
+- No pork / no alcohol content or imagery
+- Em dashes (`—`) are banned; use commas instead
+
+## Board IDs (use the best fit)
+
+| Board | BOARD_ID |
+|-------|----------|
+| Grandma breakfast recipe | `1137229412095780949` |
+| Grandma lunch recipe | `1137229412095780950` |
+| Grandma dinner recipe | `1137229412095780951` |
+| Grandma dessert recipe | `1137229412095780952` |
+| Grandma snack recipe | `1137229412095892593` |
+
+## Publish timing
+
+Auto-pin runs on **push to `main`** when the recipe’s `publishedAt` day is already live (UTC). Set `publishedAt` for the day you push if you want the pin at publish time. Do not rely on a daily cron for brand-new packs.

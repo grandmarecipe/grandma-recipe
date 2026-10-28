@@ -312,7 +312,8 @@ export async function POST(request: NextRequest) {
 
     const result: GeneratedArticle = {
       title,
-      slug: slugifyTitle(title),
+      // Public URL from focus keyword only (not the marketing title).
+      slug: slugifyTitle(focusKeyword),
       excerpt,
       category,
       contentHtml,

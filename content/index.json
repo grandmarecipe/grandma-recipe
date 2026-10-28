@@ -1,6 +1,277 @@
 {
   "recipes": [
     {
+      "slug": "halloween-recipes",
+      "title": "Easy Halloween Recipes",
+      "excerpt": "Find easy Halloween recipes for pumpkin pie, bread, muffins, caramel popcorn, cookies, mummy hot dogs, and cozy soup, all gathered in one Grandma Recipe guide.",
+      "category": "dessert",
+      "categories": [
+        "dessert",
+        "snacks",
+        "dinner",
+        "breakfast"
+      ],
+      "publishedAt": "2026-10-28T19:05:12.584Z",
+      "modifiedAt": "2026-10-28T19:06:46.509Z",
+      "featuredImage": "/wp-content/uploads/2026/10/Easy-Halloween-Recipes-Homestyle-Spread.webp",
+      "featuredImageAlt": "Easy Halloween recipes with pumpkin pie, bread, muffins, caramel popcorn, and cookies"
+    },
+    {
+      "slug": "pumpkin-soup",
+      "title": "Creamy Homemade Pumpkin Soup",
+      "excerpt": "When the evenings turn crisp and the porch fills with golden leaves, a warm pot of pumpkin soup feels like a little bowl of home. This creamy, garlicky recipe is simple enough for a weeknight and special enough for a cozy Halloween dinner, just like something Grandma would ladle into waiting bowls.",
+      "category": "dinner",
+      "categories": [
+        "dinner"
+      ],
+      "publishedAt": "2026-10-28T18:18:41.688Z",
+      "modifiedAt": "2026-10-28T19:06:44.666Z",
+      "featuredImage": "/wp-content/uploads/2026/10/Creamy-Homemade-Pumpkin-Soup.webp",
+      "featuredImageAlt": "Creamy pumpkin soup in a rustic bowl with pumpkin seeds, parsley, bread, and autumn leaves"
+    },
+    {
+      "slug": "caramel-popcorn",
+      "title": "Homemade Caramel Popcorn",
+      "excerpt": "There is something wonderfully old-fashioned about a bowl of caramel popcorn cooling on the kitchen counter, its buttery sweetness filling the house with memories of movie nights and school parties. This golden, crisp treat is just right for Halloween gatherings, cozy films, and little hands eager to sneak a handful.",
+      "category": "snacks",
+      "categories": [
+        "snacks"
+      ],
+      "publishedAt": "2026-10-28T18:17:54.296Z",
+      "modifiedAt": "2026-10-28T19:06:42.862Z",
+      "featuredImage": "/wp-content/uploads/2026/10/Homemade-Caramel-Popcorn-For-Cozy-Movie-Nights.webp",
+      "featuredImageAlt": "Golden caramel popcorn in a ceramic bowl on a cozy autumn kitchen counter"
+    },
+    {
+      "slug": "pumpkin-roll",
+      "title": "Classic Pumpkin Roll with Cream Cheese Filling",
+      "excerpt": "There is something wonderfully old-fashioned about a pumpkin roll cooling on the kitchen counter, its warm spices filling the house just like autumn afternoons at Grandma's. This tender pumpkin cake, wrapped around a sweet cream cheese filling and finished with powdered sugar, makes every dessert table feel a little more special.",
+      "category": "dessert",
+      "categories": [
+        "dessert"
+      ],
+      "publishedAt": "2026-10-28T18:17:02.609Z",
+      "modifiedAt": "2026-10-28T19:06:41.312Z",
+      "featuredImage": "/wp-content/uploads/2026/10/Classic-Pumpkin-Roll-With-Cream-Cheese-Filling.webp",
+      "featuredImageAlt": "Pumpkin roll with cream cheese filling and powdered sugar on a rustic kitchen counter"
+    },
+    {
+      "slug": "pumpkin-muffins",
+      "title": "Soft Bakery-Style Pumpkin Muffins",
+      "excerpt": "When the mornings turn crisp and the kitchen fills with the cozy scent of cinnamon, these soft pumpkin muffins feel like a little celebration. They are tender, warmly spiced, and just right for a family breakfast during Halloween week, especially with a sparkling cinnamon sugar top.",
+      "category": "breakfast",
+      "categories": [
+        "breakfast"
+      ],
+      "publishedAt": "2026-10-28T18:16:09.888Z",
+      "modifiedAt": "2026-10-28T19:06:39.657Z",
+      "featuredImage": "/wp-content/uploads/2026/10/Soft-Bakery-style-Pumpkin-Muffins.webp",
+      "featuredImageAlt": "Pumpkin muffins with sparkling cinnamon sugar tops arranged on a cozy autumn breakfast table"
+    },
+    {
+      "slug": "pumpkin-bread",
+      "title": "Grandma's Moist Pumpkin Bread",
+      "excerpt": "When autumn leaves gather by the kitchen door, this pumpkin bread is the loaf Grandma always seemed to have cooling on the counter. Its tender crumb, warm cinnamon spice, and optional handfuls of chocolate chips or walnuts make every slice feel like a cozy visit from home.",
+      "category": "dessert",
+      "categories": [
+        "dessert"
+      ],
+      "publishedAt": "2026-10-28T18:15:19.120Z",
+      "modifiedAt": "2026-10-28T19:06:37.892Z",
+      "featuredImage": "/wp-content/uploads/2026/10/Grandmas-Moist-Pumpkin-Bread.webp",
+      "featuredImageAlt": "Sliced pumpkin bread with chocolate chips and walnuts cooling on a rustic kitchen counter"
+    },
+    {
+      "slug": "pumpkin-pie-recipe",
+      "title": "Classic Homemade Pumpkin Pie Recipe",
+      "excerpt": "There is something wonderfully cozy about a pumpkin pie cooling on the kitchen counter while the house fills with cinnamon and warm autumn spice. This old-fashioned favorite is simple enough for a family baking day and just right for Halloween gatherings, fall suppers, and a generous dollop of whipped cream.",
+      "category": "dessert",
+      "categories": [
+        "dessert"
+      ],
+      "publishedAt": "2026-10-28T18:14:32.135Z",
+      "modifiedAt": "2026-10-28T19:06:33.593Z",
+      "featuredImage": "/wp-content/uploads/2026/10/Classic-Homemade-Pumpkin-Pie-Recipe.webp",
+      "featuredImageAlt": "Classic pumpkin pie recipe cooling on a wooden kitchen table with whipped cream and autumn spices"
+    },
+    {
+      "slug": "bread-recipes",
+      "title": "Easy Bread Recipes",
+      "excerpt": "Find easy bread recipes for homemade loaves, focaccia, banana bread, zucchini bread, biscuits, and pull-apart garlic bread—all gathered in one Grandma Recipe guide.",
+      "category": "breakfast",
+      "categories": [
+        "breakfast",
+        "snacks",
+        "dessert"
+      ],
+      "publishedAt": "2026-10-28T17:48:39.736Z",
+      "modifiedAt": "2026-10-28T17:55:20.680Z",
+      "featuredImage": "/wp-content/uploads/2026/10/Easy-Bread-Recipes-Homestyle-Spread.webp",
+      "featuredImageAlt": "Easy bread recipes with homemade loaf, focaccia, banana bread, and garlic bread"
+    },
+    {
+      "slug": "cookie-recipes",
+      "title": "Easy Cookie Recipes",
+      "excerpt": "Find easy cookie recipes for chocolate chip, peanut butter, no-bake, crinkle, sugar cookies, and holiday trays—all gathered in one Grandma Recipe guide.",
+      "category": "dessert",
+      "categories": [
+        "dessert",
+        "snacks"
+      ],
+      "publishedAt": "2026-10-28T17:45:35.378Z",
+      "modifiedAt": "2026-10-28T17:55:17.896Z",
+      "featuredImage": "/wp-content/uploads/2026/10/Easy-Cookie-Recipes-Homestyle-Spread.webp",
+      "featuredImageAlt": "Easy cookie recipes with chocolate chip, crinkle, peanut butter, and sugar cookies"
+    },
+    {
+      "slug": "mexican-recipes",
+      "title": "Easy Mexican Recipes",
+      "excerpt": "Find easy Mexican recipes for tacos, burritos, taco soup, nachos, street corn dip, and dinner boards—all gathered in one Grandma Recipe guide.",
+      "category": "dinner",
+      "categories": [
+        "dinner",
+        "lunch",
+        "snacks"
+      ],
+      "publishedAt": "2026-10-28T17:42:24.817Z",
+      "modifiedAt": "2026-10-28T17:55:15.557Z",
+      "featuredImage": "/wp-content/uploads/2026/10/Easy-Mexican-Recipes-Homestyle-Spread.webp",
+      "featuredImageAlt": "Easy Mexican recipes with tacos, burritos, nachos, and street corn dip"
+    },
+    {
+      "slug": "fish-recipes",
+      "title": "Easy Fish Recipes",
+      "excerpt": "Find easy fish recipes for salmon, tuna, white fish, shrimp, and seafood dinners—sheet pan, skillet, meal prep, and party plates, all gathered in one Grandma Recipe guide.",
+      "category": "dinner",
+      "categories": [
+        "dinner",
+        "lunch"
+      ],
+      "publishedAt": "2026-10-24T01:12:21.941Z",
+      "modifiedAt": "2026-10-24T01:13:45.659Z",
+      "featuredImage": "/wp-content/uploads/2026/10/Easy-Fish-Recipes-Homestyle-Spread.webp",
+      "featuredImageAlt": "Easy fish recipes with salmon, tuna, white fish, shrimp, and seafood dinner plates"
+    },
+    {
+      "slug": "egg-recipes",
+      "title": "Easy Egg Recipes",
+      "excerpt": "Find easy egg recipes for breakfast bakes, muffins, quiche, omelettes, egg salad, party eggs, and custard pie—all gathered in one Grandma Recipe guide.",
+      "category": "breakfast",
+      "categories": [
+        "breakfast",
+        "lunch",
+        "snacks"
+      ],
+      "publishedAt": "2026-10-24T00:26:38.405Z",
+      "modifiedAt": "2026-10-24T00:27:57.561Z",
+      "featuredImage": "/wp-content/uploads/2026/10/Easy-Egg-Recipes-Homestyle-Spread.webp",
+      "featuredImageAlt": "Easy egg recipes with baked eggs, quiche, omelette, egg salad, and muffins"
+    },
+    {
+      "slug": "casserole-recipes",
+      "title": "Easy Casserole Recipes",
+      "excerpt": "Find easy casserole recipes for chicken and rice bakes, pasta casseroles, hashbrown and potato sides, cowboy casserole, and more—all gathered in one Grandma Recipe guide.",
+      "category": "dinner",
+      "categories": [
+        "dinner"
+      ],
+      "publishedAt": "2026-10-17T18:32:40.912Z",
+      "modifiedAt": "2026-10-24T00:02:06.258Z",
+      "featuredImage": "/wp-content/uploads/2026/10/Easy-Casserole-Recipes-Homestyle-Spread.webp",
+      "featuredImageAlt": "Easy casserole recipes with creamy chicken bake, potato casserole, and golden cheese topping"
+    },
+    {
+      "slug": "easy-breakfast-recipes",
+      "title": "Easy Breakfast Recipes",
+      "excerpt": "Find easy breakfast recipes for busy mornings and slow weekends—pancakes, waffles, overnight oats, egg breakfasts, and homemade breads, all gathered in one cozy guide.",
+      "category": "breakfast",
+      "categories": [
+        "breakfast"
+      ],
+      "publishedAt": "2026-09-30T16:36:05.833Z",
+      "modifiedAt": "2026-10-01T10:12:15.436Z",
+      "featuredImage": "/wp-content/uploads/2026/09/Easy-Breakfast-Recipes-Homestyle-Morning-Spread.webp",
+      "featuredImageAlt": "Easy breakfast recipes featuring banana pancakes, overnight oats, and warm banana bread"
+    },
+    {
+      "slug": "easy-weeknight-dinners",
+      "title": "Easy Weeknight Dinners",
+      "excerpt": "Find easy weeknight dinners by method—air fryer, crockpot, sheet pan, and skillet meals—for busy evenings and cozy family supper.",
+      "category": "dinner",
+      "categories": [
+        "dinner"
+      ],
+      "publishedAt": "2026-09-30T16:36:05.315Z",
+      "modifiedAt": "2026-10-01T09:50:27.419Z",
+      "featuredImage": "/wp-content/uploads/2026/09/Easy-Weeknight-Dinners-Homestyle-Spread.webp",
+      "featuredImageAlt": "Easy weeknight dinners featuring skillet steak bites, sheet-pan chicken, and crockpot supper"
+    },
+    {
+      "slug": "easy-dessert-recipes",
+      "title": "Easy Dessert Recipes",
+      "excerpt": "Find easy dessert recipes for weeknights and Sunday supper—no-bake sweets, cookies, pies, cakes, brownies, and cheesecakes, all gathered in one cozy guide.",
+      "category": "dessert",
+      "categories": [
+        "dessert"
+      ],
+      "publishedAt": "2026-09-30T16:36:04.484Z",
+      "modifiedAt": "2026-10-01T00:29:50.793Z",
+      "featuredImage": "/wp-content/uploads/2026/09/Easy-Dessert-Recipes-Homestyle-Sweet-Spread.webp",
+      "featuredImageAlt": "Easy dessert recipes featuring chocolate cake, cookies, pie, and no-bake sweets"
+    },
+    {
+      "slug": "easy-soup-recipes",
+      "title": "Easy Soup Recipes",
+      "excerpt": "Find easy soup recipes for chilly evenings and Sunday supper—homemade stock, chicken soups, beef and chili bowls, creamy vegetable soups, and noodle soups, all gathered in one cozy guide.",
+      "category": "dinner",
+      "categories": [
+        "dinner"
+      ],
+      "publishedAt": "2026-09-30T16:17:43.669Z",
+      "modifiedAt": "2026-09-30T16:31:07.708Z",
+      "featuredImage": "/wp-content/uploads/2026/09/Easy-Soup-Recipes-Homestyle-Dinner-Spread.webp",
+      "featuredImageAlt": "Easy soup recipes featuring homemade chicken soup, creamy potato soup, and simmering broth"
+    },
+    {
+      "slug": "easy-rice-recipes",
+      "title": "Easy Rice Recipes",
+      "excerpt": "Find easy rice recipes for weeknights and Sunday supper—how to cook rice by type, chicken and rice dinners, casseroles, biryani, and rice noodles, all gathered in one cozy guide.",
+      "category": "dinner",
+      "categories": [
+        "dinner"
+      ],
+      "publishedAt": "2026-09-30T14:22:48.973Z",
+      "modifiedAt": "2026-09-30T14:24:15.195Z",
+      "featuredImage": "/wp-content/uploads/2026/09/Easy-Rice-Recipes-Homestyle-Dinner-Spread.webp",
+      "featuredImageAlt": "Easy rice recipes featuring fluffy white rice, jasmine rice, and chicken over rice"
+    },
+    {
+      "slug": "easy-pasta-recipes",
+      "title": "Easy Pasta Recipes",
+      "excerpt": "Find easy pasta recipes for weeknights and Sunday supper—lasagna, creamy chicken pasta, baked pasta, pasta salads, and crockpot noodles, all gathered in one cozy guide.",
+      "category": "dinner",
+      "categories": [
+        "dinner"
+      ],
+      "publishedAt": "2026-09-28T22:18:53.958Z",
+      "modifiedAt": "2026-09-28T22:29:47.451Z",
+      "featuredImage": "/wp-content/uploads/2026/09/Easy-Pasta-Recipes-Homestyle-Dinner-Spread.webp",
+      "featuredImageAlt": "Easy pasta recipes featuring lasagna, creamy chicken pasta, and a family dinner table"
+    },
+    {
+      "slug": "easy-beef-recipes",
+      "title": "Easy Beef Recipes",
+      "excerpt": "Find easy beef recipes for weeknights and Sunday supper—skillet steak, pot roast, short ribs, ground beef dinners, slow cooker beef, and brisket, all gathered in one cozy guide.",
+      "category": "dinner",
+      "categories": [
+        "dinner"
+      ],
+      "publishedAt": "2026-09-27T17:24:19.929Z",
+      "modifiedAt": "2026-09-28T22:05:01.963Z",
+      "featuredImage": "/wp-content/uploads/2026/09/Easy-Beef-Recipes-Homestyle-Dinner-Spread.webp",
+      "featuredImageAlt": "Easy beef recipes featuring seared steak, pot roast, and garlic butter steak bites"
+    },
+    {
       "slug": "easy-chicken-recipes",
       "title": "Easy Chicken Recipes",
       "excerpt": "Find easy chicken recipes for weeknights and Sunday supper—baked chicken, ground chicken, pasta, casseroles, wings, and slow cooker dinners, all gathered in one cozy guide.",

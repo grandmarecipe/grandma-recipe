@@ -1,10 +1,15 @@
 {
   "version": 1,
   "hooks": {
+    "sessionStart": [
+      {
+        "command": "node .cursor/hooks/complete-article-session-start.js"
+      }
+    ],
     "stop": [
       {
         "command": "node .cursor/hooks/complete-article-signal.js",
-        "loop_limit": 3
+        "loop_limit": 5
       }
     ]
   }

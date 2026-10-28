@@ -3,14 +3,12 @@
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { useMutation } from "convex/react";
-import { useRouter } from "next/navigation";
 import { api } from "../../../../convex/_generated/api";
 import { useAdminAuth } from "@/components/admin/AdminProviders";
 
 export default function AdminLoginPage() {
   const login = useMutation(api.adminAuth.login);
   const { setSession } = useAdminAuth();
-  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -23,7 +21,9 @@ export default function AdminLoginPage() {
     try {
       const result = await login({ email, password });
       setSession(result);
-      router.replace("/admin/");
+      // Hard nav — soft replace to /admin/ caused ERR_TOO_MANY_REDIRECTS
+      // in Cursor Simple Browser with trailingSlash.
+      window.location.assign("/admin/home/");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Sign in failed.");
     } finally {

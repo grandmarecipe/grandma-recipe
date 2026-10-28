@@ -556,7 +556,7 @@ export const create = mutation({
   },
   handler: async (ctx, args) => {
     const admin = await requireAdmin(ctx, args.token);
-    const slug = slugify(args.slug || args.title);
+    const slug = slugify(args.slug || args.focusKeyword || args.title);
     if (!slug) throw new Error("Slug is required.");
     if (!args.title.trim()) throw new Error("Title is required.");
 
@@ -629,7 +629,7 @@ export const update = mutation({
     const current = await ctx.db.get(args.id);
     if (!current) throw new Error("Article not found.");
 
-    const slug = slugify(args.slug || args.title);
+    const slug = slugify(args.slug || args.focusKeyword || args.title);
     if (!slug) throw new Error("Slug is required.");
 
     const conflict = await ctx.db
@@ -879,16 +879,18 @@ export const exportOneForSync = query({
   },
 });
 
-/** Full upsert for dev→prod CMS sync (overwrites existing slug). */
+/** Full upsert for dev→prod CMS sync (overwrites existing slug or id). */
 export const syncArticleFull = mutation({
   args: {
     token: v.optional(v.string()),
     secret: v.optional(v.string()),
+    /** When set, patch this article even if the slug is changing. */
+    id: v.optional(v.id("articles")),
     article: syncArticlePayload,
   },
-  handler: async (ctx, { token, secret, article }) => {
+  handler: async (ctx, { token, secret, id: forceId, article }) => {
     const actor = await authorizeImportOrAdmin(ctx, token, secret);
-    const slug = slugify(article.slug || article.title);
+    const slug = slugify(article.slug || article.focusKeyword || article.title);
     if (!slug) throw new Error("Slug is required.");
 
     const categories =
@@ -930,13 +932,20 @@ export const syncArticleFull = mutation({
       imageAssets: article.imageAssets,
     };
 
-    const existing = await ctx.db
+    const bySlug = await ctx.db
       .query("articles")
       .withIndex("by_slug", (q) => q.eq("slug", slug))
       .unique();
 
+    if (bySlug && forceId && bySlug._id !== forceId) {
+      throw new Error(`Slug "${slug}" is already used by another article.`);
+    }
+
     let id: Id<"articles">;
     let action: "insert" | "update";
+
+    const existing =
+      (forceId ? await ctx.db.get(forceId) : null) ?? bySlug ?? null;
 
     if (existing) {
       await ctx.db.patch(existing._id, {
@@ -962,6 +971,25 @@ export const syncArticleFull = mutation({
     );
 
     return { action, id, slug };
+  },
+});
+
+/** Secret-auth delete for CMS sync / agent cleanup. */
+export const syncRemove = mutation({
+  args: {
+    token: v.optional(v.string()),
+    secret: v.optional(v.string()),
+    id: v.id("articles"),
+  },
+  returns: v.object({ ok: v.literal(true) }),
+  handler: async (ctx, { token, secret, id }) => {
+    await authorizeImportOrAdmin(ctx, token, secret);
+    const row = await ctx.db.get(id);
+    if (!row) throw new Error("Article not found.");
+    const body = await getBody(ctx, id);
+    if (body) await ctx.db.delete(body._id);
+    await ctx.db.delete(id);
+    return { ok: true as const };
   },
 });
 
@@ -1014,7 +1042,7 @@ export const upsertPublishedImport = mutation({
       actorEmail = admin.email;
     }
 
-    const slug = slugify(article.slug || article.title);
+    const slug = slugify(article.slug || article.focusKeyword || article.title);
     if (!slug) throw new Error("Slug is required.");
 
     const existing = await ctx.db
