@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+fish-recipes-pin.jpg
+
+TITLE
+Easy Fish Recipes
+
+DESCRIPTION
+Find easy fish recipes for salmon, tuna, white fish, shrimp, and seafood dinners,sheet pan, skillet, meal prep, and party plates, all gathered in one.
+
+This pin covers:
+- Easy fish recipes for dinner
+- Simple seafood and flaky fillets
+- Fresh fish made approachable
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/fish-recipes/
+
+ALT TEXT
+Easy fish recipes with salmon, tuna, white fish, shrimp, and seafood dinner plates

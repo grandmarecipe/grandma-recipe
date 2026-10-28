@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+easy-weeknight-dinners-pin.jpg
+
+TITLE
+Easy Weeknight Dinners
+
+DESCRIPTION
+Find easy weeknight dinners by method,air fryer, crockpot, sheet pan, and skillet meals,for busy evenings and cozy family supper.
+
+This pin covers:
+- Easy weeknight dinner ideas
+- Fast, filling family meals
+- Less stress after a busy day
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/easy-weeknight-dinners/
+
+ALT TEXT
+Easy weeknight dinners featuring skillet steak bites, sheet-pan chicken, and crockpot supper

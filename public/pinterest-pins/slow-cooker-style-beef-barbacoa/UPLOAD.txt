@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+slow-cooker-style-beef-barbacoa-pin.jpg
+
+TITLE
+Slow Cooker-Style Beef Barbacoa
+
+DESCRIPTION
+There is something wonderfully comforting about a pot of barbacoa simmering in the kitchen, filling the house with the warm scent of chiles, garlic, and.
+
+This pin covers:
+- Tender slow cooker beef barbacoa
+- Warm tortillas and toppings
+- Easy make-ahead dinner
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/slow-cooker-style-beef-barbacoa/
+
+ALT TEXT
+A bowl of tender beef barbacoa with tortillas, lime wedges, cilantro, onion, and radishes on a rustic table

@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+how-to-cook-jasmine-rice-pin.jpg
+
+TITLE
+How to Cook Jasmine Rice
+
+DESCRIPTION
+How to Cook Jasmine Rice from Grandma Recipe, simple steps and cozy homemade flavor.
+
+This pin covers:
+- Fluffy jasmine rice every time
+- Clear water-to-rice ratios
+- Stovetop method that works
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/how-to-cook-jasmine-rice/
+
+ALT TEXT
+How to cook jasmine rice in a white pot with fluffy grains and gentle steam

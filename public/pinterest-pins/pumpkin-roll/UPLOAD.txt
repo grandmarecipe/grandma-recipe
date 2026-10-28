@@ -1,0 +1,27 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+pumpkin-roll-pin.jpg
+
+TITLE
+Classic Pumpkin Roll with Cream Cheese Filling
+
+DESCRIPTION
+There is something wonderfully old-fashioned about a pumpkin roll cooling on the kitchen counter, its warm spices filling the house just like autumn.
+
+This pin covers:
+- Classic pumpkin roll with cream cheese
+- Soft cake and neat spiral slices
+- Showpiece fall dessert
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/pumpkin-roll/
+
+ALT TEXT
+Pumpkin roll with cream cheese filling and powdered sugar on a rustic kitchen counter

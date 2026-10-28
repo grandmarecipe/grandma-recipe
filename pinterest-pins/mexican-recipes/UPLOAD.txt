@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+mexican-recipes-pin.jpg
+
+TITLE
+Easy Mexican Recipes
+
+DESCRIPTION
+Find easy Mexican recipes for tacos, burritos, taco soup, nachos, street corn dip, and dinner boards,all gathered in one Grandma Recipe guide.
+
+This pin covers:
+- Easy Mexican recipes for family tables
+- Tacos, bowls, and cozy classics
+- Bold flavors with simple steps
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/mexican-recipes/
+
+ALT TEXT
+Easy Mexican recipes with tacos, burritos, nachos, and street corn dip

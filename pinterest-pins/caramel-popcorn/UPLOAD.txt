@@ -1,0 +1,27 @@
+BOARD
+Grandma snack recipe
+
+BOARD_ID
+1137229412095892593
+
+IMAGE FILE
+caramel-popcorn-pin.jpg
+
+TITLE
+Homemade Caramel Popcorn
+
+DESCRIPTION
+There is something wonderfully old-fashioned about a bowl of caramel popcorn cooling on the kitchen counter, its buttery sweetness filling the house with.
+
+This pin covers:
+- Homemade caramel popcorn
+- Crispy movie-night snack
+- Great for parties and trays
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/caramel-popcorn/
+
+ALT TEXT
+Golden caramel popcorn in a ceramic bowl on a cozy autumn kitchen counter

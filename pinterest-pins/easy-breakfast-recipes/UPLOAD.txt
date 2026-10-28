@@ -1,0 +1,27 @@
+BOARD
+Grandma breakfast recipe
+
+BOARD_ID
+1137229412095780949
+
+IMAGE FILE
+easy-breakfast-recipes-pin.jpg
+
+TITLE
+Easy Breakfast Recipes
+
+DESCRIPTION
+Find easy breakfast recipes for busy mornings and slow weekends,pancakes, waffles, overnight oats, egg breakfasts, and homemade breads, all gathered in one.
+
+This pin covers:
+- Easy breakfast recipes to start the day
+- Eggs, pancakes, and bakery favorites
+- Simple morning plates
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/easy-breakfast-recipes/
+
+ALT TEXT
+Easy breakfast recipes featuring banana pancakes, overnight oats, and warm banana bread

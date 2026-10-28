@@ -1,0 +1,27 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+cookie-recipes-pin.jpg
+
+TITLE
+Easy Cookie Recipes
+
+DESCRIPTION
+Find easy cookie recipes for chocolate chip, peanut butter, no-bake, crinkle, sugar cookies, and holiday trays,all gathered in one Grandma Recipe guide.
+
+This pin covers:
+- Easy cookie recipes for every tray
+- Chocolate chip, crinkle, and more
+- Homestyle cookie baking guide
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/cookie-recipes/
+
+ALT TEXT
+Easy cookie recipes with chocolate chip, crinkle, peanut butter, and sugar cookies

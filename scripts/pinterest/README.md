@@ -116,5 +116,6 @@ npm run pinterest:auto -- --catch-up --only-today
 Workflow: `.github/workflows/pinterest-auto-pin.yml`
 
 - **Push to `main`** when packs change: pins new (non-backlog) packs for live recipes
-- **Daily crons 08:20 and 09:20 UTC**: 1 catch-up pin each (2/day)
+- **Daily crons 08:00 and 10:00 UTC** (9:00 and 11:00 local UTC+1): 1 catch-up pin each (2/day)
 - **Manual** “Run workflow” with mode `publish` or `catch-up`
+- Catch-up backlog lives in `pinterest-pins/backlog.json` (`scheduleDate` + `pinsPerDay`)

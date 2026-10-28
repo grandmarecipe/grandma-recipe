@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+easy-pasta-recipes-pin.jpg
+
+TITLE
+Easy Pasta Recipes
+
+DESCRIPTION
+Find easy pasta recipes for weeknights and Sunday supper,lasagna, creamy chicken pasta, baked pasta, pasta salads, and crockpot noodles, all gathered in one.
+
+This pin covers:
+- Easy pasta recipes for dinner
+- Creamy, tomato, and cozy bowls
+- Quick weeknight pasta ideas
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/easy-pasta-recipes/
+
+ALT TEXT
+Easy pasta recipes featuring lasagna, creamy chicken pasta, and a family dinner table

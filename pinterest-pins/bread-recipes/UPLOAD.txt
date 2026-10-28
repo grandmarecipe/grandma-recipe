@@ -1,0 +1,27 @@
+BOARD
+Grandma breakfast recipe
+
+BOARD_ID
+1137229412095780949
+
+IMAGE FILE
+bread-recipes-pin.jpg
+
+TITLE
+Easy Bread Recipes
+
+DESCRIPTION
+Find easy bread recipes for homemade loaves, focaccia, banana bread, zucchini bread, biscuits, and pull-apart garlic bread,all gathered in one Grandma.
+
+This pin covers:
+- Easy bread recipes for home bakers
+- Loaves, focaccia, and quick breads
+- Homestyle bread baking guide
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/bread-recipes/
+
+ALT TEXT
+Easy bread recipes with homemade loaf, focaccia, banana bread, and garlic bread

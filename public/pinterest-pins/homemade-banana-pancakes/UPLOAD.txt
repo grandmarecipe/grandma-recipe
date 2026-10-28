@@ -1,0 +1,27 @@
+BOARD
+Grandma breakfast recipe
+
+BOARD_ID
+1137229412095780949
+
+IMAGE FILE
+homemade-banana-pancakes-pin.jpg
+
+TITLE
+Homemade Banana Pancakes
+
+DESCRIPTION
+Homemade Banana Pancakes from Grandma Recipe, simple steps and cozy homemade flavor.
+
+This pin covers:
+- Fluffy homemade banana pancakes
+- Simple pantry ingredients
+- Perfect weekend breakfast
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/homemade-banana-pancakes/
+
+ALT TEXT
+homemade banana pancakes stacked with banana slices, cinnamon, butter, and maple syrup on a cozy breakfast table

@@ -1,0 +1,27 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+pumpkin-pie-recipe-pin.jpg
+
+TITLE
+Classic Homemade Pumpkin Pie Recipe
+
+DESCRIPTION
+Classic Homemade Pumpkin Pie Recipe from Grandma Recipe, simple steps and cozy homemade flavor.
+
+This pin covers:
+- Classic homemade pumpkin pie
+- Flaky crust and creamy filling
+- Holiday and Halloween dessert
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/pumpkin-pie-recipe/
+
+ALT TEXT
+Classic pumpkin pie recipe cooling on a wooden kitchen table with whipped cream and autumn spices

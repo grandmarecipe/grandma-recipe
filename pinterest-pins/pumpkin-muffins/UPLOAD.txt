@@ -1,0 +1,27 @@
+BOARD
+Grandma breakfast recipe
+
+BOARD_ID
+1137229412095780949
+
+IMAGE FILE
+pumpkin-muffins-pin.jpg
+
+TITLE
+Soft Bakery-Style Pumpkin Muffins
+
+DESCRIPTION
+When the mornings turn crisp and the kitchen fills with the cozy scent of cinnamon, these soft pumpkin muffins feel like a little celebration. They are.
+
+This pin covers:
+- Soft bakery-style pumpkin muffins
+- Cinnamon sugar tops
+- Easy fall breakfast bake
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/pumpkin-muffins/
+
+ALT TEXT
+Pumpkin muffins with sparkling cinnamon sugar tops arranged on a cozy autumn breakfast table

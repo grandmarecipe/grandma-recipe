@@ -1,0 +1,27 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+pumpkin-bread-pin.jpg
+
+TITLE
+Grandma's Moist Pumpkin Bread
+
+DESCRIPTION
+When autumn leaves gather by the kitchen door, this pumpkin bread is the loaf Grandma always seemed to have cooling on the counter. Its tender crumb, warm.
+
+This pin covers:
+- Moist pumpkin bread with warm spices
+- Optional chocolate chips or walnuts
+- Perfect fall baking loaf
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/pumpkin-bread/
+
+ALT TEXT
+Sliced pumpkin bread with chocolate chips and walnuts cooling on a rustic kitchen counter

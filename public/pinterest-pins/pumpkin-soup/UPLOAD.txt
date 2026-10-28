@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+pumpkin-soup-pin.jpg
+
+TITLE
+Creamy Homemade Pumpkin Soup
+
+DESCRIPTION
+When the evenings turn crisp and the porch fills with golden leaves, a warm pot of pumpkin soup feels like a little bowl of home. This creamy, garlicky.
+
+This pin covers:
+- Creamy homemade pumpkin soup
+- Cozy garlic and spice bowl
+- Easy fall dinner starter
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/pumpkin-soup/
+
+ALT TEXT
+Creamy pumpkin soup in a rustic bowl with pumpkin seeds, parsley, bread, and autumn leaves

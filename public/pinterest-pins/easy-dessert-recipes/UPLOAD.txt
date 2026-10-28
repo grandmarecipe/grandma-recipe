@@ -1,0 +1,27 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+easy-dessert-recipes-pin.jpg
+
+TITLE
+Easy Dessert Recipes
+
+DESCRIPTION
+Find easy dessert recipes for weeknights and Sunday supper,no-bake sweets, cookies, pies, cakes, brownies, and cheesecakes, all gathered in one cozy guide.
+
+This pin covers:
+- Easy dessert recipes for sharing
+- Cakes, cookies, and cozy sweets
+- Homestyle dessert inspiration
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/easy-dessert-recipes/
+
+ALT TEXT
+Easy dessert recipes featuring chocolate cake, cookies, pie, and no-bake sweets

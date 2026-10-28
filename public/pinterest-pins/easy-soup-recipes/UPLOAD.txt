@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+easy-soup-recipes-pin.jpg
+
+TITLE
+Easy Soup Recipes
+
+DESCRIPTION
+Find easy soup recipes for chilly evenings and Sunday supper,homemade stock, chicken soups, beef and chili bowls, creamy vegetable soups, and noodle soups,.
+
+This pin covers:
+- Easy soup recipes for cozy nights
+- Brothy bowls and creamy classics
+- Make-ahead soup favorites
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/easy-soup-recipes/
+
+ALT TEXT
+Easy soup recipes featuring homemade chicken soup, creamy potato soup, and simmering broth

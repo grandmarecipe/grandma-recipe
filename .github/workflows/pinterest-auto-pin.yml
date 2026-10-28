@@ -9,10 +9,10 @@ on:
       - "content/recipes/**"
       - "scripts/pinterest/**"
       - ".github/workflows/pinterest-auto-pin.yml"
-  # Catch-up: 2 pins/day, one hour apart (1 pin per run)
+  # Catch-up: 2 pins/day at 9:00 and 11:00 local (UTC+1) = 08:00 and 10:00 UTC
   schedule:
-    - cron: "20 8 * * *"
-    - cron: "20 9 * * *"
+    - cron: "0 8 * * *"
+    - cron: "0 10 * * *"
   workflow_dispatch:
     inputs:
       mode:
@@ -59,7 +59,8 @@ jobs:
         run: |
           ARGS="--refresh"
           if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event.inputs.mode }}" = "catch-up" ]; then
-            ARGS="$ARGS --catch-up --only-today --per-run=1"
+            # 1 pin per run; earliest due backlog item (scheduleDate <= today)
+            ARGS="$ARGS --catch-up --per-run=1"
           fi
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
             ARGS="$ARGS --dry-run"

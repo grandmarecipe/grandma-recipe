@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+easy-rice-recipes-pin.jpg
+
+TITLE
+Easy Rice Recipes
+
+DESCRIPTION
+Find easy rice recipes for weeknights and Sunday supper,how to cook rice by type, chicken and rice dinners, casseroles, biryani, and rice noodles, all.
+
+This pin covers:
+- Easy rice recipes beyond plain sides
+- Pilafs, bowls, and dinner staples
+- Fluffy rice made simple
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/easy-rice-recipes/
+
+ALT TEXT
+Easy rice recipes featuring fluffy white rice, jasmine rice, and chicken over rice

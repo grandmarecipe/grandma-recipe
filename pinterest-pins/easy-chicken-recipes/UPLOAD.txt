@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+easy-chicken-recipes-pin.jpg
+
+TITLE
+Easy Chicken Recipes
+
+DESCRIPTION
+Find easy chicken recipes for weeknights and Sunday supper,baked chicken, ground chicken, pasta, casseroles, wings, and slow cooker dinners, all gathered in.
+
+This pin covers:
+- Easy chicken recipes for weeknights
+- Bakes, skillets, and comfort meals
+- Reliable family chicken dinners
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/easy-chicken-recipes/
+
+ALT TEXT
+Easy chicken recipes featuring roast chicken, baked chicken, pasta, and family dinner sides

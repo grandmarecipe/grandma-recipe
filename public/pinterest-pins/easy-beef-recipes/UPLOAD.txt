@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+easy-beef-recipes-pin.jpg
+
+TITLE
+Easy Beef Recipes
+
+DESCRIPTION
+Find easy beef recipes for weeknights and Sunday supper,skillet steak, pot roast, short ribs, ground beef dinners, slow cooker beef, and brisket, all.
+
+This pin covers:
+- Easy beef dinners for busy nights
+- Skillets, stews, and classics
+- Family-friendly beef ideas
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/easy-beef-recipes/
+
+ALT TEXT
+Easy beef recipes featuring seared steak, pot roast, and garlic butter steak bites

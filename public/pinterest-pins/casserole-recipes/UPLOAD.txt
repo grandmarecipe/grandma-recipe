@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+casserole-recipes-pin.jpg
+
+TITLE
+Easy Casserole Recipes
+
+DESCRIPTION
+Find easy casserole recipes for chicken and rice bakes, pasta casseroles, hashbrown and potato sides, cowboy casserole, and more,all gathered in one Grandma.
+
+This pin covers:
+- Easy casserole recipes for sharing
+- Bake-and-serve comfort food
+- Potluck-ready casserole ideas
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/casserole-recipes/
+
+ALT TEXT
+Easy casserole recipes with creamy chicken bake, potato casserole, and golden cheese topping

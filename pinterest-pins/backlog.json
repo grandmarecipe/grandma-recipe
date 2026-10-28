@@ -1,4 +1,97 @@
 {
   "pinsPerDay": 2,
-  "items": []
+  "items": [
+    {
+      "slug": "homemade-banana-pancakes",
+      "scheduleDate": "2026-10-29"
+    },
+    {
+      "slug": "slow-cooker-style-beef-barbacoa",
+      "scheduleDate": "2026-10-29"
+    },
+    {
+      "slug": "what-is-a-light-roast-coffee",
+      "scheduleDate": "2026-10-30"
+    },
+    {
+      "slug": "how-to-cook-jasmine-rice",
+      "scheduleDate": "2026-10-30"
+    },
+    {
+      "slug": "easy-beef-recipes",
+      "scheduleDate": "2026-10-31"
+    },
+    {
+      "slug": "easy-chicken-recipes",
+      "scheduleDate": "2026-10-31"
+    },
+    {
+      "slug": "easy-pasta-recipes",
+      "scheduleDate": "2026-11-01"
+    },
+    {
+      "slug": "easy-breakfast-recipes",
+      "scheduleDate": "2026-11-01"
+    },
+    {
+      "slug": "easy-dessert-recipes",
+      "scheduleDate": "2026-11-02"
+    },
+    {
+      "slug": "easy-rice-recipes",
+      "scheduleDate": "2026-11-02"
+    },
+    {
+      "slug": "easy-soup-recipes",
+      "scheduleDate": "2026-11-03"
+    },
+    {
+      "slug": "easy-weeknight-dinners",
+      "scheduleDate": "2026-11-03"
+    },
+    {
+      "slug": "casserole-recipes",
+      "scheduleDate": "2026-11-04"
+    },
+    {
+      "slug": "fish-recipes",
+      "scheduleDate": "2026-11-04"
+    },
+    {
+      "slug": "bread-recipes",
+      "scheduleDate": "2026-11-05"
+    },
+    {
+      "slug": "caramel-popcorn",
+      "scheduleDate": "2026-11-05"
+    },
+    {
+      "slug": "cookie-recipes",
+      "scheduleDate": "2026-11-06"
+    },
+    {
+      "slug": "mexican-recipes",
+      "scheduleDate": "2026-11-06"
+    },
+    {
+      "slug": "pumpkin-bread",
+      "scheduleDate": "2026-11-07"
+    },
+    {
+      "slug": "pumpkin-muffins",
+      "scheduleDate": "2026-11-07"
+    },
+    {
+      "slug": "pumpkin-pie-recipe",
+      "scheduleDate": "2026-11-08"
+    },
+    {
+      "slug": "pumpkin-roll",
+      "scheduleDate": "2026-11-08"
+    },
+    {
+      "slug": "pumpkin-soup",
+      "scheduleDate": "2026-11-09"
+    }
+  ]
 }
