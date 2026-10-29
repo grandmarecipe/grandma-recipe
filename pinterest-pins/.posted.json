@@ -29,6 +29,16 @@
       "pinUrl": "https://www.pinterest.com/pin/1137229343445102386/",
       "uploadFile": "pinterest-pins/homemade-banana-pancakes/UPLOAD.txt",
       "postedAt": "2026-10-29T14:41:34.726Z"
+    },
+    {
+      "link": "https://www.grandmarecipe.com/slow-cooker-style-beef-barbacoa",
+      "slug": "slow-cooker-style-beef-barbacoa",
+      "publishedAtDay": "2026-09-19",
+      "scheduleDate": "2026-10-29",
+      "pinId": "1137229343445111893",
+      "pinUrl": "https://www.pinterest.com/pin/1137229343445111893/",
+      "uploadFile": "pinterest-pins/slow-cooker-style-beef-barbacoa/UPLOAD.txt",
+      "postedAt": "2026-10-29T16:35:09.522Z"
     }
   ]
 }
