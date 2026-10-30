@@ -39,6 +39,16 @@
       "pinUrl": "https://www.pinterest.com/pin/1137229343445111893/",
       "uploadFile": "pinterest-pins/slow-cooker-style-beef-barbacoa/UPLOAD.txt",
       "postedAt": "2026-10-29T16:35:09.522Z"
+    },
+    {
+      "link": "https://www.grandmarecipe.com/how-to-cook-jasmine-rice",
+      "slug": "how-to-cook-jasmine-rice",
+      "publishedAtDay": "2026-09-20",
+      "scheduleDate": "2026-10-30",
+      "pinId": "1137229343445189806",
+      "pinUrl": "https://www.pinterest.com/pin/1137229343445189806/",
+      "uploadFile": "pinterest-pins/how-to-cook-jasmine-rice/UPLOAD.txt",
+      "postedAt": "2026-10-30T14:36:51.632Z"
     }
   ]
 }
