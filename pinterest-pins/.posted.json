@@ -59,6 +59,16 @@
       "pinUrl": "https://www.pinterest.com/pin/1137229343445198641/",
       "uploadFile": "pinterest-pins/what-is-a-light-roast-coffee/UPLOAD.txt",
       "postedAt": "2026-10-30T16:31:45.752Z"
+    },
+    {
+      "link": "https://www.grandmarecipe.com/easy-beef-recipes",
+      "slug": "easy-beef-recipes",
+      "publishedAtDay": "2026-09-27",
+      "scheduleDate": "2026-10-31",
+      "pinId": "1137229343445273907",
+      "pinUrl": "https://www.pinterest.com/pin/1137229343445273907/",
+      "uploadFile": "pinterest-pins/easy-beef-recipes/UPLOAD.txt",
+      "postedAt": "2026-10-31T13:55:39.561Z"
     }
   ]
 }
