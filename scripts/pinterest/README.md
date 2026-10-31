@@ -5,9 +5,10 @@ Same flow as Viral Peptides: pin packs in the repo + OAuth token + GitHub Action
 ## How it works
 
 1. Each recipe/pillar gets a pack: `pinterest-pins/<slug>/UPLOAD.txt` + pin image (`.jpg` / `.png`)
-2. Mirror under `public/pinterest-pins/<slug>/` so the image is publicly reachable if needed
-3. On push to `main` (or daily catch-up cron), `auto-pin.mjs` creates pins via Pinterest API v5
-4. Posted pins are recorded in `pinterest-pins/.posted.json`
+2. Pin images must be **9:16 portrait** (e.g. 1080×1920), not 16:9 landscape
+3. Mirror under `public/pinterest-pins/<slug>/` so the image is publicly reachable if needed
+4. On push to `main` (or daily catch-up cron), `auto-pin.mjs` creates pins via Pinterest API v5
+5. Posted pins are recorded in `pinterest-pins/.posted.json`
 
 ## Trial vs Standard access
 

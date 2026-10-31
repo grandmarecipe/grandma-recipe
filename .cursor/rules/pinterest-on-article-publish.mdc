@@ -13,6 +13,12 @@ When creating or publishing a Grandma Recipe article, **always ship a Pinterest 
 2. Mirror the same folder under `public/pinterest-pins/<slug>/`
 3. Do **not** leave pin creation as a follow-up after publish
 
+## Pin image aspect
+
+- Pin images must be **9:16 portrait** (tall Pinterest format, e.g. 1080×1920)
+- Do **not** use 16:9 landscape for Pinterest packs
+- Generate or crop a dedicated tall pin (do not ship the wide feature image as-is)
+
 ## UPLOAD.txt rules
 
 - Include `BOARD`, `BOARD_ID`, `IMAGE FILE`, `TITLE`, `DESCRIPTION`, `DESTINATION LINK`, `ALT TEXT`
