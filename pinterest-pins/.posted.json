@@ -99,6 +99,16 @@
       "pinUrl": "https://www.pinterest.com/pin/1137229343445375665/",
       "uploadFile": "pinterest-pins/easy-pasta-recipes/UPLOAD.txt",
       "postedAt": "2026-11-01T16:34:50.897Z"
+    },
+    {
+      "link": "https://www.grandmarecipe.com/easy-dessert-recipes",
+      "slug": "easy-dessert-recipes",
+      "publishedAtDay": "2026-09-30",
+      "scheduleDate": "2026-11-02",
+      "pinId": "1137229343445473231",
+      "pinUrl": "https://www.pinterest.com/pin/1137229343445473231/",
+      "uploadFile": "pinterest-pins/easy-dessert-recipes/UPLOAD.txt",
+      "postedAt": "2026-11-02T17:29:18.087Z"
     }
   ]
 }
