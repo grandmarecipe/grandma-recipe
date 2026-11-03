@@ -119,6 +119,16 @@
       "pinUrl": "https://www.pinterest.com/pin/1137229343445484843/",
       "uploadFile": "pinterest-pins/easy-rice-recipes/UPLOAD.txt",
       "postedAt": "2026-11-02T19:58:33.451Z"
+    },
+    {
+      "link": "https://www.grandmarecipe.com/easy-soup-recipes",
+      "slug": "easy-soup-recipes",
+      "publishedAtDay": "2026-09-30",
+      "scheduleDate": "2026-11-03",
+      "pinId": "1137229343445549814",
+      "pinUrl": "https://www.pinterest.com/pin/1137229343445549814/",
+      "uploadFile": "pinterest-pins/easy-soup-recipes/UPLOAD.txt",
+      "postedAt": "2026-11-03T15:30:43.489Z"
     }
   ]
 }
