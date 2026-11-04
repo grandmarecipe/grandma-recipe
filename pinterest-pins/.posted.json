@@ -139,6 +139,16 @@
       "pinUrl": "https://www.pinterest.com/pin/1137229343445559416/",
       "uploadFile": "pinterest-pins/easy-weeknight-dinners/UPLOAD.txt",
       "postedAt": "2026-11-03T17:32:32.518Z"
+    },
+    {
+      "link": "https://www.grandmarecipe.com/casserole-recipes",
+      "slug": "casserole-recipes",
+      "publishedAtDay": "2026-10-17",
+      "scheduleDate": "2026-11-04",
+      "pinId": "1137229343445637498",
+      "pinUrl": "https://www.pinterest.com/pin/1137229343445637498/",
+      "uploadFile": "pinterest-pins/casserole-recipes/UPLOAD.txt",
+      "postedAt": "2026-11-04T15:48:27.678Z"
     }
   ]
 }
