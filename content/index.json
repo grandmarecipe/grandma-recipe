@@ -1,6 +1,19 @@
 {
   "recipes": [
     {
+      "slug": "how-long-do-you-do-hard-boiled-eggs",
+      "title": "How Long Do You Do Hard Boiled Eggs?",
+      "excerpt": "There is something wonderfully old-fashioned about a bowl of neatly peeled hard-boiled eggs waiting in the refrigerator, just as Grandma kept them for busy mornings and lunchbox treats. For firm, tender yolks, gently boil the eggs for 10 to 12 minutes, then cool them in an icy bath for easy peeling.",
+      "category": "breakfast",
+      "categories": [
+        "breakfast"
+      ],
+      "publishedAt": "2026-11-06T21:36:34.256Z",
+      "modifiedAt": "2026-11-07T01:38:19.845Z",
+      "featuredImage": "/wp-content/uploads/2026/11/How-Long-Do-You-Do-Hard-Boiled-Eggs-Easy-Timing-Guide.webp",
+      "featuredImageAlt": "How long do you do hard boiled eggs, shown with peeled eggs, an ice water bowl, and a 10 to 12 minute timer"
+    },
+    {
       "slug": "halloween-recipes",
       "title": "Easy Halloween Recipes",
       "excerpt": "Find easy Halloween recipes for pumpkin pie, bread, muffins, caramel popcorn, cookies, mummy hot dogs, and cozy soup, all gathered in one Grandma Recipe guide.",

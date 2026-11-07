@@ -1,0 +1,27 @@
+BOARD
+Grandma breakfast recipe
+
+BOARD_ID
+1137229412095780949
+
+IMAGE FILE
+how-long-do-you-do-hard-boiled-eggs-pin.jpg
+
+TITLE
+How Long Do You Do Hard Boiled Eggs?
+
+DESCRIPTION
+A simple guide for how long to hard boil eggs, with ice-bath peel tips and easy serving ideas.
+
+This pin covers:
+- Perfect hard-boiled egg timing
+- Easy ice-bath peel tips
+- Breakfast and snack serving ideas
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/how-long-do-you-do-hard-boiled-eggs/
+
+ALT TEXT
+How long do you do hard boiled eggs, peeled eggs with ice bath and kitchen timer
