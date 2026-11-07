@@ -219,6 +219,16 @@
       "pinUrl": "https://www.pinterest.com/pin/1137229343445879678/",
       "uploadFile": "pinterest-pins/pumpkin-bread/UPLOAD.txt",
       "postedAt": "2026-11-07T14:25:30.910Z"
+    },
+    {
+      "link": "https://www.grandmarecipe.com/pumpkin-muffins",
+      "slug": "pumpkin-muffins",
+      "publishedAtDay": "2026-10-28",
+      "scheduleDate": "2026-11-07",
+      "pinId": "1137229343445887845",
+      "pinUrl": "https://www.pinterest.com/pin/1137229343445887845/",
+      "uploadFile": "pinterest-pins/pumpkin-muffins/UPLOAD.txt",
+      "postedAt": "2026-11-07T16:05:53.162Z"
     }
   ]
 }
