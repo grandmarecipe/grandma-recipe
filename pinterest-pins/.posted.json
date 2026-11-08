@@ -239,6 +239,16 @@
       "pinUrl": "https://www.pinterest.com/pin/1137229343445973590/",
       "uploadFile": "pinterest-pins/pumpkin-pie-recipe/UPLOAD.txt",
       "postedAt": "2026-11-08T14:35:49.031Z"
+    },
+    {
+      "link": "https://www.grandmarecipe.com/pumpkin-roll",
+      "slug": "pumpkin-roll",
+      "publishedAtDay": "2026-10-28",
+      "scheduleDate": "2026-11-08",
+      "pinId": "1137229343445982696",
+      "pinUrl": "https://www.pinterest.com/pin/1137229343445982696/",
+      "uploadFile": "pinterest-pins/pumpkin-roll/UPLOAD.txt",
+      "postedAt": "2026-11-08T16:30:03.060Z"
     }
   ]
 }
