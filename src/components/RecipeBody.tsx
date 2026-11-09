@@ -20,7 +20,9 @@ import {
 } from "@/lib/wprm";
 import type { RecipeRatingAggregate } from "@/lib/ratings";
 import { ADSENSE_SLOTS } from "@/lib/adsense";
+import { getAmazonAffiliateProductsForRecipe } from "@/lib/amazon-affiliates";
 import { AdUnit } from "./AdUnit";
+import { AmazonAffiliateProductList } from "./AmazonAffiliateProduct";
 import { RecipeAuthorCard } from "./RecipeAuthorCard";
 import { RecipeCardDetails } from "./RecipeCardDetails";
 import { RecipeComments } from "./RecipeComments";
@@ -68,6 +70,7 @@ export function RecipeBody({
   const [storyStart, storyRest] = splitHtmlAfterParagraphs(articleHtml, 2);
   const [storyMid, storyEnd] = splitHtmlAfterParagraphs(storyRest, 4);
   const equipment = extractEquipmentFromHtml(recipe.contentHtml);
+  const affiliateProducts = getAmazonAffiliateProductsForRecipe(recipe.slug);
   const notes = extractNotesFromHtml(recipe.contentHtml, {
     calories: recipe.calories,
   });
@@ -84,6 +87,18 @@ export function RecipeBody({
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-10 lg:grid-cols-[minmax(0,1fr)_300px] no-print">
         <article className="min-w-0">
           <RecipeTableOfContents items={tableOfContents} />
+
+          {!showRecipeCard && affiliateProducts.length > 0 ? (
+            <section
+              className={`scroll-mt-36${tableOfContents.length > 0 ? " mt-8" : ""}`}
+              aria-label="Kitchen picks"
+            >
+              <h2 className="font-serif text-2xl text-[#8b1a1a]">
+                Kitchen picks
+              </h2>
+              <AmazonAffiliateProductList products={affiliateProducts} />
+            </section>
+          ) : null}
 
           {showRecipeCard ? (
             <section
@@ -178,6 +193,7 @@ export function RecipeBody({
                   ) : (
                     <p className="mt-4 text-muted">No equipment listed.</p>
                   )}
+                  <AmazonAffiliateProductList products={affiliateProducts} />
                 </div>
               </div>
 
