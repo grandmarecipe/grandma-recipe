@@ -249,6 +249,16 @@
       "pinUrl": "https://www.pinterest.com/pin/1137229343445982696/",
       "uploadFile": "pinterest-pins/pumpkin-roll/UPLOAD.txt",
       "postedAt": "2026-11-08T16:30:03.060Z"
+    },
+    {
+      "link": "https://www.grandmarecipe.com/pumpkin-soup",
+      "slug": "pumpkin-soup",
+      "publishedAtDay": "2026-10-28",
+      "scheduleDate": "2026-11-09",
+      "pinId": "1137229343446073651",
+      "pinUrl": "https://www.pinterest.com/pin/1137229343446073651/",
+      "uploadFile": "pinterest-pins/pumpkin-soup/UPLOAD.txt",
+      "postedAt": "2026-11-09T17:51:22.803Z"
     }
   ]
 }
