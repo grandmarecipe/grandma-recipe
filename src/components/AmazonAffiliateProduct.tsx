@@ -18,15 +18,17 @@ export function AmazonAffiliateProduct({
       aria-label={`Shop ${product.title} on Amazon`}
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-        <div className="mx-auto flex h-28 w-28 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white sm:mx-0">
-          <Image
-            src={product.imageSrc}
-            alt={product.imageAlt}
-            width={112}
-            height={112}
-            className="h-full w-full object-contain"
-          />
-        </div>
+        {product.imageSrc ? (
+          <div className="mx-auto flex h-28 w-28 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white sm:mx-0">
+            <Image
+              src={product.imageSrc}
+              alt={product.imageAlt ?? product.title}
+              width={112}
+              height={112}
+              className="h-full w-full object-contain"
+            />
+          </div>
+        ) : null}
 
         <div className="min-w-0 flex-1 text-center sm:text-left">
           <p className="text-xs font-semibold tracking-wide text-accent uppercase">

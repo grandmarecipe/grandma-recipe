@@ -2,8 +2,8 @@ export interface AmazonAffiliateProduct {
   /** Matches recipe slug(s) that should show this product. */
   recipeSlugs: string[];
   title: string;
-  imageSrc: string;
-  imageAlt: string;
+  imageSrc?: string;
+  imageAlt?: string;
   /** SiteStripe short link from Associates Central. */
   affiliateUrl: string;
   /** Optional blurb under the title. */
@@ -53,7 +53,11 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
       "A reliable hand mixer for cake batters, frosting, and weeknight baking projects.",
   },
   {
-    recipeSlugs: ["fruit-pastry"],
+    recipeSlugs: [
+      "fruit-pastry",
+      "autumn-frost-squash-recipe",
+      "chicken-tenders-recipe",
+    ],
     title: "Nordic Ware Naturals Half Sheet Pans (2-pack)",
     imageSrc: "/affiliates/nordic-ware-half-sheet-pans.jpg",
     imageAlt: "Nordic Ware Naturals aluminum half sheet pans, set of two",
@@ -62,7 +66,7 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
       "Heavy aluminum half sheets for pastry, cookies, and even roasting.",
   },
   {
-    recipeSlugs: ["easy-chicken-recipes"],
+    recipeSlugs: ["easy-chicken-recipes", "broasted-chicken"],
     title: "TempPro TP19H Instant-Read Thermometer",
     imageSrc: "/affiliates/temppro-tp19h-thermometer.jpg",
     imageAlt: "TempPro TP19H digital instant-read meat thermometer in orange",
@@ -89,7 +93,7 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
       "A compact processor for chickpea mixtures, herbs, and bowl toppings.",
   },
   {
-    recipeSlugs: ["navy-beans"],
+    recipeSlugs: ["navy-beans", "beef-knuckle"],
     title: "Lodge Enameled Dutch Oven (6 qt, blue)",
     imageSrc: "/affiliates/lodge-enameled-dutch-oven-6qt.jpg",
     imageAlt: "Lodge 6-quart enameled cast iron Dutch oven in blue",
@@ -195,6 +199,42 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     affiliateUrl: "https://link.amazon/B07bVtiTe",
     blurb:
       "An 8-quart multi-cooker for weeknight chicken dinners and broth-rich meals.",
+  },
+  {
+    recipeSlugs: ["easy-low-calorie-meals"],
+    title: "Tramontina Professional Nonstick Skillet (12 in)",
+    affiliateUrl: "https://link.amazon/B0ftyS93G",
+    blurb: "A 12-inch nonstick skillet gives the chicken and vegetables room to brown in a single layer.",
+  },
+  {
+    recipeSlugs: ["coleslaw-dressing-recipe"],
+    title: "OXO Good Grips Stainless Steel Whisk (9 in)",
+    affiliateUrl: "https://link.amazon/B0izYRQFs",
+    blurb: "A small whisk for blending the mayonnaise and vinegar into a smooth dressing.",
+  },
+  {
+    recipeSlugs: ["rice-paper"],
+    title: "DS. Distinctive Style Stainless Steel Steamer Rack (8.5 in)",
+    affiliateUrl: "https://link.amazon/B0cbJLFrA",
+    blurb: "This rack keeps the cloth above the simmering water. Check that the inside of your pot is wider than the rack.",
+  },
+  {
+    recipeSlugs: ["pumpkin-pie-recipe"],
+    title: "OXO Good Grips Glass Pie Plate (9 in)",
+    affiliateUrl: "https://link.amazon/B00FUWh7R",
+    blurb: "A 9-inch glass plate for baking the pumpkin pie and checking how the crust is browning.",
+  },
+  {
+    recipeSlugs: ["white-rice-recipe"],
+    title: "Cuisinart Chef’s Classic Saucepan with Lid (3 qt)",
+    affiliateUrl: "https://link.amazon/B06eOqRb5",
+    blurb: "A lidded saucepan for simmering the rice and keeping the steam in during its covered rest.",
+  },
+  {
+    recipeSlugs: ["apple-crumble-recipe"],
+    title: "OXO Good Grips Apple Slicer and Corer",
+    affiliateUrl: "https://link.amazon/B03ucFjJc",
+    blurb: "Core the apples and cut them into wedges in one pass, then slice the wedges thinner for the crumble.",
   },
 ];
 
