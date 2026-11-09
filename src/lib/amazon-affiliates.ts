@@ -2,8 +2,8 @@ export interface AmazonAffiliateProduct {
   /** Matches recipe slug(s) that should show this product. */
   recipeSlugs: string[];
   title: string;
-  imageSrc?: string;
-  imageAlt?: string;
+  imageSrc: string;
+  imageAlt: string;
   /** SiteStripe short link from Associates Central. */
   affiliateUrl: string;
   /** Optional blurb under the title. */
@@ -203,38 +203,57 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
   {
     recipeSlugs: ["easy-low-calorie-meals"],
     title: "Tramontina Professional Nonstick Skillet (12 in)",
+    imageSrc: "/affiliates/tramontina-nonstick-skillet-12in.jpg",
+    imageAlt: "Tramontina Professional 12-inch nonstick skillet",
     affiliateUrl: "https://link.amazon/B0ftyS93G",
-    blurb: "A 12-inch nonstick skillet gives the chicken and vegetables room to brown in a single layer.",
+    blurb:
+      "A 12-inch nonstick skillet that gives chicken and vegetables room to brown in a single layer.",
   },
   {
     recipeSlugs: ["coleslaw-dressing-recipe"],
     title: "OXO Good Grips Stainless Steel Whisk (9 in)",
+    imageSrc: "/affiliates/oxo-stainless-whisk-9in.jpg",
+    imageAlt: "OXO Good Grips 9-inch stainless steel whisk",
     affiliateUrl: "https://link.amazon/B0izYRQFs",
-    blurb: "A small whisk for blending the mayonnaise and vinegar into a smooth dressing.",
+    blurb:
+      "A small whisk for blending mayonnaise and vinegar into a smooth coleslaw dressing.",
   },
   {
     recipeSlugs: ["rice-paper"],
-    title: "DS. Distinctive Style Stainless Steel Steamer Rack (8.5 in)",
+    title: "DS. Distinctive Style Steamer Rack (8.5 in)",
+    imageSrc: "/affiliates/ds-steamer-rack-85in.jpg",
+    imageAlt:
+      "DS Distinctive Style 8.5-inch stainless steel steamer rack with removable legs",
     affiliateUrl: "https://link.amazon/B0cbJLFrA",
-    blurb: "This rack keeps the cloth above the simmering water. Check that the inside of your pot is wider than the rack.",
+    blurb:
+      "Keeps the cloth above simmering water for homemade rice paper. Make sure your pot is wider than the rack.",
   },
   {
     recipeSlugs: ["pumpkin-pie-recipe"],
     title: "OXO Good Grips Glass Pie Plate (9 in)",
+    imageSrc: "/affiliates/oxo-glass-pie-plate-9in.jpg",
+    imageAlt: "OXO Good Grips 9-inch glass pie plate",
     affiliateUrl: "https://link.amazon/B00FUWh7R",
-    blurb: "A 9-inch glass plate for baking the pumpkin pie and checking how the crust is browning.",
+    blurb:
+      "A 9-inch glass plate for baking pumpkin pie and checking how the crust is browning.",
   },
   {
     recipeSlugs: ["white-rice-recipe"],
-    title: "Cuisinart Chef’s Classic Saucepan with Lid (3 qt)",
+    title: "Cuisinart Chef's Classic Saucepan (3 qt)",
+    imageSrc: "/affiliates/cuisinart-classic-saucepan-3qt.jpg",
+    imageAlt: "Cuisinart Chef's Classic 3-quart saucepan with lid",
     affiliateUrl: "https://link.amazon/B06eOqRb5",
-    blurb: "A lidded saucepan for simmering the rice and keeping the steam in during its covered rest.",
+    blurb:
+      "A lidded saucepan for simmering rice and holding steam during the covered rest.",
   },
   {
     recipeSlugs: ["apple-crumble-recipe"],
     title: "OXO Good Grips Apple Slicer and Corer",
+    imageSrc: "/affiliates/oxo-apple-slicer-corer.jpg",
+    imageAlt: "OXO Good Grips apple slicer and corer",
     affiliateUrl: "https://link.amazon/B03ucFjJc",
-    blurb: "Core the apples and cut them into wedges in one pass, then slice the wedges thinner for the crumble.",
+    blurb:
+      "Core apples and cut them into wedges in one pass, then slice thinner for the crumble.",
   },
 ];
 
