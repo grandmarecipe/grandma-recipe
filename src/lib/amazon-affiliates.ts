@@ -438,6 +438,96 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     blurb:
       "A programmable rice cooker that keeps rice fluffy and warm for the table.",
   },
+  {
+    recipeSlugs: ["easy-pasta-recipes"],
+    title: "All-Clad Simply Strain Stainless Steel Multipot with Insert (12 qt)",
+    imageSrc: "/affiliates/all-clad-simply-strain-multipot-12qt.jpg",
+    imageAlt: "All-Clad Simply Strain 12-quart stainless steel multipot with strainer insert",
+    affiliateUrl: "https://link.amazon/B0b6EUGfR",
+    blurb:
+      "A deep pasta pot with a strainer insert for boiling and draining in one step.",
+  },
+  {
+    recipeSlugs: ["easy-beef-recipes"],
+    title: "Typhur Sync Dual WiFi Meat Thermometer (2 probes)",
+    imageSrc: "/affiliates/typhur-sync-dual-wifi-thermometer.jpg",
+    imageAlt: "Typhur Sync Dual WiFi meat thermometer with two probes",
+    affiliateUrl: "https://link.amazon/B0fZRGOZn",
+    blurb:
+      "Wireless probes for checking roast beef and other oven dinners without opening the door.",
+  },
+  {
+    recipeSlugs: ["christmas-eve-recipes"],
+    title: "Ninja PossibleCooker PRO 8-in-1 (8.5 qt, Sea Salt Gray)",
+    imageSrc: "/affiliates/ninja-possiblecooker-pro-85qt.jpg",
+    imageAlt: "Ninja PossibleCooker PRO 8.5-quart multicooker in sea salt gray",
+    affiliateUrl: "https://link.amazon/B0fG1iNfT",
+    blurb:
+      "An 8-in-1 multicooker for holiday sides, stews, and hands-off Christmas Eve cooking.",
+  },
+  {
+    recipeSlugs: ["christmas-recipes-for-kids"],
+    title: "OXO Good Grips Cookie Press Set (14 pieces)",
+    imageSrc: "/affiliates/oxo-cookie-press-set.jpg",
+    imageAlt: "OXO Good Grips 14-piece cookie press set with shape discs",
+    affiliateUrl: "https://link.amazon/B04pqtTef",
+    blurb:
+      "A cookie press with discs for shaping festive cookies kids can help decorate.",
+  },
+  {
+    recipeSlugs: ["gluten-free-christmas-dinner"],
+    title: "All-Clad Stainless Steel Roasting Pan with Rack (16 × 13 in)",
+    imageSrc: "/affiliates/all-clad-roasting-pan-with-rack.jpg",
+    imageAlt: "All-Clad stainless steel roasting pan with rack, 16 by 13 inches",
+    affiliateUrl: "https://link.amazon/B068edmSB",
+    blurb:
+      "A roomy roasting pan with a rack for holiday mains and vegetables.",
+  },
+  {
+    recipeSlugs: ["vegan-christmas-recipes"],
+    title: "Cuisinart Pro Custom 11-Cup Food Processor (DLC-8SBCYP1)",
+    imageSrc: "/affiliates/cuisinart-pro-custom-11cup-food-processor.jpg",
+    imageAlt: "Cuisinart Pro Custom 11-cup food processor",
+    affiliateUrl: "https://link.amazon/B01jXKTCb",
+    blurb:
+      "A sturdy processor for chopping vegetables, dips, and plant-based holiday sides.",
+  },
+  {
+    recipeSlugs: ["christmas-mocktails"],
+    title: "Smeg SKC01 Sparkling Water Maker (1 L bottle)",
+    imageSrc: "/affiliates/smeg-skc01-sparkling-water-maker.jpg",
+    imageAlt: "Smeg SKC01 sparkling water maker with one-liter bottle",
+    affiliateUrl: "https://link.amazon/B09hVgtJ1",
+    blurb:
+      "Fresh sparkling water for festive mocktails without buying bottles.",
+  },
+  {
+    recipeSlugs: ["no-bake-christmas-treats"],
+    title: "Cuisinart Electric Fondue Pot (3 qt)",
+    imageSrc: "/affiliates/cuisinart-electric-fondue-pot-3qt.jpg",
+    imageAlt: "Cuisinart 3-quart electric fondue pot",
+    affiliateUrl: "https://link.amazon/B02pcmV3i",
+    blurb:
+      "An electric pot for melting chocolate and setting up no-bake treat stations.",
+  },
+  {
+    recipeSlugs: ["christmas-desserts"],
+    title: "Bosch Universal Plus Stand Mixer Bundle (6.5 qt, 500 W)",
+    imageSrc: "/affiliates/bosch-universal-plus-stand-mixer.jpg",
+    imageAlt: "Bosch Universal Plus 6.5-quart stand mixer bundle",
+    affiliateUrl: "https://link.amazon/B08m4rAgD",
+    blurb:
+      "A powerful mixer for holiday doughs, frostings, and dessert batters.",
+  },
+  {
+    recipeSlugs: ["sheet-pan-christmas-dinner"],
+    title: "Hestan OvenBond Tri-Ply Stainless Steel Baking Sheet Set (3 pieces)",
+    imageSrc: "/affiliates/hestan-ovenbond-baking-sheet-set.jpg",
+    imageAlt: "Hestan OvenBond tri-ply stainless steel baking sheet set, 3 pieces",
+    affiliateUrl: "https://link.amazon/B0aLpbCCR",
+    blurb:
+      "Heavy sheet pans for roasting a full sheet-pan Christmas dinner.",
+  },
 ];
 
 export function getAmazonAffiliateProductsForRecipe(
