@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AmazonAffiliateProductList } from "@/components/AmazonAffiliateProduct";
 import { CategoryIntro } from "@/components/CategoryIntro";
 import { CategoryPagination } from "@/components/CategoryPagination";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { RecipeCard } from "@/components/RecipeCard";
+import { getAmazonAffiliateProductsForCategory } from "@/lib/amazon-affiliates";
 import { getCategoryContent } from "@/lib/categories";
 import { isCategorySlug } from "@/lib/content";
 import { getRecipesByCategoryResolved } from "@/lib/cms-content";
@@ -48,6 +50,7 @@ export default async function CategoryPage({ params }: PageProps) {
   if (!category) notFound();
 
   const content = getCategoryContent(slug);
+  const affiliateProducts = getAmazonAffiliateProductsForCategory(slug);
   const allRecipes = await getRecipesByCategoryResolved(slug);
   const { items, page, totalPages, totalItems, startIndex } = paginateItems(
     allRecipes,
@@ -85,6 +88,15 @@ export default async function CategoryPage({ params }: PageProps) {
             <div className="mt-6">
               <CategoryIntro intro={content.intro} />
             </div>
+
+            {affiliateProducts.length > 0 ? (
+              <section className="mt-10" aria-label="Kitchen pick">
+                <h2 className="font-serif text-2xl text-[#8b1a1a]">
+                  Kitchen pick
+                </h2>
+                <AmazonAffiliateProductList products={affiliateProducts} />
+              </section>
+            ) : null}
 
             <div className="mt-10 rounded-3xl border border-border bg-white p-6 shadow-sm">
               <h2 className="font-serif text-2xl text-accent-dark">

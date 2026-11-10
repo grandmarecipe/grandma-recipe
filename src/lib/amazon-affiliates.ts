@@ -1,6 +1,10 @@
+import type { CategorySlug } from "@/lib/types";
+
 export interface AmazonAffiliateProduct {
-  /** Matches recipe slug(s) that should show this product. */
-  recipeSlugs: string[];
+  /** Matches recipe / pillar page slug(s). */
+  recipeSlugs?: string[];
+  /** Matches /category/{slug}/ pages. */
+  categorySlugs?: CategorySlug[];
   title: string;
   imageSrc: string;
   imageAlt: string;
@@ -11,8 +15,7 @@ export interface AmazonAffiliateProduct {
 }
 
 /**
- * Curated Amazon Associates products mapped to recipe pages
- * (from all_website_-_amazon_afelialt.csv).
+ * Curated Amazon Associates products mapped to recipe, pillar, and category pages.
  */
 export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
   {
@@ -255,12 +258,200 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     blurb:
       "Core apples and cut them into wedges in one pass, then slice thinner for the crumble.",
   },
+  {
+    categorySlugs: ["breakfast"],
+    title: "All-Clad Digital Belgian Waffle Maker (4-slice)",
+    imageSrc: "/affiliates/all-clad-belgian-waffle-maker.jpg",
+    imageAlt: "All-Clad digital Belgian waffle maker, 4-slice",
+    affiliateUrl: "https://link.amazon/B04tjHI2J",
+    blurb:
+      "A sturdy waffle maker for weekend breakfasts and brunch plates.",
+  },
+  {
+    categorySlugs: ["lunch"],
+    title: "T-fal OptiGrill XL (6 servings)",
+    imageSrc: "/affiliates/tfal-optigrill-xl.jpg",
+    imageAlt: "T-fal OptiGrill XL indoor grill and panini press",
+    affiliateUrl: "https://link.amazon/B03izSW4f",
+    blurb:
+      "An indoor grill for quick lunch sandwiches, panini, and weeknight plates.",
+  },
+  {
+    categorySlugs: ["dinner"],
+    title: "Le Creuset Round Enameled Dutch Oven (5.5 qt, Cerise)",
+    imageSrc: "/affiliates/le-creuset-dutch-oven-55qt-cerise.jpg",
+    imageAlt: "Le Creuset 5.5-quart round enameled Dutch oven in Cerise red",
+    affiliateUrl: "https://link.amazon/B0fWM27xC",
+    blurb:
+      "A classic Dutch oven for braises, stews, and Sunday supper.",
+  },
+  {
+    categorySlugs: ["snacks"],
+    title: "Ninja Crispi Pro Glass Air Fryer (6 qt, Ash Gray)",
+    imageSrc: "/affiliates/ninja-crispi-pro-glass-air-fryer.jpg",
+    imageAlt: "Ninja Crispi Pro 6-quart glass air fryer in ash gray",
+    affiliateUrl: "https://link.amazon/B0gfT0aug",
+    blurb:
+      "A glass air fryer for crisp snacks without a full oven heat-up.",
+  },
+  {
+    categorySlugs: ["dessert"],
+    title: "Ninja CREAMi XL Deluxe Gen 2 (NC601, Navy)",
+    imageSrc: "/affiliates/ninja-creami-xl-deluxe-gen2.jpg",
+    imageAlt: "Ninja CREAMi XL Deluxe Gen 2 frozen treat maker in navy",
+    affiliateUrl: "https://link.amazon/B084YTgjk",
+    blurb:
+      "Turn simple bases into ice cream, sorbet, and other frozen desserts at home.",
+  },
+  {
+    recipeSlugs: ["halloween-recipes"],
+    title: "Ninja Double Oven Pro Smart XL (30.2 qt, DCT801)",
+    imageSrc: "/affiliates/ninja-double-oven-pro-smart-xl.jpg",
+    imageAlt: "Ninja Double Oven Pro Smart XL countertop convection oven",
+    affiliateUrl: "https://link.amazon/B0cajlrmS",
+    blurb:
+      "Extra oven space for party trays, sheet snacks, and holiday baking.",
+  },
+  {
+    recipeSlugs: ["bread-recipes"],
+    title: "Zojirushi Home Bakery Virtuoso Plus (2 lb, BB-PDC20BA)",
+    imageSrc: "/affiliates/zojirushi-home-bakery-virtuoso-plus.jpg",
+    imageAlt: "Zojirushi Home Bakery Virtuoso Plus 2-pound bread maker",
+    affiliateUrl: "https://link.amazon/B0h8OelyH",
+    blurb:
+      "A reliable bread maker for homemade loaves with less hands-on time.",
+  },
+  {
+    recipeSlugs: ["cookie-recipes"],
+    title: "KitchenAid Artisan Tilt-Head Stand Mixer (5 qt, Matte Black)",
+    imageSrc: "/affiliates/kitchenaid-artisan-stand-mixer-5qt.jpg",
+    imageAlt: "KitchenAid Artisan 5-quart tilt-head stand mixer in matte black",
+    affiliateUrl: "https://link.amazon/B05JClOee",
+    blurb:
+      "A workhorse mixer for cookie dough, frosting, and holiday baking batches.",
+  },
+  {
+    recipeSlugs: ["mexican-recipes"],
+    title: "Vitamix E310 Explorian Blender (48 oz, Black)",
+    imageSrc: "/affiliates/vitamix-e310-explorian-blender.jpg",
+    imageAlt: "Vitamix E310 Explorian blender with 48-ounce container",
+    affiliateUrl: "https://link.amazon/B01Cf0xNQ",
+    blurb:
+      "A powerful blender for salsa, sauces, and smooth taco-night sides.",
+  },
+  {
+    recipeSlugs: ["fish-recipes"],
+    title: "All-Clad D5 Brushed Stainless Steel Fry Pan (12 in)",
+    imageSrc: "/affiliates/all-clad-d5-fry-pan-12in.jpg",
+    imageAlt: "All-Clad D5 brushed stainless steel 12-inch fry pan",
+    affiliateUrl: "https://link.amazon/B09difJzX",
+    blurb:
+      "A roomy stainless skillet for searing fish and finishing with a quick pan sauce.",
+  },
+  {
+    recipeSlugs: ["egg-recipes"],
+    title: "All-Clad D3 Stainless Steel Nonstick Fry Pan (10 in)",
+    imageSrc: "/affiliates/all-clad-d3-nonstick-fry-pan-10in.jpg",
+    imageAlt: "All-Clad D3 stainless steel nonstick 10-inch fry pan",
+    affiliateUrl: "https://link.amazon/B0b3TVlsM",
+    blurb:
+      "A nonstick skillet that makes eggs, omelets, and quick breakfasts easy to release.",
+  },
+  {
+    recipeSlugs: ["casserole-recipes"],
+    title: "Le Creuset Heritage Covered Rectangular Casserole (4 qt, White)",
+    imageSrc: "/affiliates/le-creuset-heritage-casserole-4qt.jpg",
+    imageAlt: "Le Creuset Heritage 4-quart covered rectangular casserole in white",
+    affiliateUrl: "https://link.amazon/B08kZUzoB",
+    blurb:
+      "A covered stoneware dish for baking, serving, and storing casseroles.",
+  },
+  {
+    recipeSlugs: ["salad-recipes"],
+    title: "Ninja Professional XL Food Processor (12 cups, NF701)",
+    imageSrc: "/affiliates/ninja-professional-xl-food-processor.jpg",
+    imageAlt: "Ninja Professional XL 12-cup food processor",
+    affiliateUrl: "https://link.amazon/B01BwjOUl",
+    blurb:
+      "Slice and shred salad toppings fast with discs built for big batches.",
+  },
+  {
+    recipeSlugs: ["slow-cooker-recipes"],
+    title: "GreenPan Elite 14-in-1 Ceramic Slow Cooker (6 qt, Black)",
+    imageSrc: "/affiliates/greenpan-elite-ceramic-slow-cooker.jpg",
+    imageAlt: "GreenPan Elite 14-in-1 ceramic 6-quart slow cooker in black",
+    affiliateUrl: "https://link.amazon/B0e3zSijo",
+    blurb:
+      "A programmable ceramic slow cooker for dump-and-go dinners.",
+  },
+  {
+    recipeSlugs: ["air-fryer-recipes"],
+    title: "Ninja Foodi DualZone Smart XL Air Fryer (10 qt, DZ550)",
+    imageSrc: "/affiliates/ninja-foodi-dualzone-smart-xl-air-fryer.jpg",
+    imageAlt: "Ninja Foodi DualZone Smart XL 10-quart air fryer",
+    affiliateUrl: "https://link.amazon/B0dnKSlNh",
+    blurb:
+      "Two baskets so you can air-fry mains and sides at the same time.",
+  },
+  {
+    recipeSlugs: ["easy-breakfast-recipes"],
+    title: "Zojirushi Gourmet Sizzler Electric Griddle (EA-DCC10)",
+    imageSrc: "/affiliates/zojirushi-gourmet-sizzler-griddle.jpg",
+    imageAlt: "Zojirushi Gourmet Sizzler electric griddle",
+    affiliateUrl: "https://link.amazon/B07jzyV73",
+    blurb:
+      "A wide electric griddle for pancakes, eggs, and big breakfast spreads.",
+  },
+  {
+    recipeSlugs: ["easy-weeknight-dinners"],
+    title: "All-Clad D3 Stainless Steel Sauté Pan with Lid (3 qt)",
+    imageSrc: "/affiliates/all-clad-d3-saute-pan-3qt.jpg",
+    imageAlt: "All-Clad D3 stainless steel 3-quart sauté pan with lid",
+    affiliateUrl: "https://link.amazon/B09psFnLo",
+    blurb:
+      "A lidded sauté pan for one-pan weeknight dinners and quick sauces.",
+  },
+  {
+    recipeSlugs: ["easy-dessert-recipes"],
+    title: "GreenPan Reserve Ceramic Nonstick Bakeware Set (7 pieces, Sage Green)",
+    imageSrc: "/affiliates/greenpan-reserve-bakeware-set.jpg",
+    imageAlt: "GreenPan Reserve ceramic nonstick 7-piece bakeware set in sage green",
+    affiliateUrl: "https://link.amazon/B00hVE3B3",
+    blurb:
+      "A matching bakeware set for cakes, bars, and weeknight sweets.",
+  },
+  {
+    recipeSlugs: ["easy-soup-recipes"],
+    title: "All-Clad D3 Stainless Steel Stockpot with Lid (8 qt)",
+    imageSrc: "/affiliates/all-clad-d3-stockpot-8qt.jpg",
+    imageAlt: "All-Clad D3 stainless steel 8-quart stockpot with lid",
+    affiliateUrl: "https://link.amazon/B0983ijVz",
+    blurb:
+      "A deep stockpot for broths, soups, and big-batch simmering.",
+  },
+  {
+    recipeSlugs: ["easy-rice-recipes"],
+    title: "Zojirushi Neuro Fuzzy Rice Cooker and Warmer (5.5 cups, NS-ZCC10)",
+    imageSrc: "/affiliates/zojirushi-neuro-fuzzy-rice-cooker.jpg",
+    imageAlt: "Zojirushi Neuro Fuzzy 5.5-cup rice cooker and warmer",
+    affiliateUrl: "https://link.amazon/B0e1VvtWj",
+    blurb:
+      "A programmable rice cooker that keeps rice fluffy and warm for the table.",
+  },
 ];
 
 export function getAmazonAffiliateProductsForRecipe(
   slug: string,
 ): AmazonAffiliateProduct[] {
   return AMAZON_AFFILIATE_PRODUCTS.filter((product) =>
-    product.recipeSlugs.includes(slug),
+    product.recipeSlugs?.includes(slug),
+  );
+}
+
+export function getAmazonAffiliateProductsForCategory(
+  slug: CategorySlug,
+): AmazonAffiliateProduct[] {
+  return AMAZON_AFFILIATE_PRODUCTS.filter((product) =>
+    product.categorySlugs?.includes(slug),
   );
 }
