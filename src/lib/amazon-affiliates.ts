@@ -528,6 +528,186 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     blurb:
       "Heavy sheet pans for roasting a full sheet-pan Christmas dinner.",
   },
+  {
+    recipeSlugs: ["christmas-eve-dinner"],
+    title: "Wüsthof Classic 2-Piece Carving Set",
+    imageSrc: "/affiliates/wusthof-classic-carving-set.jpg",
+    imageAlt: "Wüsthof Classic carving knife and fork set",
+    affiliateUrl: "https://link.amazon/B02F07CjX",
+    blurb:
+      "A carving knife and fork set for slicing the Christmas Eve roast cleanly at the table.",
+  },
+  {
+    recipeSlugs: ["christmas-appetizers"],
+    title: "Chefman Electric Warming Tray (21 × 16 in)",
+    imageSrc: "/affiliates/chefman-electric-warming-tray.jpg",
+    imageAlt: "Chefman electric food warming tray, 21 by 16 inches",
+    affiliateUrl: "https://link.amazon/B04haGVQE",
+    blurb:
+      "Keeps appetizers hot through the party so trays stay ready to serve.",
+  },
+  {
+    recipeSlugs: ["christmas-snack-ideas"],
+    title: "VEVOR Countertop Popcorn Maker (8 oz, Red)",
+    imageSrc: "/affiliates/vevor-countertop-popcorn-maker.jpg",
+    imageAlt: "VEVOR 8-ounce red countertop popcorn maker",
+    affiliateUrl: "https://link.amazon/B03ge236t",
+    blurb:
+      "A countertop popcorn maker for fresh holiday snack bowls in minutes.",
+  },
+  {
+    recipeSlugs: ["christmas-brunch-ideas"],
+    title: "GreenPan Elite Multi Grill & Griddle (Graphite)",
+    imageSrc: "/affiliates/greenpan-elite-multi-grill-griddle.jpg",
+    imageAlt: "GreenPan Elite multi grill and griddle in graphite",
+    affiliateUrl: "https://link.amazon/B0asMsomu",
+    blurb:
+      "An electric grill and griddle for brunch pancakes, eggs, and grilled sides.",
+  },
+  {
+    recipeSlugs: ["christmas-breakfast-ideas"],
+    title: "Technivorm Moccamaster KBGV Select (10 cups, Black)",
+    imageSrc: "/affiliates/technivorm-moccamaster-kbgv-select.jpg",
+    imageAlt: "Technivorm Moccamaster KBGV Select 10-cup drip coffee maker in black",
+    affiliateUrl: "https://link.amazon/B0aKXUARA",
+    blurb:
+      "A reliable drip coffee maker for a full pot of Christmas morning coffee.",
+  },
+  {
+    recipeSlugs: ["white-rice"],
+    title: "Tiger Micom Rice Cooker and Warmer (5.5 cups, JBV-A10U)",
+    imageSrc: "/affiliates/tiger-micom-rice-cooker-jbv-a10u.jpg",
+    imageAlt: "Tiger Micom 5.5-cup rice cooker and warmer, model JBV-A10U",
+    affiliateUrl: "https://link.amazon/B0hmuGm7q",
+    blurb:
+      "A programmable rice cooker that keeps fluffy white rice warm for dinner.",
+  },
+  {
+    recipeSlugs: ["rice-cooker-ratio"],
+    title: "Escali Primo Digital Kitchen Scale (Royal Blue)",
+    imageSrc: "/affiliates/escali-primo-digital-kitchen-scale.jpg",
+    imageAlt: "Escali Primo digital kitchen scale in royal blue",
+    affiliateUrl: "https://link.amazon/B0ac2vUFS",
+    blurb:
+      "A compact scale for weighing rice and water when dialing in cooker ratios.",
+  },
+  {
+    recipeSlugs: ["bok-choy-recipes"],
+    title: "HexClad Hybrid Nonstick Wok (12 in)",
+    imageSrc: "/affiliates/hexclad-hybrid-nonstick-wok-12in.jpg",
+    imageAlt: "HexClad 12-inch hybrid nonstick wok",
+    affiliateUrl: "https://link.amazon/B06sHNqWh",
+    blurb:
+      "A hybrid wok for high-heat stir-fries with bok choy and other greens.",
+  },
+  {
+    recipeSlugs: ["how-long-do-you-do-hard-boiled-eggs"],
+    title: "Dash Deluxe Rapid Egg Cooker (12 eggs, White)",
+    imageSrc: "/affiliates/dash-deluxe-rapid-egg-cooker.jpg",
+    imageAlt: "Dash Deluxe rapid egg cooker for 12 eggs in white",
+    affiliateUrl: "https://link.amazon/B0c4kEpbN",
+    blurb:
+      "An electric egg cooker for consistent hard-boiled eggs without guessing timing.",
+  },
+  {
+    recipeSlugs: ["recipe-for-brinjal"],
+    title: "Staub Cast Iron Braiser with Glass Lid (3.5 qt, Matte Black)",
+    imageSrc: "/affiliates/staub-cast-iron-braiser-35qt.jpg",
+    imageAlt: "Staub 3.5-quart enameled cast iron braiser with glass lid in matte black",
+    affiliateUrl: "https://link.amazon/B08iPMfEX",
+    blurb:
+      "An enameled braiser for simmering eggplant curry and other stovetop stews.",
+  },
+  {
+    recipeSlugs: ["baked-chicken-breast-recipes"],
+    title: "USA Pan Half Sheet Pan and Oven-Safe Rack Set",
+    imageSrc: "/affiliates/usa-pan-half-sheet-rack-set.jpg",
+    imageAlt: "USA Pan half sheet pan with oven-safe roasting rack",
+    affiliateUrl: "https://link.amazon/B08443bqa",
+    blurb:
+      "A half sheet pan with a rack for baking juicy chicken breasts with even heat.",
+  },
+  {
+    recipeSlugs: ["carnitas-recipe"],
+    title: "Staub Round Cast Iron Dutch Oven (5.5 qt, Matte Black)",
+    imageSrc: "/affiliates/staub-round-dutch-oven-55qt-matte-black.jpg",
+    imageAlt: "Staub 5.5-quart round enameled cast iron Dutch oven in matte black",
+    affiliateUrl: "https://link.amazon/B0f1vVxLO",
+    blurb:
+      "A heavy Dutch oven for braising tender carnitas low and slow.",
+  },
+  {
+    recipeSlugs: ["how-to-poach-an-egg"],
+    title: "Eggssentials Stainless Steel Egg Poaching Pan (4 cups)",
+    imageSrc: "/affiliates/eggssentials-egg-poaching-pan.jpg",
+    imageAlt: "Eggssentials stainless steel 4-cup egg poaching pan",
+    affiliateUrl: "https://link.amazon/B0hH9LnCV",
+    blurb:
+      "A stovetop poacher with four cups for neat, consistent poached eggs.",
+  },
+  {
+    recipeSlugs: ["steak-recipes"],
+    title: "Le Creuset Signature Cast Iron Skillet (11.75 in, Cerise)",
+    imageSrc: "/affiliates/le-creuset-signature-skillet-1175-cerise.jpg",
+    imageAlt: "Le Creuset Signature 11.75-inch enameled cast iron skillet in Cerise",
+    affiliateUrl: "https://link.amazon/B03os2Qg5",
+    blurb:
+      "An enameled skillet that holds high heat for a deep steak sear.",
+  },
+  {
+    recipeSlugs: ["pineapple-cake-upside"],
+    title: "USA Pan Nonstick Round Cake Pan Set (9 in, 2 pieces)",
+    imageSrc: "/affiliates/usa-pan-nonstick-round-cake-pan-set-9in.jpg",
+    imageAlt: "USA Pan nonstick 9-inch round cake pan set, two pieces",
+    affiliateUrl: "https://link.amazon/B0be1ffk7",
+    blurb:
+      "Two 9-inch cake pans for flipping pineapple upside-down cake cleanly.",
+  },
+  {
+    recipeSlugs: ["caramel-popcorn"],
+    title: "Great Northern Stainless Steel Stovetop Popcorn Maker (6.5 qt)",
+    imageSrc: "/affiliates/great-northern-stovetop-popcorn-maker.jpg",
+    imageAlt: "Great Northern 6.5-quart stainless steel stovetop popcorn maker",
+    affiliateUrl: "https://link.amazon/B07QET9UU",
+    blurb:
+      "A stovetop popper for fresh popcorn ready to coat in caramel.",
+  },
+  {
+    recipeSlugs: ["pumpkin-roll"],
+    title: "Nordic Ware Naturals Jelly Roll Pan (15 × 10.5 in)",
+    imageSrc: "/affiliates/nordic-ware-naturals-jelly-roll-pan.jpg",
+    imageAlt: "Nordic Ware Naturals aluminum jelly roll pan, 15 by 10.5 inches",
+    affiliateUrl: "https://link.amazon/B059LHmOe",
+    blurb:
+      "A jelly roll pan sized for baking and rolling a classic pumpkin roll.",
+  },
+  {
+    recipeSlugs: ["pumpkin-muffins"],
+    title: "Nordic Ware Naturals 12-Cavity Muffin Pan",
+    imageSrc: "/affiliates/nordic-ware-naturals-12-cavity-muffin-pan.jpg",
+    imageAlt: "Nordic Ware Naturals 12-cavity aluminum muffin pan",
+    affiliateUrl: "https://link.amazon/B019XL92v",
+    blurb:
+      "A 12-cup muffin pan for bakery-style pumpkin muffins with even browning.",
+  },
+  {
+    recipeSlugs: ["pumpkin-bread"],
+    title: "Le Creuset Signature Cast Iron Loaf Pan (2 qt, Licorice)",
+    imageSrc: "/affiliates/le-creuset-signature-loaf-pan-2qt-licorice.jpg",
+    imageAlt: "Le Creuset Signature 2-quart enameled cast iron loaf pan in Licorice",
+    affiliateUrl: "https://link.amazon/B08fkzMrV",
+    blurb:
+      "An enameled loaf pan that holds heat for moist pumpkin bread with a sturdy crust.",
+  },
+  {
+    recipeSlugs: ["chicken-breast-in-oven"],
+    title: "ThermoPro TempSpike Plus Wireless Thermometer (2 probes, 600 ft)",
+    imageSrc: "/affiliates/thermopro-tempspike-plus-wireless-thermometer.jpg",
+    imageAlt: "ThermoPro TempSpike Plus wireless thermometer with two probes",
+    affiliateUrl: "https://link.amazon/B09Gr6W3z",
+    blurb:
+      "Wireless probes so oven chicken breasts hit juicy temps without opening the door.",
+  },
 ];
 
 export function getAmazonAffiliateProductsForRecipe(
