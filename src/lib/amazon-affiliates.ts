@@ -933,6 +933,141 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     blurb:
       "A deep sauté pan for simmering creamy tomato pasta sauce and tossing noodles.",
   },
+  {
+    recipeSlugs: ["easy-pasta-recipes-for-dinner"],
+    title: "Rösle Elegance 5-L Stainless Steel Pasta Pot (13153)",
+    imageSrc: "/affiliates/rosle-elegance-pasta-pot-5l.jpg",
+    imageAlt: "Rösle Elegance 5-liter stainless steel pasta pot",
+    affiliateUrl: "https://link.amazon/B0iVjDjZ4",
+    blurb:
+      "A tall pasta pot with room to boil noodles for easy weeknight dinners.",
+  },
+  {
+    recipeSlugs: ["cauliflower-recipes"],
+    title: "Ninja Crispi 4-in-1 Portable Glass Air Fryer, Mint",
+    imageSrc: "/affiliates/ninja-crispi-portable-glass-air-fryer-mint.jpg",
+    imageAlt: "Ninja Crispi 4-in-1 portable glass air fryer in mint",
+    affiliateUrl: "https://link.amazon/B0gHb2fAF",
+    blurb:
+      "A glass air fryer for crisp cauliflower without heating the whole oven.",
+  },
+  {
+    recipeSlugs: ["japanese-curry"],
+    title: "Lodge 6-Qt Enameled Cast Iron Dutch Oven, Storm Blue",
+    imageSrc: "/affiliates/lodge-enameled-dutch-oven-6qt-storm-blue.jpg",
+    imageAlt: "Lodge 6-quart enameled cast iron Dutch oven in Storm Blue",
+    affiliateUrl: "https://link.amazon/B0fAOdfDT",
+    blurb:
+      "A sturdy Dutch oven for simmering thick Japanese curry until tender.",
+  },
+  {
+    recipeSlugs: ["tikka-masala"],
+    title: "GreenPan Valencia Pro 5-Qt Sauté Pan with Lid",
+    imageSrc: "/affiliates/greenpan-valencia-pro-saute-pan-5qt.jpg",
+    imageAlt: "GreenPan Valencia Pro 5-quart ceramic nonstick sauté pan with lid",
+    affiliateUrl: "https://link.amazon/B0hcIDwMy",
+    blurb:
+      "A deep sauté pan for building creamy tikka masala sauce and chicken.",
+  },
+  {
+    recipeSlugs: ["chicken-francese"],
+    title: "Demeyere Industry 5-Ply 11-Inch Stainless Steel Fry Pan",
+    imageSrc: "/affiliates/demeyere-industry-fry-pan-11in.jpg",
+    imageAlt: "Demeyere Industry 5-ply 11-inch stainless steel fry pan",
+    affiliateUrl: "https://link.amazon/B0hL17s2j",
+    blurb:
+      "A stainless fry pan for browning chicken Francese cutlets evenly.",
+  },
+  {
+    recipeSlugs: ["crispy-homemade-arayes"],
+    title: "Lodge Pro-Grid 20 × 10.44-Inch Reversible Cast Iron Grill and Griddle",
+    imageSrc: "/affiliates/lodge-pro-grid-reversible-grill-griddle.jpg",
+    imageAlt: "Lodge Pro-Grid reversible cast iron grill and griddle",
+    affiliateUrl: "https://link.amazon/B0crZm8Ct",
+    blurb:
+      "A reversible grill-griddle for crisping homemade arayes on both sides.",
+  },
+  {
+    recipeSlugs: ["homemade-corn-casserole-recipe"],
+    title: "STAUB Ceramic 13 × 9-Inch Rectangular Baking Dish, White",
+    imageSrc: "/affiliates/staub-ceramic-rectangular-baking-dish-13x9-white.jpg",
+    imageAlt: "Staub ceramic 13 by 9-inch rectangular baking dish in white",
+    affiliateUrl: "https://link.amazon/B0f3IG1iN",
+    blurb:
+      "A ceramic baking dish sized for creamy homemade corn casserole.",
+  },
+  {
+    recipeSlugs: ["how-to-cook-rice"],
+    title: "CUCKOO CR-0655F 6-Cup Micom Rice Cooker and Warmer",
+    imageSrc: "/affiliates/cuckoo-cr-0655f-micom-rice-cooker.jpg",
+    imageAlt: "CUCKOO CR-0655F 6-cup Micom rice cooker and warmer",
+    affiliateUrl: "https://link.amazon/B045JhoP6",
+    blurb:
+      "A Micom rice cooker that keeps fluffy rice warm after cooking.",
+  },
+  {
+    recipeSlugs: ["how-to-cook-steak-in-a-skillet"],
+    title: "Lodge Blacklock 12-Inch Lightweight Cast Iron Skillet",
+    imageSrc: "/affiliates/lodge-blacklock-cast-iron-skillet-12in.jpg",
+    imageAlt: "Lodge Blacklock 12-inch lightweight cast iron skillet",
+    affiliateUrl: "https://link.amazon/B00fHNYGU",
+    blurb:
+      "A lighter cast-iron skillet for a deep steak sear on the stovetop.",
+  },
+  {
+    recipeSlugs: ["homemade-vegetarian-lasagna-recipe"],
+    title: "Le Creuset Heritage Covered Rectangular Stoneware Casserole, Oyster",
+    imageSrc: "/affiliates/le-creuset-heritage-covered-casserole-oyster.jpg",
+    imageAlt: "Le Creuset Heritage covered rectangular stoneware casserole in Oyster",
+    affiliateUrl: "https://link.amazon/B0fsGmu6A",
+    blurb:
+      "A covered stoneware casserole for baking vegetarian lasagna evenly.",
+  },
+  {
+    recipeSlugs: ["grandmas-homemade-apple-hand-pies"],
+    title: "Norpro 1041 Large Dough and Dumpling Press",
+    imageSrc: "/affiliates/norpro-large-dough-dumpling-press.jpg",
+    imageAlt: "Norpro large dough and dumpling press for hand pies",
+    affiliateUrl: "https://link.amazon/B0aqGFfRf",
+    blurb:
+      "A dough press for sealing neat apple hand pies quickly.",
+  },
+  {
+    recipeSlugs: ["ground-chicken-recipes-cozy-skillet-chicken-meatballs"],
+    title: "OXO Good Grips Medium Stainless Steel Cookie Scoop",
+    imageSrc: "/affiliates/oxo-medium-cookie-scoop.jpg",
+    imageAlt: "OXO Good Grips medium stainless steel cookie scoop",
+    affiliateUrl: "https://link.amazon/B0eLMPufl",
+    blurb:
+      "A portion scoop for even skillet chicken meatballs every time.",
+  },
+  {
+    recipeSlugs: ["juicy-baked-chicken-breast"],
+    title: "TempPro TempTrack Leave-In Digital Meat Thermometer",
+    imageSrc: "/affiliates/temppro-temptrack-leave-in-thermometer.jpg",
+    imageAlt: "TempPro TempTrack leave-in digital meat thermometer",
+    affiliateUrl: "https://link.amazon/B04HKzMge",
+    blurb:
+      "A leave-in probe so baked chicken breasts hit juicy temps without guessing.",
+  },
+  {
+    recipeSlugs: ["how-to-cook-basmati-rice"],
+    title: "AROMA CoreCoat 8-Cup Cooked Digital Rice Cooker and Steamer",
+    imageSrc: "/affiliates/aroma-corecoat-digital-rice-cooker-8cup.jpg",
+    imageAlt: "AROMA CoreCoat 8-cup cooked digital rice cooker and steamer",
+    affiliateUrl: "https://link.amazon/B001jOSQc",
+    blurb:
+      "A digital rice cooker for fluffy basmati with a simple one-touch start.",
+  },
+  {
+    recipeSlugs: ["grandmas-cozy-sweet-potato-casserole"],
+    title: "STAUB Ceramic Rectangular Baking Dish Set, 2-Piece, Citron",
+    imageSrc: "/affiliates/staub-ceramic-baking-dish-set-2pc-citron.jpg",
+    imageAlt: "Staub ceramic rectangular baking dish set, two pieces in Citron",
+    affiliateUrl: "https://link.amazon/B06ZvrE5z",
+    blurb:
+      "Ceramic baking dishes for sweet potato casserole from oven to table.",
+  },
 ];
 
 export function getAmazonAffiliateProductsForRecipe(
