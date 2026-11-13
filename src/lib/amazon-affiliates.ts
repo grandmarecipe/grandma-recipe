@@ -708,6 +708,231 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     blurb:
       "Wireless probes so oven chicken breasts hit juicy temps without opening the door.",
   },
+  {
+    recipeSlugs: ["how-to-medium-boil-eggs"],
+    title: "Cuisinart Chef’s Classic 1.5-Qt Stainless Steel Saucepan (719-16)",
+    imageSrc: "/affiliates/cuisinart-chefs-classic-saucepan-15qt.jpg",
+    imageAlt: "Cuisinart Chef’s Classic 1.5-quart stainless steel saucepan",
+    affiliateUrl: "https://link.amazon/B09gMBr8m",
+    blurb:
+      "A compact saucepan sized for simmering eggs to a medium boil.",
+  },
+  {
+    recipeSlugs: ["bok-choy-recipe"],
+    title: "Joyce Chen Professional Series 14-Inch Carbon Steel Wok",
+    imageSrc: "/affiliates/joyce-chen-carbon-steel-wok-14in.jpg",
+    imageAlt: "Joyce Chen Professional Series 14-inch carbon steel wok",
+    affiliateUrl: "https://link.amazon/B07Yha3W1",
+    blurb:
+      "A carbon-steel wok for quick, high-heat bok choy stir-fries.",
+  },
+  {
+    recipeSlugs: ["mango-ice-cream"],
+    title: "Cuisinart ICE-100 1.5-Qt Compressor Ice Cream Maker",
+    imageSrc: "/affiliates/cuisinart-ice-100-ice-cream-maker.jpg",
+    imageAlt: "Cuisinart ICE-100 1.5-quart compressor ice cream maker",
+    affiliateUrl: "https://link.amazon/B07MhdJer",
+    blurb:
+      "A compressor ice cream maker for churning homemade mango ice cream anytime.",
+  },
+  {
+    recipeSlugs: ["lo-mein-noodles"],
+    title: "Lodge BOLD 14-Inch Pre-Seasoned Cast Iron Wok",
+    imageSrc: "/affiliates/lodge-bold-cast-iron-wok-14in.jpg",
+    imageAlt: "Lodge BOLD 14-inch pre-seasoned cast iron wok",
+    affiliateUrl: "https://link.amazon/B0aZiuMqS",
+    blurb:
+      "A deep cast-iron wok for tossing lo mein noodles over high heat.",
+  },
+  {
+    recipeSlugs: ["crumpet"],
+    title: "Norpro 3776 Stainless Steel English Muffin Rings, Set of 4",
+    imageSrc: "/affiliates/norpro-english-muffin-rings-set-of-4.jpg",
+    imageAlt: "Norpro stainless steel English muffin rings, set of four",
+    affiliateUrl: "https://link.amazon/B07sKh59S",
+    blurb:
+      "Ring molds for shaping homemade crumpets on the griddle.",
+  },
+  {
+    recipeSlugs: ["potato-recipes"],
+    title: "Le Creuset Signature 3.5-Qt Cast Iron Braiser, Sea Salt",
+    imageSrc: "/affiliates/le-creuset-signature-braiser-35qt-sea-salt.jpg",
+    imageAlt: "Le Creuset Signature 3.5-quart cast iron braiser in Sea Salt",
+    affiliateUrl: "https://link.amazon/B0d3XOG4o",
+    blurb:
+      "A wide braiser for roasting, simmering, and serving potato dishes.",
+  },
+  {
+    recipeSlugs: ["red-curry-paste"],
+    title: "ChefSofi Granite Mortar and Pestle Set, Gray, 2 Cups",
+    imageSrc: "/affiliates/chefsofi-granite-mortar-pestle-2cup.jpg",
+    imageAlt: "ChefSofi gray granite mortar and pestle set, 2 cups",
+    affiliateUrl: "https://link.amazon/B0gItRUkr",
+    blurb:
+      "A heavy granite mortar for pounding fragrant red curry paste by hand.",
+  },
+  {
+    recipeSlugs: ["sukiyaki"],
+    title: "Duxtop 9100MC 1800W Portable Induction Cooktop, Black",
+    imageSrc: "/affiliates/duxtop-9100mc-induction-cooktop.jpg",
+    imageAlt: "Duxtop 9100MC 1800W portable induction cooktop in black",
+    affiliateUrl: "https://link.amazon/B06biXZTO",
+    blurb:
+      "A portable induction burner for simmering sukiyaki at the table.",
+  },
+  {
+    recipeSlugs: ["sunday-dinner-ideas"],
+    title: "Staub 7-Qt Round Cast Iron Cocotte, Cherry",
+    imageSrc: "/affiliates/staub-round-cocotte-7qt-cherry.jpg",
+    imageAlt: "Staub 7-quart round cast iron cocotte in cherry",
+    affiliateUrl: "https://link.amazon/B04E1ox9t",
+    blurb:
+      "A roomy Dutch oven for braises and one-pot Sunday dinners.",
+  },
+  {
+    recipeSlugs: ["eclairs"],
+    title: "Ateco 787 6-Piece Stainless Steel Piping Tip Set",
+    imageSrc: "/affiliates/ateco-787-piping-tip-set.jpg",
+    imageAlt: "Ateco 787 six-piece stainless steel piping tip set",
+    affiliateUrl: "https://link.amazon/B073L8Cgp",
+    blurb:
+      "Piping tips for filling and finishing homemade eclairs.",
+  },
+  {
+    recipeSlugs: ["chicken-fried-rice-recipe"],
+    title: "Calphalon Premier 5-Ply Stainless Steel 13-Inch Wok",
+    imageSrc: "/affiliates/calphalon-premier-stainless-wok-13in.jpg",
+    imageAlt: "Calphalon Premier 5-ply stainless steel 13-inch wok",
+    affiliateUrl: "https://link.amazon/B03UHA0UR",
+    blurb:
+      "A stainless wok with room to toss chicken fried rice without crowding.",
+  },
+  {
+    recipeSlugs: ["brussel-sprout-recipes"],
+    title: "Nordic Ware Naturals Half Sheet and Quarter Sheet Set",
+    imageSrc: "/affiliates/nordic-ware-naturals-half-quarter-sheet-set.jpg",
+    imageAlt: "Nordic Ware Naturals half sheet and quarter sheet pan set",
+    affiliateUrl: "https://link.amazon/B0iNn9Pd1",
+    blurb:
+      "Sheet pans for roasting Brussels sprouts in an even single layer.",
+  },
+  {
+    recipeSlugs: ["how-to-make-rice"],
+    title: "Zojirushi NS-TSC10 5.5-Cup Micom Rice Cooker",
+    imageSrc: "/affiliates/zojirushi-ns-tsc10-micom-rice-cooker.jpg",
+    imageAlt: "Zojirushi NS-TSC10 5.5-cup Micom rice cooker",
+    affiliateUrl: "https://link.amazon/B08J8AhOd",
+    blurb:
+      "A Micom rice cooker for fluffy rice with a keep-warm setting.",
+  },
+  {
+    recipeSlugs: ["winston-soup"],
+    title: "Cuisinart Chef’s Classic 8-Qt Stainless Steel Stockpot with Lid",
+    imageSrc: "/affiliates/cuisinart-chefs-classic-stockpot-8qt.jpg",
+    imageAlt: "Cuisinart Chef’s Classic 8-quart stainless steel stockpot with lid",
+    affiliateUrl: "https://link.amazon/B09DKQ1GA",
+    blurb:
+      "A tall stockpot for simmering big batches of soup.",
+  },
+  {
+    recipeSlugs: ["how-to-cook-fish"],
+    title: "OXO Good Grips Slotted Stainless Steel Fish Turner",
+    imageSrc: "/affiliates/oxo-slotted-fish-turner.jpg",
+    imageAlt: "OXO Good Grips slotted stainless steel fish turner",
+    affiliateUrl: "https://link.amazon/B0bPUf0uJ",
+    blurb:
+      "A flexible fish spatula for flipping delicate fillets without breaking them.",
+  },
+  {
+    recipeSlugs: ["easy-fish-recipes-for-dinner"],
+    title: "All-Clad D3 Stainless Steel 12-Inch Fry Pan",
+    imageSrc: "/affiliates/all-clad-d3-fry-pan-12in.jpg",
+    imageAlt: "All-Clad D3 stainless steel 12-inch fry pan",
+    affiliateUrl: "https://link.amazon/B0cc5y2ES",
+    blurb:
+      "A wide stainless skillet for searing fish fillets for weeknight dinners.",
+  },
+  {
+    recipeSlugs: ["smashed-potatoes"],
+    title: "OXO Good Grips Stainless Steel Potato Masher",
+    imageSrc: "/affiliates/oxo-stainless-potato-masher.jpg",
+    imageAlt: "OXO Good Grips stainless steel potato masher",
+    affiliateUrl: "https://link.amazon/B09VAxave",
+    blurb:
+      "A sturdy masher for crushing boiled potatoes before roasting.",
+  },
+  {
+    recipeSlugs: ["porchetta"],
+    title: "MEATER Pro Wireless Meat Thermometer, Walnut",
+    imageSrc: "/affiliates/meater-pro-wireless-meat-thermometer.jpg",
+    imageAlt: "MEATER Pro wireless meat thermometer with walnut finish",
+    affiliateUrl: "https://link.amazon/B0gC13S5C",
+    blurb:
+      "A wireless probe for monitoring roast temperatures without opening the oven.",
+  },
+  {
+    recipeSlugs: ["upside-down-pineapple"],
+    title: "USA Pan 9-Inch Nonstick Round Cake Pan",
+    imageSrc: "/affiliates/usa-pan-nonstick-round-cake-pan-9in.jpg",
+    imageAlt: "USA Pan 9-inch nonstick round cake pan",
+    affiliateUrl: "https://link.amazon/B09EZKt9K",
+    blurb:
+      "A nonstick round pan for flipping pineapple upside-down cake cleanly.",
+  },
+  {
+    recipeSlugs: ["frenchs-fried"],
+    title: "All-Clad 3.5-L Electric Deep Fryer with Basket and Lid",
+    imageSrc: "/affiliates/all-clad-electric-deep-fryer-35l.jpg",
+    imageAlt: "All-Clad 3.5-liter electric deep fryer with basket and lid",
+    affiliateUrl: "https://link.amazon/B0bNtsPdi",
+    blurb:
+      "An electric fryer for crisp homemade French-fried onions.",
+  },
+  {
+    recipeSlugs: ["biscotti"],
+    title: "USA Pan Nonstick Aluminized Steel Biscotti Pan",
+    imageSrc: "/affiliates/usa-pan-nonstick-biscotti-pan.jpg",
+    imageAlt: "USA Pan nonstick aluminized steel biscotti pan",
+    affiliateUrl: "https://link.amazon/B0jfYt7zi",
+    blurb:
+      "A long biscotti pan for shaping and baking twice-baked cookies.",
+  },
+  {
+    recipeSlugs: ["cowboy-butter"],
+    title: "OXO Good Grips Silicone Pastry Brush",
+    imageSrc: "/affiliates/oxo-silicone-pastry-brush.jpg",
+    imageAlt: "OXO Good Grips silicone pastry brush",
+    affiliateUrl: "https://link.amazon/B063tjkW1",
+    blurb:
+      "A silicone brush for basting melted cowboy butter onto steaks and veggies.",
+  },
+  {
+    recipeSlugs: ["bearnaise-sauce"],
+    title: "Farberware Classic Series 2-Qt Double Boiler and Saucepan",
+    imageSrc: "/affiliates/farberware-classic-double-boiler-2qt.jpg",
+    imageAlt: "Farberware Classic Series 2-quart double boiler and saucepan",
+    affiliateUrl: "https://link.amazon/B03en5aMe",
+    blurb:
+      "A double boiler for gently whisking silky béarnaise without scrambling.",
+  },
+  {
+    recipeSlugs: ["easy-side-dish-recipes"],
+    title: "OXO Good Grips 8-Inch Stainless Steel Steamer Basket",
+    imageSrc: "/affiliates/oxo-stainless-steamer-basket-8in.jpg",
+    imageAlt: "OXO Good Grips 8-inch stainless steel steamer basket",
+    affiliateUrl: "https://link.amazon/B0hkKN8aB",
+    blurb:
+      "A steamer basket for quick vegetable side dishes.",
+  },
+  {
+    recipeSlugs: ["easy-creamy-tomato-pasta-for-dinner"],
+    title: "Cuisinart MultiClad Pro 5.5-Qt Triple-Ply Sauté Pan with Lid",
+    imageSrc: "/affiliates/cuisinart-multiclad-pro-saute-pan-55qt.jpg",
+    imageAlt: "Cuisinart MultiClad Pro 5.5-quart triple-ply sauté pan with lid",
+    affiliateUrl: "https://link.amazon/B0cIEkd5A",
+    blurb:
+      "A deep sauté pan for simmering creamy tomato pasta sauce and tossing noodles.",
+  },
 ];
 
 export function getAmazonAffiliateProductsForRecipe(

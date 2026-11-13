@@ -14,11 +14,11 @@ export function AmazonAffiliateProduct({
 }: AmazonAffiliateProductProps) {
   return (
     <aside
-      className="rounded-2xl border border-border bg-[#fffdf9] p-4 sm:p-5"
+      className="@container rounded-2xl border border-border bg-[#fffdf9] p-4 sm:p-5"
       aria-label={`Shop ${product.title} on Amazon`}
     >
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-        <div className="mx-auto flex h-28 w-28 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white sm:mx-0">
+      <div className="flex flex-col gap-4 @[28rem]:flex-row @[28rem]:items-center">
+        <div className="mx-auto flex h-28 w-28 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white @[28rem]:mx-0">
           <Image
             src={product.imageSrc}
             alt={product.imageAlt}
@@ -28,7 +28,7 @@ export function AmazonAffiliateProduct({
           />
         </div>
 
-        <div className="min-w-0 flex-1 text-center sm:text-left">
+        <div className="min-w-0 flex-1 text-center @[28rem]:text-left">
           <p className="text-xs font-semibold tracking-wide text-accent uppercase">
             Kitchen pick
           </p>
@@ -44,9 +44,20 @@ export function AmazonAffiliateProduct({
             href={product.affiliateUrl}
             target="_blank"
             rel="nofollow sponsored noopener noreferrer"
-            className="mt-3 inline-flex items-center justify-center rounded-full bg-accent px-5 py-2.5 text-sm font-semibold !text-white transition hover:bg-accent-dark"
+            aria-label="View on Amazon"
+            className="mt-3 inline-flex h-12 max-w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border border-[#FCD200] bg-[#FFD814] px-5 shadow-sm transition hover:bg-[#F7CA00]"
           >
-            View on Amazon
+            <span className="text-[19px] font-semibold leading-none tracking-tight !text-[#0F1111]">
+              View on
+            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element -- local brand mark; avoid stale image optimizer cache */}
+            <img
+              src="/brand/amazon-logo.png?v=5"
+              alt=""
+              width={196}
+              height={62}
+              className="h-6 w-auto shrink-0 translate-y-[1px]"
+            />
           </a>
           {showDisclosure ? <AmazonAffiliateDisclosure /> : null}
         </div>
