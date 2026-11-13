@@ -1068,6 +1068,141 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     blurb:
       "Ceramic baking dishes for sweet potato casserole from oven to table.",
   },
+  {
+    recipeSlugs: ["how-to-cook-brown-rice"],
+    title: "Zojirushi NW-QAC10 5.5-Cup Induction Rice Cooker and Warmer",
+    imageSrc: "/affiliates/zojirushi-nw-qac10-induction-rice-cooker.jpg",
+    imageAlt: "Zojirushi NW-QAC10 5.5-cup induction rice cooker and warmer",
+    affiliateUrl: "https://link.amazon/B05R0D312",
+    blurb:
+      "An induction rice cooker that handles brown rice with even heat and keep-warm.",
+  },
+  {
+    recipeSlugs: ["best-homemade-chicken-ramen-recipe"],
+    title: "Cuisinart 3-Piece Stainless Steel Fine Mesh Strainer Set",
+    imageSrc: "/affiliates/cuisinart-fine-mesh-strainer-set-3pc.jpg",
+    imageAlt: "Cuisinart 3-piece stainless steel fine mesh strainer set",
+    affiliateUrl: "https://link.amazon/B0j7mNLuU",
+    blurb:
+      "Fine mesh strainers for clarifying broth and rinsing noodles for ramen.",
+  },
+  {
+    recipeSlugs: ["grandmas-golden-wooflix-waffles"],
+    title: "Cuisinart Round Classic Waffle Maker, WMR-CAP2",
+    imageSrc: "/affiliates/cuisinart-round-classic-waffle-maker.jpg",
+    imageAlt: "Cuisinart Round Classic waffle maker, model WMR-CAP2",
+    affiliateUrl: "https://link.amazon/B041sbqLl",
+    blurb:
+      "A classic waffle maker for golden weekend waffles with crisp edges.",
+  },
+  {
+    recipeSlugs: ["how-to-make-crostini"],
+    title: "15 × 10-Inch Nonstick Jelly Roll Pan, Champagne Gold",
+    imageSrc: "/affiliates/nonstick-jelly-roll-pan-15x10-champagne-gold.jpg",
+    imageAlt: "15 by 10-inch nonstick jelly roll pan in champagne gold",
+    affiliateUrl: "https://link.amazon/B0gsrvHAf",
+    blurb:
+      "A rimmed baking sheet for toasting crostini in an even single layer.",
+  },
+  {
+    recipeSlugs: ["how-to-make-vegetable-stock"],
+    title: "Cuisinart MultiClad Pro 12-Qt Stainless Steel Stockpot with Lid",
+    imageSrc: "/affiliates/cuisinart-multiclad-pro-stockpot-12qt.jpg",
+    imageAlt: "Cuisinart MultiClad Pro 12-quart stainless steel stockpot with lid",
+    affiliateUrl: "https://link.amazon/B04gJp8ZU",
+    blurb:
+      "A tall stockpot for simmering big batches of vegetable stock.",
+  },
+  {
+    recipeSlugs: ["how-to-roast-a-chicken"],
+    title: "Viking 3-Ply Stainless Steel Roasting Pan with Rack",
+    imageSrc: "/affiliates/viking-3ply-roasting-pan-with-rack.jpg",
+    imageAlt: "Viking 3-ply stainless steel roasting pan with rack",
+    affiliateUrl: "https://link.amazon/B0hw38fsK",
+    blurb:
+      "A roasting pan with a rack for chicken that browns evenly all over.",
+  },
+  {
+    recipeSlugs: ["homemade-beef-pastrami"],
+    title: "Cuisinart Kitchen Pro FS-75 Food Slicer",
+    imageSrc: "/affiliates/cuisinart-kitchen-pro-food-slicer.jpg",
+    imageAlt: "Cuisinart Kitchen Pro FS-75 electric food slicer",
+    affiliateUrl: "https://link.amazon/B04Pl9dwC",
+    blurb:
+      "An electric slicer for thin, deli-style slices of homemade beef pastrami.",
+  },
+  {
+    recipeSlugs: ["how-to-make-soup-stock"],
+    title: "Instant Pot Pro Plus 6-Qt Wi-Fi Electric Pressure Cooker",
+    imageSrc: "/affiliates/instant-pot-pro-plus-6qt.jpg",
+    imageAlt: "Instant Pot Pro Plus 6-quart Wi-Fi electric pressure cooker",
+    affiliateUrl: "https://link.amazon/B01LddgrO",
+    blurb:
+      "A pressure cooker for rich soup stock in a fraction of the simmer time.",
+  },
+  {
+    recipeSlugs: ["slow-cooker-style-beef-barbacoa"],
+    title: "Crock-Pot 7-Qt Programmable Countdown Slow Cooker",
+    imageSrc: "/affiliates/crock-pot-7qt-programmable-countdown.jpg",
+    imageAlt: "Crock-Pot 7-quart programmable countdown slow cooker",
+    affiliateUrl: "https://link.amazon/B05xxcqpn",
+    blurb:
+      "A programmable slow cooker for tender beef barbacoa with a timer.",
+  },
+  {
+    recipeSlugs: ["cozy-lasagna-soup"],
+    title: "Lodge Essential Enamel 7.5-Qt Dutch Oven, Storm Blue",
+    imageSrc: "/affiliates/lodge-essential-enamel-dutch-oven-75qt-storm-blue.jpg",
+    imageAlt: "Lodge Essential Enamel 7.5-quart Dutch oven in Storm Blue",
+    affiliateUrl: "https://link.amazon/B04CfUAHs",
+    blurb:
+      "A roomy Dutch oven for simmering cozy lasagna soup for the table.",
+  },
+  {
+    recipeSlugs: ["chop-sandwich"],
+    title: "John Boos Chop-N-Slice 18 × 12-Inch Maple Cutting Board",
+    imageSrc: "/affiliates/john-boos-chop-n-slice-maple-cutting-board.jpg",
+    imageAlt: "John Boos Chop-N-Slice 18 by 12-inch maple cutting board",
+    affiliateUrl: "https://link.amazon/B0gIz2dIS",
+    blurb:
+      "A sturdy maple board for chopping sandwich fillings and slicing bread.",
+  },
+  {
+    recipeSlugs: ["marinara-pasta"],
+    title: "All-Clad D5 3-Qt Stainless Steel Saucepan with Lid",
+    imageSrc: "/affiliates/all-clad-d5-saucepan-3qt.jpg",
+    imageAlt: "All-Clad D5 3-quart stainless steel saucepan with lid",
+    affiliateUrl: "https://link.amazon/B07CsWcbA",
+    blurb:
+      "A stainless saucepan for simmering marinara without scorching.",
+  },
+  {
+    recipeSlugs: ["seaweed-salad"],
+    title: "OXO Good Grips Stainless Steel 6.34-Qt Salad Spinner",
+    imageSrc: "/affiliates/oxo-stainless-salad-spinner-634qt.jpg",
+    imageAlt: "OXO Good Grips stainless steel 6.34-quart salad spinner",
+    affiliateUrl: "https://link.amazon/B0bcpSrbi",
+    blurb:
+      "A salad spinner for drying greens and rinsed seaweed thoroughly.",
+  },
+  {
+    recipeSlugs: ["smoked-sirloin-steak"],
+    title: "MEATER Pro Duo Wireless Meat Thermometer, 2 Probes",
+    imageSrc: "/affiliates/meater-pro-duo-wireless-thermometer.jpg",
+    imageAlt: "MEATER Pro Duo wireless meat thermometer with two probes",
+    affiliateUrl: "https://link.amazon/B0e9Rl2tp",
+    blurb:
+      "Dual wireless probes for tracking smoked sirloin without lifting the lid.",
+  },
+  {
+    recipeSlugs: ["teriyaki-noodles-recipe"],
+    title: "Cuisinart 12-Inch Stainless Steel Stir-Fry Wok with Lid, 726-30SD",
+    imageSrc: "/affiliates/cuisinart-stainless-stir-fry-wok-12in.jpg",
+    imageAlt: "Cuisinart 12-inch stainless steel stir-fry wok with lid",
+    affiliateUrl: "https://link.amazon/B0aHWpRBh",
+    blurb:
+      "A stainless wok for tossing teriyaki noodles over high heat.",
+  },
 ];
 
 export function getAmazonAffiliateProductsForRecipe(
