@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+thanksgiving-recipes-pin.jpg
+
+TITLE
+Easy Thanksgiving Recipes Hub
+
+DESCRIPTION
+Easy Thanksgiving recipes for turkey, sides, desserts, and appetizers in one guide.
+
+This pin covers:
+- Turkey mains and gravy
+- Classic holiday sides
+- Pumpkin desserts and starters
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/thanksgiving-recipes/
+
+ALT TEXT
+Easy Thanksgiving recipes spread with turkey, sides, and pie

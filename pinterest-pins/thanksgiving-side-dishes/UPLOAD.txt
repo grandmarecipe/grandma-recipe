@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+thanksgiving-side-dishes-pin.jpg
+
+TITLE
+Thanksgiving Side Dishes Guide
+
+DESCRIPTION
+Easy Thanksgiving side dishes for potatoes, stuffing, beans, and gravy.
+
+This pin covers:
+- Mashed potatoes and casseroles
+- Stuffing and green beans
+- Gravy and cranberry sauce
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/thanksgiving-side-dishes/
+
+ALT TEXT
+Thanksgiving side dishes with mashed potatoes, stuffing, and gravy

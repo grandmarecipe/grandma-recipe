@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+classic-stuffing-pin.jpg
+
+TITLE
+Classic Bread Stuffing Recipe for Thanksgiving
+
+DESCRIPTION
+Classic bread stuffing with onion, celery, and herbs for the holiday sideboard.
+
+This pin covers:
+- Day-old bread cubes
+- Butter, sage, and thyme
+- Oven-baked until golden on top
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/classic-stuffing/
+
+ALT TEXT
+Classic bread stuffing with herbs in a ceramic baking dish

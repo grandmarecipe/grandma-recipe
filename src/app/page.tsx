@@ -48,10 +48,19 @@ export default function HomePage() {
     return recipe ? { ...pick, title: recipe.title } : null;
   }).filter(Boolean) as Array<(typeof GRANDMAS_PICKS)[number] & { title: string }>;
 
+  // Prefer the first unique recipe photo per category so circles do not
+  // all inherit the same multi-category pillar image (e.g. halloween-recipes).
+  const usedImages = new Set<string>();
   const categoryImages = Object.fromEntries(
     CATEGORIES.map((category) => {
-      const first = getRecipesByCategory(category.slug)[0];
-      return [category.slug, first?.featuredImage];
+      const recipes = getRecipesByCategory(category.slug);
+      const unique = recipes.find(
+        (recipe) =>
+          recipe.featuredImage && !usedImages.has(recipe.featuredImage),
+      );
+      const image = unique?.featuredImage ?? category.image;
+      if (image) usedImages.add(image);
+      return [category.slug, image];
     }),
   ) as Record<string, string | undefined>;
 

@@ -1,0 +1,27 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+thanksgiving-desserts-pin.jpg
+
+TITLE
+Thanksgiving Desserts Guide
+
+DESCRIPTION
+Thanksgiving desserts centered on pumpkin pie, rolls, breads, and easy cakes.
+
+This pin covers:
+- Classic pumpkin pie
+- Pumpkin roll and poke cake
+- Bread and muffins for leftovers
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/thanksgiving-desserts/
+
+ALT TEXT
+Thanksgiving desserts with pumpkin pie and fall bakes

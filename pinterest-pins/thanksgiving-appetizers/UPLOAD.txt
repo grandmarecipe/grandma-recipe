@@ -1,0 +1,27 @@
+BOARD
+Grandma snack recipe
+
+BOARD_ID
+1137229412095892593
+
+IMAGE FILE
+thanksgiving-appetizers-pin.jpg
+
+TITLE
+Thanksgiving Appetizers Guide
+
+DESCRIPTION
+Light Thanksgiving appetizers with dips, cheese balls, and non-alcoholic drinks.
+
+This pin covers:
+- Cheese balls and veggie dips
+- Fresh starters for guests
+- Cider and cranberry drinks
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/thanksgiving-appetizers/
+
+ALT TEXT
+Thanksgiving appetizer tray with dips and festive drinks

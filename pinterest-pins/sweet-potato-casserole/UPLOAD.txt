@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+sweet-potato-casserole-pin.jpg
+
+TITLE
+Classic Sweet Potato Casserole with Pecan Streusel
+
+DESCRIPTION
+Sweet potato casserole with a buttery pecan streusel topping for Thanksgiving.
+
+This pin covers:
+- Creamy mashed sweet potatoes
+- Cinnamon brown sugar flavor
+- Crunchy pecan streusel finish
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/sweet-potato-casserole/
+
+ALT TEXT
+Classic sweet potato casserole topped with golden pecan streusel

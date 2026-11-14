@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+turkey-gravy-pin.jpg
+
+TITLE
+Silky Homemade Turkey Gravy, No Wine
+
+DESCRIPTION
+Silky turkey gravy from drippings or broth for mashed potatoes and turkey.
+
+This pin covers:
+- Pan drippings or turkey broth
+- Smooth flour-butter roux
+- No wine, just classic gravy
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/turkey-gravy/
+
+ALT TEXT
+Silky homemade turkey gravy in a ceramic gravy boat

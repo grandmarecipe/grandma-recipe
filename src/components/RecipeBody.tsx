@@ -282,7 +282,7 @@ export function RecipeBody({
                 slot={ADSENSE_SLOTS.inArticle02}
                 format="fluid"
                 layout="in-article"
-                className="my-8 not-prose"
+                className="my-12 not-prose"
               />
             ) : null}
             {storyMid ? (
@@ -293,7 +293,7 @@ export function RecipeBody({
                 slot={ADSENSE_SLOTS.inArticle01}
                 format="fluid"
                 layout="in-article"
-                className="my-8 not-prose"
+                className="my-12 not-prose"
               />
             ) : null}
             {storyEnd ? (
@@ -309,7 +309,7 @@ export function RecipeBody({
             <AdUnit
               slot={ADSENSE_SLOTS.multiplexBottom}
               format="autorelaxed"
-              className="my-10"
+              className="my-12"
             />
           ) : null}
 

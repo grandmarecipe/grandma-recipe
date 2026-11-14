@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+roast-turkey-pin.jpg
+
+TITLE
+How to Cook a Turkey for Thanksgiving
+
+DESCRIPTION
+Clear roast turkey guide with seasoning, timing, resting, and carving tips.
+
+This pin covers:
+- Herb butter under the skin
+- Oven timing by bird size
+- Resting for juicy slices
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/roast-turkey/
+
+ALT TEXT
+Golden roasted whole turkey on a holiday serving platter

@@ -1,0 +1,61 @@
+{
+  "startIso": "2026-11-14T12:00:00.000Z",
+  "gapsMinutes": [
+    105,
+    135,
+    90,
+    150,
+    120,
+    145,
+    95,
+    130,
+    110,
+    125
+  ],
+  "order": [
+    {
+      "slug": "green-bean-casserole",
+      "at": "2026-11-14T12:00:00.000Z"
+    },
+    {
+      "slug": "sweet-potato-casserole",
+      "at": "2026-11-14T13:45:00.000Z"
+    },
+    {
+      "slug": "classic-stuffing",
+      "at": "2026-11-14T16:00:00.000Z"
+    },
+    {
+      "slug": "cranberry-sauce",
+      "at": "2026-11-14T17:30:00.000Z"
+    },
+    {
+      "slug": "turkey-gravy",
+      "at": "2026-11-14T20:00:00.000Z"
+    },
+    {
+      "slug": "roast-turkey",
+      "at": "2026-11-14T22:00:00.000Z"
+    },
+    {
+      "slug": "thanksgiving-side-dishes",
+      "at": "2026-11-15T00:25:00.000Z"
+    },
+    {
+      "slug": "thanksgiving-desserts",
+      "at": "2026-11-15T02:00:00.000Z"
+    },
+    {
+      "slug": "thanksgiving-appetizers",
+      "at": "2026-11-15T04:10:00.000Z"
+    },
+    {
+      "slug": "thanksgiving-dinner-ideas",
+      "at": "2026-11-15T06:00:00.000Z"
+    },
+    {
+      "slug": "thanksgiving-recipes",
+      "at": "2026-11-15T08:05:00.000Z"
+    }
+  ]
+}

@@ -205,11 +205,28 @@ async function main() {
   if (!secret) throw new Error("Missing CMS_IMPORT_SECRET");
   if (devUrl === prodUrl) throw new Error("Dev URL equals prod — aborting.");
 
+  function resolveAsset(section: RecipeImageSection): string {
+    const candidates = [
+      path.join(ASSETS_DIR, `${basename}-${section}.png`),
+      path.join(ASSETS_DIR, `${basename}-${section}.jpg`),
+      path.join(ASSETS_DIR, `${basename}-${section}.jpeg`),
+      path.join(ASSETS_DIR, `${basename}-${section.replace(/_/g, "-")}.png`),
+      path.join(ASSETS_DIR, `${basename}-${section.replace(/_/g, "-")}.jpg`),
+    ];
+    const found = candidates.find((p) => fs.existsSync(p));
+    if (!found) {
+      throw new Error(
+        `Missing image for ${section}. Tried:\n${candidates.join("\n")}`,
+      );
+    }
+    return found;
+  }
+
   const imageFiles: Record<RecipeImageSection, string> = {
-    feature: path.join(ASSETS_DIR, `${basename}-feature.png`),
-    ingredients: path.join(ASSETS_DIR, `${basename}-ingredients.png`),
-    how_to_make: path.join(ASSETS_DIR, `${basename}-how-to-make.png`),
-    how_to_serve: path.join(ASSETS_DIR, `${basename}-how-to-serve.png`),
+    feature: resolveAsset("feature"),
+    ingredients: resolveAsset("ingredients"),
+    how_to_make: resolveAsset("how_to_make"),
+    how_to_serve: resolveAsset("how_to_serve"),
   };
 
   const client = new ConvexHttpClient(devUrl);

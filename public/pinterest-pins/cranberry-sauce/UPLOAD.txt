@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+cranberry-sauce-pin.jpg
+
+TITLE
+Homemade Cranberry Sauce for Thanksgiving
+
+DESCRIPTION
+Homemade cranberry sauce simmered with orange and cinnamon until glossy.
+
+This pin covers:
+- Fresh cranberries
+- Orange zest and juice
+- Make-ahead holiday condiment
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/cranberry-sauce/
+
+ALT TEXT
+Homemade cranberry sauce with orange zest in a small bowl

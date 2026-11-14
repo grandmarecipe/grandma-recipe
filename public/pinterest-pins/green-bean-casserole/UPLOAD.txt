@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+green-bean-casserole-pin.jpg
+
+TITLE
+Homestyle Green Bean Casserole for Thanksgiving
+
+DESCRIPTION
+Creamy green bean casserole with a crispy onion topping for the holiday table.
+
+This pin covers:
+- Fresh green beans in a creamy mushroom sauce
+- Golden crispy fried onion topping
+- Make-ahead tips for Thanksgiving day
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/green-bean-casserole/
+
+ALT TEXT
+Homestyle green bean casserole with creamy sauce and crispy fried onions

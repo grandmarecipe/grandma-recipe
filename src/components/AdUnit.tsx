@@ -58,6 +58,7 @@ export function AdUnit({
     <div
       className={`ad-unit no-print ${className}`.trim()}
       data-ad-slot={slot}
+      data-ad-layout={layout || undefined}
       aria-hidden="true"
     >
       <ins

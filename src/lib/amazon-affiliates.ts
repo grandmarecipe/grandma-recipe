@@ -69,7 +69,15 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
       "Heavy aluminum half sheets for pastry, cookies, and even roasting.",
   },
   {
-    recipeSlugs: ["easy-chicken-recipes", "broasted-chicken"],
+    recipeSlugs: [
+      "easy-chicken-recipes",
+      "broasted-chicken",
+      "thanksgiving-recipes",
+      "thanksgiving-dinner-ideas",
+      "bone-turkey-breast",
+      "butterball-turkey-breast",
+      "frozen-whole-turkey",
+    ],
     title: "TempPro TP19H Instant-Read Thermometer",
     imageSrc: "/affiliates/temppro-tp19h-thermometer.jpg",
     imageAlt: "TempPro TP19H digital instant-read meat thermometer in orange",
@@ -105,7 +113,15 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
       "A sturdy Dutch oven for simmering beans and other one-pot dinners.",
   },
   {
-    recipeSlugs: ["ritz-cracker-chicken-casserole"],
+    recipeSlugs: [
+      "ritz-cracker-chicken-casserole",
+      "thanksgiving-side-dishes",
+      "thanksgiving-recipes",
+      "mashed-potato-casserole",
+      "green-bean-casserole",
+      "sweet-potato-casserole",
+      "classic-stuffing",
+    ],
     title: "OXO Glass Baking Dish with Lid (9 × 13 in)",
     imageSrc: "/affiliates/oxo-glass-baking-dish-9x13.jpg",
     imageAlt: "OXO 9 by 13 inch glass baking dish with lid",
@@ -232,7 +248,11 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
       "Keeps the cloth above simmering water for homemade rice paper. Make sure your pot is wider than the rack.",
   },
   {
-    recipeSlugs: ["pumpkin-pie-recipe"],
+    recipeSlugs: [
+      "pumpkin-pie-recipe",
+      "thanksgiving-desserts",
+      "thanksgiving-recipes",
+    ],
     title: "OXO Good Grips Glass Pie Plate (9 in)",
     imageSrc: "/affiliates/oxo-glass-pie-plate-9in.jpg",
     imageAlt: "OXO Good Grips 9-inch glass pie plate",
@@ -475,7 +495,14 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
       "A cookie press with discs for shaping festive cookies kids can help decorate.",
   },
   {
-    recipeSlugs: ["gluten-free-christmas-dinner"],
+    recipeSlugs: [
+      "gluten-free-christmas-dinner",
+      "thanksgiving-recipes",
+      "thanksgiving-dinner-ideas",
+      "bone-turkey-breast",
+      "butterball-turkey-breast",
+      "frozen-whole-turkey",
+    ],
     title: "All-Clad Stainless Steel Roasting Pan with Rack (16 × 13 in)",
     imageSrc: "/affiliates/all-clad-roasting-pan-with-rack.jpg",
     imageAlt: "All-Clad stainless steel roasting pan with rack, 16 by 13 inches",
@@ -529,7 +556,13 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
       "Heavy sheet pans for roasting a full sheet-pan Christmas dinner.",
   },
   {
-    recipeSlugs: ["christmas-eve-dinner"],
+    recipeSlugs: [
+      "christmas-eve-dinner",
+      "thanksgiving-recipes",
+      "thanksgiving-dinner-ideas",
+      "bone-turkey-breast",
+      "butterball-turkey-breast",
+    ],
     title: "Wüsthof Classic 2-Piece Carving Set",
     imageSrc: "/affiliates/wusthof-classic-carving-set.jpg",
     imageAlt: "Wüsthof Classic carving knife and fork set",
@@ -538,7 +571,11 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
       "A carving knife and fork set for slicing the Christmas Eve roast cleanly at the table.",
   },
   {
-    recipeSlugs: ["christmas-appetizers"],
+    recipeSlugs: [
+      "christmas-appetizers",
+      "thanksgiving-appetizers",
+      "thanksgiving-recipes",
+    ],
     title: "Chefman Electric Warming Tray (21 × 16 in)",
     imageSrc: "/affiliates/chefman-electric-warming-tray.jpg",
     imageAlt: "Chefman electric food warming tray, 21 by 16 inches",

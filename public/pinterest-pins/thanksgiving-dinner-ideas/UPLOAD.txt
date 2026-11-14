@@ -1,0 +1,27 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+thanksgiving-dinner-ideas-pin.jpg
+
+TITLE
+Thanksgiving Dinner Ideas and Menus
+
+DESCRIPTION
+Thanksgiving dinner ideas for a classic table, dinner for two, and vegetarian plates.
+
+This pin covers:
+- Classic turkey menu
+- Smaller dinner for two
+- Vegetarian holiday plate
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/thanksgiving-dinner-ideas/
+
+ALT TEXT
+Thanksgiving dinner table with turkey, sides, and pie
