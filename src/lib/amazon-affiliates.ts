@@ -1203,6 +1203,186 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     blurb:
       "A stainless wok for tossing teriyaki noodles over high heat.",
   },
+  {
+    recipeSlugs: ["teriyaki-chicken"],
+    title: "Lodge 10.5-Inch Pre-Seasoned Cast Iron Square Grill Pan",
+    imageSrc: "/affiliates/lodge-cast-iron-square-grill-pan-105in.jpg",
+    imageAlt: "Lodge 10.5-inch pre-seasoned cast iron square grill pan",
+    affiliateUrl: "https://link.amazon/B0bpHvhMR",
+    blurb:
+      "A cast-iron grill pan for searing teriyaki chicken with neat grill marks.",
+  },
+  {
+    recipeSlugs: ["pho-ha-noi"],
+    title: "Cooks Standard Professional 20-Qt Stainless Steel Stockpot with Lid",
+    imageSrc: "/affiliates/cooks-standard-stockpot-20qt.jpg",
+    imageAlt: "Cooks Standard Professional 20-quart stainless steel stockpot with lid",
+    affiliateUrl: "https://link.amazon/B0iUPi4Z9",
+    blurb:
+      "A tall stockpot for simmering big pots of Pho Ha Noi broth.",
+  },
+  {
+    recipeSlugs: ["cheesecake-balls"],
+    title: "Wilton Candy Melts Candy and Chocolate Melting Pot",
+    imageSrc: "/affiliates/wilton-candy-melts-melting-pot.jpg",
+    imageAlt: "Wilton Candy Melts candy and chocolate melting pot",
+    affiliateUrl: "https://link.amazon/B09bGpVgQ",
+    blurb:
+      "A melting pot for coating cheesecake balls in smooth chocolate.",
+  },
+  {
+    recipeSlugs: ["chocolate-lasagna"],
+    title: "Pyrex Deep 9 × 13-Inch Glass Baking Dish with Lid",
+    imageSrc: "/affiliates/pyrex-deep-9x13-glass-baking-dish-lid.jpg",
+    imageAlt: "Pyrex deep 9 by 13-inch glass baking dish with lid",
+    affiliateUrl: "https://link.amazon/B0hjslA7Z",
+    blurb:
+      "A deep glass dish for layering and chilling chocolate lasagna.",
+  },
+  {
+    recipeSlugs: ["strawberries-cheesecake"],
+    title: "Farberware 9-Inch Nonstick Springform Pan",
+    imageSrc: "/affiliates/farberware-nonstick-springform-pan-9in.jpg",
+    imageAlt: "Farberware 9-inch nonstick springform pan",
+    affiliateUrl: "https://link.amazon/B03hP4mIc",
+    blurb:
+      "A springform pan for releasing strawberry cheesecake cleanly.",
+  },
+  {
+    recipeSlugs: ["strawberry-bread"],
+    title: "OXO Good Grips Nonstick Pro 1-lb Loaf Pan",
+    imageSrc: "/affiliates/oxo-nonstick-pro-loaf-pan-1lb.jpg",
+    imageAlt: "OXO Good Grips Nonstick Pro 1-pound loaf pan",
+    affiliateUrl: "https://link.amazon/B0iN4jtJe",
+    blurb:
+      "A nonstick loaf pan for baking strawberry bread with easy release.",
+  },
+  {
+    recipeSlugs: ["black-garlic-ramen"],
+    title: "Lareina Ceramic Japanese Ramen Bowl Set",
+    imageSrc: "/affiliates/lareina-ceramic-japanese-ramen-bowl-set.jpg",
+    imageAlt: "Lareina ceramic Japanese ramen bowl set",
+    affiliateUrl: "https://link.amazon/B0is5PT4f",
+    blurb:
+      "Deep ceramic ramen bowls for serving black garlic ramen at the table.",
+  },
+  {
+    recipeSlugs: ["holy-cow-burgers"],
+    title: "Cuisinart Cast Iron Smashed Burger Press",
+    imageSrc: "/affiliates/cuisinart-cast-iron-smashed-burger-press.jpg",
+    imageAlt: "Cuisinart cast iron smashed burger press",
+    affiliateUrl: "https://link.amazon/B0frdE1SJ",
+    blurb:
+      "A cast-iron press for thin, crispy smashed burgers.",
+  },
+  {
+    recipeSlugs: ["4-inch-cake"],
+    title: "Fat Daddio’s 4 × 2-Inch Anodized Aluminum Round Cake Pan",
+    imageSrc: "/affiliates/fat-daddios-round-cake-pan-4x2in.jpg",
+    imageAlt: "Fat Daddio’s 4 by 2-inch anodized aluminum round cake pan",
+    affiliateUrl: "https://link.amazon/B055kz6OV",
+    blurb:
+      "A small round pan sized for neat 4-inch layer cakes.",
+  },
+  {
+    recipeSlugs: ["plate-short-ribs"],
+    title: "ThermoPro TP20 Dual-Probe Wireless Meat Thermometer",
+    imageSrc: "/affiliates/thermopro-tp20-dual-probe-thermometer.jpg",
+    imageAlt: "ThermoPro TP20 dual-probe wireless meat thermometer",
+    affiliateUrl: "https://link.amazon/B0eaeB3WT",
+    blurb:
+      "Dual probes for monitoring short ribs until they hit tender temps.",
+  },
+  {
+    recipeSlugs: ["cheesy-ravioli"],
+    title: "Marcato Atlas Ravioli Tablet",
+    imageSrc: "/affiliates/marcato-atlas-ravioli-tablet.jpg",
+    imageAlt: "Marcato Atlas ravioli tablet mold",
+    affiliateUrl: "https://link.amazon/B0hQxHJgn",
+    blurb:
+      "A ravioli mold for sealing neat squares of cheesy homemade pasta.",
+  },
+  {
+    recipeSlugs: ["blt-macaroni-salad"],
+    title: "OXO Good Grips 5-Qt Stainless Steel Colander",
+    imageSrc: "/affiliates/oxo-stainless-colander-5qt.jpg",
+    imageAlt: "OXO Good Grips 5-quart stainless steel colander",
+    affiliateUrl: "https://link.amazon/B083AITCm",
+    blurb:
+      "A roomy colander for draining pasta for macaroni salad.",
+  },
+  {
+    recipeSlugs: ["mississippi-pot-roast"],
+    title: "Hamilton Beach Set & Forget 6-Qt Programmable Slow Cooker",
+    imageSrc: "/affiliates/hamilton-beach-set-forget-slow-cooker-6qt.jpg",
+    imageAlt: "Hamilton Beach Set & Forget 6-quart programmable slow cooker",
+    affiliateUrl: "https://link.amazon/B0bFfHBZZ",
+    blurb:
+      "A programmable slow cooker for tender Mississippi pot roast.",
+  },
+  {
+    recipeSlugs: ["keto-chicken-parmesan"],
+    title: "Zyliss Classic Rotary Cheese Grater",
+    imageSrc: "/affiliates/zyliss-classic-rotary-cheese-grater.jpg",
+    imageAlt: "Zyliss Classic rotary cheese grater",
+    affiliateUrl: "https://link.amazon/B0ivu5hdZ",
+    blurb:
+      "A rotary grater for fresh Parmesan over chicken cutlets.",
+  },
+  {
+    recipeSlugs: ["blt-pasta-salad"],
+    title: "OXO Good Grips 3-Piece Mixing Bowl Set",
+    imageSrc: "/affiliates/oxo-3-piece-mixing-bowl-set.jpg",
+    imageAlt: "OXO Good Grips 3-piece mixing bowl set",
+    affiliateUrl: "https://link.amazon/B02yCZiU0",
+    blurb:
+      "Nesting bowls for tossing pasta salad and prepping toppings.",
+  },
+  {
+    recipeSlugs: ["kfc-coleslaw-copycat"],
+    title: "Ninja Professional Plus 9-Cup Food Processor, BN601",
+    imageSrc: "/affiliates/ninja-professional-plus-food-processor-bn601.jpg",
+    imageAlt: "Ninja Professional Plus 9-cup food processor, model BN601",
+    affiliateUrl: "https://link.amazon/B04aHBV1I",
+    blurb:
+      "A food processor for finely shredding cabbage for creamy coleslaw.",
+  },
+  {
+    recipeSlugs: ["air-fryer-nachos"],
+    title: "Instant Vortex Plus ClearCook 6-Qt Air Fryer",
+    imageSrc: "/affiliates/instant-vortex-plus-clearcook-air-fryer-6qt.jpg",
+    imageAlt: "Instant Vortex Plus ClearCook 6-quart air fryer",
+    affiliateUrl: "https://link.amazon/B0cKHp9Zv",
+    blurb:
+      "A ClearCook air fryer for melting nacho cheese without soggy chips.",
+  },
+  {
+    recipeSlugs: ["air-fryer-chips"],
+    title: "OXO Good Grips Chef’s Mandoline 2.0",
+    imageSrc: "/affiliates/oxo-chefs-mandoline-2.jpg",
+    imageAlt: "OXO Good Grips Chef’s Mandoline 2.0",
+    affiliateUrl: "https://link.amazon/B0gUhS96E",
+    blurb:
+      "A mandoline for even potato slices that crisp in the air fryer.",
+  },
+  {
+    recipeSlugs: ["homemade-alfredo-sauce"],
+    title: "Made In 2-Qt Stainless Clad Saucier",
+    imageSrc: "/affiliates/made-in-stainless-clad-saucier-2qt.jpg",
+    imageAlt: "Made In 2-quart stainless clad saucier",
+    affiliateUrl: "https://link.amazon/B0amRW0Pd",
+    blurb:
+      "A rounded saucier for whisking silky homemade Alfredo without scorching.",
+  },
+  {
+    recipeSlugs: ["chili-cheese-tater-tot-casserole"],
+    title: "Emile Henry Modern Classics 13 × 9-Inch Rectangular Baker",
+    imageSrc: "/affiliates/emile-henry-modern-classics-rectangular-baker.jpg",
+    imageAlt: "Emile Henry Modern Classics 13 by 9-inch rectangular baker",
+    affiliateUrl: "https://link.amazon/B0eddSlBk",
+    blurb:
+      "A ceramic baker for chili cheese tater tot casserole from oven to table.",
+  },
 ];
 
 export function getAmazonAffiliateProductsForRecipe(
