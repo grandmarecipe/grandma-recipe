@@ -12,6 +12,11 @@ export interface AmazonAffiliateProduct {
   affiliateUrl: string;
   /** Optional blurb under the title. */
   blurb?: string;
+  /**
+   * Optional custom soft line under Pro Tips (same affiliate URL, no product box).
+   * When omitted, the first sentence of `blurb` is used.
+   */
+  softCta?: string;
 }
 
 /**
@@ -220,13 +225,15 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
       "An 8-quart multi-cooker for weeknight chicken dinners and broth-rich meals.",
   },
   {
-    recipeSlugs: ["easy-low-calorie-meals"],
+    recipeSlugs: ["easy-low-calorie-meals", "cajun-chicken-turkey-sausage-pasta"],
     title: "Tramontina Professional Nonstick Skillet (12 in)",
     imageSrc: "/affiliates/tramontina-nonstick-skillet-12in.jpg",
     imageAlt: "Tramontina Professional 12-inch nonstick skillet",
     affiliateUrl: "https://link.amazon/B0ftyS93G",
     blurb:
       "A 12-inch nonstick skillet that gives chicken and vegetables room to brown in a single layer.",
+    softCta:
+      "A roomy skillet browns chicken and turkey sausage before the creamy Cajun sauce.",
   },
   {
     recipeSlugs: ["coleslaw-dressing-recipe"],
@@ -259,6 +266,7 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     affiliateUrl: "https://link.amazon/B00FUWh7R",
     blurb:
       "A 9-inch glass plate for baking pumpkin pie and checking how the crust is browning.",
+    softCta: "A glass pie plate helps you check browning.",
   },
   {
     recipeSlugs: ["white-rice-recipe"],
@@ -340,6 +348,8 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     affiliateUrl: "https://link.amazon/B0h8OelyH",
     blurb:
       "A reliable bread maker for homemade loaves with less hands-on time.",
+    softCta:
+      "A bread maker helps when you want homemade loaves with less hands-on time.",
   },
   {
     recipeSlugs: ["cookie-recipes"],
@@ -502,6 +512,7 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
       "bone-turkey-breast",
       "butterball-turkey-breast",
       "frozen-whole-turkey",
+      "pineapple-glazed-turkey",
     ],
     title: "All-Clad Stainless Steel Roasting Pan with Rack (16 × 13 in)",
     imageSrc: "/affiliates/all-clad-roasting-pan-with-rack.jpg",
@@ -509,6 +520,8 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     affiliateUrl: "https://link.amazon/B068edmSB",
     blurb:
       "A roomy roasting pan with a rack for holiday mains and vegetables.",
+    softCta:
+      "A roasting pan with a rack helps pineapple glazed turkey brown evenly.",
   },
   {
     recipeSlugs: ["vegan-christmas-recipes"],
@@ -1420,6 +1433,872 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     blurb:
       "A ceramic baker for chili cheese tater tot casserole from oven to table.",
   },
+  {
+    recipeSlugs: ["cheese-ball-bites"],
+    title: "OXO Good Grips Small Cookie Scoop",
+    imageSrc: "/affiliates/oxo-small-cookie-scoop.jpg",
+    imageAlt: "OXO Good Grips Small Cookie Scoop",
+    affiliateUrl: "https://link.amazon/B0erEiqGf",
+    blurb: "A small scoop for even cheese ball bites.",
+    softCta: "A small scoop for even cheese ball bites.",
+  },
+  {
+    recipeSlugs: ["better-than-sex-cake"],
+    title: "M MCIRCO 8-Piece Deep Glass Baking Dish Set with Lids, Gray",
+    imageSrc: "/affiliates/mcirco-8pc-deep-glass-baking-dish-set.jpg",
+    imageAlt: "M MCIRCO 8-Piece Deep Glass Baking Dish Set with Lids, Gray",
+    affiliateUrl: "https://link.amazon/B0bow5hfN",
+    blurb: "A deep glass bakeware set for layered poke cakes and covered leftovers.",
+    softCta: "A deep glass bakeware set for layered poke cakes and covered leftovers.",
+  },
+  {
+    recipeSlugs: ["peanut-butter-oatmeal-chocolate-chip-cookies"],
+    title: "Silpat Premium Nonstick Silicone Half Sheet Baking Mat",
+    imageSrc: "/affiliates/silpat-premium-half-sheet-baking-mat.jpg",
+    imageAlt: "Silpat Premium Nonstick Silicone Half Sheet Baking Mat",
+    affiliateUrl: "https://link.amazon/B0gGForju",
+    blurb: "A reusable silicone mat for even cookie browning without parchment every time.",
+    softCta: "A reusable silicone mat for even cookie browning without parchment every time.",
+  },
+  {
+    recipeSlugs: ["air-fryer-mozzarella-sticks"],
+    title: "Ninja Air Fryer Max XL, 5.5 Qt",
+    imageSrc: "/affiliates/ninja-air-fryer-max-xl-55qt.jpg",
+    imageAlt: "Ninja Air Fryer Max XL, 5.5 Qt",
+    affiliateUrl: "https://link.amazon/B051qPRyp",
+    blurb: "A roomy air fryer for crisp mozzarella sticks without a deep fryer.",
+    softCta: "A roomy air fryer for crisp mozzarella sticks without a deep fryer.",
+  },
+  {
+    recipeSlugs: ["strawberry-brownies"],
+    title: "Wilton Recipe Right Nonstick 8-Inch Square Baking Pan",
+    imageSrc: "/affiliates/wilton-recipe-right-8in-square-pan.jpg",
+    imageAlt: "Wilton Recipe Right Nonstick 8-Inch Square Baking Pan",
+    affiliateUrl: "https://link.amazon/B09PVGyXx",
+    blurb: "An 8-inch square pan for brownies with clean edges and easy release.",
+    softCta: "An 8-inch square pan for brownies with clean edges and easy release.",
+  },
+  {
+    recipeSlugs: ["keto-egg-roll-in-a-bowl"],
+    title: "GreenPan Valencia Pro 12-Inch Ceramic Nonstick Wok with Lid",
+    imageSrc: "/affiliates/greenpan-valencia-pro-wok-12in.jpg",
+    imageAlt: "GreenPan Valencia Pro 12-Inch Ceramic Nonstick Wok with Lid",
+    affiliateUrl: "https://link.amazon/B0gYDCcKL",
+    blurb: "A nonstick wok for quick egg-roll-in-a-bowl stir-fries.",
+    softCta: "A nonstick wok for quick egg-roll-in-a-bowl stir-fries.",
+  },
+  {
+    recipeSlugs: ["samoa-cheesecake"],
+    title: "Nordic Ware 9-Inch Nonstick Springform Pan",
+    imageSrc: "/affiliates/nordic-ware-9in-nonstick-springform.jpg",
+    imageAlt: "Nordic Ware 9-Inch Nonstick Springform Pan",
+    affiliateUrl: "https://link.amazon/B0hKJgaxw",
+    blurb: "A 9-inch springform for releasing Samoa cheesecake cleanly.",
+    softCta: "A 9-inch springform for releasing Samoa cheesecake cleanly.",
+  },
+  {
+    recipeSlugs: ["turtle-cheesecake"],
+    title: "HIWARE 9-Inch Nonstick Cheesecake Pan with Removable Bottom",
+    imageSrc: "/affiliates/hiware-9in-nonstick-cheesecake-pan.jpg",
+    imageAlt: "HIWARE 9-Inch Nonstick Cheesecake Pan with Removable Bottom",
+    affiliateUrl: "https://link.amazon/B09X8PqH5",
+    blurb: "A removable-bottom pan for neat Turtle cheesecake slices.",
+    softCta: "A removable-bottom pan for neat Turtle cheesecake slices.",
+  },
+  {
+    recipeSlugs: ["chocolate-depression-cake"],
+    title: "USA Pan American Bakeware Classics 8-Inch Square Cake and Brownie Pan",
+    imageSrc: "/affiliates/usa-pan-8in-square-cake-brownie-pan.jpg",
+    imageAlt: "USA Pan American Bakeware Classics 8-Inch Square Cake and Brownie Pan",
+    affiliateUrl: "https://link.amazon/B0iKZYIvG",
+    blurb: "An 8-inch square pan for Depression cake with sturdy browning.",
+    softCta: "An 8-inch square pan for Depression cake with sturdy browning.",
+  },
+  {
+    recipeSlugs: ["macaroni-and-cheese"],
+    title: "All-Clad D3 3-Qt Stainless Steel Saucepan with Lid",
+    imageSrc: "/affiliates/all-clad-d3-saucepan-3qt-lid.jpg",
+    imageAlt: "All-Clad D3 3-Qt Stainless Steel Saucepan with Lid",
+    affiliateUrl: "https://link.amazon/B01lkSwtJ",
+    blurb: "A 3-quart saucepan for creamy stovetop mac and cheese.",
+    softCta: "A 3-quart saucepan for creamy stovetop mac and cheese.",
+  },
+  {
+    recipeSlugs: ["pineapple-delight"],
+    title: "Nordic Ware Naturals 9 × 13-Inch Aluminum Cake Pan with Lid",
+    imageSrc: "/affiliates/nordic-ware-naturals-9x13-cake-pan-lid.jpg",
+    imageAlt: "Nordic Ware Naturals 9 × 13-Inch Aluminum Cake Pan with Lid",
+    affiliateUrl: "https://link.amazon/B0gQntUDu",
+    blurb: "A covered 9×13 pan for chilled pineapple delight.",
+    softCta: "A covered 9×13 pan for chilled pineapple delight.",
+  },
+  {
+    recipeSlugs: ["crack-chicken-sliders"],
+    title: "Emile Henry Modern Classics 13 × 9-Inch Ceramic Baker, Rouge",
+    imageSrc: "/affiliates/emile-henry-modern-classics-baker-rouge.jpg",
+    imageAlt: "Emile Henry Modern Classics 13 × 9-Inch Ceramic Baker, Rouge",
+    affiliateUrl: "https://link.amazon/B0aQkFkfs",
+    blurb: "A ceramic baker for warm crack chicken sliders from oven to table.",
+    softCta: "A ceramic baker for warm crack chicken sliders from oven to table.",
+  },
+  {
+    recipeSlugs: ["crack-chicken-penne"],
+    title: "Cuisinart Chef’s Classic 5.5-Qt Stainless Steel Sauté Pan with Lid",
+    imageSrc: "/affiliates/cuisinart-chefs-classic-saute-55qt.jpg",
+    imageAlt: "Cuisinart Chef’s Classic 5.5-Qt Stainless Steel Sauté Pan with Lid",
+    affiliateUrl: "https://link.amazon/B0euVMEt4",
+    blurb: "A deep sauté pan for simmering crack chicken penne in one pot.",
+    softCta: "A deep sauté pan for simmering crack chicken penne in one pot.",
+  },
+  {
+    recipeSlugs: ["cucumber-bites"],
+    title: "Benriner 64 mm Japanese Mandoline Slicer",
+    imageSrc: "/affiliates/benriner-64mm-japanese-mandoline.jpg",
+    imageAlt: "Benriner 64 mm Japanese Mandoline Slicer",
+    affiliateUrl: "https://link.amazon/B00yr8vhT",
+    blurb: "A mandoline for even cucumber slices for bite-sized appetizers.",
+    softCta: "A mandoline for even cucumber slices for bite-sized appetizers.",
+  },
+  {
+    recipeSlugs: ["butterfinger-puppy-chow"],
+    title: "OXO Good Grips 3-Piece Plastic Mixing Bowl Set with Multicolor Handles",
+    imageSrc: "/affiliates/oxo-3pc-plastic-mixing-bowl-set-multicolor.jpg",
+    imageAlt: "OXO Good Grips 3-Piece Plastic Mixing Bowl Set with Multicolor Handles",
+    affiliateUrl: "https://link.amazon/B0dxeDdtz",
+    blurb: "Nesting bowls for tossing puppy chow without the mess.",
+    softCta: "Nesting bowls for tossing puppy chow without the mess.",
+  },
+  {
+    recipeSlugs: ["pretzel-bites-with-cheese"],
+    title: "Made In 2-Qt Stainless Clad Saucepan with Lid, Antique Brass Handle",
+    imageSrc: "/affiliates/made-in-2qt-saucepan-antique-brass.jpg",
+    imageAlt: "Made In 2-Qt Stainless Clad Saucepan with Lid, Antique Brass Handle",
+    affiliateUrl: "https://link.amazon/B0hzOlt96",
+    blurb: "A small saucepan for smooth cheese dip for pretzel bites.",
+    softCta: "A small saucepan for smooth cheese dip for pretzel bites.",
+  },
+  {
+    recipeSlugs: ["not-yo-mamas-banana-pudding"],
+    title: "Libbey Selene 9-Inch Glass Trifle Bowl",
+    imageSrc: "/affiliates/libbey-selene-9in-glass-trifle-bowl.jpg",
+    imageAlt: "Libbey Selene 9-Inch Glass Trifle Bowl",
+    affiliateUrl: "https://link.amazon/B05oCHhZ9",
+    blurb: "A clear trifle bowl for layered banana pudding.",
+    softCta: "A clear trifle bowl for layered banana pudding.",
+  },
+  {
+    recipeSlugs: ["chicken-pot-pie-hand-pies"],
+    title: "Prepworks 3-Piece Dough Press Set",
+    imageSrc: "/affiliates/prepworks-3pc-dough-press-set.jpg",
+    imageAlt: "Prepworks 3-Piece Dough Press Set",
+    affiliateUrl: "https://link.amazon/B0eIW0zGS",
+    blurb: "Dough presses for sealing neat chicken pot pie hand pies.",
+    softCta: "Dough presses for sealing neat chicken pot pie hand pies.",
+  },
+  {
+    recipeSlugs: ["chocolate-mayonnaise-cake"],
+    title: "Cuisinart 9-Speed Electric Hand Mixer with Storage Case",
+    imageSrc: "/affiliates/cuisinart-9speed-hand-mixer-storage.jpg",
+    imageAlt: "Cuisinart 9-Speed Electric Hand Mixer with Storage Case",
+    affiliateUrl: "https://link.amazon/B0bVwLtlH",
+    blurb: "A hand mixer for cake batter and frosting with tidy storage.",
+    softCta: "A hand mixer for cake batter and frosting with tidy storage.",
+  },
+  {
+    recipeSlugs: ["slow-cooker-chicken-stroganoff"],
+    title: "Crock-Pot 4-Qt Manual Slow Cooker",
+    imageSrc: "/affiliates/crock-pot-4qt-manual-slow-cooker.jpg",
+    imageAlt: "Crock-Pot 4-Qt Manual Slow Cooker",
+    affiliateUrl: "https://link.amazon/B0b4Hn20x",
+    blurb: "A compact slow cooker for creamy chicken stroganoff.",
+    softCta: "A compact slow cooker for creamy chicken stroganoff.",
+  },
+  {
+    recipeSlugs: ["chocolate-pistachio-bundt-cake"],
+    title: "Nordic Ware Heritage Bundt Pan",
+    imageSrc: "/affiliates/nordic-ware-heritage-bundt-pan.jpg",
+    imageAlt: "Nordic Ware Heritage Bundt Pan",
+    affiliateUrl: "https://link.amazon/B07OFXfHV",
+    blurb: "A detailed Bundt pan for chocolate pistachio cakes with crisp edges.",
+    softCta: "A detailed Bundt pan for chocolate pistachio cakes with crisp edges.",
+  },
+  {
+    recipeSlugs: ["7up-bundt-cake"],
+    title: "Nordic Ware Anniversary Bundt Pan",
+    imageSrc: "/affiliates/nordic-ware-anniversary-bundt-pan.jpg",
+    imageAlt: "Nordic Ware Anniversary Bundt Pan",
+    affiliateUrl: "https://link.amazon/B0iDsrUis",
+    blurb: "A classic Bundt pan for tall 7UP cakes.",
+    softCta: "A classic Bundt pan for tall 7UP cakes.",
+  },
+  {
+    recipeSlugs: ["oreo-bundt-cake"],
+    title: "Nordic Ware Blossom Bundt Pan",
+    imageSrc: "/affiliates/nordic-ware-blossom-bundt-pan.jpg",
+    imageAlt: "Nordic Ware Blossom Bundt Pan",
+    affiliateUrl: "https://link.amazon/B01RGARUa",
+    blurb: "A blossom Bundt pan for Oreo cakes with a pretty release.",
+    softCta: "A blossom Bundt pan for Oreo cakes with a pretty release.",
+  },
+  {
+    recipeSlugs: ["lemon-bundt-cake"],
+    title: "Nordic Ware Brilliance Bundt Pan, 10 Cup",
+    imageSrc: "/affiliates/nordic-ware-brilliance-bundt-pan-10cup.jpg",
+    imageAlt: "Nordic Ware Brilliance Bundt Pan, 10 Cup",
+    affiliateUrl: "https://link.amazon/B0av09X6u",
+    blurb: "A 10-cup Brilliance Bundt for lemon cakes with sharp detail.",
+    softCta: "A 10-cup Brilliance Bundt for lemon cakes with sharp detail.",
+  },
+  {
+    recipeSlugs: ["cherry-cake"],
+    title: "OXO Good Grips Cherry and Olive Pitter",
+    imageSrc: "/affiliates/oxo-cherry-olive-pitter.jpg",
+    imageAlt: "OXO Good Grips Cherry and Olive Pitter",
+    affiliateUrl: "https://link.amazon/B02dRJDeA",
+    blurb: "A cherry pitter that speeds prep for cherry cake.",
+    softCta: "A cherry pitter that speeds prep for cherry cake.",
+  },
+  {
+    recipeSlugs: ["summer-corn-salad"],
+    title: "OXO Good Grips Corn Prep Peeler",
+    imageSrc: "/affiliates/oxo-corn-prep-peeler.jpg",
+    imageAlt: "OXO Good Grips Corn Prep Peeler",
+    affiliateUrl: "https://link.amazon/B0fRWDqgF",
+    blurb: "A corn peeler for fast kernels for summer corn salad.",
+    softCta: "A corn peeler for fast kernels for summer corn salad.",
+  },
+  {
+    recipeSlugs: ["monterey-chicken"],
+    title: "All-Clad D3 Stainless Steel 12-Inch Fry Pan with Lid",
+    imageSrc: "/affiliates/all-clad-d3-fry-pan-12in-lid.jpg",
+    imageAlt: "All-Clad D3 Stainless Steel 12-Inch Fry Pan with Lid",
+    affiliateUrl: "https://link.amazon/B00nqKtZc",
+    blurb: "A 12-inch stainless skillet for Monterey chicken and pan sauces.",
+    softCta: "A 12-inch stainless skillet for Monterey chicken and pan sauces.",
+  },
+  {
+    recipeSlugs: ["garlic-butter-steak-bites"],
+    title: "Victoria 12-Inch Cast Iron Skillet",
+    imageSrc: "/affiliates/victoria-12in-cast-iron-skillet.jpg",
+    imageAlt: "Victoria 12-Inch Cast Iron Skillet",
+    affiliateUrl: "https://link.amazon/B0htS3wqh",
+    blurb: "A cast-iron skillet for a deep sear on garlic butter steak bites.",
+    softCta: "A cast-iron skillet for a deep sear on garlic butter steak bites.",
+  },
+  {
+    recipeSlugs: ["crock-pot-beef-and-noodles"],
+    title: "Hamilton Beach 7-Quart Set & Forget Portable Programmable Slow Cooker",
+    imageSrc: "/affiliates/hamilton-beach-7qt-set-forget-portable.jpg",
+    imageAlt: "Hamilton Beach 7-Quart Set & Forget Portable Programmable Slow Cooker",
+    affiliateUrl: "https://link.amazon/B0jm8feyA",
+    blurb: "A programmable slow cooker for tender beef and noodles.",
+    softCta: "A programmable slow cooker for tender beef and noodles.",
+  },
+  {
+    recipeSlugs: ["orange-creamsicle-poke-cake"],
+    title: "Anchor Hocking 2-Piece Glass Baking Dish Set, 2 and 3 Quart",
+    imageSrc: "/affiliates/anchor-hocking-2pc-glass-baking-dish-set.jpg",
+    imageAlt: "Anchor Hocking 2-Piece Glass Baking Dish Set, 2 and 3 Quart",
+    affiliateUrl: "https://link.amazon/B0g6FIfXC",
+    blurb: "Glass baking dishes for poke cakes and chilled desserts.",
+    softCta: "Glass baking dishes for poke cakes and chilled desserts.",
+  },
+  {
+    recipeSlugs: ["no-bake-oreo-dessert"],
+    title: "Pyrex 3-Quart Glass Baking Dish with Red Lid",
+    imageSrc: "/affiliates/pyrex-3qt-glass-baking-dish-red-lid.jpg",
+    imageAlt: "Pyrex 3-Quart Glass Baking Dish with Red Lid",
+    affiliateUrl: "https://link.amazon/B0fyPQ3qW",
+    blurb: "A lidded glass dish for layered no-bake Oreo dessert.",
+    softCta: "A lidded glass dish for layered no-bake Oreo dessert.",
+  },
+  {
+    recipeSlugs: ["chicken-pot-pie-soup"],
+    title: "Cuisinart Chef’s Classic Stainless 6-Quart Stockpot with Cover",
+    imageSrc: "/affiliates/cuisinart-chefs-classic-stockpot-6qt.jpg",
+    imageAlt: "Cuisinart Chef’s Classic Stainless 6-Quart Stockpot with Cover",
+    affiliateUrl: "https://link.amazon/B0d1TSX7b",
+    blurb: "A 6-quart stockpot for chicken pot pie soup.",
+    softCta: "A 6-quart stockpot for chicken pot pie soup.",
+  },
+  {
+    recipeSlugs: ["puffy-tacos"],
+    title: "Lodge 5-Qt Cast Iron Dutch Oven",
+    imageSrc: "/affiliates/lodge-5qt-cast-iron-dutch-oven.jpg",
+    imageAlt: "Lodge 5-Qt Cast Iron Dutch Oven",
+    affiliateUrl: "https://link.amazon/B0eKcfCBE",
+    blurb: "A cast-iron Dutch oven for frying puffy taco shells.",
+    softCta: "A cast-iron Dutch oven for frying puffy taco shells.",
+  },
+  {
+    recipeSlugs: ["orange-fluff"],
+    title: "OXO Good Grips Silicone Balloon Whisk",
+    imageSrc: "/affiliates/oxo-silicone-balloon-whisk.jpg",
+    imageAlt: "OXO Good Grips Silicone Balloon Whisk",
+    affiliateUrl: "https://link.amazon/B04yTrI60",
+    blurb: "A silicone whisk for folding fluffy dessert mixtures.",
+    softCta: "A silicone whisk for folding fluffy dessert mixtures.",
+  },
+  {
+    recipeSlugs: ["oreo-lasagna"],
+    title: "Hamilton Beach 10-Cup Food Processor with Bowl Scraper",
+    imageSrc: "/affiliates/hamilton-beach-10cup-food-processor-scraper.jpg",
+    imageAlt: "Hamilton Beach 10-Cup Food Processor with Bowl Scraper",
+    affiliateUrl: "https://link.amazon/B03asgsLa",
+    blurb: "A food processor for crushing cookies for Oreo lasagna crusts.",
+    softCta: "A food processor for crushing cookies for Oreo lasagna crusts.",
+  },
+  {
+    recipeSlugs: ["strawberry-shortcake-cake"],
+    title: "Fat Daddio’s 8 × 2-Inch Round Cake Pan",
+    imageSrc: "/affiliates/fat-daddios-8x2in-round-cake-pan.jpg",
+    imageAlt: "Fat Daddio’s 8 × 2-Inch Round Cake Pan",
+    affiliateUrl: "https://link.amazon/B02mjbgq7",
+    blurb: "An 8-inch round pan for strawberry shortcake layers.",
+    softCta: "An 8-inch round pan for strawberry shortcake layers.",
+  },
+  {
+    recipeSlugs: ["mini-doughnut-hot-buttered-cheerios"],
+    title: "Lodge 12-Inch Cast Iron Skillet",
+    imageSrc: "/affiliates/lodge-12in-cast-iron-skillet.jpg",
+    imageAlt: "Lodge 12-Inch Cast Iron Skillet",
+    affiliateUrl: "https://link.amazon/B03z1sNMg",
+    blurb: "A cast-iron skillet for hot buttered Cheerios on the stove.",
+    softCta: "A cast-iron skillet for hot buttered Cheerios on the stove.",
+  },
+  {
+    recipeSlugs: ["heaven-on-earth-cake"],
+    title: "Anchor Hocking Monaco Glass Trifle Bowl",
+    imageSrc: "/affiliates/anchor-hocking-monaco-glass-trifle-bowl.jpg",
+    imageAlt: "Anchor Hocking Monaco Glass Trifle Bowl",
+    affiliateUrl: "https://link.amazon/B0ilPz6jT",
+    blurb: "A trifle bowl for layered Heaven on Earth cake.",
+    softCta: "A trifle bowl for layered Heaven on Earth cake.",
+  },
+  {
+    recipeSlugs: ["peanut-butter-cup-pie"],
+    title: "Emile Henry Modern Classics 9-Inch Ceramic Pie Dish",
+    imageSrc: "/affiliates/emile-henry-modern-classics-9in-pie-dish.jpg",
+    imageAlt: "Emile Henry Modern Classics 9-Inch Ceramic Pie Dish",
+    affiliateUrl: "https://link.amazon/B03BcA9Z6",
+    blurb: "A ceramic pie dish for peanut butter cup pie.",
+    softCta: "A ceramic pie dish for peanut butter cup pie.",
+  },
+  {
+    recipeSlugs: ["cowboy-caviar-dip"],
+    title: "Fullstar 4-in-1 Vegetable Chopper",
+    imageSrc: "/affiliates/fullstar-4in1-vegetable-chopper.jpg",
+    imageAlt: "Fullstar 4-in-1 Vegetable Chopper",
+    affiliateUrl: "https://link.amazon/B0hnlkj6z",
+    blurb: "A chopper for quick peppers and onions for cowboy caviar.",
+    softCta: "A chopper for quick peppers and onions for cowboy caviar.",
+  },
+  {
+    recipeSlugs: ["chicken-and-dumplings"],
+    title: "Cuisinart Chef’s Classic 12-Quart Stainless Steel Stockpot with Lid",
+    imageSrc: "/affiliates/cuisinart-chefs-classic-stockpot-12qt.jpg",
+    imageAlt: "Cuisinart Chef’s Classic 12-Quart Stainless Steel Stockpot with Lid",
+    affiliateUrl: "https://link.amazon/B03Ym236s",
+    blurb: "A deep stockpot for chicken and dumplings.",
+    softCta: "A deep stockpot for chicken and dumplings.",
+  },
+  {
+    recipeSlugs: ["mini-cupcakes"],
+    title: "Wilton Recipe Right 24-Cup Mini Muffin Pan",
+    imageSrc: "/affiliates/wilton-recipe-right-24cup-mini-muffin-pan.jpg",
+    imageAlt: "Wilton Recipe Right 24-Cup Mini Muffin Pan",
+    affiliateUrl: "https://link.amazon/B05xabtjo",
+    blurb: "A 24-cup mini muffin pan for bite-size cupcakes.",
+    softCta: "A 24-cup mini muffin pan for bite-size cupcakes.",
+  },
+  {
+    recipeSlugs: ["dark-chocolate-cake"],
+    title: "USA Pan American Bakeware Classics 9-Inch Round Cake Pan",
+    imageSrc: "/affiliates/usa-pan-9in-round-cake-pan-classics.jpg",
+    imageAlt: "USA Pan American Bakeware Classics 9-Inch Round Cake Pan",
+    affiliateUrl: "https://link.amazon/B00F4CfTx",
+    blurb: "A 9-inch round pan for even dark chocolate cake layers.",
+    softCta: "A 9-inch round pan for even dark chocolate cake layers.",
+  },
+  {
+    recipeSlugs: ["italian-pasta-salad"],
+    title: "Bellemain 5-Quart Stainless Steel Colander",
+    imageSrc: "/affiliates/bellemain-5qt-stainless-colander.jpg",
+    imageAlt: "Bellemain 5-Quart Stainless Steel Colander",
+    affiliateUrl: "https://link.amazon/B06KJy02t",
+    blurb: "A roomy colander for draining pasta salad noodles.",
+    softCta: "A roomy colander for draining pasta salad noodles.",
+  },
+  {
+    recipeSlugs: ["taco-soup"],
+    title: "Lodge Enameled Cast Iron Dutch Oven",
+    imageSrc: "/affiliates/lodge-enameled-cast-iron-dutch-oven-generic.jpg",
+    imageAlt: "Lodge Enameled Cast Iron Dutch Oven",
+    affiliateUrl: "https://link.amazon/B05z2iWpa",
+    blurb: "An enameled Dutch oven for simmering taco soup.",
+    softCta: "An enameled Dutch oven for simmering taco soup.",
+  },
+  {
+    recipeSlugs: ["nashville-hot-chicken"],
+    title: "T-fal 3.5-Liter Deep Fryer",
+    imageSrc: "/affiliates/tfal-35l-deep-fryer.jpg",
+    imageAlt: "T-fal 3.5-Liter Deep Fryer",
+    affiliateUrl: "https://link.amazon/B0dC6z9DA",
+    blurb: "An electric deep fryer for Nashville hot chicken.",
+    softCta: "An electric deep fryer for Nashville hot chicken.",
+  },
+  {
+    recipeSlugs: ["buffalo-chicken"],
+    title: "Instant Pot Vortex Plus 4-Quart Air Fryer",
+    imageSrc: "/affiliates/instant-vortex-plus-4qt-air-fryer.jpg",
+    imageAlt: "Instant Pot Vortex Plus 4-Quart Air Fryer",
+    affiliateUrl: "https://link.amazon/B07kWFHbk",
+    blurb: "A compact air fryer for buffalo chicken.",
+    softCta: "A compact air fryer for buffalo chicken.",
+  },
+  {
+    recipeSlugs: ["ramen-noodle-salad"],
+    title: "Cuisinart 5-Quart Salad Spinner",
+    imageSrc: "/affiliates/cuisinart-5qt-salad-spinner.jpg",
+    imageAlt: "Cuisinart 5-Quart Salad Spinner",
+    affiliateUrl: "https://link.amazon/B02lZXuNX",
+    blurb: "A salad spinner for drying greens for ramen noodle salad.",
+    softCta: "A salad spinner for drying greens for ramen noodle salad.",
+  },
+  {
+    recipeSlugs: ["loaded-mashed-potatoes"],
+    title: "OXO Good Grips Potato Masher",
+    imageSrc: "/affiliates/oxo-potato-masher-classic.jpg",
+    imageAlt: "OXO Good Grips Potato Masher",
+    affiliateUrl: "https://link.amazon/B04GW03oP",
+    blurb: "A sturdy masher for creamy loaded mashed potatoes.",
+    softCta: "A sturdy masher for creamy loaded mashed potatoes.",
+  },
+  {
+    recipeSlugs: ["peanut-butter-banana-cookies"],
+    title: "Nordic Ware Naturals Half Sheet Pan",
+    imageSrc: "/affiliates/nordic-ware-naturals-half-sheet-pan.jpg",
+    imageAlt: "Nordic Ware Naturals Half Sheet Pan",
+    affiliateUrl: "https://link.amazon/B03XDNqFR",
+    blurb: "A half sheet pan for even batches of cookies.",
+    softCta: "A half sheet pan for even batches of cookies.",
+  },
+  {
+    recipeSlugs: ["philly-cheese-steak-pizza"],
+    title: "Old Stone 14 × 16-Inch Rectangular Pizza Stone",
+    imageSrc: "/affiliates/old-stone-14x16-pizza-stone.jpg",
+    imageAlt: "Old Stone 14 × 16-Inch Rectangular Pizza Stone",
+    affiliateUrl: "https://link.amazon/B01Dpx7mD",
+    blurb: "A pizza stone for crisp Philly cheesesteak pizza crust.",
+    softCta: "A pizza stone for crisp Philly cheesesteak pizza crust.",
+  },
+  {
+    recipeSlugs: ["pepper-steak"],
+    title: "YOSUKATA 13.5-Inch Carbon Steel Wok",
+    imageSrc: "/affiliates/yosukata-135in-carbon-steel-wok-pepper-steak.jpg",
+    imageAlt: "YOSUKATA 13.5-Inch Carbon Steel Wok",
+    affiliateUrl: "https://link.amazon/B01gjLQyV",
+    blurb: "A carbon steel wok for high-heat pepper steak.",
+    softCta: "A carbon steel wok for high-heat pepper steak.",
+  },
+  {
+    recipeSlugs: ["deviled-egg-pasta-salad"],
+    title: "OXO Good Grips Egg Slicer",
+    imageSrc: "/affiliates/oxo-egg-slicer.jpg",
+    imageAlt: "OXO Good Grips Egg Slicer",
+    affiliateUrl: "https://link.amazon/B0hAXAvUN",
+    blurb: "An egg slicer for neat egg pieces in pasta salad.",
+    softCta: "An egg slicer for neat egg pieces in pasta salad.",
+  },
+  {
+    recipeSlugs: ["cloud-bread"],
+    title: "Breville Handy Mix Scraper 9-Speed Hand Mixer",
+    imageSrc: "/affiliates/breville-handy-mix-scraper-hand-mixer.jpg",
+    imageAlt: "Breville Handy Mix Scraper 9-Speed Hand Mixer",
+    affiliateUrl: "https://link.amazon/B0fx0moao",
+    blurb: "A hand mixer for light cloud bread batter.",
+    softCta: "A hand mixer for light cloud bread batter.",
+  },
+  {
+    recipeSlugs: ["biscoff-butter-cookies"],
+    title: "OXO Good Grips Medium Silicone Cookie Scoop and Small Spatula Set",
+    imageSrc: "/affiliates/oxo-cookie-scoop-spatula-set.jpg",
+    imageAlt: "OXO Good Grips Medium Silicone Cookie Scoop and Small Spatula Set",
+    affiliateUrl: "https://link.amazon/B0eXmsEOx",
+    blurb: "A cookie scoop set for even Biscoff butter cookies.",
+    softCta: "A cookie scoop set for even Biscoff butter cookies.",
+  },
+  {
+    recipeSlugs: ["pineapple-upside-down-cake"],
+    title: "Nordic Ware 8-Cup Pineapple Upside Down Cake Pan",
+    imageSrc: "/affiliates/nordic-ware-8cup-pineapple-upside-down-pan.jpg",
+    imageAlt: "Nordic Ware 8-Cup Pineapple Upside Down Cake Pan",
+    affiliateUrl: "https://link.amazon/B00dFOL6K",
+    blurb: "A shaped pan for pineapple upside-down cake.",
+    softCta: "A shaped pan for pineapple upside-down cake.",
+  },
+  {
+    recipeSlugs: ["focaccia"],
+    title: "LloydPans 10 × 14-Inch Deep Baking Pan",
+    imageSrc: "/affiliates/lloydpans-10x14-deep-baking-pan.jpg",
+    imageAlt: "LloydPans 10 × 14-Inch Deep Baking Pan",
+    affiliateUrl: "https://link.amazon/B06sFzIXq",
+    blurb: "A deep pan for focaccia with crisp edges.",
+    softCta: "A deep pan for focaccia with crisp edges.",
+  },
+  {
+    recipeSlugs: ["sandwich-meat"],
+    title: "Chef’sChoice 615A Electric Meat Slicer",
+    imageSrc: "/affiliates/chefschoice-615a-electric-meat-slicer.jpg",
+    imageAlt: "Chef’sChoice 615A Electric Meat Slicer",
+    affiliateUrl: "https://link.amazon/B02VfoJ9a",
+    blurb: "An electric slicer for thin sandwich meat.",
+    softCta: "An electric slicer for thin sandwich meat.",
+  },
+  {
+    recipeSlugs: ["shells-and-cheese"],
+    title: "Tramontina Signature Tri-Ply Stainless Steel Saucepan",
+    imageSrc: "/affiliates/tramontina-signature-triply-saucepan.jpg",
+    imageAlt: "Tramontina Signature Tri-Ply Stainless Steel Saucepan",
+    affiliateUrl: "https://link.amazon/B0f45uKEr",
+    blurb: "A stainless saucepan for creamy shells and cheese.",
+    softCta: "A stainless saucepan for creamy shells and cheese.",
+  },
+  {
+    recipeSlugs: ["blueberry-pie"],
+    title: "Emile Henry 9-Inch Ceramic Pie Dish",
+    imageSrc: "/affiliates/emile-henry-9in-ceramic-pie-dish.jpg",
+    imageAlt: "Emile Henry 9-Inch Ceramic Pie Dish",
+    affiliateUrl: "https://link.amazon/B0gA3Vy54",
+    blurb: "A ceramic pie dish for blueberry pie.",
+    softCta: "A ceramic pie dish for blueberry pie.",
+  },
+  {
+    recipeSlugs: ["chicken-patty-sandwich"],
+    title: "Ninja Air Fryer Pro 5-Quart AF141",
+    imageSrc: "/affiliates/ninja-air-fryer-pro-5qt-af141.jpg",
+    imageAlt: "Ninja Air Fryer Pro 5-Quart AF141",
+    affiliateUrl: "https://link.amazon/B0bHIj3iB",
+    blurb: "An air fryer for crisp chicken patties.",
+    softCta: "An air fryer for crisp chicken patties.",
+  },
+  {
+    recipeSlugs: ["german-cake"],
+    title: "Wilton Aluminum Round Cake Pan Set, 9 × 2 Inches",
+    imageSrc: "/affiliates/wilton-aluminum-round-cake-pan-set-9in.jpg",
+    imageAlt: "Wilton Aluminum Round Cake Pan Set, 9 × 2 Inches",
+    affiliateUrl: "https://link.amazon/B06ztecFY",
+    blurb: "A 9-inch round pan set for German cake layers.",
+    softCta: "A 9-inch round pan set for German cake layers.",
+  },
+  {
+    recipeSlugs: ["kimchi-noodles"],
+    title: "OXO Good Grips 12-Inch Silicone Tongs",
+    imageSrc: "/affiliates/oxo-12in-silicone-tongs.jpg",
+    imageAlt: "OXO Good Grips 12-Inch Silicone Tongs",
+    affiliateUrl: "https://link.amazon/B0eAuOBh0",
+    blurb: "Silicone tongs for tossing kimchi noodles.",
+    softCta: "Silicone tongs for tossing kimchi noodles.",
+  },
+  {
+    recipeSlugs: ["cooked-sushi-rolls"],
+    title: "SushiQuik Sushi Making Kit",
+    imageSrc: "/affiliates/sushiquik-sushi-making-kit.jpg",
+    imageAlt: "SushiQuik Sushi Making Kit",
+    affiliateUrl: "https://link.amazon/B06mY4s4W",
+    blurb: "A sushi kit for rolling cooked sushi at home.",
+    softCta: "A sushi kit for rolling cooked sushi at home.",
+  },
+  {
+    recipeSlugs: ["buffalo-chicken-wings"],
+    title: "COSORI TurboBlaze 6-Quart Air Fryer",
+    imageSrc: "/affiliates/cosori-turboblaze-6qt-air-fryer.jpg",
+    imageAlt: "COSORI TurboBlaze 6-Quart Air Fryer",
+    affiliateUrl: "https://link.amazon/B01FuamZv",
+    blurb: "A 6-quart air fryer for buffalo chicken wings.",
+    softCta: "A 6-quart air fryer for buffalo chicken wings.",
+  },
+  {
+    recipeSlugs: ["strawberry-roses"],
+    title: "Victorinox Swiss Classic 3.25-Inch Paring Knife",
+    imageSrc: "/affiliates/victorinox-swiss-classic-paring-knife.jpg",
+    imageAlt: "Victorinox Swiss Classic 3.25-Inch Paring Knife",
+    affiliateUrl: "https://link.amazon/B0eYat95G",
+    blurb: "A sharp paring knife for carving strawberry roses.",
+    softCta: "A sharp paring knife for carving strawberry roses.",
+  },
+  {
+    recipeSlugs: ["thai-yellow-curry"],
+    title: "Cuisinart MultiClad Pro Stainless 3.5-Quart Sauté Pan with Lid",
+    imageSrc: "/affiliates/cuisinart-multiclad-pro-saute-35qt.jpg",
+    imageAlt: "Cuisinart MultiClad Pro Stainless 3.5-Quart Sauté Pan with Lid",
+    affiliateUrl: "https://link.amazon/B04nLQUjM",
+    blurb: "A sauté pan for Thai yellow curry.",
+    softCta: "A sauté pan for Thai yellow curry.",
+  },
+  {
+    recipeSlugs: ["pollock-fish"],
+    title: "Mercer Culinary Hell’s Handle Fish Turner",
+    imageSrc: "/affiliates/mercer-hells-handle-fish-turner.jpg",
+    imageAlt: "Mercer Culinary Hell’s Handle Fish Turner",
+    affiliateUrl: "https://link.amazon/B0eKRvIlP",
+    blurb: "A fish turner for flipping delicate pollock fillets.",
+    softCta: "A fish turner for flipping delicate pollock fillets.",
+  },
+  {
+    recipeSlugs: ["chocolate-ganache-cake"],
+    title: "Ateco 4.5-Inch Offset Spatula",
+    imageSrc: "/affiliates/ateco-45in-offset-spatula.jpg",
+    imageAlt: "Ateco 4.5-Inch Offset Spatula",
+    affiliateUrl: "https://link.amazon/B04SrIHdO",
+    blurb: "An offset spatula for smooth ganache frosting.",
+    softCta: "An offset spatula for smooth ganache frosting.",
+  },
+  {
+    recipeSlugs: ["osso-buco"],
+    title: "Lodge 7-Quart Cast Iron Dutch Oven with Loop Handle",
+    imageSrc: "/affiliates/lodge-7qt-cast-iron-dutch-oven-loop.jpg",
+    imageAlt: "Lodge 7-Quart Cast Iron Dutch Oven with Loop Handle",
+    affiliateUrl: "https://link.amazon/B0i2Rs8Pt",
+    blurb: "A deep Dutch oven for slow-braised osso buco.",
+    softCta: "A deep Dutch oven for slow-braised osso buco.",
+  },
+  {
+    recipeSlugs: ["whipped-yogurt"],
+    title: "OXO Good Grips 11-Inch Stainless Steel Balloon Whisk",
+    imageSrc: "/affiliates/oxo-11in-stainless-balloon-whisk.jpg",
+    imageAlt: "OXO Good Grips 11-Inch Stainless Steel Balloon Whisk",
+    affiliateUrl: "https://link.amazon/B0gS1Nc1d",
+    blurb: "A balloon whisk for fluffy whipped yogurt.",
+    softCta: "A balloon whisk for fluffy whipped yogurt.",
+  },
+  {
+    recipeSlugs: ["pull-apart-garlic-bread"],
+    title: "USA Pan 1-Pound Loaf Pan Set",
+    imageSrc: "/affiliates/usa-pan-1lb-loaf-pan-set.jpg",
+    imageAlt: "USA Pan 1-Pound Loaf Pan Set",
+    affiliateUrl: "https://link.amazon/B0djH1TjY",
+    blurb: "Loaf pans for pull-apart garlic bread.",
+    softCta: "Loaf pans for pull-apart garlic bread.",
+  },
+  {
+    recipeSlugs: ["seed-crackers"],
+    title: "Amazon Basics Silicone Half Sheet Baking Mats, 2 Pack",
+    imageSrc: "/affiliates/amazon-basics-silicone-half-sheet-mats-2pk.jpg",
+    imageAlt: "Amazon Basics Silicone Half Sheet Baking Mats, 2 Pack",
+    affiliateUrl: "https://link.amazon/B0ebf3rf4",
+    blurb: "Silicone mats for baking seed crackers evenly.",
+    softCta: "Silicone mats for baking seed crackers evenly.",
+  },
+  {
+    recipeSlugs: ["angus-beef-steak"],
+    title: "MEATER Pro Wireless Meat Thermometer",
+    imageSrc: "/affiliates/meater-pro-wireless-thermometer-steak.jpg",
+    imageAlt: "MEATER Pro Wireless Meat Thermometer",
+    affiliateUrl: "https://link.amazon/B06g1FhwU",
+    blurb: "A wireless probe for perfect Angus steak temps.",
+    softCta: "A wireless probe for perfect Angus steak temps.",
+  },
+  {
+    recipeSlugs: ["hibachi-noodles"],
+    title: "Cuisinart MultiClad Pro Nonstick Double Burner Griddle, 10 × 18 Inches",
+    imageSrc: "/affiliates/cuisinart-multiclad-pro-double-burner-griddle.jpg",
+    imageAlt: "Cuisinart MultiClad Pro Nonstick Double Burner Griddle, 10 × 18 Inches",
+    affiliateUrl: "https://link.amazon/B0hDL5E2k",
+    blurb: "A wide griddle for hibachi-style noodles.",
+    softCta: "A wide griddle for hibachi-style noodles.",
+  },
+  {
+    recipeSlugs: ["salmon-meal-prep"],
+    title: "PrepNaturals Glass Meal Prep Containers",
+    imageSrc: "/affiliates/prepnaturals-glass-meal-prep-containers.jpg",
+    imageAlt: "PrepNaturals Glass Meal Prep Containers",
+    affiliateUrl: "https://link.amazon/B0gKaE8zT",
+    blurb: "Glass containers for salmon meal prep.",
+    softCta: "Glass containers for salmon meal prep.",
+  },
+  {
+    recipeSlugs: ["3-ingredient-brownies"],
+    title: "Wilton Perfect Results 8-Inch Nonstick Square Cake Pan Set, 2 Pack",
+    imageSrc: "/affiliates/wilton-perfect-results-8in-square-pan-set.jpg",
+    imageAlt: "Wilton Perfect Results 8-Inch Nonstick Square Cake Pan Set, 2 Pack",
+    affiliateUrl: "https://link.amazon/B0c4gilov",
+    blurb: "8-inch square pans for quick brownie batches.",
+    softCta: "8-inch square pans for quick brownie batches.",
+  },
+  {
+    recipeSlugs: ["korean-mango-ice-cream"],
+    title: "Cuisinart ICE-21 1.5-Quart Ice Cream Maker",
+    imageSrc: "/affiliates/cuisinart-ice-21-ice-cream-maker.jpg",
+    imageAlt: "Cuisinart ICE-21 1.5-Quart Ice Cream Maker",
+    affiliateUrl: "https://link.amazon/B07POpXK8",
+    blurb: "An ice cream maker for homemade mango ice cream.",
+    softCta: "An ice cream maker for homemade mango ice cream.",
+  },
+  {
+    recipeSlugs: ["stuffed-sole"],
+    title: "OXO Good Grips Angled Baster with Cleaning Brush",
+    imageSrc: "/affiliates/oxo-angled-baster.jpg",
+    imageAlt: "OXO Good Grips Angled Baster with Cleaning Brush",
+    affiliateUrl: "https://link.amazon/B0fqW3vIU",
+    blurb: "A baster for keeping stuffed sole moist while baking.",
+    softCta: "A baster for keeping stuffed sole moist while baking.",
+  },
+  {
+    recipeSlugs: ["chuck-eye-roast"],
+    title: "Calphalon Roasting Pan with Rack",
+    imageSrc: "/affiliates/calphalon-roasting-pan-with-rack.jpg",
+    imageAlt: "Calphalon Roasting Pan with Rack",
+    affiliateUrl: "https://link.amazon/B0b5AgnKV",
+    blurb: "A roasting pan with rack for chuck eye roast.",
+    softCta: "A roasting pan with rack for chuck eye roast.",
+  },
+  {
+    recipeSlugs: ["frozen-whole-turkey"],
+    title: "ThermoPro TempSpike Plus Wireless Meat Thermometer",
+    imageSrc: "/affiliates/thermopro-tempspike-plus-frozen-turkey.jpg",
+    imageAlt: "ThermoPro TempSpike Plus Wireless Meat Thermometer",
+    affiliateUrl: "https://link.amazon/B0dbIx45h",
+    blurb: "Wireless probes for roasting a frozen whole turkey safely.",
+    softCta: "Wireless probes for roasting a frozen whole turkey safely.",
+  },
+  {
+    recipeSlugs: ["beef-short-ribs"],
+    title: "Staub 5.5-Quart Round Cast Iron Cocotte, Grenadine",
+    imageSrc: "/affiliates/staub-55qt-cocotte-grenadine.jpg",
+    imageAlt: "Staub 5.5-Quart Round Cast Iron Cocotte, Grenadine",
+    affiliateUrl: "https://link.amazon/B08jKme45",
+    blurb: "A Staub cocotte for braising beef short ribs.",
+    softCta: "A Staub cocotte for braising beef short ribs.",
+  },
+  {
+    recipeSlugs: ["broccoli-soup"],
+    title: "Braun MultiQuick 7 Immersion Blender",
+    imageSrc: "/affiliates/braun-multiquick-7-immersion-blender.jpg",
+    imageAlt: "Braun MultiQuick 7 Immersion Blender",
+    affiliateUrl: "https://link.amazon/B09qWQlrm",
+    blurb: "An immersion blender for silky broccoli soup.",
+    softCta: "An immersion blender for silky broccoli soup.",
+  },
+  {
+    recipeSlugs: ["granola-peanut-butter-bars"],
+    title: "Nordic Ware 9-Inch Square Cake Pan",
+    imageSrc: "/affiliates/nordic-ware-9in-square-cake-pan.jpg",
+    imageAlt: "Nordic Ware 9-Inch Square Cake Pan",
+    affiliateUrl: "https://link.amazon/B07kq4Cl9",
+    blurb: "A 9-inch square pan for granola peanut butter bars.",
+    softCta: "A 9-inch square pan for granola peanut butter bars.",
+  },
+  {
+    recipeSlugs: ["fried-dough"],
+    title: "Presto FryDaddy Electric Deep Fryer",
+    imageSrc: "/affiliates/presto-frydaddy-electric-deep-fryer.jpg",
+    imageAlt: "Presto FryDaddy Electric Deep Fryer",
+    affiliateUrl: "https://link.amazon/B0a2eqNnN",
+    blurb: "A compact deep fryer for fried dough.",
+    softCta: "A compact deep fryer for fried dough.",
+  },
+  {
+    recipeSlugs: ["thai-papaya-salad"],
+    title: "Kiwi Pro Slice Thai Julienne Peeler",
+    imageSrc: "/affiliates/kiwi-pro-slice-thai-julienne-peeler.jpg",
+    imageAlt: "Kiwi Pro Slice Thai Julienne Peeler",
+    affiliateUrl: "https://link.amazon/B0fSp6cF1",
+    blurb: "A julienne peeler for shredded papaya salad.",
+    softCta: "A julienne peeler for shredded papaya salad.",
+  },
+  {
+    recipeSlugs: ["chicken-tenders"],
+    title: "Dreo ChefMaker Combi Fryer",
+    imageSrc: "/affiliates/dreo-chefmaker-combi-fryer.jpg",
+    imageAlt: "Dreo ChefMaker Combi Fryer",
+    affiliateUrl: "https://link.amazon/B0j9FjPFJ",
+    blurb: "A combi fryer for crisp chicken tenders.",
+    softCta: "A combi fryer for crisp chicken tenders.",
+  },
+  {
+    recipeSlugs: ["catfish-fillets"],
+    title: "Lodge 10.25-Inch Cast Iron Skillet with Silicone Handle Holder",
+    imageSrc: "/affiliates/lodge-1025in-skillet-silicone-holder.jpg",
+    imageAlt: "Lodge 10.25-Inch Cast Iron Skillet with Silicone Handle Holder",
+    affiliateUrl: "https://link.amazon/B02Go8lVc",
+    blurb: "A cast-iron skillet for searing catfish fillets.",
+    softCta: "A cast-iron skillet for searing catfish fillets.",
+  },
+  {
+    recipeSlugs: ["nut-bar"],
+    title: "Webake Silicone Snack Bar Mold Set",
+    imageSrc: "/affiliates/webake-silicone-snack-bar-mold-set.jpg",
+    imageAlt: "Webake Silicone Snack Bar Mold Set",
+    affiliateUrl: "https://link.amazon/B040bY3hs",
+    blurb: "Silicone molds for homemade nut bars.",
+    softCta: "Silicone molds for homemade nut bars.",
+  },
+  {
+    recipeSlugs: ["hamburger-buns"],
+    title: "Six-Cavity Silicone Hamburger Bun Pan",
+    imageSrc: "/affiliates/silicone-hamburger-bun-pan-6cavity.jpg",
+    imageAlt: "Six-Cavity Silicone Hamburger Bun Pan",
+    affiliateUrl: "https://link.amazon/B0bQTrTMf",
+    blurb: "A bun pan for even homemade hamburger buns.",
+    softCta: "A bun pan for even homemade hamburger buns.",
+  },
+  {
+    recipeSlugs: ["beef-strips"],
+    title: "de Buyer Mineral B Carbon Steel Fry Pan",
+    imageSrc: "/affiliates/de-buyer-mineral-b-carbon-steel-fry-pan.jpg",
+    imageAlt: "de Buyer Mineral B Carbon Steel Fry Pan",
+    affiliateUrl: "https://link.amazon/B069dtHaa",
+    blurb: "A carbon steel skillet for quick beef strips.",
+    softCta: "A carbon steel skillet for quick beef strips.",
+  },
+  {
+    recipeSlugs: ["hawaiian-chicken-sheet-pan"],
+    title: "OXO Good Grips Nonstick Pro Half Sheet Pan",
+    imageSrc: "/affiliates/oxo-nonstick-pro-half-sheet-pan.jpg",
+    imageAlt: "OXO Good Grips Nonstick Pro Half Sheet Pan",
+    affiliateUrl: "https://link.amazon/B00OQ2SlP",
+    blurb: "A half sheet pan for Hawaiian chicken dinners.",
+    softCta: "A half sheet pan for Hawaiian chicken dinners.",
+  },
+  {
+    recipeSlugs: ["beef-chuck-steak"],
+    title: "ThermoPro TP620 Instant Read Meat Thermometer",
+    imageSrc: "/affiliates/thermopro-tp620-instant-read.jpg",
+    imageAlt: "ThermoPro TP620 Instant Read Meat Thermometer",
+    affiliateUrl: "https://link.amazon/B0fPnrZJV",
+    blurb: "An instant-read thermometer for chuck steak.",
+    softCta: "An instant-read thermometer for chuck steak.",
+  },
+  {
+    recipeSlugs: ["cheeseburger-macaroni"],
+    title: "Calphalon Classic Hard-Anodized Nonstick 5-Quart Sauté Pan with Cover",
+    imageSrc: "/affiliates/calphalon-classic-saute-5qt.jpg",
+    imageAlt: "Calphalon Classic Hard-Anodized Nonstick 5-Quart Sauté Pan with Cover",
+    affiliateUrl: "https://link.amazon/B04m50exq",
+    blurb: "A deep sauté pan for cheeseburger macaroni.",
+    softCta: "A deep sauté pan for cheeseburger macaroni.",
+  },
+  {
+    recipeSlugs: ["ginger-ale-bread"],
+    title: "USA Pan 1145LF 1.25-lb Aluminized Steel Loaf Pan",
+    imageSrc: "/affiliates/usa-pan-125lb-aluminized-loaf-pan.jpg",
+    imageAlt: "USA Pan 1.25-pound aluminized steel loaf pan",
+    affiliateUrl: "https://link.amazon/B0h5vY0R6",
+    blurb:
+      "A sturdy loaf pan for ginger ale bread with even browning and easy release.",
+    softCta: "A sturdy loaf pan helps ginger ale bread bake evenly.",
+  },
+  {
+    recipeSlugs: ["pineapple-soft-serve"],
+    title: "Ninja Professional Plus BN701 Blender",
+    imageSrc: "/affiliates/ninja-professional-plus-bn701-blender.jpg",
+    imageAlt: "Ninja Professional Plus BN701 countertop blender",
+    affiliateUrl: "https://link.amazon/B0bG7gr5D",
+    blurb:
+      "A powerful blender for creamy pineapple soft serve from frozen fruit.",
+    softCta: "A powerful blender helps whip frozen pineapple into soft serve.",
+  },
 ];
 
 export function getAmazonAffiliateProductsForRecipe(
@@ -1436,4 +2315,86 @@ export function getAmazonAffiliateProductsForCategory(
   return AMAZON_AFFILIATE_PRODUCTS.filter((product) =>
     product.categorySlugs?.includes(slug),
   );
+}
+
+function escapeHtmlAttr(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function escapeHtmlText(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+/** Prefer a product with an explicit softCta; otherwise the first mapped product. */
+export function getAmazonAffiliateSoftCtaProduct(
+  products: AmazonAffiliateProduct[],
+): AmazonAffiliateProduct | undefined {
+  if (products.length === 0) return undefined;
+  return (
+    products.find((product) => Boolean(product.softCta?.trim())) ?? products[0]
+  );
+}
+
+/** Soft Pro Tips line: custom softCta, else first blurb sentence, else title. */
+export function resolveAmazonSoftCtaLine(
+  product: AmazonAffiliateProduct,
+): string {
+  const explicit = product.softCta?.trim();
+  if (explicit) {
+    return /[.!?]$/.test(explicit) ? explicit : `${explicit}.`;
+  }
+
+  const blurb = product.blurb?.trim().replace(/\s+/g, " ");
+  if (blurb) {
+    const firstSentence = blurb.match(/^(.+?[.!?])(?:\s|$)/)?.[1] ?? blurb;
+    if (firstSentence.length <= 140) {
+      return /[.!?]$/.test(firstSentence)
+        ? firstSentence
+        : `${firstSentence}.`;
+    }
+    return `${firstSentence.slice(0, 137).replace(/\s+\S*$/, "")}…`;
+  }
+
+  const shortTitle = product.title
+    .replace(/\s*\([^)]*\)\s*/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return `${shortTitle} makes this recipe easier.`;
+}
+
+/** Inline soft CTA markup for injection under the Pro Tips heading. */
+export function buildAmazonAffiliateSoftCtaHtml(
+  product: AmazonAffiliateProduct,
+): string {
+  const line = resolveAmazonSoftCtaLine(product);
+  if (!line) return "";
+
+  const href = escapeHtmlAttr(product.affiliateUrl);
+  const text = escapeHtmlText(line);
+
+  return `<p class="amazon-soft-cta not-prose my-4 text-base leading-relaxed text-[#6b5b4f]"><span>${text}</span> <a href="${href}" target="_blank" rel="nofollow sponsored noopener noreferrer" class="font-semibold text-accent transition hover:text-accent-dark">View on Amazon</a></p>`;
+}
+
+/**
+ * Inserts the soft CTA immediately after the Pro Tips &lt;h2&gt;.
+ * No-op when there is no Pro Tips heading or no CTA HTML.
+ */
+export function injectAmazonSoftCtaAfterProTips(
+  html: string,
+  ctaHtml: string,
+): string {
+  if (!html || !ctaHtml) return html;
+
+  const proTipsHeading =
+    /(<h2\b[^>]*>[\s\S]*?Pro Tips[\s\S]*?<\/h2>)/i;
+  if (!proTipsHeading.test(html)) return html;
+
+  return html.replace(proTipsHeading, `$1${ctaHtml}`);
 }

@@ -180,6 +180,21 @@ export function stripHtml(html: string): string {
     .trim();
 }
 
+/**
+ * Split article HTML at the FAQs heading so CTAs can sit just before FAQs.
+ * Matches "FAQ", "FAQs", or "Frequently asked questions".
+ */
+export function splitHtmlAtFaqHeading(html: string): [string, string] {
+  if (!html) return ["", ""];
+
+  const re =
+    /<h2\b[^>]*>\s*(?:FAQs?|Frequently\s+asked\s+questions)\s*<\/h2>/i;
+  const match = re.exec(html);
+  if (!match || match.index == null) return [html, ""];
+
+  return [html.slice(0, match.index), html.slice(match.index)];
+}
+
 /** Split HTML after the Nth closing </p> (for in-article ad placement). */
 export function splitHtmlAfterParagraphs(
   html: string,

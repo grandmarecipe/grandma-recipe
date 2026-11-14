@@ -67,6 +67,46 @@ const recipeSlugRedirects = [
     destination: "/what-is-a-light-roast-coffee/",
     permanent: true,
   },
+  {
+    source: "/beer-bread",
+    destination: "/ginger-ale-bread/",
+    permanent: true,
+  },
+  {
+    source: "/beer-bread/",
+    destination: "/ginger-ale-bread/",
+    permanent: true,
+  },
+  {
+    source: "/boozy-dole-whip",
+    destination: "/pineapple-soft-serve/",
+    permanent: true,
+  },
+  {
+    source: "/boozy-dole-whip/",
+    destination: "/pineapple-soft-serve/",
+    permanent: true,
+  },
+  {
+    source: "/hawaiian-ham",
+    destination: "/pineapple-glazed-turkey/",
+    permanent: true,
+  },
+  {
+    source: "/hawaiian-ham/",
+    destination: "/pineapple-glazed-turkey/",
+    permanent: true,
+  },
+  {
+    source: "/cajun-chicken-and-sausage-pasta",
+    destination: "/cajun-chicken-turkey-sausage-pasta/",
+    permanent: true,
+  },
+  {
+    source: "/cajun-chicken-and-sausage-pasta/",
+    destination: "/cajun-chicken-turkey-sausage-pasta/",
+    permanent: true,
+  },
 ];
 
 /**

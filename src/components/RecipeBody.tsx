@@ -6,6 +6,7 @@ import {
   ensureHeadingIds,
   normalizeRecipeToc,
   splitHtmlAfterParagraphs,
+  splitHtmlAtFaqHeading,
   stripEquipmentBlockFromHtml,
   stripFaqBlockFromHtml,
   stripNutritionBlockFromHtml,
@@ -20,7 +21,12 @@ import {
 } from "@/lib/wprm";
 import type { RecipeRatingAggregate } from "@/lib/ratings";
 import { ADSENSE_SLOTS } from "@/lib/adsense";
-import { getAmazonAffiliateProductsForRecipe } from "@/lib/amazon-affiliates";
+import {
+  buildAmazonAffiliateSoftCtaHtml,
+  getAmazonAffiliateProductsForRecipe,
+  getAmazonAffiliateSoftCtaProduct,
+  injectAmazonSoftCtaAfterProTips,
+} from "@/lib/amazon-affiliates";
 import { AdUnit } from "./AdUnit";
 import { AmazonAffiliateProductList } from "./AmazonAffiliateProduct";
 import { RecipeAuthorCard } from "./RecipeAuthorCard";
@@ -60,17 +66,36 @@ export function RecipeBody({
       includeRecipeCard: showRecipeCard,
     }),
   );
-  const articleHtml = ensureHeadingIds(
-    stripFaqBlockFromHtml(
+  const affiliateProducts = getAmazonAffiliateProductsForRecipe(recipe.slug);
+  const softCtaProduct = getAmazonAffiliateSoftCtaProduct(affiliateProducts);
+  const preparedHtml = injectAmazonSoftCtaAfterProTips(
+    ensureHeadingIds(
       stripNutritionBlockFromHtml(
         stripEquipmentBlockFromHtml(stripWprmMarkup(recipe.contentHtml)),
       ),
     ),
+    softCtaProduct ? buildAmazonAffiliateSoftCtaHtml(softCtaProduct) : "",
   );
+
+  // Guides: keep story above FAQs, then Kitchen pick, then FAQ block + tail.
+  // Recipes: strip FAQ HTML and render the dedicated FAQ UI later.
+  let articleHtml = preparedHtml;
+  let guideAfterKitchenPick = "";
+  if (!showRecipeCard) {
+    const [beforeFaqs, fromFaqs] = splitHtmlAtFaqHeading(preparedHtml);
+    articleHtml = beforeFaqs;
+    if (faqs.length > 0) {
+      guideAfterKitchenPick = stripFaqBlockFromHtml(fromFaqs);
+    } else {
+      guideAfterKitchenPick = fromFaqs;
+    }
+  } else {
+    articleHtml = stripFaqBlockFromHtml(preparedHtml);
+  }
+
   const [storyStart, storyRest] = splitHtmlAfterParagraphs(articleHtml, 2);
   const [storyMid, storyEnd] = splitHtmlAfterParagraphs(storyRest, 4);
   const equipment = extractEquipmentFromHtml(recipe.contentHtml);
-  const affiliateProducts = getAmazonAffiliateProductsForRecipe(recipe.slug);
   const notes = extractNotesFromHtml(recipe.contentHtml, {
     calories: recipe.calories,
   });
@@ -87,18 +112,6 @@ export function RecipeBody({
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-10 lg:grid-cols-[minmax(0,1fr)_300px] no-print">
         <article className="min-w-0">
           <RecipeTableOfContents items={tableOfContents} />
-
-          {!showRecipeCard && affiliateProducts.length > 0 ? (
-            <section
-              className={`scroll-mt-36${tableOfContents.length > 0 ? " mt-8" : ""}`}
-              aria-label="Kitchen picks"
-            >
-              <h2 className="font-serif text-2xl text-[#8b1a1a]">
-                Kitchen picks
-              </h2>
-              <AmazonAffiliateProductList products={affiliateProducts} />
-            </section>
-          ) : null}
 
           {showRecipeCard ? (
             <section
@@ -193,7 +206,6 @@ export function RecipeBody({
                   ) : (
                     <p className="mt-4 text-muted">No equipment listed.</p>
                   )}
-                  <AmazonAffiliateProductList products={affiliateProducts} />
                 </div>
               </div>
 
@@ -223,6 +235,18 @@ export function RecipeBody({
               ) : (
                 <p className="mt-4 text-muted">No instructions listed.</p>
               )}
+
+              {affiliateProducts.length > 0 ? (
+                <section
+                  className="mt-10 scroll-mt-36"
+                  aria-label="Kitchen picks"
+                >
+                  <h3 className="font-serif text-xl text-[#8b1a1a]">
+                    Kitchen pick
+                  </h3>
+                  <AmazonAffiliateProductList products={affiliateProducts} />
+                </section>
+              ) : null}
 
               <h3 id="notes" className="mt-10 scroll-mt-36 font-serif text-xl">
                 Notes
@@ -301,7 +325,30 @@ export function RecipeBody({
             ) : null}
           </section>
 
-          <RecipeFaqs faqs={faqs} />
+          {!showRecipeCard && affiliateProducts.length > 0 ? (
+            <section
+              className="mt-10 scroll-mt-36 not-prose"
+              aria-label="Kitchen picks"
+            >
+              <h2 className="font-serif text-2xl text-[#8b1a1a]">
+                Kitchen pick
+              </h2>
+              <AmazonAffiliateProductList products={affiliateProducts} />
+            </section>
+          ) : null}
+
+          {!showRecipeCard && faqs.length > 0 ? (
+            <RecipeFaqs faqs={faqs} />
+          ) : null}
+
+          {!showRecipeCard && guideAfterKitchenPick ? (
+            <section
+              className="prose-recipe mt-10 max-w-none"
+              dangerouslySetInnerHTML={{ __html: guideAfterKitchenPick }}
+            />
+          ) : null}
+
+          {showRecipeCard ? <RecipeFaqs faqs={faqs} /> : null}
           <RecipeKitchenNotes hasNutrition={hasNutrition} />
           <RecipeAuthorCard />
 

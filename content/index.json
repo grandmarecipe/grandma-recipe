@@ -805,9 +805,9 @@
       "featuredImageAlt": "Plate of peanut butter oatmeal chocolate chip cookies with a glass of milk."
     },
     {
-      "slug": "beer-bread",
-      "title": "Easy Beer Bread",
-      "excerpt": "Beer Bread is a simple, no-knead loaf with a golden crust and soft, tender inside, made with pantry staples and fizzy ginger ale for a light texture. Flour, sugar, salt, and baking powder come together in one bowl, creating an easy batter that bakes into a warm, comforting loaf. Perfect sliced and served with butter [&hellip;]",
+      "slug": "ginger-ale-bread",
+      "title": "Easy Ginger Ale Bread",
+      "excerpt": "Ginger Ale Bread is a simple, no-knead loaf with a golden crust and soft, tender inside, made with pantry staples and fizzy ginger ale for a light texture. Flour, sugar, salt, and baking powder come together in one bowl, creating an easy batter that bakes into a warm, comforting loaf. Perfect sliced and served with butter [&hellip;]",
       "category": "snacks",
       "categories": [
         "snacks"
@@ -815,7 +815,7 @@
       "publishedAt": "2026-01-27T20:35:00",
       "modifiedAt": "2026-01-27T16:40:29",
       "featuredImage": "/wp-content/uploads/2026/01/Delicious-Homemade-Beer-Bread.webp",
-      "featuredImageAlt": "Freshly baked Beer Bread on a wooden cutting board with melted butter drizzled on top."
+      "featuredImageAlt": "Freshly baked Ginger Ale Bread on a wooden cutting board with melted butter drizzled on top."
     },
     {
       "slug": "air-fryer-mozzarella-sticks",
@@ -844,17 +844,17 @@
       "featuredImageAlt": "Delicious strawberry brownies on a rustic wooden table, garnished with fresh strawberries."
     },
     {
-      "slug": "cajun-chicken-and-sausage-pasta",
-      "title": "Cajun Chicken And Sausage Pasta",
-      "excerpt": "Cajun Chicken and Sausage Pasta is a bold, creamy pasta dish loaded with tender chicken, savory sausage, and colorful bell peppers and onions. A rich tomato-cream sauce seasoned with smoky spices and a splash of chicken broth coats every bite, while a touch of lemon adds brightness. Quick to make and full of comforting flavor, [&hellip;]",
+      "slug": "cajun-chicken-turkey-sausage-pasta",
+      "title": "Cajun Chicken and Turkey Sausage Pasta",
+      "excerpt": "Cajun Chicken and Turkey Sausage Pasta is a bold, creamy pasta dish loaded with tender chicken, smoky turkey sausage, and colorful bell peppers and onions. A rich tomato-cream style sauce seasoned with Cajun spices makes an easy weeknight dinner with big flavor.",
       "category": "dinner",
       "categories": [
         "dinner"
       ],
       "publishedAt": "2026-01-27T17:11:00",
-      "modifiedAt": "2026-01-27T16:02:44",
+      "modifiedAt": "2026-11-14T19:40:31",
       "featuredImage": "/wp-content/uploads/2026/01/Cajun-Chicken-and-Sausage-Pasta-Delight.webp",
-      "featuredImageAlt": "A delicious serving of Cajun Chicken and Sausage Pasta with colorful vegetables and creamy sauce."
+      "featuredImageAlt": "A bowl of Cajun chicken and turkey sausage pasta with colorful peppers in a creamy sauce."
     },
     {
       "slug": "keto-egg-roll-in-a-bowl",
@@ -1520,17 +1520,17 @@
       "featuredImageAlt": "Philly Cheese Steak Pizza with melted cheese and fresh toppings on a wooden table."
     },
     {
-      "slug": "hawaiian-ham",
-      "title": "Best Hawaiian Ham",
-      "excerpt": "Hawaiian ham fills the kitchen with cozy, tropical comfort as a golden glaze caramelizes into sweet, tangy perfection. Brown sugar, pineapple juice, and warm spices like cinnamon, ginger, and cloves perfume the air while the roast turns glossy and irresistible. A simple mix of pineapple preserves, mustard, soy sauce, and a splash of apple cider [&hellip;]",
+      "slug": "pineapple-glazed-turkey",
+      "title": "Pineapple Glazed Turkey",
+      "excerpt": "Pineapple glazed turkey fills the kitchen with cozy, tropical comfort as a golden glaze caramelizes into sweet, tangy perfection. Brown sugar, pineapple juice, and warm spices perfume the air while the roast turns glossy and irresistible. A simple mix of pineapple juice, mustard, [&hellip;]",
       "category": "dinner",
       "categories": [
         "dinner"
       ],
       "publishedAt": "2026-01-14T06:34:00",
-      "modifiedAt": "2026-01-13T23:05:04",
+      "modifiedAt": "2026-11-14T19:33:04",
       "featuredImage": "/wp-content/uploads/2026/01/Delicious-Hawaiian-Ham-Ready-for-the-Feast.webp",
-      "featuredImageAlt": "Glazed Hawaiian Ham with pineapple and cherries on top, ready to be served."
+      "featuredImageAlt": "Pineapple glazed turkey breast topped with pineapple rings and cherries, ready to serve."
     },
     {
       "slug": "pepper-steak",
@@ -1572,9 +1572,9 @@
       "featuredImageAlt": "Freshly baked Cloud Bread on a rustic wooden table with ingredients in the background."
     },
     {
-      "slug": "boozy-dole-whip",
-      "title": "Boozy Dole Whip",
-      "excerpt": "Dole Whip inspired delight sweeps you into a sunlit island daydream, blending tangy pineapple with velvety coconut milk and a playful touch of non alcoholic rum essence. Each frosty spoonful tastes like citrus sunshine, brightened with a squeeze of lime and whirled into creamy, icy perfection. It delivers that cheeky, “spiked” vibe without any actual [&hellip;]",
+      "slug": "pineapple-soft-serve",
+      "title": "Homemade Pineapple Soft Serve",
+      "excerpt": "Homemade pineapple soft serve sweeps you into a sunlit island daydream, blending tangy frozen pineapple with velvety coconut milk. Each frosty spoonful tastes like citrus sunshine, brightened with lime and whirled into creamy, icy perfection. Smooth, dreamy, and perfect for backyard hangouts or anytime you want a tropical escape.",
       "category": "dessert",
       "categories": [
         "dessert"
@@ -1582,7 +1582,7 @@
       "publishedAt": "2026-01-14T01:22:00",
       "modifiedAt": "2026-01-13T12:23:25",
       "featuredImage": "/wp-content/uploads/2026/01/Tropical-Boozy-Dole-Whip-Delight.webp",
-      "featuredImageAlt": "A delicious Boozy Dole Whip topped with a pineapple wedge and toasted coconut, set against a tropical backdrop."
+      "featuredImageAlt": "A bowl of homemade pineapple soft serve topped with a pineapple wedge and toasted coconut."
     },
     {
       "slug": "baked-potato-skins",

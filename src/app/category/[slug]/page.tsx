@@ -89,15 +89,6 @@ export default async function CategoryPage({ params }: PageProps) {
               <CategoryIntro intro={content.intro} />
             </div>
 
-            {affiliateProducts.length > 0 ? (
-              <section className="mt-10" aria-label="Kitchen pick">
-                <h2 className="font-serif text-2xl text-[#8b1a1a]">
-                  Kitchen pick
-                </h2>
-                <AmazonAffiliateProductList products={affiliateProducts} />
-              </section>
-            ) : null}
-
             <div className="mt-10 rounded-3xl border border-border bg-white p-6 shadow-sm">
               <h2 className="font-serif text-2xl text-accent-dark">
                 Grandma&apos;s Picks
@@ -116,6 +107,15 @@ export default async function CategoryPage({ params }: PageProps) {
                 ))}
               </ul>
             </div>
+
+            {affiliateProducts.length > 0 ? (
+              <section className="mt-10" aria-label="Kitchen pick">
+                <h2 className="font-serif text-2xl text-[#8b1a1a]">
+                  Kitchen pick
+                </h2>
+                <AmazonAffiliateProductList products={affiliateProducts} />
+              </section>
+            ) : null}
           </div>
 
           <aside className="hidden lg:block">
