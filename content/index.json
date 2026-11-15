@@ -8617,6 +8617,49 @@
       "modifiedAt": "2025-12-14T01:36:49",
       "featuredImage": "/wp-content/uploads/2025/06/Delicious-Sheet-Pan-Pancakes.webp",
       "featuredImageAlt": "Overhead view of a 9x13 sheet pan filled with golden-brown pancakes, divided into four sections with different toppings including strawberry jam, chocolate chips, blueberries, and cinnamon sugar."
+    },
+    {
+      "slug": "thanksgiving-desserts",
+      "title": "Thanksgiving Desserts",
+      "excerpt": "Find easy Thanksgiving desserts for pumpkin pie, pumpkin roll, bread, muffins, and dump cake, gathered in one Grandma Recipe guide.",
+      "category": "dessert",
+      "categories": [
+        "dessert",
+        "breakfast"
+      ],
+      "publishedAt": "2026-11-15T00:00:00.000Z",
+      "modifiedAt": "2026-11-15T00:18:25.711Z",
+      "featuredImage": "/wp-content/uploads/2026/11/Thanksgiving-Desserts-Homestyle-Spread.webp",
+      "featuredImageAlt": "Thanksgiving desserts with pumpkin pie, pumpkin roll, muffins, and bread"
+    },
+    {
+      "slug": "thanksgiving-side-dishes",
+      "title": "Thanksgiving Side Dishes",
+      "excerpt": "Find easy Thanksgiving side dishes for mashed potatoes, stuffing, green beans, and gravy, gathered in one Grandma Recipe guide.",
+      "category": "dinner",
+      "categories": [
+        "dinner",
+        "snacks"
+      ],
+      "publishedAt": "2026-11-15T00:00:00.000Z",
+      "modifiedAt": "2026-11-15T00:18:31.086Z",
+      "featuredImage": "/wp-content/uploads/2026/11/Thanksgiving-Side-Dishes-Homestyle-Spread.webp",
+      "featuredImageAlt": "Thanksgiving side dishes with mashed potatoes, stuffing, green beans, and gravy"
+    },
+    {
+      "slug": "thanksgiving-recipes",
+      "title": "Easy Thanksgiving Recipes",
+      "excerpt": "Find easy Thanksgiving recipes for turkey, mashed potatoes, stuffing, green beans, gravy, and pumpkin pie, all gathered in one Grandma Recipe guide.",
+      "category": "dinner",
+      "categories": [
+        "dinner",
+        "dessert",
+        "snacks"
+      ],
+      "publishedAt": "2026-11-15T00:00:00.000Z",
+      "modifiedAt": "2026-11-15T00:16:39.790Z",
+      "featuredImage": "/wp-content/uploads/2026/11/Easy-Thanksgiving-Recipes-Homestyle-Spread.webp",
+      "featuredImageAlt": "Easy Thanksgiving recipes with turkey, mashed potatoes, green beans, and pumpkin pie"
     }
   ],
   "pages": [

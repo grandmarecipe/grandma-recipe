@@ -1,0 +1,23 @@
+---
+description: GitHub accounts for grandma-recipe pushes and repo access
+alwaysApply: true
+---
+
+# GitHub accounts for this repo
+
+Remote: `https://github.com/grandmarecipe/grandma-recipe.git`
+
+## Accounts
+
+| Account | Role |
+|---------|------|
+| `grandmarecipe` | **Owner** of the repo. Use this for `git push` / `gh` when write access is needed. |
+| `dadofseo` | Collaborator (write invite sent). Prefer switching to this after the invite is accepted. |
+| `grapheinoservices-star` | Secondary logged-in account; pull only unless later granted write. |
+
+## Agent rules
+
+1. Before pushing to `main`, make sure `gh` is authenticated as `grandmarecipe` (or `dadofseo` after write access is active).
+2. If push returns 403, run `gh auth switch --user grandmarecipe` (or refresh login), then retry. Do not keep retrying with `dadofseo` / `grapheinoservices-star` when they lack push.
+3. Never store passwords or PATs in the repo. Only account names and roles belong in this rule.
+4. Keep multiple accounts logged in via `gh auth login` / `gh auth switch`; do not log out `grandmarecipe` just to clean up.
