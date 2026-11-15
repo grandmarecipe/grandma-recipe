@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Suspense } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { AdSenseConsent } from "@/components/AdSenseConsent";
 import { AdSenseLoader } from "@/components/AdSenseLoader";
 import { CookieConsent } from "@/components/CookieConsent";
@@ -91,6 +92,7 @@ export default function RootLayout({
         <Footer />
         <MobileBottomNav />
         <CookieConsent />
+        <Analytics />
       </body>
     </html>
   );
