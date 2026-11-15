@@ -259,6 +259,36 @@
       "pinUrl": "https://www.pinterest.com/pin/1137229343446073651/",
       "uploadFile": "pinterest-pins/pumpkin-soup/UPLOAD.txt",
       "postedAt": "2026-11-09T17:51:22.803Z"
+    },
+    {
+      "link": "https://www.grandmarecipe.com/thanksgiving-desserts",
+      "slug": "thanksgiving-desserts",
+      "publishedAtDay": "2026-11-15",
+      "scheduleDate": null,
+      "pinId": "1137229343446516101",
+      "pinUrl": "https://www.pinterest.com/pin/1137229343446516101/",
+      "uploadFile": "pinterest-pins/thanksgiving-desserts/UPLOAD.txt",
+      "postedAt": "2026-11-15T00:27:49.694Z"
+    },
+    {
+      "link": "https://www.grandmarecipe.com/thanksgiving-recipes",
+      "slug": "thanksgiving-recipes",
+      "publishedAtDay": "2026-11-15",
+      "scheduleDate": null,
+      "pinId": "1137229343446516103",
+      "pinUrl": "https://www.pinterest.com/pin/1137229343446516103/",
+      "uploadFile": "pinterest-pins/thanksgiving-recipes/UPLOAD.txt",
+      "postedAt": "2026-11-15T00:27:52.486Z"
+    },
+    {
+      "link": "https://www.grandmarecipe.com/thanksgiving-side-dishes",
+      "slug": "thanksgiving-side-dishes",
+      "publishedAtDay": "2026-11-15",
+      "scheduleDate": null,
+      "pinId": "1137229343446516105",
+      "pinUrl": "https://www.pinterest.com/pin/1137229343446516105/",
+      "uploadFile": "pinterest-pins/thanksgiving-side-dishes/UPLOAD.txt",
+      "postedAt": "2026-11-15T00:27:53.241Z"
     }
   ]
 }
