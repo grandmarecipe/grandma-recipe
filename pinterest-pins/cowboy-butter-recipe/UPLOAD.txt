@@ -1,0 +1,22 @@
+BOARD
+Grandma snack recipe
+
+BOARD_ID
+1137229412095892593
+
+IMAGE FILE
+cowboy-butter-recipe-pin.png
+
+TITLE
+Homemade Cowboy Butter Recipe with Garlic and Herbs
+
+DESCRIPTION
+Stir together creamy cowboy butter with garlic, lemon, Dijon, fresh parsley, chives and a little cayenne. This easy seasoned butter is delicious spread over warm bread or served with grilled vegetables, steak and family suppers.
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/cowboy-butter-recipe/
+
+ALT TEXT
+Creamy cowboy butter flecked with garlic, fresh herbs and spices beside crusty bread and lemon on a farmhouse table

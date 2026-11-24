@@ -1,0 +1,22 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+how-to-cook-a-turkey-breast-pin.png
+
+TITLE
+How to Cook a Turkey Breast with Herb Butter
+
+DESCRIPTION
+Make a golden roasted turkey breast with garlic, lemon and herb butter. Follow the preparation, thermometer checks and resting tips for a comforting family dinner, with serving ideas and leftover storage guidance.
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/how-to-cook-a-turkey-breast/
+
+ALT TEXT
+Golden herb-roasted turkey breast with tender slices, lemon, garlic and pan juices on a rustic serving platter
