@@ -509,8 +509,6 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
       "gluten-free-christmas-dinner",
       "thanksgiving-recipes",
       "thanksgiving-dinner-ideas",
-      "bone-turkey-breast",
-      "butterball-turkey-breast",
       "frozen-whole-turkey",
       "pineapple-glazed-turkey",
     ],
@@ -2498,6 +2496,486 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     softCta: "A panini press toasts pizza subs until the cheese is melted and gooey.",
   },
 
+  {
+    recipeSlugs: ["trout-fillet"],
+    title: "All-Clad D3 Stainless Steel Fry Pan with Lid (10 in)",
+    imageSrc: "/affiliates/all-clad-d3-stainless-fry-pan-lid-10in.jpg",
+    imageAlt:
+      "All-Clad D3 Stainless Steel Fry Pan with Lid (10 in)",
+    affiliateUrl: "https://link.amazon/B0eWy3uz5",
+    blurb:
+      "A lidded stainless steel skillet for searing trout and finishing a quick pan sauce.",
+    softCta:
+      "A stainless skillet gives trout room to sear before you make the pan sauce.",
+  },
+  {
+    recipeSlugs: ["shrimp-salad"],
+    title: "OXO Good Grips Glass Salad Spinner",
+    imageSrc: "/affiliates/oxo-good-grips-glass-salad-spinner.jpg",
+    imageAlt:
+      "OXO Good Grips Glass Salad Spinner",
+    affiliateUrl: "https://link.amazon/B01LM8Lcy",
+    blurb:
+      "Wash and dry salad greens before adding shrimp and dressing; the glass bowl doubles as a serving bowl.",
+    softCta:
+      "Dry salad greens before dressing so the shrimp salad stays crisp.",
+  },
+  {
+    recipeSlugs: ["birria-tacos"],
+    title: "Le Creuset Signature Round Dutch Oven (5.5 qt, Cerise)",
+    imageSrc: "/affiliates/le-creuset-signature-dutch-oven-55qt-cerise.jpg",
+    imageAlt:
+      "Le Creuset Signature Round Dutch Oven (5.5 qt, Cerise)",
+    affiliateUrl: "https://link.amazon/B08FcRDQb",
+    blurb:
+      "A lidded enameled cast-iron pot for slowly braising the beef for birria tacos.",
+    softCta:
+      "A covered Dutch oven holds the beef and braising liquid for birria tacos.",
+  },
+  {
+    recipeSlugs: ["bone-turkey-breast"],
+    title: "All-Clad HA1 Nonstick Roaster with Rack (13 × 16 in)",
+    imageSrc: "/affiliates/all-clad-ha1-nonstick-roaster-rack-13x16.jpg",
+    imageAlt:
+      "All-Clad HA1 Nonstick Roaster with Rack (13 × 16 in)",
+    affiliateUrl: "https://link.amazon/B0ht2F0GO",
+    blurb:
+      "A nonstick roasting pan with a rack to lift the turkey breast above the pan juices.",
+    softCta:
+      "A roasting rack lifts the turkey breast above the juices for more even browning.",
+  },
+  {
+    recipeSlugs: ["tartlet"],
+    title: "CHEFMADE Mini Tart Pans with Removable Bottoms (4 in, 4-pack)",
+    imageSrc: "/affiliates/chefmade-mini-tart-pans-4in-4pack.jpg",
+    imageAlt:
+      "CHEFMADE Mini Tart Pans with Removable Bottoms (4 in, 4-pack)",
+    affiliateUrl: "https://link.amazon/B0cj3ZdSS",
+    blurb:
+      "Four small tart pans with removable bottoms for releasing individual tartlets.",
+    softCta:
+      "Removable-bottom tart pans make individual tartlets easier to lift out.",
+  },
+  {
+    recipeSlugs: ["szechuan-dumplings"],
+    title: "Cuisinart Cookfresh Digital Glass Food Steamer (STM-1000)",
+    imageSrc: "/affiliates/cuisinart-cookfresh-glass-food-steamer-stm1000.jpg",
+    imageAlt:
+      "Cuisinart Cookfresh Digital Glass Food Steamer (STM-1000)",
+    affiliateUrl: "https://link.amazon/B04DclLGf",
+    blurb:
+      "An optional electric steamer for a soft steamed-dumpling variation; the written recipe uses a skillet for crisp bottoms.",
+    softCta:
+      "Use a steamer for a soft steamed variation; follow the skillet method for crisp dumpling bottoms.",
+  },
+  {
+    recipeSlugs: ["chicken-bone-broth"],
+    title: "Instant Pot Pro Electric Pressure Cooker (8 qt)",
+    imageSrc: "/affiliates/instant-pot-pro-pressure-cooker-8qt.jpg",
+    imageAlt:
+      "Instant Pot Pro Electric Pressure Cooker (8 qt)",
+    affiliateUrl: "https://link.amazon/B0gCdSWjA",
+    blurb:
+      "An optional electric pressure cooker for broth; the recipe’s stovetop simmering time does not apply to pressure cooking.",
+    softCta:
+      "A pressure cooker is an optional broth method; use its instructions rather than the stovetop timing.",
+  },
+  {
+    recipeSlugs: ["primavera-pizza"],
+    title: "Breville Smart Oven Pizzaiolo (BPZ820BSS)",
+    imageSrc: "/affiliates/breville-smart-oven-pizzaiolo-bpz820bss.jpg",
+    imageAlt:
+      "Breville Smart Oven Pizzaiolo (BPZ820BSS)",
+    affiliateUrl: "https://link.amazon/B0gDemOlb",
+    blurb:
+      "An optional countertop pizza oven for primavera pizza; follow the appliance’s baking instructions instead of conventional-oven timing.",
+    softCta:
+      "A countertop pizza oven is an optional upgrade; its baking time differs from a conventional oven.",
+  },
+  {
+    recipeSlugs: ["hanoi-pho"],
+    title: "Viking 3-Ply Stainless Steel Stockpot with Lid (12 qt)",
+    imageSrc: "/affiliates/viking-3ply-stainless-stockpot-12qt.jpg",
+    imageAlt:
+      "Viking 3-Ply Stainless Steel Stockpot with Lid (12 qt)",
+    affiliateUrl: "https://link.amazon/B0em5jSiz",
+    blurb:
+      "A deep 12-quart stockpot with a lid for simmering pho broth and its aromatics.",
+    softCta:
+      "A deep stockpot gives pho broth and aromatics plenty of room to simmer.",
+  },
+  {
+    recipeSlugs: ["movie-popcorn"],
+    title: "Whirley Pop Stainless Steel Stovetop Popcorn Maker (6 qt)",
+    imageSrc: "/affiliates/whirley-pop-stainless-popcorn-maker-6qt.jpg",
+    imageAlt:
+      "Whirley Pop Stainless Steel Stovetop Popcorn Maker (6 qt)",
+    affiliateUrl: "https://link.amazon/B084kyX5T",
+    blurb:
+      "A stovetop popcorn pot with a hand-cranked stirring mechanism for movie-night batches.",
+    softCta:
+      "A hand-cranked popcorn pot keeps kernels moving as they pop.",
+  },
+  {
+    recipeSlugs: ["sub-rolls"],
+    title: "KitchenAid Artisan Tilt-Head Stand Mixer (5 qt, Empire Red)",
+    imageSrc: "/affiliates/kitchenaid-artisan-mixer-5qt-empire-red.jpg",
+    imageAlt:
+      "KitchenAid Artisan Tilt-Head Stand Mixer (5 qt, Empire Red)",
+    affiliateUrl: "https://link.amazon/B09iiQe43",
+    blurb:
+      "A stand mixer with a dough hook for mixing and kneading sub-roll dough in suitable batch sizes.",
+    softCta:
+      "A stand mixer can handle the mixing and kneading for sub-roll dough.",
+  },
+  {
+    recipeSlugs: ["egg-patties"],
+    title: "Dash Deluxe Everyday Electric Griddle with Removable Plate",
+    imageSrc: "/affiliates/dash-deluxe-everyday-electric-griddle.jpg",
+    imageAlt:
+      "Dash Deluxe Everyday Electric Griddle with Removable Plate",
+    affiliateUrl: "https://link.amazon/B02ZYpHed",
+    blurb:
+      "A broad electric griddle for cooking several egg patties in one batch.",
+    softCta:
+      "A broad griddle gives several egg patties room to cook at once.",
+  },
+  {
+    recipeSlugs: ["seafood-mix"],
+    title: "Made In Stainless Clad Sauté Pan (3.5 qt)",
+    imageSrc: "/affiliates/made-in-stainless-saute-pan-35qt.jpg",
+    imageAlt:
+      "Made In Stainless Clad Sauté Pan (3.5 qt)",
+    affiliateUrl: "https://link.amazon/B04ekVu31",
+    blurb:
+      "A stainless steel sauté pan for cooking a mixed seafood supper and finishing the sauce.",
+    softCta:
+      "A sauté pan gives mixed seafood room to cook in a single layer.",
+  },
+  {
+    recipeSlugs: ["alfredos-italian-kitchen"],
+    title: "MARCATO Atlas 150 Manual Pasta Machine",
+    imageSrc: "/affiliates/marcato-atlas-150-manual-pasta-machine.jpg",
+    imageAlt:
+      "MARCATO Atlas 150 Manual Pasta Machine",
+    affiliateUrl: "https://link.amazon/B09gbDHeJ",
+    blurb:
+      "An optional pasta machine for homemade fettuccine; the Alfredo recipe also works with prepared pasta.",
+    softCta:
+      "A pasta machine is an optional upgrade for homemade fettuccine; prepared pasta works too.",
+  },
+  {
+    recipeSlugs: ["thin-crispy-chocolate-chip-cookies"],
+    title: "Nordic Ware Naturals Baking Sheets (3-piece set)",
+    imageSrc: "/affiliates/nordic-ware-naturals-baking-sheets-3piece.jpg",
+    imageAlt:
+      "Nordic Ware Naturals Baking Sheets (3-piece set)",
+    affiliateUrl: "https://link.amazon/B0fKz50nX",
+    blurb:
+      "Aluminum half-sheet, jelly-roll and quarter-sheet pans for spreading cookie dough into well-spaced batches.",
+    softCta:
+      "Sturdy baking sheets give thin cookies space to spread without running together.",
+  },
+  {
+    recipeSlugs: ["honey-hot-chicken"],
+    title: "Ninja Foodi DualZone Air Fryer (8 qt, DZ201)",
+    imageSrc: "/affiliates/ninja-foodi-dualzone-air-fryer-8qt-dz201.jpg",
+    imageAlt:
+      "Ninja Foodi DualZone Air Fryer (8 qt, DZ201)",
+    affiliateUrl: "https://link.amazon/B0hybE49d",
+    blurb:
+      "An optional air fryer for reheating cooked honey-hot chicken; the written flour-coated chicken recipe is fried in oil.",
+    softCta:
+      "An air fryer can reheat cooked chicken; keep the recipe’s oil-frying method for the flour coating.",
+  },
+  {
+    recipeSlugs: ["lamb-leg-steak"],
+    title: "Le Creuset Signature Cast Iron Skillet (11.75 in, Caribbean)",
+    imageSrc: "/affiliates/le-creuset-signature-skillet-1175-caribbean.jpg",
+    imageAlt:
+      "Le Creuset Signature Cast Iron Skillet (11.75 in, Caribbean)",
+    affiliateUrl: "https://link.amazon/B0exJd0sP",
+    blurb:
+      "An enameled cast-iron skillet for searing lamb leg steaks in manageable batches.",
+    softCta:
+      "A cast-iron skillet holds heat for searing lamb leg steaks.",
+  },
+  {
+    recipeSlugs: ["beef-tendon"],
+    title: "Ninja Foodi PossibleCooker PRO Multicooker (8.5 qt, Navy)",
+    imageSrc: "/affiliates/ninja-possiblecooker-pro-85qt-navy.jpg",
+    imageAlt:
+      "Ninja Foodi PossibleCooker PRO Multicooker (8.5 qt, Navy)",
+    affiliateUrl: "https://link.amazon/B06vwPBhH",
+    blurb:
+      "An optional slow-cooking pot for beef tendon. This model is a multicooker, not a pressure cooker; use the appropriate slow-cook instructions.",
+    softCta:
+      "The PossibleCooker is a slow-cooking option for tendon, not a pressure cooker.",
+  },
+  {
+    recipeSlugs: ["taco-gringo"],
+    title: "Lodge Pre-Seasoned Cast Iron Skillet (15 in)",
+    imageSrc: "/affiliates/lodge-cast-iron-skillet-15in.jpg",
+    imageAlt:
+      "Lodge Pre-Seasoned Cast Iron Skillet (15 in)",
+    affiliateUrl: "https://link.amazon/B0eRN1CEO",
+    blurb:
+      "A large cast-iron skillet for browning taco filling in batches; its 15-inch size needs a suitable burner.",
+    softCta:
+      "A roomy cast-iron skillet helps taco filling brown without crowding.",
+  },
+  {
+    recipeSlugs: ["cinnamon-raisin-sourdough"],
+    title: "Emile Henry Ceramic Bread Cloche (Charcoal)",
+    imageSrc: "/affiliates/emile-henry-ceramic-bread-cloche-charcoal.jpg",
+    imageAlt:
+      "Emile Henry Ceramic Bread Cloche (Charcoal)",
+    affiliateUrl: "https://link.amazon/B06GcjM0g",
+    blurb:
+      "A covered ceramic baker for a sourdough loaf that fits comfortably inside; handle the ceramic carefully.",
+    softCta:
+      "A bread cloche provides a covered baking space for a suitably sized sourdough loaf.",
+  },
+  {
+    recipeSlugs: ["jalapeno-cheese"],
+    title: "DOWAN Ceramic Baking Dish (8 × 8 in, 2 qt, White)",
+    imageSrc: "/affiliates/dowan-ceramic-baking-dish-8x8-white.jpg",
+    imageAlt:
+      "DOWAN Ceramic Baking Dish (8 × 8 in, 2 qt, White)",
+    affiliateUrl: "https://link.amazon/B039H3rm7",
+    blurb:
+      "A handled 8-inch square ceramic dish for baking and serving jalapeño cheese spread.",
+    softCta:
+      "A handled baking dish takes the jalapeño cheese spread from oven to table.",
+  },
+  {
+    recipeSlugs: ["beef-lo-mein"],
+    title: "Babish Flat-Bottom Carbon Steel Wok (14 in)",
+    imageSrc: "/affiliates/babish-flat-bottom-carbon-steel-wok-14in.jpg",
+    imageAlt:
+      "Babish Flat-Bottom Carbon Steel Wok (14 in)",
+    affiliateUrl: "https://link.amazon/B0e60FIS3",
+    blurb:
+      "A flat-bottom carbon steel wok for tossing lo mein; season and care for it according to the manufacturer’s instructions.",
+    softCta:
+      "A flat-bottom wok gives lo mein noodles and beef room to toss.",
+  },
+  {
+    recipeSlugs: ["honey-garlic-wings"],
+    title: "Ninja Foodi DualZone XL Air Fryer (10 qt, DZ401)",
+    imageSrc: "/affiliates/ninja-foodi-dualzone-xl-air-fryer-10qt-dz401.jpg",
+    imageAlt:
+      "Ninja Foodi DualZone XL Air Fryer (10 qt, DZ401)",
+    affiliateUrl: "https://link.amazon/B0hEVEOAr",
+    blurb:
+      "An optional dual-basket air fryer for reheating cooked wings or preparing a side; follow the recipe’s stated method for the wings.",
+    softCta:
+      "A dual-basket air fryer is useful for reheating cooked wings alongside a side dish.",
+  },
+  {
+    recipeSlugs: ["beef-brisket-flat"],
+    title: "TempPro TempSync TP930 Bluetooth Meat Thermometer (4 wired probes)",
+    imageSrc: "/affiliates/temppro-tempsync-tp930-bluetooth-4probe.jpg",
+    imageAlt:
+      "TempPro TempSync TP930 Bluetooth Meat Thermometer (4 wired probes)",
+    affiliateUrl: "https://link.amazon/B04FwskGD",
+    blurb:
+      "Four wired probes connect to a base that communicates by Bluetooth, for monitoring a brisket cook within local range.",
+    softCta:
+      "Wired probes and local-range Bluetooth help monitor brisket without repeatedly opening the cooker.",
+  },
+  {
+    recipeSlugs: ["poke-sushi-bowl"],
+    title: "CUCKOO High Pressure Rice Cooker (20 cups cooked, CRP-P1009SW)",
+    imageSrc: "/affiliates/cuckoo-pressure-rice-cooker-crpp1009sw.jpg",
+    imageAlt:
+      "CUCKOO High Pressure Rice Cooker (20 cups cooked, CRP-P1009SW)",
+    affiliateUrl: "https://link.amazon/B0eXLQrnZ",
+    blurb:
+      "A pressure rice cooker with a 10-cup uncooked capacity for family-size batches of rice for poke bowls.",
+    softCta:
+      "A rice cooker handles a family-size batch of rice while you prepare the poke-bowl toppings.",
+  },
+  {
+    recipeSlugs: ["thai-chilli"],
+    title: "Vitamix 5-Speed Immersion Blender (625 W)",
+    imageSrc: "/affiliates/vitamix-5speed-immersion-blender-625w.jpg",
+    imageAlt:
+      "Vitamix 5-Speed Immersion Blender (625 W)",
+    affiliateUrl: "https://link.amazon/B0bIbEwta",
+    blurb:
+      "An immersion blender for blending chilli sauce in a suitable deep container, with the blade guard fully submerged.",
+    softCta:
+      "An immersion blender brings chilli sauce together in a suitable deep container.",
+  },
+  {
+    recipeSlugs: ["cocktail-sausages"],
+    title: "All-Clad Programmable Electric Slow Cooker (7 qt)",
+    imageSrc: "/affiliates/all-clad-programmable-slow-cooker-7qt.jpg",
+    imageAlt:
+      "All-Clad Programmable Electric Slow Cooker (7 qt)",
+    affiliateUrl: "https://link.amazon/B04UZfbVV",
+    blurb:
+      "A large slow cooker for keeping cooked chicken or turkey cocktail sausages warm for a party; the recipe itself uses a skillet.",
+    softCta:
+      "A slow cooker is useful for serving a large batch of already-cooked chicken or turkey cocktail sausages.",
+  },
+  {
+    recipeSlugs: ["thai-coconut-curry"],
+    title: "Made In Stainless Clad Rondeau with Lid (6 qt)",
+    imageSrc: "/affiliates/made-in-stainless-rondeau-lid-6qt.jpg",
+    imageAlt:
+      "Made In Stainless Clad Rondeau with Lid (6 qt)",
+    affiliateUrl: "https://link.amazon/B0bBxNWXe",
+    blurb:
+      "A wide lidded stainless steel pot for browning curry ingredients and gently simmering the coconut sauce.",
+    softCta:
+      "A wide lidded pot gives coconut curry ingredients room to brown before simmering.",
+  },
+  {
+    recipeSlugs: ["boneless-ribeye-roast"],
+    title: "Shun Classic Hollow-Ground Brisket Knife (12 in)",
+    imageSrc: "/affiliates/shun-classic-brisket-slicing-knife-12in.jpg",
+    imageAlt:
+      "Shun Classic Hollow-Ground Brisket Knife (12 in)",
+    affiliateUrl: "https://link.amazon/B07C2HYsl",
+    blurb:
+      "A long slicing knife for carving a rested boneless roast into even slices; keep the edge away from bones.",
+    softCta:
+      "A long slicing knife makes it easier to carve even slices from a rested boneless roast.",
+  },
+  {
+    recipeSlugs: ["striploin-roast"],
+    title: "John Boos Maple Cutting Board (24 × 18 × 1.5 in)",
+    imageSrc: "/affiliates/john-boos-maple-cutting-board-24x18.jpg",
+    imageAlt:
+      "John Boos Maple Cutting Board (24 × 18 × 1.5 in)",
+    affiliateUrl: "https://link.amazon/B0497kGN9",
+    blurb:
+      "A large reversible maple board for resting and carving a roast; dry it thoroughly and maintain it as directed.",
+    softCta:
+      "A large carving board leaves room for the roast and its carved slices.",
+  },
+  {
+    recipeSlugs: ["butterball-turkey-breast"],
+    title: "Viking 3-Ply Oval Roasting Pan with Lid and Rack (8.5 qt)",
+    imageSrc: "/affiliates/viking-3ply-oval-roasting-pan-85qt.jpg",
+    imageAlt:
+      "Viking 3-Ply Oval Roasting Pan with Lid and Rack (8.5 qt)",
+    affiliateUrl: "https://link.amazon/B04J7xvS6",
+    blurb:
+      "A stainless steel oval roasting pan with a rack and lid for a turkey breast that fits with adequate clearance.",
+    softCta:
+      "A roasting pan with a rack gives a suitably sized turkey breast room to roast.",
+  },
+  {
+    recipeSlugs: ["butterflied-lamb-leg"],
+    title: "Ninja Woodfire ProConnect Premium XL Outdoor Grill and Smoker",
+    imageSrc: "/affiliates/ninja-woodfire-proconnect-premium-xl-grill.jpg",
+    imageAlt:
+      "Ninja Woodfire ProConnect Premium XL Outdoor Grill and Smoker",
+    affiliateUrl: "https://link.amazon/B0cN7GyXY",
+    blurb:
+      "An outdoor-only electric grill and smoker for a butterflied lamb leg; use it outdoors according to the manufacturer’s directions.",
+    softCta:
+      "An outdoor electric grill is an option for butterflied lamb; this appliance must stay outdoors.",
+  },
+  {
+    recipeSlugs: ["korean-bbq-meat"],
+    title: "Zojirushi Indoor Electric Grill (EB-DLC10)",
+    imageSrc: "/affiliates/zojirushi-indoor-electric-grill-ebdlc10.jpg",
+    imageAlt:
+      "Zojirushi Indoor Electric Grill (EB-DLC10)",
+    affiliateUrl: "https://link.amazon/B04bYrCzg",
+    blurb:
+      "An indoor electric grill for small batches of Korean BBQ meat, with ventilation and use as directed by the manufacturer.",
+    softCta:
+      "An indoor grill lets you cook Korean BBQ meat in small batches.",
+  },
+  {
+    recipeSlugs: ["strip-loin-roast"],
+    title: "Breville Smart Oven Air Fryer Pro (BOV900BSS)",
+    imageSrc: "/affiliates/breville-smart-oven-air-fryer-pro-bov900bss.jpg",
+    imageAlt:
+      "Breville Smart Oven Air Fryer Pro (BOV900BSS)",
+    affiliateUrl: "https://link.amazon/B0aVk5wFn",
+    blurb:
+      "An optional countertop oven for a small roast that fits with the required clearance; follow the appliance’s instructions.",
+    softCta:
+      "A countertop oven is an option only when the roast fits with the appliance’s required clearance.",
+  },
+  {
+    recipeSlugs: ["chocolate-torte"],
+    title: "Cuisinart Chef’s Classic Springform Pan (9 in, AMB-9SP)",
+    imageSrc: "/affiliates/cuisinart-chefs-classic-springform-9in.jpg",
+    imageAlt:
+      "Cuisinart Chef’s Classic Springform Pan (9 in, AMB-9SP)",
+    affiliateUrl: "https://link.amazon/B008ZWhyS",
+    blurb:
+      "A 9-inch springform pan with a removable side for releasing a delicate chocolate torte.",
+    softCta:
+      "A springform pan lets you release the chocolate torte without turning it upside down.",
+  },
+  {
+    recipeSlugs: ["tuna-steak"],
+    title: "Misen 5-Ply Stainless Steel Frying Pan (12 in)",
+    imageSrc: "/affiliates/misen-5ply-stainless-frying-pan-12in.jpg",
+    imageAlt:
+      "Misen 5-Ply Stainless Steel Frying Pan (12 in)",
+    affiliateUrl: "https://link.amazon/B03D0lyxY",
+    blurb:
+      "A stainless steel frying pan for searing tuna steaks; preheat and cook according to your chosen recipe.",
+    softCta:
+      "A roomy stainless skillet gives tuna steaks space to sear.",
+  },
+  {
+    recipeSlugs: ["irish-bangers"],
+    title: "All-Clad D3 Stainless Steel Sauté Pan with Lid (4 qt)",
+    imageSrc: "/affiliates/all-clad-d3-stainless-saute-pan-4qt.jpg",
+    imageAlt:
+      "All-Clad D3 Stainless Steel Sauté Pan with Lid (4 qt)",
+    affiliateUrl: "https://link.amazon/B015OoLAO",
+    blurb:
+      "A stainless steel sauté pan for browning chicken or turkey bangers before finishing them as the recipe directs.",
+    softCta:
+      "A sauté pan gives chicken or turkey bangers room to brown in batches.",
+  },
+  {
+    recipeSlugs: ["soybean-recipe"],
+    title: "COSORI Electric Pressure Cooker (6 qt)",
+    imageSrc: "/affiliates/cosori-electric-pressure-cooker-6qt.jpg",
+    imageAlt:
+      "COSORI Electric Pressure Cooker (6 qt)",
+    affiliateUrl: "https://link.amazon/B0eJtbp6p",
+    blurb:
+      "An optional electric pressure cooker for soybeans; use the appliance’s bean instructions, not the recipe’s stovetop cooking time.",
+    softCta:
+      "An electric pressure cooker is optional for soybeans; its cooking time differs from the stovetop method.",
+  },
+  {
+    recipeSlugs: ["spring-rolls"],
+    title: "Philips Premium Airfryer XXL (7 qt, HD9650/96)",
+    imageSrc: "/affiliates/philips-premium-airfryer-xxl-hd9650.jpg",
+    imageAlt:
+      "Philips Premium Airfryer XXL (7 qt, HD9650/96)",
+    affiliateUrl: "https://link.amazon/B04Sjgk3a",
+    blurb:
+      "An optional air fryer for reheating cooked spring rolls; the written recipe fries the rolls in oil.",
+    softCta:
+      "An air fryer can reheat cooked spring rolls; the written recipe uses oil for the initial frying.",
+  },
+  {
+    recipeSlugs: ["boneless-chicken-thighs"],
+    title: "HexClad Hybrid Deep Sauté Pan with Lid",
+    imageSrc: "/affiliates/hexclad-hybrid-deep-saute-pan-lid.jpg",
+    imageAlt:
+      "HexClad Hybrid Deep Sauté Pan with Lid",
+    affiliateUrl: "https://link.amazon/B0aZYEIrI",
+    blurb:
+      "A deep lidded sauté pan for browning boneless chicken thighs and finishing them in sauce.",
+    softCta:
+      "A deep sauté pan gives chicken thighs space to brown before the sauce goes in.",
+  },
 ];
 
 export function getAmazonAffiliateProductsForRecipe(
