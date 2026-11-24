@@ -289,6 +289,26 @@
       "pinUrl": "https://www.pinterest.com/pin/1137229343446516105/",
       "uploadFile": "pinterest-pins/thanksgiving-side-dishes/UPLOAD.txt",
       "postedAt": "2026-11-15T00:27:53.241Z"
+    },
+    {
+      "link": "https://www.grandmarecipe.com/cowboy-butter-recipe",
+      "slug": "cowboy-butter-recipe",
+      "publishedAtDay": "2026-11-22",
+      "scheduleDate": null,
+      "pinId": "1137229343447315417",
+      "pinUrl": "https://www.pinterest.com/pin/1137229343447315417/",
+      "uploadFile": "pinterest-pins/cowboy-butter-recipe/UPLOAD.txt",
+      "postedAt": "2026-11-24T18:07:23.909Z"
+    },
+    {
+      "link": "https://www.grandmarecipe.com/how-to-cook-a-turkey-breast",
+      "slug": "how-to-cook-a-turkey-breast",
+      "publishedAtDay": "2026-11-22",
+      "scheduleDate": null,
+      "pinId": "1137229343447315418",
+      "pinUrl": "https://www.pinterest.com/pin/1137229343447315418/",
+      "uploadFile": "pinterest-pins/how-to-cook-a-turkey-breast/UPLOAD.txt",
+      "postedAt": "2026-11-24T18:07:25.342Z"
     }
   ]
 }
