@@ -16,20 +16,20 @@ const PORTRAIT = SITE.author.image;
 
 const standards = [
   {
-    title: "Cooked in a real home kitchen",
-    text: "Recipes are made with everyday pans, grocery-store ingredients, and the kind of timing a busy weeknight actually allows — not a test-kitchen fantasy.",
+    title: "Ingredients that match the method",
+    text: "Our review checklist starts with quantities, units, and ingredient names. The recipe card and the longer instructions should describe the same dish.",
   },
   {
     title: "Clear steps before pretty words",
-    text: "If a step is fuzzy, we rewrite it. You should know what “done” looks like, smells like, and feels like before you take the dish out of the oven.",
+    text: "Our goal is to explain the order of the steps, the equipment, and the signs of doneness. If a step is unclear, please tell us where you got stuck.",
   },
   {
-    title: "Honest notes when things go sideways",
-    text: "Burned biscuits, runny fillings, and “why is this pale?” moments get written down so you can skip the mistakes Millie already made.",
+    title: "Cooking tests described accurately",
+    text: "An editorial review is a check of the written recipe. A kitchen test means actually cooking it. Any kitchen-test claim should be supported by notes on that specific recipe.",
   },
   {
-    title: "Updated when readers teach us better",
-    text: "When comments, emails, or retests show a clearer method, we revise the recipe and bump the updated date so you can trust what’s current.",
+    title: "Reader feedback and corrections",
+    text: "Spot a missing ingredient or a confusing quantity? Send the recipe link and the detail through our contact page so it can be reviewed and corrected.",
   },
 ];
 
@@ -44,21 +44,21 @@ export default function HowWeTestRecipesPage() {
             className="mb-6"
             items={[
               { label: "Home", href: "/" },
-              { label: "How we test recipes" },
+              { label: "Our recipe standards" },
             ]}
           />
           <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
               <p className="text-sm font-semibold tracking-[0.22em] text-gold uppercase">
-                Kitchen standards
+                Recipe care
               </p>
               <h1 className="mt-3 font-serif text-5xl text-[#8b1a1a] sm:text-6xl">
-                How we test recipes
+                Our recipe standards
               </h1>
               <p className="mt-5 max-w-xl text-lg leading-8 text-muted">
-                At {SITE.name}, a recipe earns its place only after it works in a
-                real kitchen — with clear steps, honest notes, and food worth
-                sharing at the table.
+                At {SITE.name}, we want you to feel comfortable following a
+                recipe from the first ingredient to the final serving. These
+                standards guide our ongoing review of the recipes on this site.
               </p>
             </div>
 
@@ -82,18 +82,20 @@ export default function HowWeTestRecipesPage() {
       </section>
 
       <section className="mx-auto max-w-3xl px-4 py-14">
-        <h2 className="font-serif text-3xl text-[#8b1a1a]">Our promise</h2>
+        <h2 className="font-serif text-3xl text-[#8b1a1a]">
+          A little care behind the recipe
+        </h2>
         <div className="mt-6 space-y-5 text-lg leading-8 text-muted">
           <p>
-            These pages are written for home cooks, not food-lab technicians.{" "}
-            {SITE.author.name} tests recipes the way you will cook them: with
-            ordinary tools, pantry staples, and enough patience for a second
-            (or third) try when something needs fixing.
+            These pages are written for home cooks using everyday tools and
+            grocery-store ingredients. Our review focuses on consistent
+            quantities, understandable instructions, and useful serving notes.
           </p>
           <p>
-            That experience shows up as practical tips, timing you can trust,
-            and updates when a better method comes along. If a dish is still
-            evolving, the recipe page says so through its updated date.
+            We do not claim that every recipe has been cooked and tested by
+            Grandma Millie. When a cooking test is documented, its details
+            belong on the individual
+            recipe page, where you can see what was tried.
           </p>
         </div>
       </section>
@@ -101,10 +103,10 @@ export default function HowWeTestRecipesPage() {
       <section className="border-y border-border bg-[#f8f2ea]">
         <div className="mx-auto max-w-6xl px-4 py-14">
           <p className="text-sm font-semibold tracking-wide text-accent uppercase">
-            What “kitchen-tested” means here
+            What we look for during review
           </p>
           <h2 className="mt-2 max-w-2xl font-serif text-3xl text-[#8b1a1a]">
-            Four standards behind every recipe card
+            Four standards for clearer recipes
           </h2>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {standards.map((item) => (

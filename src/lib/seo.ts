@@ -106,7 +106,6 @@ export function buildPersonJsonLd() {
       "comfort food",
       "family recipes",
       "baking",
-      "kitchen-tested recipes",
     ],
   });
 }
@@ -472,7 +471,7 @@ export function buildAboutPageJsonLd() {
 export function buildHowWeTestPageJsonLd() {
   const pageUrl = `${SITE.url}/how-we-test-recipes/`;
   const description =
-    "Learn how Grandma Millie kitchen-tests recipes at Grandma Recipe — clear steps, honest notes, and updates when methods improve.";
+    "Read Grandma Recipe’s standards for consistent ingredients, clear instructions, documented cooking tests, and recipe corrections.";
 
   return cleanSchema({
     "@context": SCHEMA_CONTEXT,
@@ -480,14 +479,14 @@ export function buildHowWeTestPageJsonLd() {
       buildOrganizationJsonLd(),
       buildPersonJsonLd(),
       buildWebPageJsonLd({
-        name: "How we test recipes",
+        name: "Our recipe standards",
         description,
         url: pageUrl,
         type: "WebPage",
       }),
       buildBreadcrumbJsonLd([
         { name: "Home", url: `${SITE.url}/` },
-        { name: "How we test recipes", url: pageUrl },
+        { name: "Our recipe standards", url: pageUrl },
       ]),
     ],
   });

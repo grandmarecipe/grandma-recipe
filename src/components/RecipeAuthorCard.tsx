@@ -36,8 +36,9 @@ export function RecipeAuthorCard() {
           </h2>
           <p className="mt-3 leading-7 text-muted">{SITE.author.description}</p>
           <p className="mt-3 leading-7 text-muted">
-            Every recipe here is kitchen-tested for real home cooks — clear
-            steps, honest notes, and the little fixes that save a batch.
+            Pull up a chair for comforting dishes and practical cooking ideas.
+            Have a question about a step? Send us a note — there’s always room
+            for a conversation at this kitchen table.
           </p>
           <div className="mt-5 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm font-semibold sm:justify-start">
             <Link
@@ -50,7 +51,7 @@ export function RecipeAuthorCard() {
               href="/how-we-test-recipes/"
               className="text-accent transition hover:text-accent-dark"
             >
-              How we test recipes →
+              Our recipe standards →
             </Link>
           </div>
         </div>

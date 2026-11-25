@@ -43,12 +43,12 @@ export function RecipeKitchenNotes({ hasNutrition }: RecipeKitchenNotesProps) {
           . They are not a substitute for professional medical or dietary advice.
         </p>
         <p>
-          For how recipes are tested and when pages are updated, see{" "}
+          For our recipe review standards and how pages are updated, see{" "}
           <Link
             href="/how-we-test-recipes/"
             className="font-semibold text-accent transition hover:text-accent-dark"
           >
-            How we test recipes
+            Our recipe standards
           </Link>
           . Full legal context lives in our{" "}
           <Link

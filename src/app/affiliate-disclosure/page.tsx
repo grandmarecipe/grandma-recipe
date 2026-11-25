@@ -132,7 +132,7 @@ export default function AffiliateDisclosurePage() {
                 href="/how-we-test-recipes/"
                 className="font-semibold text-accent hover:text-accent-dark"
               >
-                How we test recipes
+                Our recipe standards
               </Link>
             </p>
           </div>

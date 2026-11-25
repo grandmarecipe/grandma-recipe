@@ -23,12 +23,12 @@ const highlights = [
     text: "Nothing fancy or fussy here. Just good, honest food with steps you can follow — whether you’ve been cooking for years or just now picking up the spoon.",
   },
   {
-    title: "Stories with every dish",
-    text: "You’ll find more than just ingredients. Every recipe comes with a bit of history — a memory, a Sunday tradition, or the reason why Grandpa still asks for it.",
+    title: "The comfort of familiar dishes",
+    text: "From a bubbling casserole to a warm slice of pie, there’s plenty here to inspire a Sunday supper or a new tradition of your own.",
   },
   {
-    title: "Tips from trial and error",
-    text: "I’ve burned my fair share of biscuits, so you don’t have to. I’ll share what works, what flops, and what you can skip without anyone noticing.",
+    title: "A helping hand in the kitchen",
+    text: "Look for ingredient notes, serving ideas, and clear steps to help you plan your meal. If something needs explaining, you’re always welcome to ask.",
   },
   {
     title: "Cooking with the seasons",
@@ -82,19 +82,17 @@ export default function AboutUsPage() {
         <div className="mt-6 space-y-5 text-lg leading-8 text-muted">
           <p>
             My name is <strong className="text-foreground">Grandma Millie</strong>
-            , and while I might not be your real grandma, I hope this little
-            kitchen corner of the internet makes you feel like you’ve come home.
-            This blog was born out of flour-dusted counters, handwritten recipe
-            cards tucked in cookie tins, and decades of Sunday dinners filled
-            with laughter, love, and plenty of second helpings.
+            , and I’m here to make this little kitchen corner of the internet
+            feel like home. Pull up a chair for golden biscuits, bubbling pies,
+            hearty suppers, and something sweet to share. There’s always room
+            for another place at the table.
           </p>
           <p>
-            I’ve been stirring sauces, rolling dough, and feeding hungry hearts
-            for as long as I can remember. These recipes aren’t just
-            instructions — they’re memories. The cinnamon rolls my grandkids
-            beg for every holiday morning, the chicken pot pie that brings
-            neighbors running, and the biscuits that could start family feuds if
-            I ever changed the recipe.
+            Millie is the grandmother-inspired character and welcoming voice of
+            Grandma Recipe, created to bring the warmth of a family kitchen to
+            these pages. I’m here to help you find something comforting to cook,
+            whether that’s a quiet supper for one or a table full of friends.
+            Let’s make room for a new favorite.
           </p>
         </div>
       </section>
@@ -169,7 +167,7 @@ export default function AboutUsPage() {
           <h2 className="font-serif text-3xl text-[#8b1a1a]">Come cook with me</h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted">
             Browse a category and find something cozy for tonight’s table — or
-            read how every recipe gets kitchen-tested before it lands here.
+            read about our recipe standards and how to share a correction.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {CATEGORIES.map((category) => (
@@ -185,7 +183,7 @@ export default function AboutUsPage() {
               href="/how-we-test-recipes/"
               className="rounded-full border border-border bg-[#fffdf9] px-5 py-2 text-sm font-semibold text-foreground transition hover:border-accent hover:text-accent"
             >
-              How we test recipes
+              Our recipe standards
             </Link>
             <Link
               href="/contact-us/"

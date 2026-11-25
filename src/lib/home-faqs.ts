@@ -5,16 +5,16 @@ import { SITE } from "@/lib/types";
 export const HOME_FAQS: FaqItem[] = [
   {
     question: "Are Grandma Recipe recipes free to use?",
-    answer: `Yes. Every recipe on ${SITE.name} is free to read, cook, print, and share at home. No subscription is required to follow Grandma Millie's kitchen-tested methods.`,
+    answer: `Yes. Every recipe on ${SITE.name} is free to read, cook, print, and share at home. No subscription is required to follow the ingredients and instructions.`,
   },
   {
-    question: "Are these recipes kitchen-tested?",
+    question: "Are all these recipes kitchen-tested?",
     answer:
-      "Yes. Recipes are cooked in a real home kitchen with everyday tools and grocery-store ingredients. Steps stay clear, notes stay honest, and pages are updated when a better method comes along. Learn more on our How we test recipes page.",
+      "We do not claim that every recipe has been kitchen-tested. Our editorial standards focus on consistent ingredients, clear instructions, and corrections. Cooking-test details, when documented, belong on the individual recipe page. Read Our recipe standards for more.",
   },
   {
     question: "Who is Grandma Millie?",
-    answer: `${SITE.author.name} is the voice behind ${SITE.name} — sharing comfort-food recipes, family-style tips, and the little fixes that help home cooks succeed. Meet her on the About Us page.`,
+    answer: `${SITE.author.name} is the grandmother-inspired character and welcoming voice of ${SITE.name} — sharing comfort-food recipes, family-style tips, and the little fixes that help home cooks succeed. Meet her on the About Us page.`,
   },
   {
     question: "How do recipe ratings and comments work?",

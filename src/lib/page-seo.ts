@@ -53,12 +53,12 @@ export const STATIC_PAGE_SEO: Record<string, PageSeo> = {
   "about-us": {
     title: "About Grandma Millie & Our Recipe Story | Grandma Recipe",
     description:
-      "Meet Grandma Millie at GrandmaRecipe.com—homestyle recipes, kitchen stories, and vintage comfort food made with love from flour-dusted counters at home.",
+      "Meet Grandma Millie, the welcoming character behind Grandma Recipe. Discover our love of homestyle comfort food, simple cooking, and a cozy family table.",
   },
   "how-we-test-recipes": {
-    title: "How We Test Recipes | Kitchen Standards at Grandma Recipe",
+    title: "Our Recipe Standards | Recipe Review at Grandma Recipe",
     description:
-      "See how Grandma Millie kitchen-tests every recipe—real home cooking, clear steps, honest notes, and updates when a better method comes along.",
+      "Read Grandma Recipe’s standards for consistent ingredients, clear instructions, documented cooking tests, reader feedback, and meaningful recipe updates.",
   },
   "affiliate-disclosure": {
     title: "Affiliate Disclosure | How Grandma Recipe Uses Affiliate Links",

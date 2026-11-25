@@ -143,7 +143,7 @@ export const SITE = {
   author: {
     name: "Grandma Millie",
     description:
-      "Grandma Millie shares homestyle recipes passed down from flour-dusted counters and handwritten cards.",
+      "Grandma Millie is the grandmother-inspired voice of Grandma Recipe, sharing homestyle dishes, comforting flavors, and a warm welcome to the kitchen.",
     image: "/brand/grandma-millie.webp",
   },
 };

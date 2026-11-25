@@ -3,7 +3,7 @@ import { CategoryCircle } from "@/components/CategoryCircle";
 import { HomeRecipeSection } from "@/components/HomeRecipeSection";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFaqs } from "@/components/SiteFaqs";
-import { getAllRecipeMeta, getRecipesByCategory } from "@/lib/content";
+import { getAllRecipeMeta } from "@/lib/content";
 import { HOME_FAQS } from "@/lib/home-faqs";
 import { buildHomePageJsonLd } from "@/lib/seo";
 import { CATEGORIES, SITE } from "@/lib/types";
@@ -53,7 +53,9 @@ export default function HomePage() {
   const usedImages = new Set<string>();
   const categoryImages = Object.fromEntries(
     CATEGORIES.map((category) => {
-      const recipes = getRecipesByCategory(category.slug);
+      const recipes = allRecipes.filter(
+        (recipe) => recipe.category === category.slug,
+      );
       const unique = recipes.find(
         (recipe) =>
           recipe.featuredImage && !usedImages.has(recipe.featuredImage),
@@ -101,8 +103,8 @@ export default function HomePage() {
           </div>
           <p className="mt-6 text-lg text-muted">
             I&apos;m <strong>Grandma Millie</strong>, and I hope this cozy
-            kitchen corner feels like home, full of love, laughter, and recipes
-            passed down from flour-dusted counters and handwritten cards.
+            kitchen corner feels like home. You’ll find comforting flavors,
+            simple steps, and ideas for your own family table.
           </p>
           <Link
             href="/about-us/"
@@ -131,7 +133,9 @@ export default function HomePage() {
         description="From cozy classics to quick bites on the go, our breakfast recipes help you start the day with flavor, comfort, and a full heart."
         categoryHref="/category/breakfast/"
         categoryLabel="All breakfast recipes"
-        recipes={getRecipesByCategory("breakfast").slice(0, 3)}
+        recipes={allRecipes
+          .filter((recipe) => recipe.category === "breakfast")
+          .slice(0, 3)}
         prioritizeFirstImage
       />
 
@@ -149,7 +153,9 @@ export default function HomePage() {
         description="Refresh your routine with light, satisfying lunches that keep you going, from vibrant salads to quick, hearty bites."
         categoryHref="/category/lunch/"
         categoryLabel="All lunch recipes"
-        recipes={getRecipesByCategory("lunch").slice(0, 3)}
+        recipes={allRecipes
+          .filter((recipe) => recipe.category === "lunch")
+          .slice(0, 3)}
       />
 
       <section className="border-y border-border bg-white">
@@ -192,7 +198,9 @@ export default function HomePage() {
         description="Whether it's a simple skillet meal or a comforting family classic, our dinner recipes make every evening feel like home."
         categoryHref="/category/dinner/"
         categoryLabel="All dinner recipes"
-        recipes={getRecipesByCategory("dinner").slice(0, 3)}
+        recipes={allRecipes
+          .filter((recipe) => recipe.category === "dinner")
+          .slice(0, 3)}
       />
 
       <HomeRecipeSection
@@ -200,7 +208,9 @@ export default function HomePage() {
         description="Whether you're fueling up for the afternoon or treating yourself between meals, our snack recipes bring joy in every bite."
         categoryHref="/category/snacks/"
         categoryLabel="All snack recipes"
-        recipes={getRecipesByCategory("snacks").slice(0, 3)}
+        recipes={allRecipes
+          .filter((recipe) => recipe.category === "snacks")
+          .slice(0, 3)}
       />
 
       <HomeRecipeSection
@@ -208,14 +218,16 @@ export default function HomePage() {
         description="From nostalgic bakes to easy no-bake delights, our dessert recipes bring a sweet finish to any day."
         categoryHref="/category/dessert/"
         categoryLabel="All dessert recipes"
-        recipes={getRecipesByCategory("dessert").slice(0, 3)}
+        recipes={allRecipes
+          .filter((recipe) => recipe.category === "dessert")
+          .slice(0, 3)}
       />
 
       <SiteFaqs
         faqs={HOME_FAQS}
         eyebrow="About this kitchen"
         title="Frequently asked questions"
-        description="Straight answers about Grandma Recipe — testing, ratings, nutrition estimates, and how this cozy kitchen corner works."
+        description="Straight answers about Grandma Recipe — recipe standards, ratings, nutrition estimates, and how this cozy kitchen corner works."
       />
     </>
   );
