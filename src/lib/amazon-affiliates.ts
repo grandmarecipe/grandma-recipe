@@ -3304,6 +3304,336 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     softCta:
       "A manual sausage stuffer helps fill beef casings evenly; a suitable filling funnel also works.",
   },
+  {
+    recipeSlugs: ["flourless-chocolate-cake"],
+    title: "USA Pan Nonstick Round Cake Pan (8 in)",
+    imageSrc: "/affiliates/usa-pan-round-cake-pan-8in.jpg",
+    imageAlt: "USA Pan Nonstick Round Cake Pan (8 in)",
+    affiliateUrl: "https://link.amazon/B03s7Lwn1",
+    blurb:
+      "An 8-inch round aluminized-steel pan for the flourless chocolate cake. Grease and dust with cocoa as directed.",
+    softCta:
+      "An 8-inch round pan matches this cake; grease it and dust with cocoa before adding the batter.",
+  },
+  {
+    recipeSlugs: ["roasted-beef"],
+    title: "HexClad Hybrid Roasting Pan with Rack (14 × 10 in)",
+    imageSrc: "/affiliates/hexclad-hybrid-roasting-pan-rack-14x10.jpg",
+    imageAlt: "HexClad Hybrid Roasting Pan with Rack (14 × 10 in)",
+    affiliateUrl: "https://link.amazon/B0iUokfq0",
+    blurb:
+      "A roasting pan and rack for elevating the beef roast. Check the outer dimensions against your oven before use.",
+    softCta:
+      "A roasting rack raises the beef above the pan; check that the pan and roast fit your oven.",
+  },
+  {
+    recipeSlugs: ["gluten-free-cookies"],
+    title: "Stainless Steel Cooling Rack Set (11.5 × 16.5 in, 2 pieces)",
+    imageSrc: "/affiliates/stainless-cooling-rack-set-115x165-2piece.jpg",
+    imageAlt: "Stainless Steel Cooling Rack Set (11.5 × 16.5 in, 2 pieces)",
+    affiliateUrl: "https://link.amazon/B02OacmL1",
+    blurb:
+      "Two stainless steel racks for cooling the gluten-free cookies after their initial rest on the baking sheet.",
+    softCta:
+      "Let the cookies rest on the baking sheet first, then transfer them to a wire rack to cool completely.",
+  },
+  {
+    recipeSlugs: ["rice-stuffing"],
+    title: "Demeyere 5-Plus Stainless Steel Saucier (3.5 qt)",
+    imageSrc: "/affiliates/demeyere-5plus-stainless-saucier-35qt.jpg",
+    imageAlt: "Demeyere 5-Plus Stainless Steel Saucier (3.5 qt)",
+    affiliateUrl: "https://link.amazon/B0bMnhfFz",
+    blurb:
+      "A stainless steel pan for sautéing the stuffing vegetables and combining the cooked rice and broth. Use a separate baking dish for the oven finish.",
+    softCta:
+      "A saucier works for the rice and vegetable mixture; transfer to a covered baking dish for the oven finish.",
+  },
+  {
+    recipeSlugs: ["vegan-gravy"],
+    title: "All-Clad D3 Stainless Steel Saucier with Lid (2 qt)",
+    imageSrc: "/affiliates/all-clad-d3-stainless-saucier-lid-2qt.jpg",
+    imageAlt: "All-Clad D3 Stainless Steel Saucier with Lid (2 qt)",
+    affiliateUrl: "https://link.amazon/B08ZngeqQ",
+    blurb:
+      "A rounded stainless steel pan for whisking the vegan gravy roux and gradually adding the vegetable broth.",
+    softCta:
+      "The rounded sides of a saucier help a whisk reach the gravy roux; a regular saucepan also works.",
+  },
+  {
+    recipeSlugs: ["chocolate-mousse"],
+    title: "SMEG SMF04 Classico Stand Mixer (5 qt, Black)",
+    imageSrc: "/affiliates/smeg-smf04-classico-stand-mixer-5qt-black.jpg",
+    imageAlt: "SMEG SMF04 Classico Stand Mixer (5 qt, Black)",
+    affiliateUrl: "https://link.amazon/B0cqTsOFJ",
+    blurb:
+      "An optional stand mixer for whipping cream and egg whites in separate clean bowls. Fold the mousse mixtures together by hand.",
+    softCta:
+      "A stand mixer is optional for whipping the cream and egg whites separately; fold the mousse together by hand.",
+  },
+  {
+    recipeSlugs: ["vegan-mashed-potatoes"],
+    title: "OXO Good Grips Stainless Steel Potato Ricer",
+    imageSrc: "/affiliates/oxo-good-grips-stainless-potato-ricer.jpg",
+    imageAlt: "OXO Good Grips Stainless Steel Potato Ricer",
+    affiliateUrl: "https://link.amazon/B06pNAtvb",
+    blurb:
+      "An alternative to a hand masher: rice the cooked, drained potatoes, then gently mix in the warm plant milk and vegan butter.",
+    softCta:
+      "For a smooth texture, rice the cooked potatoes in batches before gently mixing in warm plant milk and vegan butter.",
+  },
+  {
+    recipeSlugs: ["balsamic-roasted-vegetables"],
+    title: "Epicurean Gourmet Series Cutting Board (17.5 × 13 in)",
+    imageSrc: "/affiliates/epicurean-gourmet-cutting-board-175x13-nutmeg.jpg",
+    imageAlt: "Epicurean Gourmet Series Cutting Board (17.5 × 13 in)",
+    affiliateUrl: "https://link.amazon/B03adPVur",
+    blurb:
+      "A composite cutting board for preparing the vegetables before tossing them with the balsamic dressing and roasting.",
+    softCta:
+      "A stable cutting board gives you room to chop the vegetables into evenly sized pieces for roasting.",
+  },
+  {
+    recipeSlugs: ["mushroom-lentil-loaf"],
+    title: "Caraway Ceramic-Coated Loaf Pan (1 lb)",
+    imageSrc: "/affiliates/caraway-ceramic-coated-loaf-pan-1lb.jpg",
+    imageAlt: "Caraway Ceramic-Coated Loaf Pan (1 lb)",
+    affiliateUrl: "https://link.amazon/B0793F92E",
+    blurb:
+      "A loaf pan for shaping the lentil and mushroom mixture. Line with parchment and check capacity before filling; divide the batch if needed.",
+    softCta:
+      "Line the loaf pan with parchment and check the mixture fits with headroom; divide the batch if needed.",
+  },
+  {
+    recipeSlugs: ["roasted-squash"],
+    title: "Shun Classic Chef’s Knife (8 in)",
+    imageSrc: "/affiliates/shun-classic-chefs-knife-8in.jpg",
+    imageAlt: "Shun Classic Chef’s Knife (8 in)",
+    affiliateUrl: "https://link.amazon/B01bDfXG2",
+    blurb:
+      "A chef’s knife for controlled slicing of prepared squash on a stable board. Avoid twisting or forcing the blade through a hard rind.",
+    softCta:
+      "Use a stable board and controlled cuts for the squash; avoid twisting or forcing the knife through a hard rind.",
+  },
+  {
+    recipeSlugs: ["cranberry-juice-cocktail"],
+    title: "ZWIESEL GLAS Paris Iceberg Drinking Glasses (16.5 oz, 6 pieces)",
+    imageSrc: "/affiliates/zwiesel-paris-iceberg-drinking-glasses-165oz-6piece.jpg",
+    imageAlt: "ZWIESEL GLAS Paris Iceberg Drinking Glasses (16.5 oz, 6 pieces)",
+    affiliateUrl: "https://link.amazon/B013mVZq4",
+    blurb:
+      "Tall reusable glasses for serving the cranberry and fruit-juice drink with room for ice and garnish.",
+    softCta:
+      "Tall glasses leave room for the cranberry juice drink, ice and a fresh garnish.",
+  },
+  {
+    recipeSlugs: ["iced-peppermint-latte"],
+    title: "De’Longhi Rivelia Automatic Espresso Machine (White)",
+    imageSrc: "/affiliates/delonghi-rivelia-espresso-machine-white.jpg",
+    imageAlt: "De’Longhi Rivelia Automatic Espresso Machine (White)",
+    affiliateUrl: "https://link.amazon/B0h3sSiF8",
+    blurb:
+      "An optional espresso machine for the latte’s coffee base. Add the peppermint syrup, cold milk and ice separately; an existing coffee maker also works.",
+    softCta:
+      "An espresso machine is optional for the coffee base; add the peppermint syrup, cold milk and ice separately.",
+  },
+  {
+    recipeSlugs: ["spiced-apple-cider"],
+    title: "All-Clad D5 Stainless Steel Soup Pot with Lid (4 qt)",
+    imageSrc: "/affiliates/all-clad-d5-stainless-soup-pot-lid-4qt.jpg",
+    imageAlt: "All-Clad D5 Stainless Steel Soup Pot with Lid (4 qt)",
+    affiliateUrl: "https://link.amazon/B0fa5sEVS",
+    blurb:
+      "A lidded pot for gently simmering the apple cider and spices. Leave headroom and use a separate fine-mesh strainer before serving.",
+    softCta:
+      "Leave headroom when simmering the cider and spices, then strain into mugs before serving.",
+  },
+  {
+    recipeSlugs: ["hot-chocolate-bar"],
+    title: "Breville Milk Café Electric Milk Frother (BMF600XL)",
+    imageSrc: "/affiliates/breville-milk-cafe-frother-bmf600xl.jpg",
+    imageAlt: "Breville Milk Café Electric Milk Frother (BMF600XL)",
+    affiliateUrl: "https://link.amazon/B0j9foKUB",
+    blurb:
+      "An optional appliance for small batches of hot chocolate. Adapt quantities to its instructions and fill limits; keep the full party batch in a saucepan.",
+    softCta:
+      "A milk frother is an optional small-batch method; follow its hot-chocolate instructions and fill limits.",
+  },
+  {
+    recipeSlugs: ["yogurt-parfaits-with-granola-and-fruit"],
+    title: "Libbey Fountain Shoppe Tall Dessert Glasses (6 pieces)",
+    imageSrc: "/affiliates/libbey-fountain-shoppe-dessert-glasses-6piece.jpg",
+    imageAlt: "Libbey Fountain Shoppe Tall Dessert Glasses (6 pieces)",
+    affiliateUrl: "https://link.amazon/B03o85CP3",
+    blurb:
+      "Tall reusable glasses for displaying layers of yogurt, granola and fruit. Portion to fit the glasses and serve promptly for crunchy granola.",
+    softCta:
+      "Tall dessert glasses show off the yogurt, granola and fruit layers; serve promptly to keep the granola crunchy.",
+  },
+  {
+    recipeSlugs: ["peanut-butter-chocolate-bars"],
+    title: "Nordic Ware Naturals Square Cake Pan (8 × 8 in)",
+    imageSrc: "/affiliates/nordic-ware-naturals-square-cake-pan-8x8.jpg",
+    imageAlt: "Nordic Ware Naturals Square Cake Pan (8 × 8 in)",
+    affiliateUrl: "https://link.amazon/B07z3rYVt",
+    blurb:
+      "An 8-by-8-inch aluminum pan for pressing and chilling the peanut butter chocolate bars. Add a parchment sling for lifting out the slab.",
+    softCta:
+      "Line an 8-by-8-inch pan with a parchment sling so you can lift out the chilled bars before cutting.",
+  },
+  {
+    recipeSlugs: ["no-bake-oreo-cheesecake"],
+    title: "Cuisinart Food Processor (14 cups, DFP-14BCNY)",
+    imageSrc: "/affiliates/cuisinart-food-processor-14cup-dfp14bcny.jpg",
+    imageAlt: "Cuisinart Food Processor (14 cups, DFP-14BCNY)",
+    affiliateUrl: "https://link.amazon/B09MnH4qa",
+    blurb:
+      "An optional food processor for pulsing Oreo cookies into crust crumbs. A bag and rolling pin also work; fold the cheesecake filling by hand.",
+    softCta:
+      "A food processor makes fine cookie crumbs; a bag and rolling pin also work for the Oreo crust.",
+  },
+  {
+    recipeSlugs: ["rice-krispies-christmas-trees"],
+    title: "GIR Ultimate Silicone Spatula Set (3 pieces, Slate)",
+    imageSrc: "/affiliates/gir-ultimate-silicone-spatula-set-slate-3piece.jpg",
+    imageAlt: "GIR Ultimate Silicone Spatula Set (3 pieces, Slate)",
+    affiliateUrl: "https://link.amazon/B0boWxNOV",
+    blurb:
+      "A spatula and spoonula set for stirring the melted marshmallows and folding in cereal before shaping the cooled mixture.",
+    softCta:
+      "A silicone spatula helps fold cereal into melted marshmallows; let the mixture cool slightly before shaping.",
+  },
+  {
+    recipeSlugs: ["chocolate-cocoa-truffles"],
+    title: "Fat Daddio’s Stainless Steel Cookie Scoop (No. 100, 0.64 tbsp)",
+    imageSrc: "/affiliates/fat-daddios-cookie-scoop-no100-sctp100.jpg",
+    imageAlt: "Fat Daddio’s Stainless Steel Cookie Scoop (No. 100, 0.64 tbsp)",
+    affiliateUrl: "https://link.amazon/B04HF1bwW",
+    blurb:
+      "A mini scoop for portioning chilled ganache before rolling the truffles by hand. Chill until scoopable rather than rock hard.",
+    softCta:
+      "A mini scoop helps portion the ganache evenly; chill it until scoopable, then roll the truffles by hand.",
+  },
+  {
+    recipeSlugs: ["christmas-sugar-cookies"],
+    title: "Joseph Joseph PrecisionPin Adjustable Rolling Pin",
+    imageSrc: "/affiliates/joseph-joseph-precisionpin-adjustable-rolling-pin.jpg",
+    imageAlt: "Joseph Joseph PrecisionPin Adjustable Rolling Pin",
+    affiliateUrl: "https://link.amazon/B0dhxwtzk",
+    blurb:
+      "An adjustable rolling pin for even sugar-cookie dough. Follow the recipe’s quarter-inch thickness and check the guides are secured.",
+    softCta:
+      "An adjustable rolling pin helps keep the cookie dough an even quarter-inch thick; secure the guides before rolling.",
+  },
+  {
+    recipeSlugs: ["no-bake-cheesecake-cup"],
+    title: "Bormioli Rocco Essential Glass Tumblers (7.5 oz, 12 pieces)",
+    imageSrc: "/affiliates/bormioli-rocco-essential-glass-tumblers-75oz-12piece.jpg",
+    imageAlt: "Bormioli Rocco Essential Glass Tumblers (7.5 oz, 12 pieces)",
+    affiliateUrl: "https://link.amazon/B00bJUoPs",
+    blurb:
+      "Small reusable glasses for layering the crumb crust and cheesecake filling. Divide portions to fit and leave room for the fruit topping.",
+    softCta:
+      "Small glasses make individual cheesecake portions; leave room above the filling for the fruit topping.",
+  },
+  {
+    recipeSlugs: ["chocolate-brownies"],
+    title: "All-Clad Pro-Release Nonstick Square Baking Pan (8 × 8 in)",
+    imageSrc: "/affiliates/all-clad-pro-release-square-baking-pan-8x8.jpg",
+    imageAlt: "All-Clad Pro-Release Nonstick Square Baking Pan (8 × 8 in)",
+    affiliateUrl: "https://link.amazon/B09cxcxQX",
+    blurb:
+      "An 8-by-8-inch nonstick pan for the brownies. Grease as directed or add a parchment sling, and protect the coating when serving.",
+    softCta:
+      "An 8-by-8-inch pan matches the brownie recipe; use a parchment sling to lift the slab out before cutting.",
+  },
+  {
+    recipeSlugs: ["gingerbread-cookies-royal-icing"],
+    title: "Wilton Master Cake Decorating Piping Tip Set (55 pieces)",
+    imageSrc: "/affiliates/wilton-master-piping-tip-set-55piece.jpg",
+    imageAlt: "Wilton Master Cake Decorating Piping Tip Set (55 pieces)",
+    affiliateUrl: "https://link.amazon/B09b3wvfy",
+    blurb:
+      "Piping tips and couplers for decorating cooled gingerbread cookies with royal icing. Supply suitable pastry bags separately.",
+    softCta:
+      "Round piping tips help outline the gingerbread cookies with royal icing; pastry bags are needed separately.",
+  },
+  {
+    recipeSlugs: ["yule-log-cake"],
+    title: "KitchenAid Nonstick Baking Sheet (10 × 15 in)",
+    imageSrc: "/affiliates/kitchenaid-nonstick-baking-sheet-10x15.jpg",
+    imageAlt: "KitchenAid Nonstick Baking Sheet (10 × 15 in)",
+    affiliateUrl: "https://link.amazon/B0cdlejHG",
+    blurb:
+      "A 10-by-15-inch baking sheet for the thin Yule log sponge. Line with parchment before baking and turning onto the prepared towel.",
+    softCta:
+      "A parchment-lined 10-by-15-inch pan matches the thin sponge for rolling this Yule log.",
+  },
+  {
+    recipeSlugs: ["one-pan-roasted-chicken-and-vegetables"],
+    title: "Made In Aluminum Sheet Pan",
+    imageSrc: "/affiliates/made-in-aluminum-sheet-pan.jpg",
+    imageAlt: "Made In Aluminum Sheet Pan",
+    affiliateUrl: "https://link.amazon/B0i7R8f8l",
+    blurb:
+      "A rimmed aluminum sheet pan for spreading chicken pieces and vegetables in a single layer. Use two pans if needed to avoid crowding.",
+    softCta:
+      "Spread the chicken and vegetables in one layer on a rimmed pan; use two pans if needed to avoid crowding.",
+  },
+  {
+    recipeSlugs: ["easy-vegetable-pasta-bake"],
+    title: "Le Creuset Cast Iron Rectangular Roaster (5.25 qt, Cerise)",
+    imageSrc: "/affiliates/le-creuset-cast-iron-rectangular-roaster-525qt-cerise.jpg",
+    imageAlt: "Le Creuset Cast Iron Rectangular Roaster (5.25 qt, Cerise)",
+    affiliateUrl: "https://link.amazon/B0gc8unEX",
+    blurb:
+      "An enameled cast-iron baking dish for the vegetable pasta and cheese topping. Check the fill level and oven fit before baking.",
+    softCta:
+      "An oven-safe rectangular roaster holds the pasta and cheese topping; check the fill level before baking.",
+  },
+  {
+    recipeSlugs: ["sausage-peppers-potatoe-baked"],
+    title: "Circulon Nonstick Baking Sheet (11 × 17 in)",
+    imageSrc: "/affiliates/circulon-nonstick-baking-sheet-11x17.jpg",
+    imageAlt: "Circulon Nonstick Baking Sheet (11 × 17 in)",
+    affiliateUrl: "https://link.amazon/B03Wldqvp",
+    blurb:
+      "A baking sheet for chicken or turkey sausage, peppers and potatoes in one layer. Follow its heat limits and protect the nonstick coating.",
+    softCta:
+      "Give the chicken or turkey sausage and vegetables room on the baking sheet so they roast evenly.",
+  },
+  {
+    recipeSlugs: ["sheet-pan-salmon"],
+    title: "ThermoWorks Thermapen ONE Instant-Read Thermometer (Cayenne Red)",
+    imageSrc: "/affiliates/thermoworks-thermapen-one-cayenne-red.jpg",
+    imageAlt: "ThermoWorks Thermapen ONE Instant-Read Thermometer (Cayenne Red)",
+    affiliateUrl: "https://link.amazon/B07xusOKt",
+    blurb:
+      "An instant-read thermometer for checking the thickest part of the salmon near the end of baking. Remove after checking; it is not a leave-in oven probe.",
+    softCta:
+      "An instant-read thermometer helps check the thickest part of the salmon; remove it after taking the reading.",
+  },
+  {
+    recipeSlugs: ["homemade-gravy"],
+    title: "All-Clad Copper Core Stainless Steel Saucepan with Lid (3 qt)",
+    imageSrc: "/affiliates/all-clad-copper-core-saucepan-lid-3qt.jpg",
+    imageAlt: "All-Clad Copper Core Stainless Steel Saucepan with Lid (3 qt)",
+    affiliateUrl: "https://link.amazon/B07u8vi6t",
+    blurb:
+      "A stainless steel saucepan for whisking the gravy roux, gradually adding stock and simmering the sauce until thickened.",
+    softCta:
+      "A saucepan gives you room to whisk the roux and gradually add stock for smooth gravy.",
+  },
+  {
+    recipeSlugs: ["green-beans-garlic-almonds"],
+    title: "All-Clad Copper Core Stainless Steel Fry Pan (12 in)",
+    imageSrc: "/affiliates/all-clad-copper-core-fry-pan-12in.jpg",
+    imageAlt: "All-Clad Copper Core Stainless Steel Fry Pan (12 in)",
+    affiliateUrl: "https://link.amazon/B071zJxLs",
+    blurb:
+      "A wide uncoated stainless steel skillet for sautéing the blanched green beans, garlic and sliced almonds with the recipe’s cooking oil.",
+    softCta:
+      "A wide skillet gives the blanched green beans, garlic and almonds space to sauté without crowding.",
+  },
 ];
 
 export function getAmazonAffiliateProductsForRecipe(
