@@ -1,0 +1,22 @@
+BOARD
+Grandma breakfast recipe
+
+BOARD_ID
+1137229412095780949
+
+IMAGE FILE
+white-pudding-pin.jpg
+
+TITLE
+Homemade White Pudding with Turkey and Beef Suet
+
+DESCRIPTION
+Make savory white pudding with turkey, rolled oats, finely chopped beef suet, onion and warm spices. Fill beef casings, gently poach, chill thoroughly and pan-fry golden slices for a hearty breakfast with eggs, grilled tomatoes or toast.
+
+Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/white-pudding/
+
+ALT TEXT
+Golden pan-fried turkey and oat white pudding rounds, one cut open to show the filling, with grilled tomatoes, toast and sage

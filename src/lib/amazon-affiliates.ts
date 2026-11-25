@@ -2976,6 +2976,334 @@ export const AMAZON_AFFILIATE_PRODUCTS: AmazonAffiliateProduct[] = [
     softCta:
       "A deep sauté pan gives chicken thighs space to brown before the sauce goes in.",
   },
+  {
+    recipeSlugs: ["chop-suey"],
+    title: "Cooks Standard Multi-Ply Stainless Steel Stir-Fry Pan with Lid (12 in)",
+    imageSrc: "/affiliates/cooks-standard-stainless-stir-fry-pan-lid-12in.jpg",
+    imageAlt: "Cooks Standard Multi-Ply Stainless Steel Stir-Fry Pan with Lid (12 in)",
+    affiliateUrl: "https://link.amazon/B02On0qtt",
+    blurb:
+      "A lidded stainless steel stir-fry pan for cooking chicken chop suey in batches.",
+    softCta:
+      "A roomy stir-fry pan gives chicken and vegetables space to cook without crowding.",
+  },
+  {
+    recipeSlugs: ["filet-medallions"],
+    title: "Stargazer Seasoned Cast Iron Skillet (12 in)",
+    imageSrc: "/affiliates/stargazer-seasoned-cast-iron-skillet-12in.jpg",
+    imageAlt: "Stargazer Seasoned Cast Iron Skillet (12 in)",
+    affiliateUrl: "https://link.amazon/B0cFxtuUJ",
+    blurb:
+      "A smooth-surface cast-iron skillet for searing filet medallions and finishing them with garlic herb butter.",
+    softCta:
+      "A cast-iron skillet holds heat for searing and butter-basting filet medallions.",
+  },
+  {
+    recipeSlugs: ["mac-and-cheese-microwave"],
+    title: "Pyrex Smart Essentials Glass Mixing Bowls with Lids (8-piece set)",
+    imageSrc: "/affiliates/pyrex-smart-essentials-glass-mixing-bowls-8piece.jpg",
+    imageAlt: "Pyrex Smart Essentials Glass Mixing Bowls with Lids (8-piece set)",
+    affiliateUrl: "https://link.amazon/B0dPfPjL1",
+    blurb:
+      "Glass mixing bowls for microwave mac and cheese; choose a roomy microwave-safe bowl and follow the lid instructions.",
+    softCta:
+      "A roomy microwave-safe glass bowl leaves space for the macaroni and cooking liquid.",
+  },
+  {
+    recipeSlugs: ["lemon-meringue-pie"],
+    title: "SMEG HMF01 9-Speed Hand Mixer",
+    imageSrc: "/affiliates/smeg-hmf01-9speed-hand-mixer.jpg",
+    imageAlt: "SMEG HMF01 9-Speed Hand Mixer",
+    affiliateUrl: "https://link.amazon/B0fsxst1l",
+    blurb:
+      "A variable-speed hand mixer with whisk attachments for whipping the pie’s egg-white meringue.",
+    softCta:
+      "A hand mixer with whisk attachments helps whip the egg whites for lemon meringue pie.",
+  },
+  {
+    recipeSlugs: ["bibimbowl"],
+    title: "All-Clad HA1 Nonstick Fry Pan Set (2 pieces)",
+    imageSrc: "/affiliates/all-clad-ha1-nonstick-fry-pan-set-2piece.jpg",
+    imageAlt: "All-Clad HA1 Nonstick Fry Pan Set (2 pieces)",
+    affiliateUrl: "https://link.amazon/B06AXF87e",
+    blurb:
+      "Two nonstick frying pans for preparing the eggs and cooking the vegetables or beef separately.",
+    softCta:
+      "Separate nonstick pans make it easier to cook the eggs and bibimbowl toppings.",
+  },
+  {
+    recipeSlugs: ["chicken-pita"],
+    title: "Ninja Foodi Smart Indoor Grill and Air Fryer (FG551)",
+    imageSrc: "/affiliates/ninja-foodi-smart-indoor-grill-fg551.jpg",
+    imageAlt: "Ninja Foodi Smart Indoor Grill and Air Fryer (FG551)",
+    affiliateUrl: "https://link.amazon/B09VhEA3R",
+    blurb:
+      "An indoor electric grill for cooking the chicken before filling the pitas; adjust cooking time to the appliance and chicken thickness.",
+    softCta:
+      "An indoor grill is an option for cooking the chicken before assembling the pitas.",
+  },
+  {
+    recipeSlugs: ["macs-pizza"],
+    title: "Cuisinart Indoor Pizza Oven (CPZ-120)",
+    imageSrc: "/affiliates/cuisinart-indoor-pizza-oven-cpz120.jpg",
+    imageAlt: "Cuisinart Indoor Pizza Oven (CPZ-120)",
+    affiliateUrl: "https://link.amazon/B00XQuM1F",
+    blurb:
+      "An optional countertop oven for pizzas up to 12 inches; follow the appliance’s guidance rather than conventional-oven timing.",
+    softCta:
+      "A countertop pizza oven is optional; hotter settings need different timing from a conventional oven.",
+  },
+  {
+    recipeSlugs: ["lumpia"],
+    title: "Hamilton Beach Professional-Style Electric Deep Fryer (4.5 L)",
+    imageSrc: "/affiliates/hamilton-beach-professional-deep-fryer-45l.jpg",
+    imageAlt: "Hamilton Beach Professional-Style Electric Deep Fryer (4.5 L)",
+    affiliateUrl: "https://link.amazon/B0gLbOv2X",
+    blurb:
+      "An optional electric fryer with baskets for cooking batches of chicken or turkey lumpia instead of using a frying pan.",
+    softCta:
+      "Frying baskets make it easier to lower and lift small batches of chicken or turkey lumpia.",
+  },
+  {
+    recipeSlugs: ["goat-biryani"],
+    title: "Staub Enameled Cast Iron Dutch Oven (3.75 qt, White)",
+    imageSrc: "/affiliates/staub-cast-iron-dutch-oven-375qt-white.jpg",
+    imageAlt: "Staub Enameled Cast Iron Dutch Oven (3.75 qt, White)",
+    affiliateUrl: "https://link.amazon/B04RV7TFV",
+    blurb:
+      "A compact covered cast-iron pot for reduced batches of goat biryani; check that the rice and meat fit with adequate headroom.",
+    softCta:
+      "Use this compact 3.75-quart pot only for a reduced biryani batch that fits with headroom.",
+  },
+  {
+    recipeSlugs: ["biryani"],
+    title: "Le Creuset Round Wide Dutch Oven (6.75 qt, Cerise)",
+    imageSrc: "/affiliates/le-creuset-round-wide-dutch-oven-675qt-cerise.jpg",
+    imageAlt: "Le Creuset Round Wide Dutch Oven (6.75 qt, Cerise)",
+    affiliateUrl: "https://link.amazon/B03WxmZcG",
+    blurb:
+      "A wide enameled cast-iron pot for browning biryani ingredients and layering rice before covered cooking.",
+    softCta:
+      "A wide Dutch oven provides room to brown the ingredients before layering the biryani rice.",
+  },
+  {
+    recipeSlugs: ["mackerel"],
+    title: "Weber Large Fish Grilling Basket",
+    imageSrc: "/affiliates/weber-large-fish-grilling-basket.jpg",
+    imageAlt: "Weber Large Fish Grilling Basket",
+    affiliateUrl: "https://link.amazon/B09wQzjqM",
+    blurb:
+      "A fish basket for supporting mackerel when turning it on an existing grill; check the basket fits your cooking surface.",
+    softCta: "A fish basket supports delicate mackerel when you turn it on the grill.",
+  },
+  {
+    recipeSlugs: ["rib-cap"],
+    title: "Lodge Chef Collection Cast Iron Skillet (13.25 in)",
+    imageSrc: "/affiliates/lodge-chef-collection-cast-iron-skillet-1325in.jpg",
+    imageAlt: "Lodge Chef Collection Cast Iron Skillet (13.25 in)",
+    affiliateUrl: "https://link.amazon/B0fWa9XrN",
+    blurb:
+      "A large pre-seasoned cast-iron skillet for searing rib cap steak on a suitably sized burner.",
+    softCta:
+      "A large cast-iron skillet gives rib cap steak room to sear without crowding.",
+  },
+  {
+    recipeSlugs: ["refried-beans"],
+    title: "OXO Good Grips Stainless Steel Food Mill",
+    imageSrc: "/affiliates/oxo-good-grips-stainless-food-mill.jpg",
+    imageAlt: "OXO Good Grips Stainless Steel Food Mill",
+    affiliateUrl: "https://link.amazon/B0bLvD2ue",
+    blurb:
+      "An optional food mill for a smoother texture: mill fully cooked beans, then finish them in the skillet. A hand masher also works.",
+    softCta:
+      "A food mill is optional for smoother refried beans; the recipe’s hand-masher method still works.",
+  },
+  {
+    recipeSlugs: ["oxtail-pho"],
+    title: "Tramontina Gourmet Stainless Steel Stockpot with Lid (12 qt)",
+    imageSrc: "/affiliates/tramontina-gourmet-stainless-stockpot-12qt.jpg",
+    imageAlt: "Tramontina Gourmet Stainless Steel Stockpot with Lid (12 qt)",
+    affiliateUrl: "https://link.amazon/B00d4z4Af",
+    blurb:
+      "A large lidded stainless steel stockpot for slowly simmering oxtail pho broth and aromatics.",
+    softCta:
+      "A large stockpot leaves room for oxtail, water and aromatics during the long broth simmer.",
+  },
+  {
+    recipeSlugs: ["tuna-belly"],
+    title: "Cuisinart Chef’s Classic Enameled Cast Iron Grill Pan (9.25 in)",
+    imageSrc: "/affiliates/cuisinart-enameled-cast-iron-grill-pan-925in.jpg",
+    imageAlt: "Cuisinart Chef’s Classic Enameled Cast Iron Grill Pan (9.25 in)",
+    affiliateUrl: "https://link.amazon/B0c2NZQvC",
+    blurb:
+      "A compact enameled cast-iron grill pan for the recipe’s indoor tuna-belly grilling option; cook in batches if needed.",
+    softCta:
+      "A grill pan provides an indoor option for cooking tuna belly in small batches.",
+  },
+  {
+    recipeSlugs: ["flapjacks"],
+    title: "Parrish Magic Line Square Baking Pan (9 × 9 × 3 in)",
+    imageSrc: "/affiliates/parrish-magic-line-square-baking-pan-9x9x3.jpg",
+    imageAlt: "Parrish Magic Line Square Baking Pan (9 × 9 × 3 in)",
+    affiliateUrl: "https://link.amazon/B02Ai6wBR",
+    blurb:
+      "A straight-sided aluminum pan for the recipe’s chewy oat bars. Adjust baking time if the pan size changes the bar thickness.",
+    softCta:
+      "A square baking pan suits these oat-bar flapjacks; line it with parchment for lifting out the slab.",
+  },
+  {
+    recipeSlugs: ["buttermilk-pancake-mix"],
+    title: "Presto Ceramic Electric Griddle (22 in, 07062)",
+    imageSrc: "/affiliates/presto-ceramic-electric-griddle-22in-07062.jpg",
+    imageAlt: "Presto Ceramic Electric Griddle (22 in, 07062)",
+    affiliateUrl: "https://link.amazon/B0hiFDlqB",
+    blurb:
+      "A broad electric griddle with removable handles for cooking several pancakes from your homemade mix at once.",
+    softCta:
+      "A broad griddle lets you cook several pancakes from the homemade mix in one batch.",
+  },
+  {
+    recipeSlugs: ["cake-bar"],
+    title: "Fat Daddio’s Anodized Aluminum Square Cake Pan (8 × 2 in)",
+    imageSrc: "/affiliates/fat-daddios-square-cake-pan-8x2-psq882.jpg",
+    imageAlt: "Fat Daddio’s Anodized Aluminum Square Cake Pan (8 × 2 in)",
+    affiliateUrl: "https://link.amazon/B0fvy4Uyp",
+    blurb:
+      "An 8-inch square, 2-inch-deep aluminum pan for baking cake bars with a parchment sling.",
+    softCta:
+      "An 8-inch square pan with a parchment sling makes cake bars easier to lift out and slice.",
+  },
+  {
+    recipeSlugs: ["beef-burritos"],
+    title: "Tramontina Signature Tri-Ply Stainless Steel Sauté Pan (3 qt)",
+    imageSrc: "/affiliates/tramontina-signature-triply-saute-pan-3qt.jpg",
+    imageAlt: "Tramontina Signature Tri-Ply Stainless Steel Sauté Pan (3 qt)",
+    affiliateUrl: "https://link.amazon/B01QBQhyk",
+    blurb:
+      "A stainless steel sauté pan for browning beef and cooking burrito-filling vegetables in manageable batches.",
+    softCta:
+      "A sauté pan gives beef and vegetables room to brown before you assemble the burritos.",
+  },
+  {
+    recipeSlugs: ["prime-beef-brisket"],
+    title: "Weber Smokey Mountain Charcoal Smoker (18 in)",
+    imageSrc: "/affiliates/weber-smokey-mountain-charcoal-smoker-18in.jpg",
+    imageAlt: "Weber Smokey Mountain Charcoal Smoker (18 in)",
+    affiliateUrl: "https://link.amazon/B04wIaeNx",
+    blurb:
+      "An outdoor-only charcoal smoker for the recipe’s smoking option; check brisket size and follow the smoker’s instructions.",
+    softCta:
+      "A charcoal smoker is an outdoor option for brisket; the recipe’s oven method remains available.",
+  },
+  {
+    recipeSlugs: ["aloha-chicken"],
+    title: "Weber Q 1400 Outdoor Electric Grill",
+    imageSrc: "/affiliates/weber-q1400-outdoor-electric-grill.jpg",
+    imageAlt: "Weber Q 1400 Outdoor Electric Grill",
+    affiliateUrl: "https://link.amazon/B0cuezJQ7",
+    blurb:
+      "An outdoor-only electric grill for marinated Aloha chicken and pineapple; the recipe’s skillet option also works.",
+    softCta:
+      "An outdoor electric grill is an option for Aloha chicken and pineapple; a skillet also works.",
+  },
+  {
+    recipeSlugs: ["spinach-ricotta-ravioli"],
+    title: "KitchenAid Pasta Roller and Cutter Attachments (KSMPRA, 3 pieces)",
+    imageSrc: "/affiliates/kitchenaid-pasta-roller-cutter-ksmpra.jpg",
+    imageAlt: "KitchenAid Pasta Roller and Cutter Attachments (KSMPRA, 3 pieces)",
+    affiliateUrl: "https://link.amazon/B07JE9qvc",
+    blurb:
+      "Roll pasta sheets for ravioli using a compatible KitchenAid stand mixer, sold separately. Fill and cut the ravioli by hand.",
+    softCta:
+      "The pasta roller needs a compatible stand mixer; roll the sheets, then fill and cut the ravioli by hand.",
+  },
+  {
+    recipeSlugs: ["whiting-fish"],
+    title: "T-fal Experience Nonstick Frying Pan (12 in)",
+    imageSrc: "/affiliates/tfal-experience-nonstick-frying-pan-12in.jpg",
+    imageAlt: "T-fal Experience Nonstick Frying Pan (12 in)",
+    affiliateUrl: "https://link.amazon/B0iLcWj3o",
+    blurb:
+      "A nonstick frying pan for pan-fried whiting, with room between fillets for turning and release.",
+    softCta: "A roomy nonstick skillet makes delicate whiting fillets easier to turn.",
+  },
+  {
+    recipeSlugs: ["ciabatta-bread"],
+    title: "Baking Steel Original (14 × 16 in)",
+    imageSrc: "/affiliates/baking-steel-original-14x16.jpg",
+    imageAlt: "Baking Steel Original (14 × 16 in)",
+    affiliateUrl: "https://link.amazon/B0bEfGNRT",
+    blurb:
+      "An optional baking steel for ciabatta instead of a baking sheet; check oven fit and follow the steel’s preheating guidance.",
+    softCta:
+      "A baking steel is an optional ciabatta upgrade; check oven fit and adjust the bake as needed.",
+  },
+  {
+    recipeSlugs: ["shaved-ribeye"],
+    title: "BESWOOD Electric Meat Slicer (10 in, BESWOOD250)",
+    imageSrc: "/affiliates/beswood-electric-meat-slicer-10in-250.jpg",
+    imageAlt: "BESWOOD Electric Meat Slicer (10 in, BESWOOD250)",
+    affiliateUrl: "https://link.amazon/B0hHR3Cxg",
+    blurb:
+      "An optional slicer for preparing chilled boneless ribeye; ready-shaved beef lets you make the sandwiches without this appliance.",
+    softCta:
+      "A meat slicer is optional for shaving boneless ribeye; ready-shaved beef works too.",
+  },
+  {
+    recipeSlugs: ["puff-pastry-hot-dogs"],
+    title: "Chicago Metallic Jelly Roll Pans with Cooling Rack",
+    imageSrc: "/affiliates/chicago-metallic-jelly-roll-pans-cooling-rack.jpg",
+    imageAlt: "Chicago Metallic Jelly Roll Pans with Cooling Rack",
+    affiliateUrl: "https://link.amazon/B03IFkECk",
+    blurb:
+      "Baking sheets for chicken or turkey puff-pastry hot dogs, plus a rack for cooling them after baking.",
+    softCta:
+      "A baking sheet and cooling rack help chicken or turkey pastry hot dogs bake and cool in batches.",
+  },
+  {
+    recipeSlugs: ["christmas-fruit-kabobs"],
+    title: "WÜSTHOF Classic Chef’s Knife (8 in, Black)",
+    imageSrc: "/affiliates/wusthof-classic-chefs-knife-8in-black.jpg",
+    imageAlt: "WÜSTHOF Classic Chef’s Knife (8 in, Black)",
+    affiliateUrl: "https://link.amazon/B05chOqzk",
+    blurb:
+      "A chef’s knife for an adult to prepare pineapple and melon before assembling the fruit kabobs.",
+    softCta:
+      "Have an adult cut the pineapple and melon before assembling the fruit kabobs.",
+  },
+  {
+    recipeSlugs: ["reindeer-rice-krispies-treats"],
+    title: "OXO Non-Stick Pro Ceramic Cake Pan (9 × 13 in, Storm Blue)",
+    imageSrc: "/affiliates/oxo-nonstick-pro-ceramic-cake-pan-9x13-blue.jpg",
+    imageAlt: "OXO Non-Stick Pro Ceramic Cake Pan (9 × 13 in, Storm Blue)",
+    affiliateUrl: "https://link.amazon/B0cwHJUUw",
+    blurb:
+      "A 9-by-13-inch cake pan for pressing the cereal-treat slab; a parchment sling lets you lift it out before cutting and decorating.",
+    softCta:
+      "A parchment-lined 9-by-13-inch pan makes the cereal-treat slab easy to lift out for decorating.",
+  },
+  {
+    recipeSlugs: ["pizza-faces"],
+    title: "Chicago Metallic Deep Dish Pizza Pan Set (7 in)",
+    imageSrc: "/affiliates/chicago-metallic-deep-dish-pizza-pans-7in.jpg",
+    imageAlt: "Chicago Metallic Deep Dish Pizza Pan Set (7 in)",
+    affiliateUrl: "https://link.amazon/B0iMU6opd",
+    blurb:
+      "Optional personal pizza pans for assembling individual pizza faces; divide the dough to fit and check the baking time.",
+    softCta:
+      "Personal pizza pans let everyone assemble a separate pizza face; check timing for the smaller size.",
+  },
+  {
+    recipeSlugs: ["white-pudding"],
+    title: "Hakka Vertical Sausage Stuffer (3 L / 7 lb)",
+    imageSrc: "/affiliates/hakka-vertical-sausage-stuffer-3l-7lb.jpg",
+    imageAlt: "Hakka Vertical Sausage Stuffer (3 L / 7 lb)",
+    affiliateUrl: "https://link.amazon/B0cFQTa27",
+    blurb:
+      "An optional manual stuffer for filling prepared beef casings with the turkey-and-oat mixture. This appliance stuffs sausages; prepare the ground turkey separately.",
+    softCta:
+      "A manual sausage stuffer helps fill beef casings evenly; a suitable filling funnel also works.",
+  },
 ];
 
 export function getAmazonAffiliateProductsForRecipe(
