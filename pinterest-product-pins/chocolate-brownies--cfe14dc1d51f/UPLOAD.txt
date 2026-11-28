@@ -1,0 +1,20 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Chocolate Brownies + All-Clad Pro-Release 8×8 Baking Pan
+
+DESCRIPTION
+#ad | Pair our chocolate brownie recipe with the All-Clad Pro-Release 8×8-inch baking pan, the size this recipe calls for. Find the ingredients, baking steps and the featured pan’s Amazon link on the recipe page. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/chocolate-brownies/
+
+ALT TEXT
+AI-generated illustration of chocolate brownies in a gray All-Clad Pro-Release square pan, with a brownie being lifted using a silicone spatula.

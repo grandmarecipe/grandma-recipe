@@ -120,3 +120,23 @@ Workflow: `.github/workflows/pinterest-auto-pin.yml`
 - **Daily crons 08:00 and 10:00 UTC** (9:00 and 11:00 local UTC+1): 1 catch-up pin each (2/day)
 - **Manual** “Run workflow” with mode `publish` or `catch-up`
 - Catch-up backlog lives in `pinterest-pins/backlog.json` (`scheduleDate` + `pinsPerDay`)
+
+## Daily Amazon product-in-use pins
+
+The user requested one daily product-in-use pin, prioritizing older recipes never pinned before. The approved brownie sample is live at https://www.pinterest.com/pin/1137229343447595240/.
+
+- Workflow: .github/workflows/pinterest-product-pins.yml, daily at 13:17 Africa/Casablanca. GitHub may start scheduled jobs later.
+- Images are generated HERE with the built-in generator and the exact product photo as a reference, then saved as 1080x1920 JPGs. The scheduled job ONLY posts prepared images. There is no paid image API, image-generation service or new API secret.
+- The title and image connect the product to the recipe. Descriptions include #ad, an affiliate disclosure and the standard recipe CTA; destinations stay recipe pages. Images carry an AI-generated illustration label.
+- Ordered inventory: pinterest-product-pins/queue.json. Before publishing, the runner refreshes history from all five recipe boards, checks BOTH posted logs and current affiliate mappings. Old URLs that redirect to renamed recipes also count as already pinned. Local logs alone are incomplete. Dry runs use the saved history snapshot.
+- Ready packs: pinterest-product-pins/<key>/product-pin.jpg, UPLOAD.txt and prompt.txt. Public mirrors live under public/pinterest-product-pins/<key>/. Only entries with a prepared image can be posted.
+- Each Casablanca calendar day allows one product pin. Duplicate recipe/product pairs are blocked. Original publish-on-release and old-recipe catch-up schedules remain intact.
+- Remaining ready images are logged on every run. Prepare another batch here before the ready queue runs out; pending-image inventory does not generate itself.
+- Prepare up to 30 days per batch, using ONLY never-pinned recipes. The November 28 live-board audit found four eligible recipes after excluding renamed URLs. Do not refill with previously pinned recipes just to reach 30.
+
+Preview without posting:
+
+    node --import tsx scripts/pinterest/product-pins.mjs --dry-run --day=2026-11-29
+    node --test scripts/pinterest/product-pin-lib.test.mjs
+
+The --day override is accepted only for dry runs.

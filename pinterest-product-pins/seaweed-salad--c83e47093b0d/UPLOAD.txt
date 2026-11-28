@@ -1,0 +1,20 @@
+BOARD
+Grandma lunch recipe
+
+BOARD_ID
+1137229412095780950
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Seaweed Salad + OXO Good Grips Stainless Steel 6.34-Qt Salad Spinner
+
+DESCRIPTION
+#ad | Discover Seaweed Salad with OXO Good Grips Stainless Steel 6.34-Qt Salad Spinner as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/seaweed-salad/
+
+ALT TEXT
+AI-generated illustration showing OXO Good Grips Stainless Steel 6.34-Qt Salad Spinner in use for Seaweed Salad.

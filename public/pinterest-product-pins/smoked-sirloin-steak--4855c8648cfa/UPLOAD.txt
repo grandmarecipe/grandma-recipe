@@ -1,0 +1,20 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Smoked Sirloin Steak + MEATER Pro Duo Wireless Meat Thermometer, 2 Probes
+
+DESCRIPTION
+#ad | Discover Smoked Sirloin Steak with MEATER Pro Duo Wireless Meat Thermometer, 2 Probes as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/smoked-sirloin-steak/
+
+ALT TEXT
+AI-generated illustration showing MEATER Pro Duo Wireless Meat Thermometer, 2 Probes in use for Smoked Sirloin Steak.

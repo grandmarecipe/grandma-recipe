@@ -1,0 +1,11 @@
+Use case: ads-marketing.
+Asset type: one Pinterest sample creative, exact 9:16 tall portrait.
+Input image: reference photo of the exact All-Clad Pro-Release 8-by-8-inch square baking pan. Preserve this product's identity: charcoal gray nonstick metal, square base with softly rounded corners, flared sides, two opposite wide integral flanged handles with their distinctive raised contour. It is ONE pan shown from a cooking perspective; the reference image is a single pan, not nested pans. Do not replace it with a ceramic dish, skillet, generic straight-sided tin or different handles.
+Scene: warm realistic farmhouse kitchen counter with soft natural window light. The referenced pan is visibly IN USE holding a freshly baked slab of chocolate brownies with a thin crackly top, cut into nine squares. A hand uses a charcoal silicone spatula to lift one corner brownie, revealing a moist chocolate interior and the empty square inside the pan. Show the two distinctive handles clearly so the product is recognizable. No metal knife or metal spatula inside the nonstick pan. Use a subtle neutral linen and cooling rack beneath the pan, no unrelated products or brand packaging. Close enough to distinguish product shape and chocolate texture.
+Composition: large clean cream header occupying upper quarter; food and pan dominate the central and lower part. Editorial, appetizing, natural brown and cream tones, clear visual hierarchy and readable elegant dark brown typography.
+Text verbatim, headline: "CHOCOLATE BROWNIES"
+Smaller product line: "All-Clad Pro-Release 8×8 Pan"
+Small call to action: "Get the recipe + kitchen pick"
+Bottom brand: "GrandmaRecipe.com"
+Very small but readable footer: "AI-generated illustration"
+Keep all text inside safe margins. No price, ratings, exaggerated benefit claims, awards, fake endorsement badges, added logos, extra lettering or watermark. Only the product's existing subtle embossed manufacturer mark may appear. No pork or alcohol. Exact 9:16 tall canvas.

@@ -1,0 +1,20 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Pho Ha Noi + Cooks Standard Professional 20-Qt Stainless Steel Stockpot with Lid
+
+DESCRIPTION
+#ad | Discover Pho Ha Noi with Cooks Standard Professional 20-Qt Stainless Steel Stockpot with Lid as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/pho-ha-noi/
+
+ALT TEXT
+AI-generated illustration showing Cooks Standard Professional 20-Qt Stainless Steel Stockpot with Lid in use for Pho Ha Noi.

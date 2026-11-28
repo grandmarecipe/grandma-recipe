@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-28T01:57:10.561Z",
+  "eligibleNeverPinnedRecipes": 4,
+  "previouslyPinnedDraftImagesExcluded": 30,
+  "items": [
+    {
+      "key": "pho-ha-noi--9d3e0cb5b544",
+      "slug": "pho-ha-noi",
+      "recipeTitle": "Pho Ha Noi",
+      "productTitle": "Cooks Standard Professional 20-Qt Stainless Steel Stockpot with Lid",
+      "affiliateUrl": "https://link.amazon/B0iUPi4Z9",
+      "referenceImage": "/affiliates/cooks-standard-stockpot-20qt.jpg"
+    },
+    {
+      "key": "teriyaki-noodles-recipe--95446f8664c1",
+      "slug": "teriyaki-noodles-recipe",
+      "recipeTitle": "Teriyaki Noodles Recipe",
+      "productTitle": "Cuisinart 12-Inch Stainless Steel Stir-Fry Wok with Lid, 726-30SD",
+      "affiliateUrl": "https://link.amazon/B0aHWpRBh",
+      "referenceImage": "/affiliates/cuisinart-stainless-stir-fry-wok-12in.jpg"
+    },
+    {
+      "key": "smoked-sirloin-steak--4855c8648cfa",
+      "slug": "smoked-sirloin-steak",
+      "recipeTitle": "Smoked Sirloin Steak",
+      "productTitle": "MEATER Pro Duo Wireless Meat Thermometer, 2 Probes",
+      "affiliateUrl": "https://link.amazon/B0e9Rl2tp",
+      "referenceImage": "/affiliates/meater-pro-duo-wireless-thermometer.jpg"
+    },
+    {
+      "key": "seaweed-salad--c83e47093b0d",
+      "slug": "seaweed-salad",
+      "recipeTitle": "Seaweed Salad",
+      "productTitle": "OXO Good Grips Stainless Steel 6.34-Qt Salad Spinner",
+      "affiliateUrl": "https://link.amazon/B0bcpSrbi",
+      "referenceImage": "/affiliates/oxo-stainless-salad-spinner-634qt.jpg"
+    }
+  ],
+  "readyPins": 4,
+  "remainingAwaitingImages": 0
+}
