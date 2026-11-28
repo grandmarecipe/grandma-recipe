@@ -1,0 +1,20 @@
+BOARD
+Grandma snack recipe
+
+BOARD_ID
+1137229412095892593
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Spiced Apple Cider + All-Clad D5 Stainless Steel Soup Pot with Lid (4 qt)
+
+DESCRIPTION
+#ad | Discover Spiced Apple Cider with All-Clad D5 Stainless Steel Soup Pot with Lid (4 qt) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/spiced-apple-cider/
+
+ALT TEXT
+AI-generated illustration showing All-Clad D5 Stainless Steel Soup Pot with Lid (4 qt) in use for Spiced Apple Cider.

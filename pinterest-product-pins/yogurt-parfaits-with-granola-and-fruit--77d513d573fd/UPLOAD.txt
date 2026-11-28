@@ -1,0 +1,20 @@
+BOARD
+Grandma breakfast recipe
+
+BOARD_ID
+1137229412095780949
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Yogurt parfaits with granola and fruit + Libbey Fountain Shoppe Tall Dessert Glasses (6 pieces)
+
+DESCRIPTION
+#ad | Discover Yogurt parfaits with granola and fruit with Libbey Fountain Shoppe Tall Dessert Glasses (6 pieces) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/yogurt-parfaits-with-granola-and-fruit/
+
+ALT TEXT
+AI-generated illustration showing Libbey Fountain Shoppe Tall Dessert Glasses (6 pieces) in use for Yogurt parfaits with granola and fruit.

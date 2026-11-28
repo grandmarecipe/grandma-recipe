@@ -15,9 +15,9 @@ The user approved the All-Clad brownie example and requested one product-in-use 
 - Link to the recipe page, where the matching Amazon affiliate link appears. No prices, ratings, pork or alcohol.
 - Keep the existing publish-on-release and old-recipe catch-up schedules intact.
 - Product pins have their own `pinterest-product-pins/` packs, public mirrors, queue and posted log. Limit to one product pin per Casablanca calendar day.
-- Prioritize older articles that have NEVER been pinned. Exclude every recipe in either `pinterest-pins/.posted.json` or `pinterest-product-pins/.posted.json`, including pins posted after the queue was prepared.
-- The user explicitly chose only never-pinned recipes. Check the live Pinterest boards when preparing a batch; local logs are incomplete. Save the observed recipe URLs in `pinterest-product-pins/account-history.json` and exclude renamed/redirected versions as well. Never fill the queue with already-pinned recipes to meet a batch-size target.
-- Prepare up to 30 days at a time. If fewer eligible recipes remain, queue only those and report the actual count.
+- The user clarified on November 28 that previously pinned articles SHOULD get these new Amazon product-in-use pins too. Ordinary recipe pin history does not exclude a recipe from the product campaign.
+- Exclude recipe/product pairs already recorded in `pinterest-product-pins/.posted.json`, including renamed/redirected versions. Keep the one-product-pin-per-day limit. `account-history.json` is an audit of ordinary recipe pins, not a product-campaign exclusion list.
+- Prepare new images in batches of 30. The user authorized adding all 30 existing product drafts to the four queued pins, for 34 upcoming product pins.
 - Prepare images here with the built-in image generator, using exact product reference photos. The scheduled GitHub workflow posts saved images only, as the old recipe backlog did. Do not add a paid image API, image-generation dependency or API secret.
 - Follow `pinterest-product-pins/settings.json`. Keep a clear count of ready images and remaining recipes; never describe pending-image entries as ready-to-post pins.
 - The brownie example was posted on 2026-11-28: https://www.pinterest.com/pin/1137229343447595240/.

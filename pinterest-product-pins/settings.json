@@ -6,6 +6,6 @@
   "localTime": "13:17",
   "startDate": "2026-11-29",
   "batchSize": 30,
-  "selection": "never-pinned-only",
-  "note": "Prepare up to 30 at a time, using only never-pinned recipes. Exclude live-account history, both posted logs and redirected old URLs. Post saved images only; no paid image API or new secret."
+  "selection": "new-product-pins",
+  "note": "Prepare new images in batches of 30. Previously pinned recipes qualify for a new Amazon product-in-use pin. Block duplicate recipe/product campaigns using the product posted log. Post one saved image per day; no paid image API."
 }

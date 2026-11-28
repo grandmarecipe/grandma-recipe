@@ -1,13 +1,13 @@
 {
-  "preparedAt": "2026-11-28T02:05:35.385Z",
+  "preparedAt": "2026-11-28T02:13:41.395Z",
   "requestedBatchSize": 30,
-  "readyPins": 4,
-  "selection": "never-pinned-only",
+  "readyPins": 34,
+  "selection": "new-product-pins",
   "startsOn": "2026-11-29",
-  "endsOn": "2026-12-02",
+  "endsOn": "2027-01-01",
   "localTime": "13:17",
   "timezone": "Africa/Casablanca",
-  "note": "Only four eligible never-pinned recipes remain. Renamed URLs and all observed Pinterest history excluded. Previously generated drafts for already-pinned recipes are outside the queue.",
+  "note": "Four existing queued pins followed by the 30 product-in-use drafts the user approved. Ordinary recipe pins do not exclude these new product campaigns.",
   "schedule": [
     {
       "date": "2026-11-29",
@@ -32,6 +32,186 @@
       "key": "seaweed-salad--c83e47093b0d",
       "recipe": "Seaweed Salad",
       "product": "OXO Good Grips Stainless Steel 6.34-Qt Salad Spinner"
+    },
+    {
+      "date": "2026-12-03",
+      "key": "chocolate-chip-banana-bread--58eea89dc640",
+      "recipe": "Chocolate Chip Banana Bread",
+      "product": "USA Pan Nonstick Loaf Pan (1 lb)"
+    },
+    {
+      "date": "2026-12-04",
+      "key": "navy-beans--083fa44e3aff",
+      "recipe": "Navy Beans",
+      "product": "Lodge Enameled Dutch Oven (6 qt, blue)"
+    },
+    {
+      "date": "2026-12-05",
+      "key": "broasted-chicken--4dd3b635d1b4",
+      "recipe": "Broasted-Style Chicken",
+      "product": "TempPro TP19H Instant-Read Thermometer"
+    },
+    {
+      "date": "2026-12-06",
+      "key": "falafel-bowl--5ccbecd8e84a",
+      "recipe": "Falafel Bowl",
+      "product": "Cuisinart Mini Food Processor (3 cup)"
+    },
+    {
+      "date": "2026-12-07",
+      "key": "autumn-frost-squash-recipe--56c5258b0ac3",
+      "recipe": "Autumn Frost Squash",
+      "product": "Nordic Ware Naturals Half Sheet Pans (2-pack)"
+    },
+    {
+      "date": "2026-12-08",
+      "key": "green-beans-garlic-almonds--dcf59c429201",
+      "recipe": "Green beans garlic almonds",
+      "product": "All-Clad Copper Core Stainless Steel Fry Pan (12 in)"
+    },
+    {
+      "date": "2026-12-09",
+      "key": "homemade-gravy--68df42d95726",
+      "recipe": "Homemade Gravy",
+      "product": "All-Clad Copper Core Stainless Steel Saucepan with Lid (3 qt)"
+    },
+    {
+      "date": "2026-12-10",
+      "key": "sheet-pan-salmon--7facc819d646",
+      "recipe": "Sheet Pan Salmon",
+      "product": "ThermoWorks Thermapen ONE Instant-Read Thermometer (Cayenne Red)"
+    },
+    {
+      "date": "2026-12-11",
+      "key": "sausage-peppers-potatoe-baked--603cddcd6ea0",
+      "recipe": "Sausage peppers potatoe baked",
+      "product": "Circulon Nonstick Baking Sheet (11 × 17 in)"
+    },
+    {
+      "date": "2026-12-12",
+      "key": "easy-vegetable-pasta-bake--9afc7fb989b3",
+      "recipe": "Easy Vegetable Pasta Bake",
+      "product": "Le Creuset Cast Iron Rectangular Roaster (5.25 qt, Cerise)"
+    },
+    {
+      "date": "2026-12-13",
+      "key": "one-pan-roasted-chicken-and-vegetables--29e03ff226b4",
+      "recipe": "One Pan Roasted Chicken",
+      "product": "Made In Aluminum Sheet Pan"
+    },
+    {
+      "date": "2026-12-14",
+      "key": "yule-log-cake--b250c60b6995",
+      "recipe": "Yule Log Cake",
+      "product": "KitchenAid Nonstick Baking Sheet (10 × 15 in)"
+    },
+    {
+      "date": "2026-12-15",
+      "key": "gingerbread-cookies-royal-icing--81f6a8f23661",
+      "recipe": "Gingerbread Cookies Royal Icing",
+      "product": "Wilton Master Cake Decorating Piping Tip Set (55 pieces)"
+    },
+    {
+      "date": "2026-12-16",
+      "key": "no-bake-cheesecake-cup--7f58ab052ee4",
+      "recipe": "No Bake Cheesecake Cup",
+      "product": "Bormioli Rocco Essential Glass Tumblers (7.5 oz, 12 pieces)"
+    },
+    {
+      "date": "2026-12-17",
+      "key": "christmas-sugar-cookies--a8ef2fb8e133",
+      "recipe": "Christmas Sugar Cookies",
+      "product": "Joseph Joseph PrecisionPin Adjustable Rolling Pin"
+    },
+    {
+      "date": "2026-12-18",
+      "key": "chocolate-cocoa-truffles--eec732ec6236",
+      "recipe": "Chocolate Cocoa Truffles",
+      "product": "Fat Daddio’s Stainless Steel Cookie Scoop (No. 100, 0.64 tbsp)"
+    },
+    {
+      "date": "2026-12-19",
+      "key": "rice-krispies-christmas-trees--21c120c93ae2",
+      "recipe": "Rice Krispies Christmas Trees",
+      "product": "GIR Ultimate Silicone Spatula Set (3 pieces, Slate)"
+    },
+    {
+      "date": "2026-12-20",
+      "key": "no-bake-oreo-cheesecake--075a99dcedf3",
+      "recipe": "No Bake Oreo Cheesecake",
+      "product": "Cuisinart Food Processor (14 cups, DFP-14BCNY)"
+    },
+    {
+      "date": "2026-12-21",
+      "key": "peanut-butter-chocolate-bars--376a21f1783f",
+      "recipe": "Peanut Butter Chocolate Bars",
+      "product": "Nordic Ware Naturals Square Cake Pan (8 × 8 in)"
+    },
+    {
+      "date": "2026-12-22",
+      "key": "yogurt-parfaits-with-granola-and-fruit--77d513d573fd",
+      "recipe": "Yogurt parfaits with granola and fruit",
+      "product": "Libbey Fountain Shoppe Tall Dessert Glasses (6 pieces)"
+    },
+    {
+      "date": "2026-12-23",
+      "key": "hot-chocolate-bar--237248495697",
+      "recipe": "Hot Chocolate Bar",
+      "product": "Breville Milk Café Electric Milk Frother (BMF600XL)"
+    },
+    {
+      "date": "2026-12-24",
+      "key": "spiced-apple-cider--801bbb87f2d1",
+      "recipe": "Spiced Apple Cider",
+      "product": "All-Clad D5 Stainless Steel Soup Pot with Lid (4 qt)"
+    },
+    {
+      "date": "2026-12-25",
+      "key": "iced-peppermint-latte--81e17e31ac2b",
+      "recipe": "Iced Peppermint Latte",
+      "product": "De’Longhi Rivelia Automatic Espresso Machine (White)"
+    },
+    {
+      "date": "2026-12-26",
+      "key": "cranberry-juice-cocktail--c7ffc3b60167",
+      "recipe": "Cranberry Juice Cocktail",
+      "product": "ZWIESEL GLAS Paris Iceberg Drinking Glasses (16.5 oz, 6 pieces)"
+    },
+    {
+      "date": "2026-12-27",
+      "key": "roasted-squash--01f544f05673",
+      "recipe": "Roasted Squash",
+      "product": "Shun Classic Chef’s Knife (8 in)"
+    },
+    {
+      "date": "2026-12-28",
+      "key": "mushroom-lentil-loaf--b53f4953c93c",
+      "recipe": "Mushroom Lentil Loaf",
+      "product": "Caraway Ceramic-Coated Loaf Pan (1 lb)"
+    },
+    {
+      "date": "2026-12-29",
+      "key": "balsamic-roasted-vegetables--c465a0999d49",
+      "recipe": "Balsamic Roasted Vegetables",
+      "product": "Epicurean Gourmet Series Cutting Board (17.5 × 13 in)"
+    },
+    {
+      "date": "2026-12-30",
+      "key": "vegan-mashed-potatoes--9d454f0af200",
+      "recipe": "Vegan Mashed Potatoes",
+      "product": "OXO Good Grips Stainless Steel Potato Ricer"
+    },
+    {
+      "date": "2026-12-31",
+      "key": "chocolate-mousse--8aba1fc14b6a",
+      "recipe": "Chocolate Mousse",
+      "product": "SMEG SMF04 Classico Stand Mixer (5 qt, Black)"
+    },
+    {
+      "date": "2027-01-01",
+      "key": "vegan-gravy--60e8cc9d7e92",
+      "recipe": "Vegan Gravy",
+      "product": "All-Clad D3 Stainless Steel Saucier with Lid (2 qt)"
     }
   ]
 }

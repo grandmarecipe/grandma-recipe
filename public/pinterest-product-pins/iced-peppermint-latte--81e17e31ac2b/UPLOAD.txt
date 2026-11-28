@@ -1,0 +1,20 @@
+BOARD
+Grandma snack recipe
+
+BOARD_ID
+1137229412095892593
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Iced Peppermint Latte + De’Longhi Rivelia Automatic Espresso Machine (White)
+
+DESCRIPTION
+#ad | Discover Iced Peppermint Latte with De’Longhi Rivelia Automatic Espresso Machine (White) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/iced-peppermint-latte/
+
+ALT TEXT
+AI-generated illustration showing De’Longhi Rivelia Automatic Espresso Machine (White) in use for Iced Peppermint Latte.

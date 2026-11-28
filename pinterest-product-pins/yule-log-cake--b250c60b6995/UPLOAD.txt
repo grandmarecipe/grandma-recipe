@@ -1,0 +1,20 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Yule Log Cake + KitchenAid Nonstick Baking Sheet (10 × 15 in)
+
+DESCRIPTION
+#ad | Discover Yule Log Cake with KitchenAid Nonstick Baking Sheet (10 × 15 in) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/yule-log-cake/
+
+ALT TEXT
+AI-generated illustration showing KitchenAid Nonstick Baking Sheet (10 × 15 in) in use for Yule Log Cake.

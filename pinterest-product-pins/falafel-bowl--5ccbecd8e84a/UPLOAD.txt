@@ -1,0 +1,20 @@
+BOARD
+Grandma lunch recipe
+
+BOARD_ID
+1137229412095780950
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Falafel Bowl + Cuisinart Mini Food Processor (3 cup)
+
+DESCRIPTION
+#ad | Discover Falafel Bowl with Cuisinart Mini Food Processor (3 cup) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/falafel-bowl/
+
+ALT TEXT
+AI-generated illustration showing Cuisinart Mini Food Processor (3 cup) in use for Falafel Bowl.

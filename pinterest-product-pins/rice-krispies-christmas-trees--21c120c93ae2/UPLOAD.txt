@@ -1,0 +1,20 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Rice Krispies Christmas Trees + GIR Ultimate Silicone Spatula Set (3 pieces, Slate)
+
+DESCRIPTION
+#ad | Discover Rice Krispies Christmas Trees with GIR Ultimate Silicone Spatula Set (3 pieces, Slate) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/rice-krispies-christmas-trees/
+
+ALT TEXT
+AI-generated illustration showing GIR Ultimate Silicone Spatula Set (3 pieces, Slate) in use for Rice Krispies Christmas Trees.

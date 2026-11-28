@@ -1,0 +1,20 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Easy Vegetable Pasta Bake + Le Creuset Cast Iron Rectangular Roaster (5.25 qt, Cerise)
+
+DESCRIPTION
+#ad | Discover Easy Vegetable Pasta Bake with Le Creuset Cast Iron Rectangular Roaster (5.25 qt, Cerise) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/easy-vegetable-pasta-bake/
+
+ALT TEXT
+AI-generated illustration showing Le Creuset Cast Iron Rectangular Roaster (5.25 qt, Cerise) in use for Easy Vegetable Pasta Bake.

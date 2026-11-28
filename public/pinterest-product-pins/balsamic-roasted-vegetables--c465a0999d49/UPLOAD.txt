@@ -1,0 +1,20 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Balsamic Roasted Vegetables + Epicurean Gourmet Series Cutting Board (17.5 × 13 in)
+
+DESCRIPTION
+#ad | Discover Balsamic Roasted Vegetables with Epicurean Gourmet Series Cutting Board (17.5 × 13 in) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/balsamic-roasted-vegetables/
+
+ALT TEXT
+AI-generated illustration showing Epicurean Gourmet Series Cutting Board (17.5 × 13 in) in use for Balsamic Roasted Vegetables.

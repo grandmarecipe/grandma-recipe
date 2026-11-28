@@ -4,7 +4,7 @@ import {mkdtempSync, mkdirSync, writeFileSync, rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {localDay, productKey, selectCandidate, excludePreviouslyPosted, loadCandidates, loadRecipeAliases, pinMetadata, imagePrompt} from './product-pin-lib.mjs';
+import {localDay, productKey, selectCandidate, excludePreviouslyPosted, excludePostedProducts, loadCandidates, loadRecipeAliases, pinMetadata, imagePrompt} from './product-pin-lib.mjs';
 import {refreshProductHistory} from './product-history.mjs';
 
 test('daily limits follow Casablanca dates at midnight', () => {
@@ -19,6 +19,13 @@ test('a posted product pin blocks another that day, while old recipe pins do not
 test('campaign identity changes with product, not copy edits', () => {
   assert.equal(productKey('brownies', 'https://link.amazon/a'), productKey('brownies', 'https://link.amazon/a'));
   assert.notEqual(productKey('brownies', 'https://link.amazon/a'), productKey('brownies', 'https://link.amazon/b'));
+});
+test('product pins allow previously pinned recipes but block repeat product campaigns, including renamed URLs', () => {
+  const candidate = (slug, url) => ({slug, key: productKey(slug, url), product: {affiliateUrl: url}});
+  const items = [candidate('ginger-ale-bread', 'https://link.amazon/pan'), candidate('ginger-ale-bread', 'https://link.amazon/mixer'), candidate('beans', 'https://link.amazon/pot')];
+  assert.deepEqual(excludePostedProducts(items, {pins: []}), items);
+  const posted = {pins: [{slug: 'beer-bread', affiliateUrl: 'https://link.amazon/pan'}, {key: items[2].key}]};
+  assert.deepEqual(excludePostedProducts(items, posted, {'beer-bread': 'ginger-ale-bread'}), [items[1]]);
 });
 test('recipes already pinned by either workflow are excluded, including URL-only receipts', () => {
   const candidates = [{key: 'a', slug: 'brownies'}, {key: 'b', slug: 'beans'}, {key: 'c', slug: 'salmon'}];

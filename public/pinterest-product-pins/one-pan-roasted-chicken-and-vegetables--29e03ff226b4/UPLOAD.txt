@@ -1,0 +1,20 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+One Pan Roasted Chicken + Made In Aluminum Sheet Pan
+
+DESCRIPTION
+#ad | Discover One Pan Roasted Chicken with Made In Aluminum Sheet Pan as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/one-pan-roasted-chicken-and-vegetables/
+
+ALT TEXT
+AI-generated illustration showing Made In Aluminum Sheet Pan in use for One Pan Roasted Chicken.

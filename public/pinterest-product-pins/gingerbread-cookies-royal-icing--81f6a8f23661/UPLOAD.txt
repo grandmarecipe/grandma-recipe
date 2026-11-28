@@ -1,0 +1,20 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Gingerbread Cookies Royal Icing + Wilton Master Cake Decorating Piping Tip Set (55 pieces)
+
+DESCRIPTION
+#ad | Discover Gingerbread Cookies Royal Icing with Wilton Master Cake Decorating Piping Tip Set (55 pieces) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/gingerbread-cookies-royal-icing/
+
+ALT TEXT
+AI-generated illustration showing Wilton Master Cake Decorating Piping Tip Set (55 pieces) in use for Gingerbread Cookies Royal Icing.

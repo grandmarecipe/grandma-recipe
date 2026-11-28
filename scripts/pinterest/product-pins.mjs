@@ -3,10 +3,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 import sharp from 'sharp';
-import {loadEnvLocal, parseArgs, getAccessToken, pinterestFetch, ROOT} from './lib.mjs';
+import {loadEnvLocal, parseArgs, getAccessToken, ROOT} from './lib.mjs';
 import {createPinFromResolved} from './create-pin.mjs';
-import {refreshProductHistory} from './product-history.mjs';
-import {loadCandidates, selectCandidate, excludePreviouslyPosted, loadRecipeAliases, localDay, pinMetadata, uploadText} from './product-pin-lib.mjs';
+import {loadCandidates, selectCandidate, excludePostedProducts, loadRecipeAliases, localDay, pinMetadata, uploadText} from './product-pin-lib.mjs';
 
 const directory = path.join(ROOT, 'pinterest-product-pins');
 const json = (name, fallback) => fs.existsSync(path.join(directory, name)) ? JSON.parse(fs.readFileSync(path.join(directory, name), 'utf8')) : fallback;
@@ -24,22 +23,14 @@ async function main() {
   const affiliates = module.default || module;
   const current = loadCandidates(ROOT, affiliates.AMAZON_AFFILIATE_PRODUCTS, today);
   const posted = json('.posted.json', {pins: []});
-  const legacy = JSON.parse(fs.readFileSync(path.join(ROOT, 'pinterest-pins/.posted.json'), 'utf8'));
-  let history = json('account-history.json', {pins: []});
   const byKey = new Map(current.map(item => [item.key, item]));
   const queue = json('queue.json', {items: []});
-  const eligible = () => excludePreviouslyPosted(queue.items.map(item => byKey.get(item.key)).filter(Boolean), {pins: [...legacy.pins, ...history.pins]}, posted, loadRecipeAliases(ROOT));
+  // Ordinary recipe pins do not count as this product-in-use campaign.
+  const eligible = () => excludePostedProducts(queue.items.map(item => byKey.get(item.key)).filter(Boolean), posted, loadRecipeAliases(ROOT));
   const prepared = items => items.filter(item => fs.existsSync(path.join(directory, item.key, 'product-pin.jpg')));
-  let candidates = eligible();
-  let ready = prepared(candidates);
-  if (!dryRun && ready.length && today >= settings.startDate && !posted.pins.some(pin => pin.day === today)) {
-    await getAccessToken({refresh: true});
-    history = await refreshProductHistory(pinterestFetch, history);
-    save('account-history.json', history);
-    candidates = eligible();
-    ready = prepared(candidates);
-  }
-  console.log(`Older unposted recipes: ${candidates.length}; prepared images remaining: ${ready.length}.`);
+  const candidates = eligible();
+  const ready = prepared(candidates);
+  console.log(`Unposted product pins: ${candidates.length}; prepared images remaining: ${ready.length}.`);
   if (today < settings.startDate) { console.log(`Daily product queue starts ${settings.startDate}.`); return; }
   const item = selectCandidate(ready, posted, today);
   if (!item) { console.log('No product pin due: today is already posted or the prepared image queue needs replenishing.'); return; }
@@ -60,6 +51,7 @@ async function main() {
   const mirror = path.join(ROOT, 'public/pinterest-product-pins', item.key);
   fs.mkdirSync(mirror, {recursive: true});
   for (const file of ['UPLOAD.txt', imageName]) fs.copyFileSync(path.join(pack, file), path.join(mirror, file));
+  await getAccessToken({refresh: true});
   const created = await createPinFromResolved({...metadata, localImage: imageFile});
   posted.pins.push({key: item.key, day: today, slug: item.slug, product: item.product.title, affiliateUrl: item.product.affiliateUrl, pinId: created.id, pinUrl: created.url, link: metadata.link, postedAt: new Date().toISOString()});
   save('.posted.json', posted);

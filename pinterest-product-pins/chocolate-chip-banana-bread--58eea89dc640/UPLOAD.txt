@@ -1,0 +1,20 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Chocolate Chip Banana Bread + USA Pan Nonstick Loaf Pan (1 lb)
+
+DESCRIPTION
+#ad | Discover Chocolate Chip Banana Bread with USA Pan Nonstick Loaf Pan (1 lb) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/chocolate-chip-banana-bread/
+
+ALT TEXT
+AI-generated illustration showing USA Pan Nonstick Loaf Pan (1 lb) in use for Chocolate Chip Banana Bread.

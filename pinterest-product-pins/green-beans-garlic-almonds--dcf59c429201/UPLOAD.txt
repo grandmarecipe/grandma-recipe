@@ -1,0 +1,20 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Green beans garlic almonds + All-Clad Copper Core Stainless Steel Fry Pan (12 in)
+
+DESCRIPTION
+#ad | Discover Green beans garlic almonds with All-Clad Copper Core Stainless Steel Fry Pan (12 in) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/green-beans-garlic-almonds/
+
+ALT TEXT
+AI-generated illustration showing All-Clad Copper Core Stainless Steel Fry Pan (12 in) in use for Green beans garlic almonds.

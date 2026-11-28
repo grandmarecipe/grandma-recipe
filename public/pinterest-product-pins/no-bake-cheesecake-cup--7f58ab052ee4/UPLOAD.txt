@@ -1,0 +1,20 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+No Bake Cheesecake Cup + Bormioli Rocco Essential Glass Tumblers (7.5 oz, 12 pieces)
+
+DESCRIPTION
+#ad | Discover No Bake Cheesecake Cup with Bormioli Rocco Essential Glass Tumblers (7.5 oz, 12 pieces) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/no-bake-cheesecake-cup/
+
+ALT TEXT
+AI-generated illustration showing Bormioli Rocco Essential Glass Tumblers (7.5 oz, 12 pieces) in use for No Bake Cheesecake Cup.

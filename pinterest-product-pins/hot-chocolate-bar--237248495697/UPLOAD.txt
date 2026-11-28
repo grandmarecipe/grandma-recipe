@@ -1,0 +1,20 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Hot Chocolate Bar + Breville Milk Café Electric Milk Frother (BMF600XL)
+
+DESCRIPTION
+#ad | Discover Hot Chocolate Bar with Breville Milk Café Electric Milk Frother (BMF600XL) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/hot-chocolate-bar/
+
+ALT TEXT
+AI-generated illustration showing Breville Milk Café Electric Milk Frother (BMF600XL) in use for Hot Chocolate Bar.

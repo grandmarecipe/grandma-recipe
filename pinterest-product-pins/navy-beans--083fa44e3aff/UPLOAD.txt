@@ -1,0 +1,20 @@
+BOARD
+Grandma lunch recipe
+
+BOARD_ID
+1137229412095780950
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Navy Beans + Lodge Enameled Dutch Oven (6 qt, blue)
+
+DESCRIPTION
+#ad | Discover Navy Beans with Lodge Enameled Dutch Oven (6 qt, blue) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/navy-beans/
+
+ALT TEXT
+AI-generated illustration showing Lodge Enameled Dutch Oven (6 qt, blue) in use for Navy Beans.

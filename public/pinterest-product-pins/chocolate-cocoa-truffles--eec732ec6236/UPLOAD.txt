@@ -1,0 +1,20 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Chocolate Cocoa Truffles + Fat Daddio’s Stainless Steel Cookie Scoop (No. 100, 0.64 tbsp)
+
+DESCRIPTION
+#ad | Discover Chocolate Cocoa Truffles with Fat Daddio’s Stainless Steel Cookie Scoop (No. 100, 0.64 tbsp) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/chocolate-cocoa-truffles/
+
+ALT TEXT
+AI-generated illustration showing Fat Daddio’s Stainless Steel Cookie Scoop (No. 100, 0.64 tbsp) in use for Chocolate Cocoa Truffles.

@@ -55,6 +55,12 @@ export function excludePreviouslyPosted(candidates, legacyPosted, productPosted,
   }).filter(Boolean));
   return candidates.filter(item => !slugs.has(canonical(item.slug)));
 }
+export function excludePostedProducts(candidates, productPosted, aliases = {}) {
+  const canonical = slug => { const seen = new Set(); while (aliases[slug] && !seen.has(slug)) { seen.add(slug); slug = aliases[slug]; } return slug; };
+  const keys = new Set((productPosted.pins || []).map(pin => pin.key));
+  const pairs = new Set((productPosted.pins || []).filter(pin => pin.slug && pin.affiliateUrl).map(pin => productKey(canonical(pin.slug), pin.affiliateUrl)));
+  return candidates.filter(item => !keys.has(item.key) && !pairs.has(productKey(canonical(item.slug), item.product.affiliateUrl)));
+}
 function shorten(text, length) {
   return text.length <= length ? text : text.slice(0, length - 1).replace(/\s+\S*$/, '') + '…';
 }

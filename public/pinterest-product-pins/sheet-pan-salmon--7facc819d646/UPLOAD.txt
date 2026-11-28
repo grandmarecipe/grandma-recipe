@@ -1,0 +1,20 @@
+BOARD
+Grandma dinner recipe
+
+BOARD_ID
+1137229412095780951
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Sheet Pan Salmon + ThermoWorks Thermapen ONE Instant-Read Thermometer (Cayenne Red)
+
+DESCRIPTION
+#ad | Discover Sheet Pan Salmon with ThermoWorks Thermapen ONE Instant-Read Thermometer (Cayenne Red) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/sheet-pan-salmon/
+
+ALT TEXT
+AI-generated illustration showing ThermoWorks Thermapen ONE Instant-Read Thermometer (Cayenne Red) in use for Sheet Pan Salmon.

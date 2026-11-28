@@ -1,0 +1,20 @@
+BOARD
+Grandma dessert recipe
+
+BOARD_ID
+1137229412095780952
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Chocolate Mousse + SMEG SMF04 Classico Stand Mixer (5 qt, Black)
+
+DESCRIPTION
+#ad | Discover Chocolate Mousse with SMEG SMF04 Classico Stand Mixer (5 qt, Black) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/chocolate-mousse/
+
+ALT TEXT
+AI-generated illustration showing SMEG SMF04 Classico Stand Mixer (5 qt, Black) in use for Chocolate Mousse.

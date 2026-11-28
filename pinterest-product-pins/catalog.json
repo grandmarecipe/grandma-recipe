@@ -1,31 +1,297 @@
 {
-  "checkedAt": "2026-11-28T01:57:10.561Z",
-  "eligibleNeverPinnedRecipes": 4,
-  "previouslyPinnedDraftImagesExcluded": 30,
+  "checkedAt": "2026-11-28T02:13:41.395Z",
+  "selection": "new-product-pins",
+  "eligibleProductPins": 251,
+  "readyPins": 34,
+  "remainingAwaitingImages": 217,
   "items": [
     {
-      "key": "pho-ha-noi--9d3e0cb5b544",
-      "slug": "pho-ha-noi",
-      "recipeTitle": "Pho Ha Noi",
-      "productTitle": "Cooks Standard Professional 20-Qt Stainless Steel Stockpot with Lid",
-      "affiliateUrl": "https://link.amazon/B0iUPi4Z9",
-      "referenceImage": "/affiliates/cooks-standard-stockpot-20qt.jpg"
+      "key": "crockpot-hashbrown-casserole--53dffefe6325",
+      "slug": "crockpot-hashbrown-casserole",
+      "recipeTitle": "Crockpot Hashbrown Casserole",
+      "productTitle": "Crock-Pot Cook & Carry Slow Cooker (6 qt)",
+      "affiliateUrl": "https://link.amazon/B0j20qQuO",
+      "referenceImage": "/affiliates/crock-pot-cook-carry-6qt.jpg",
+      "imageReady": false
     },
     {
-      "key": "teriyaki-noodles-recipe--95446f8664c1",
-      "slug": "teriyaki-noodles-recipe",
-      "recipeTitle": "Teriyaki Noodles Recipe",
-      "productTitle": "Cuisinart 12-Inch Stainless Steel Stir-Fry Wok with Lid, 726-30SD",
-      "affiliateUrl": "https://link.amazon/B0aHWpRBh",
-      "referenceImage": "/affiliates/cuisinart-stainless-stir-fry-wok-12in.jpg"
+      "key": "air-fryer-zucchini-chips--31f1e8647e30",
+      "slug": "air-fryer-zucchini-chips",
+      "recipeTitle": "Air Fryer Zucchini Chips",
+      "productTitle": "Ninja Air Fryer XL AF150AMZ (5.5 qt)",
+      "affiliateUrl": "https://link.amazon/B00yBFzI6",
+      "referenceImage": "/affiliates/ninja-air-fryer-xl-af150.jpg",
+      "imageReady": false
     },
     {
-      "key": "smoked-sirloin-steak--4855c8648cfa",
-      "slug": "smoked-sirloin-steak",
-      "recipeTitle": "Smoked Sirloin Steak",
-      "productTitle": "MEATER Pro Duo Wireless Meat Thermometer, 2 Probes",
-      "affiliateUrl": "https://link.amazon/B0e9Rl2tp",
-      "referenceImage": "/affiliates/meater-pro-duo-wireless-thermometer.jpg"
+      "key": "homemade-banana-pancakes--5810a7c8acb7",
+      "slug": "homemade-banana-pancakes",
+      "recipeTitle": "Homemade Banana Pancakes",
+      "productTitle": "Lodge Pre-Seasoned Cast Iron Skillet (8 in)",
+      "affiliateUrl": "https://link.amazon/B0fL5Ji9g",
+      "referenceImage": "/affiliates/lodge-cast-iron-skillet-8in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chocolate-coconut-cake--0979ea3dd7c4",
+      "slug": "chocolate-coconut-cake",
+      "recipeTitle": "Chocolate Coconut Cake",
+      "productTitle": "KitchenAid 5-Speed Hand Mixer (Red)",
+      "affiliateUrl": "https://link.amazon/B00ZLb1E1",
+      "referenceImage": "/affiliates/kitchenaid-hand-mixer-red.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "fruit-pastry--56c5258b0ac3",
+      "slug": "fruit-pastry",
+      "recipeTitle": "Fruit Pastry",
+      "productTitle": "Nordic Ware Naturals Half Sheet Pans (2-pack)",
+      "affiliateUrl": "https://link.amazon/B0jefkM64",
+      "referenceImage": "/affiliates/nordic-ware-half-sheet-pans.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "autumn-frost-squash-recipe--56c5258b0ac3",
+      "slug": "autumn-frost-squash-recipe",
+      "recipeTitle": "Autumn Frost Squash",
+      "productTitle": "Nordic Ware Naturals Half Sheet Pans (2-pack)",
+      "affiliateUrl": "https://link.amazon/B0jefkM64",
+      "referenceImage": "/affiliates/nordic-ware-half-sheet-pans.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "broasted-chicken--4dd3b635d1b4",
+      "slug": "broasted-chicken",
+      "recipeTitle": "Broasted-Style Chicken",
+      "productTitle": "TempPro TP19H Instant-Read Thermometer",
+      "affiliateUrl": "https://link.amazon/B080gDK8w",
+      "referenceImage": "/affiliates/temppro-tp19h-thermometer.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "bone-turkey-breast--4dd3b635d1b4",
+      "slug": "bone-turkey-breast",
+      "recipeTitle": "Oven-Roasted Bone Turkey Breast",
+      "productTitle": "TempPro TP19H Instant-Read Thermometer",
+      "affiliateUrl": "https://link.amazon/B080gDK8w",
+      "referenceImage": "/affiliates/temppro-tp19h-thermometer.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "butterball-turkey-breast--4dd3b635d1b4",
+      "slug": "butterball-turkey-breast",
+      "recipeTitle": "Oven-Roasted Butterball Turkey Breast",
+      "productTitle": "TempPro TP19H Instant-Read Thermometer",
+      "affiliateUrl": "https://link.amazon/B080gDK8w",
+      "referenceImage": "/affiliates/temppro-tp19h-thermometer.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "frozen-whole-turkey--4dd3b635d1b4",
+      "slug": "frozen-whole-turkey",
+      "recipeTitle": "Frozen Whole Turkey",
+      "productTitle": "TempPro TP19H Instant-Read Thermometer",
+      "affiliateUrl": "https://link.amazon/B080gDK8w",
+      "referenceImage": "/affiliates/temppro-tp19h-thermometer.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "how-to-cook-jasmine-rice--6d5c0658212f",
+      "slug": "how-to-cook-jasmine-rice",
+      "recipeTitle": "How to Cook Jasmine Rice",
+      "productTitle": "Aroma Digital Rice Cooker (8 cups cooked)",
+      "affiliateUrl": "https://link.amazon/B0056yEcz",
+      "referenceImage": "/affiliates/aroma-digital-rice-cooker.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "falafel-bowl--5ccbecd8e84a",
+      "slug": "falafel-bowl",
+      "recipeTitle": "Falafel Bowl",
+      "productTitle": "Cuisinart Mini Food Processor (3 cup)",
+      "affiliateUrl": "https://link.amazon/B0gFsbxCq",
+      "referenceImage": "/affiliates/cuisinart-mini-food-processor.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "navy-beans--083fa44e3aff",
+      "slug": "navy-beans",
+      "recipeTitle": "Navy Beans",
+      "productTitle": "Lodge Enameled Dutch Oven (6 qt, blue)",
+      "affiliateUrl": "https://link.amazon/B02iWcpQM",
+      "referenceImage": "/affiliates/lodge-enameled-dutch-oven-6qt.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "ritz-cracker-chicken-casserole--ad6e3b2c5e1e",
+      "slug": "ritz-cracker-chicken-casserole",
+      "recipeTitle": "Easy Ritz Cracker Chicken Casserole",
+      "productTitle": "OXO Glass Baking Dish with Lid (9 × 13 in)",
+      "affiliateUrl": "https://link.amazon/B071Ywz8S",
+      "referenceImage": "/affiliates/oxo-glass-baking-dish-9x13.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chocolate-chip-banana-bread--58eea89dc640",
+      "slug": "chocolate-chip-banana-bread",
+      "recipeTitle": "Chocolate Chip Banana Bread",
+      "productTitle": "USA Pan Nonstick Loaf Pan (1 lb)",
+      "affiliateUrl": "https://link.amazon/B0c8WN0Uk",
+      "referenceImage": "/affiliates/usa-pan-loaf-pan-1lb.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "creamy-cucumber-salad--65fedf4f8afe",
+      "slug": "creamy-cucumber-salad",
+      "recipeTitle": "Creamy Cucumber Salad",
+      "productTitle": "OXO Good Grips Handheld Mandoline",
+      "affiliateUrl": "https://link.amazon/B00bgj8Hn",
+      "referenceImage": "/affiliates/oxo-handheld-mandoline.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "star-cake--7382e1583da6",
+      "slug": "star-cake",
+      "recipeTitle": "Star Cake",
+      "productTitle": "Microplane Classic Zester Grater (Black)",
+      "affiliateUrl": "https://link.amazon/B0370iWQA",
+      "referenceImage": "/affiliates/microplane-classic-zester.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "rice-stick-noodles--f8766bbcad43",
+      "slug": "rice-stick-noodles",
+      "recipeTitle": "Rice Stick Noodles",
+      "productTitle": "Yosukata Carbon Steel Wok (13.5 in)",
+      "affiliateUrl": "https://link.amazon/B03KDQr5t",
+      "referenceImage": "/affiliates/yosukata-carbon-steel-wok.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "what-is-a-light-roast-coffee--47dcea4ea01f",
+      "slug": "what-is-a-light-roast-coffee",
+      "recipeTitle": "What Is a Light Roast Coffee? A Bright, Gentle Brew",
+      "productTitle": "OXO Good Grips Digital Food Scale (11 lb)",
+      "affiliateUrl": "https://link.amazon/B09YMT26p",
+      "referenceImage": "/affiliates/oxo-digital-food-scale.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "brioche-loaf--a805ccf22f3b",
+      "slug": "brioche-loaf",
+      "recipeTitle": "Homemade Brioche Loaf Recipe",
+      "productTitle": "Cuisinart Precision Master Stand Mixer (5.5 qt)",
+      "affiliateUrl": "https://link.amazon/B04bjFriL",
+      "referenceImage": "/affiliates/cuisinart-precision-stand-mixer.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pumpkin-soup--861d5c155daf",
+      "slug": "pumpkin-soup",
+      "recipeTitle": "Creamy Homemade Pumpkin Soup",
+      "productTitle": "Vitamix Immersion Blender Bundle (3-piece)",
+      "affiliateUrl": "https://link.amazon/B07S7VSB4",
+      "referenceImage": "/affiliates/vitamix-immersion-blender-bundle.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "cajun-chicken-turkey-sausage-pasta--7eaea81a232d",
+      "slug": "cajun-chicken-turkey-sausage-pasta",
+      "recipeTitle": "Cajun Chicken and Turkey Sausage Pasta",
+      "productTitle": "Tramontina Professional Nonstick Skillet (12 in)",
+      "affiliateUrl": "https://link.amazon/B0ftyS93G",
+      "referenceImage": "/affiliates/tramontina-nonstick-skillet-12in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pumpkin-pie-recipe--ee22b79269b8",
+      "slug": "pumpkin-pie-recipe",
+      "recipeTitle": "Classic Homemade Pumpkin Pie Recipe",
+      "productTitle": "OXO Good Grips Glass Pie Plate (9 in)",
+      "affiliateUrl": "https://link.amazon/B00FUWh7R",
+      "referenceImage": "/affiliates/oxo-glass-pie-plate-9in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pineapple-glazed-turkey--20e0ad6975bb",
+      "slug": "pineapple-glazed-turkey",
+      "recipeTitle": "Pineapple Glazed Turkey",
+      "productTitle": "All-Clad Stainless Steel Roasting Pan with Rack (16 × 13 in)",
+      "affiliateUrl": "https://link.amazon/B068edmSB",
+      "referenceImage": "/affiliates/all-clad-roasting-pan-with-rack.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "how-long-do-you-do-hard-boiled-eggs--ec0609e39336",
+      "slug": "how-long-do-you-do-hard-boiled-eggs",
+      "recipeTitle": "How Long Do You Do Hard Boiled Eggs?",
+      "productTitle": "Dash Deluxe Rapid Egg Cooker (12 eggs, White)",
+      "affiliateUrl": "https://link.amazon/B0c4kEpbN",
+      "referenceImage": "/affiliates/dash-deluxe-rapid-egg-cooker.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "caramel-popcorn--9e03aec167e5",
+      "slug": "caramel-popcorn",
+      "recipeTitle": "Homemade Caramel Popcorn",
+      "productTitle": "Great Northern Stainless Steel Stovetop Popcorn Maker (6.5 qt)",
+      "affiliateUrl": "https://link.amazon/B07QET9UU",
+      "referenceImage": "/affiliates/great-northern-stovetop-popcorn-maker.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pumpkin-roll--1e875e75006c",
+      "slug": "pumpkin-roll",
+      "recipeTitle": "Classic Pumpkin Roll with Cream Cheese Filling",
+      "productTitle": "Nordic Ware Naturals Jelly Roll Pan (15 × 10.5 in)",
+      "affiliateUrl": "https://link.amazon/B059LHmOe",
+      "referenceImage": "/affiliates/nordic-ware-naturals-jelly-roll-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pumpkin-muffins--0bb7af269373",
+      "slug": "pumpkin-muffins",
+      "recipeTitle": "Soft Bakery-Style Pumpkin Muffins",
+      "productTitle": "Nordic Ware Naturals 12-Cavity Muffin Pan",
+      "affiliateUrl": "https://link.amazon/B019XL92v",
+      "referenceImage": "/affiliates/nordic-ware-naturals-12-cavity-muffin-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pumpkin-bread--8f27eb18d26a",
+      "slug": "pumpkin-bread",
+      "recipeTitle": "Grandma's Moist Pumpkin Bread",
+      "productTitle": "Le Creuset Signature Cast Iron Loaf Pan (2 qt, Licorice)",
+      "affiliateUrl": "https://link.amazon/B08fkzMrV",
+      "referenceImage": "/affiliates/le-creuset-signature-loaf-pan-2qt-licorice.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "slow-cooker-style-beef-barbacoa--51f3a00b804d",
+      "slug": "slow-cooker-style-beef-barbacoa",
+      "recipeTitle": "Slow Cooker-Style Beef Barbacoa",
+      "productTitle": "Crock-Pot 7-Qt Programmable Countdown Slow Cooker",
+      "affiliateUrl": "https://link.amazon/B05xxcqpn",
+      "referenceImage": "/affiliates/crock-pot-7qt-programmable-countdown.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chop-sandwich--8efbd439481a",
+      "slug": "chop-sandwich",
+      "recipeTitle": "Chop Sandwich",
+      "productTitle": "John Boos Chop-N-Slice 18 × 12-Inch Maple Cutting Board",
+      "affiliateUrl": "https://link.amazon/B0gIz2dIS",
+      "referenceImage": "/affiliates/john-boos-chop-n-slice-maple-cutting-board.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "marinara-pasta--96d140140664",
+      "slug": "marinara-pasta",
+      "recipeTitle": "Marinara Pasta",
+      "productTitle": "All-Clad D5 3-Qt Stainless Steel Saucepan with Lid",
+      "affiliateUrl": "https://link.amazon/B07CsWcbA",
+      "referenceImage": "/affiliates/all-clad-d5-saucepan-3qt.jpg",
+      "imageReady": false
     },
     {
       "key": "seaweed-salad--c83e47093b0d",
@@ -33,9 +299,1970 @@
       "recipeTitle": "Seaweed Salad",
       "productTitle": "OXO Good Grips Stainless Steel 6.34-Qt Salad Spinner",
       "affiliateUrl": "https://link.amazon/B0bcpSrbi",
-      "referenceImage": "/affiliates/oxo-stainless-salad-spinner-634qt.jpg"
+      "referenceImage": "/affiliates/oxo-stainless-salad-spinner-634qt.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "smoked-sirloin-steak--4855c8648cfa",
+      "slug": "smoked-sirloin-steak",
+      "recipeTitle": "Smoked Sirloin Steak",
+      "productTitle": "MEATER Pro Duo Wireless Meat Thermometer, 2 Probes",
+      "affiliateUrl": "https://link.amazon/B0e9Rl2tp",
+      "referenceImage": "/affiliates/meater-pro-duo-wireless-thermometer.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "teriyaki-noodles-recipe--95446f8664c1",
+      "slug": "teriyaki-noodles-recipe",
+      "recipeTitle": "Teriyaki Noodles Recipe",
+      "productTitle": "Cuisinart 12-Inch Stainless Steel Stir-Fry Wok with Lid, 726-30SD",
+      "affiliateUrl": "https://link.amazon/B0aHWpRBh",
+      "referenceImage": "/affiliates/cuisinart-stainless-stir-fry-wok-12in.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "pho-ha-noi--9d3e0cb5b544",
+      "slug": "pho-ha-noi",
+      "recipeTitle": "Pho Ha Noi",
+      "productTitle": "Cooks Standard Professional 20-Qt Stainless Steel Stockpot with Lid",
+      "affiliateUrl": "https://link.amazon/B0iUPi4Z9",
+      "referenceImage": "/affiliates/cooks-standard-stockpot-20qt.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "cheesecake-balls--e5fb5b569c5a",
+      "slug": "cheesecake-balls",
+      "recipeTitle": "Cheesecake Balls",
+      "productTitle": "Wilton Candy Melts Candy and Chocolate Melting Pot",
+      "affiliateUrl": "https://link.amazon/B09bGpVgQ",
+      "referenceImage": "/affiliates/wilton-candy-melts-melting-pot.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chocolate-lasagna--8b61940a7aae",
+      "slug": "chocolate-lasagna",
+      "recipeTitle": "Chocolate Lasagna",
+      "productTitle": "Pyrex Deep 9 × 13-Inch Glass Baking Dish with Lid",
+      "affiliateUrl": "https://link.amazon/B0hjslA7Z",
+      "referenceImage": "/affiliates/pyrex-deep-9x13-glass-baking-dish-lid.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "strawberries-cheesecake--9d27f75d3dac",
+      "slug": "strawberries-cheesecake",
+      "recipeTitle": "Strawberry Cheesecake",
+      "productTitle": "Farberware 9-Inch Nonstick Springform Pan",
+      "affiliateUrl": "https://link.amazon/B03hP4mIc",
+      "referenceImage": "/affiliates/farberware-nonstick-springform-pan-9in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "strawberry-bread--57373de3bd79",
+      "slug": "strawberry-bread",
+      "recipeTitle": "Strawberry Bread",
+      "productTitle": "OXO Good Grips Nonstick Pro 1-lb Loaf Pan",
+      "affiliateUrl": "https://link.amazon/B0iN4jtJe",
+      "referenceImage": "/affiliates/oxo-nonstick-pro-loaf-pan-1lb.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "black-garlic-ramen--1c951d8ffe04",
+      "slug": "black-garlic-ramen",
+      "recipeTitle": "Black Garlic Ramen",
+      "productTitle": "Lareina Ceramic Japanese Ramen Bowl Set",
+      "affiliateUrl": "https://link.amazon/B0is5PT4f",
+      "referenceImage": "/affiliates/lareina-ceramic-japanese-ramen-bowl-set.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "holy-cow-burgers--d6905e6447cd",
+      "slug": "holy-cow-burgers",
+      "recipeTitle": "Holy Cow Burgers",
+      "productTitle": "Cuisinart Cast Iron Smashed Burger Press",
+      "affiliateUrl": "https://link.amazon/B0frdE1SJ",
+      "referenceImage": "/affiliates/cuisinart-cast-iron-smashed-burger-press.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "4-inch-cake--28cfaac7d276",
+      "slug": "4-inch-cake",
+      "recipeTitle": "4 Inch Cake",
+      "productTitle": "Fat Daddio’s 4 × 2-Inch Anodized Aluminum Round Cake Pan",
+      "affiliateUrl": "https://link.amazon/B055kz6OV",
+      "referenceImage": "/affiliates/fat-daddios-round-cake-pan-4x2in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "plate-short-ribs--16c3d3409568",
+      "slug": "plate-short-ribs",
+      "recipeTitle": "Plate Short Ribs",
+      "productTitle": "ThermoPro TP20 Dual-Probe Wireless Meat Thermometer",
+      "affiliateUrl": "https://link.amazon/B0eaeB3WT",
+      "referenceImage": "/affiliates/thermopro-tp20-dual-probe-thermometer.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "cheesy-ravioli--b62bff5641db",
+      "slug": "cheesy-ravioli",
+      "recipeTitle": "Cheesy Ravioli",
+      "productTitle": "Marcato Atlas Ravioli Tablet",
+      "affiliateUrl": "https://link.amazon/B0hQxHJgn",
+      "referenceImage": "/affiliates/marcato-atlas-ravioli-tablet.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "blt-macaroni-salad--e5c24c11c211",
+      "slug": "blt-macaroni-salad",
+      "recipeTitle": "BLT Macaroni Salad",
+      "productTitle": "OXO Good Grips 5-Qt Stainless Steel Colander",
+      "affiliateUrl": "https://link.amazon/B083AITCm",
+      "referenceImage": "/affiliates/oxo-stainless-colander-5qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "mississippi-pot-roast--90adccd40808",
+      "slug": "mississippi-pot-roast",
+      "recipeTitle": "Mississippi Pot Roast",
+      "productTitle": "Hamilton Beach Set & Forget 6-Qt Programmable Slow Cooker",
+      "affiliateUrl": "https://link.amazon/B0bFfHBZZ",
+      "referenceImage": "/affiliates/hamilton-beach-set-forget-slow-cooker-6qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "keto-chicken-parmesan--953f44784b98",
+      "slug": "keto-chicken-parmesan",
+      "recipeTitle": "Keto Chicken Parmesan",
+      "productTitle": "Zyliss Classic Rotary Cheese Grater",
+      "affiliateUrl": "https://link.amazon/B0ivu5hdZ",
+      "referenceImage": "/affiliates/zyliss-classic-rotary-cheese-grater.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "kfc-coleslaw-copycat--adf9b85b6a4b",
+      "slug": "kfc-coleslaw-copycat",
+      "recipeTitle": "KFC Coleslaw Copycat",
+      "productTitle": "Ninja Professional Plus 9-Cup Food Processor, BN601",
+      "affiliateUrl": "https://link.amazon/B04aHBV1I",
+      "referenceImage": "/affiliates/ninja-professional-plus-food-processor-bn601.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "air-fryer-nachos--85ee9b2adb80",
+      "slug": "air-fryer-nachos",
+      "recipeTitle": "Crispy Air Fryer Nachos",
+      "productTitle": "Instant Vortex Plus ClearCook 6-Qt Air Fryer",
+      "affiliateUrl": "https://link.amazon/B0cKHp9Zv",
+      "referenceImage": "/affiliates/instant-vortex-plus-clearcook-air-fryer-6qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "air-fryer-chips--65a8e3fb3651",
+      "slug": "air-fryer-chips",
+      "recipeTitle": "Air Fryer Chips",
+      "productTitle": "OXO Good Grips Chef’s Mandoline 2.0",
+      "affiliateUrl": "https://link.amazon/B0gUhS96E",
+      "referenceImage": "/affiliates/oxo-chefs-mandoline-2.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "homemade-alfredo-sauce--6268881f2959",
+      "slug": "homemade-alfredo-sauce",
+      "recipeTitle": "Homemade Alfredo Sauce",
+      "productTitle": "Made In 2-Qt Stainless Clad Saucier",
+      "affiliateUrl": "https://link.amazon/B0amRW0Pd",
+      "referenceImage": "/affiliates/made-in-stainless-clad-saucier-2qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chili-cheese-tater-tot-casserole--b124856e71a3",
+      "slug": "chili-cheese-tater-tot-casserole",
+      "recipeTitle": "Chili Cheese Tater Tot Casserole",
+      "productTitle": "Emile Henry Modern Classics 13 × 9-Inch Rectangular Baker",
+      "affiliateUrl": "https://link.amazon/B0eddSlBk",
+      "referenceImage": "/affiliates/emile-henry-modern-classics-rectangular-baker.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "better-than-sex-cake--cc564d6db146",
+      "slug": "better-than-sex-cake",
+      "recipeTitle": "Better Than Sex Cake",
+      "productTitle": "M MCIRCO 8-Piece Deep Glass Baking Dish Set with Lids, Gray",
+      "affiliateUrl": "https://link.amazon/B0bow5hfN",
+      "referenceImage": "/affiliates/mcirco-8pc-deep-glass-baking-dish-set.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "peanut-butter-oatmeal-chocolate-chip-cookies--4aa248399d5d",
+      "slug": "peanut-butter-oatmeal-chocolate-chip-cookies",
+      "recipeTitle": "Peanut Butter Oatmeal Chocolate Chip Cookies",
+      "productTitle": "Silpat Premium Nonstick Silicone Half Sheet Baking Mat",
+      "affiliateUrl": "https://link.amazon/B0gGForju",
+      "referenceImage": "/affiliates/silpat-premium-half-sheet-baking-mat.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "air-fryer-mozzarella-sticks--c1e1c1cce125",
+      "slug": "air-fryer-mozzarella-sticks",
+      "recipeTitle": "Air Fryer Mozzarella Sticks",
+      "productTitle": "Ninja Air Fryer Max XL, 5.5 Qt",
+      "affiliateUrl": "https://link.amazon/B051qPRyp",
+      "referenceImage": "/affiliates/ninja-air-fryer-max-xl-55qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "strawberry-brownies--a80aa99ae96d",
+      "slug": "strawberry-brownies",
+      "recipeTitle": "Strawberry Brownies",
+      "productTitle": "Wilton Recipe Right Nonstick 8-Inch Square Baking Pan",
+      "affiliateUrl": "https://link.amazon/B09PVGyXx",
+      "referenceImage": "/affiliates/wilton-recipe-right-8in-square-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "keto-egg-roll-in-a-bowl--4259ef014216",
+      "slug": "keto-egg-roll-in-a-bowl",
+      "recipeTitle": "Keto Egg Roll in a Bowl",
+      "productTitle": "GreenPan Valencia Pro 12-Inch Ceramic Nonstick Wok with Lid",
+      "affiliateUrl": "https://link.amazon/B0gYDCcKL",
+      "referenceImage": "/affiliates/greenpan-valencia-pro-wok-12in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "samoa-cheesecake--219900462b69",
+      "slug": "samoa-cheesecake",
+      "recipeTitle": "Samoa Cheesecake",
+      "productTitle": "Nordic Ware 9-Inch Nonstick Springform Pan",
+      "affiliateUrl": "https://link.amazon/B0hKJgaxw",
+      "referenceImage": "/affiliates/nordic-ware-9in-nonstick-springform.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "turtle-cheesecake--c356a6573184",
+      "slug": "turtle-cheesecake",
+      "recipeTitle": "Turtle Cheesecake",
+      "productTitle": "HIWARE 9-Inch Nonstick Cheesecake Pan with Removable Bottom",
+      "affiliateUrl": "https://link.amazon/B09X8PqH5",
+      "referenceImage": "/affiliates/hiware-9in-nonstick-cheesecake-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chocolate-depression-cake--5cd3bddf24ee",
+      "slug": "chocolate-depression-cake",
+      "recipeTitle": "Chocolate Depression Cake",
+      "productTitle": "USA Pan American Bakeware Classics 8-Inch Square Cake and Brownie Pan",
+      "affiliateUrl": "https://link.amazon/B0iKZYIvG",
+      "referenceImage": "/affiliates/usa-pan-8in-square-cake-brownie-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "macaroni-and-cheese--d83be7ed919d",
+      "slug": "macaroni-and-cheese",
+      "recipeTitle": "Macaroni and Cheese",
+      "productTitle": "All-Clad D3 3-Qt Stainless Steel Saucepan with Lid",
+      "affiliateUrl": "https://link.amazon/B01lkSwtJ",
+      "referenceImage": "/affiliates/all-clad-d3-saucepan-3qt-lid.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pineapple-delight--d65a650c5f51",
+      "slug": "pineapple-delight",
+      "recipeTitle": "Pineapple Delight",
+      "productTitle": "Nordic Ware Naturals 9 × 13-Inch Aluminum Cake Pan with Lid",
+      "affiliateUrl": "https://link.amazon/B0gQntUDu",
+      "referenceImage": "/affiliates/nordic-ware-naturals-9x13-cake-pan-lid.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "cucumber-bites--fba526806050",
+      "slug": "cucumber-bites",
+      "recipeTitle": "Cucumber Bites",
+      "productTitle": "Benriner 64 mm Japanese Mandoline Slicer",
+      "affiliateUrl": "https://link.amazon/B00yr8vhT",
+      "referenceImage": "/affiliates/benriner-64mm-japanese-mandoline.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "butterfinger-puppy-chow--6a238ba66854",
+      "slug": "butterfinger-puppy-chow",
+      "recipeTitle": "Butterfinger Puppy Chow",
+      "productTitle": "OXO Good Grips 3-Piece Plastic Mixing Bowl Set with Multicolor Handles",
+      "affiliateUrl": "https://link.amazon/B0dxeDdtz",
+      "referenceImage": "/affiliates/oxo-3pc-plastic-mixing-bowl-set-multicolor.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pretzel-bites-with-cheese--30ac7f037b6a",
+      "slug": "pretzel-bites-with-cheese",
+      "recipeTitle": "Pretzel Bites With Cheese",
+      "productTitle": "Made In 2-Qt Stainless Clad Saucepan with Lid, Antique Brass Handle",
+      "affiliateUrl": "https://link.amazon/B0hzOlt96",
+      "referenceImage": "/affiliates/made-in-2qt-saucepan-antique-brass.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "not-yo-mamas-banana-pudding--d995ea28bee6",
+      "slug": "not-yo-mamas-banana-pudding",
+      "recipeTitle": "Not Yo Mama’s Banana Pudding",
+      "productTitle": "Libbey Selene 9-Inch Glass Trifle Bowl",
+      "affiliateUrl": "https://link.amazon/B05oCHhZ9",
+      "referenceImage": "/affiliates/libbey-selene-9in-glass-trifle-bowl.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chicken-pot-pie-hand-pies--7f2d80105625",
+      "slug": "chicken-pot-pie-hand-pies",
+      "recipeTitle": "Chicken Pot Pie Hand Pies",
+      "productTitle": "Prepworks 3-Piece Dough Press Set",
+      "affiliateUrl": "https://link.amazon/B0eIW0zGS",
+      "referenceImage": "/affiliates/prepworks-3pc-dough-press-set.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chocolate-mayonnaise-cake--2be2f8af3fce",
+      "slug": "chocolate-mayonnaise-cake",
+      "recipeTitle": "Moist Chocolate Mayonnaise Cake",
+      "productTitle": "Cuisinart 9-Speed Electric Hand Mixer with Storage Case",
+      "affiliateUrl": "https://link.amazon/B0bVwLtlH",
+      "referenceImage": "/affiliates/cuisinart-9speed-hand-mixer-storage.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "slow-cooker-chicken-stroganoff--4447fcaf8576",
+      "slug": "slow-cooker-chicken-stroganoff",
+      "recipeTitle": "Slow Cooker Chicken Stroganoff",
+      "productTitle": "Crock-Pot 4-Qt Manual Slow Cooker",
+      "affiliateUrl": "https://link.amazon/B0b4Hn20x",
+      "referenceImage": "/affiliates/crock-pot-4qt-manual-slow-cooker.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chocolate-pistachio-bundt-cake--065d20fefee6",
+      "slug": "chocolate-pistachio-bundt-cake",
+      "recipeTitle": "Chocolate Pistachio Bundt Cake",
+      "productTitle": "Nordic Ware Heritage Bundt Pan",
+      "affiliateUrl": "https://link.amazon/B07OFXfHV",
+      "referenceImage": "/affiliates/nordic-ware-heritage-bundt-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "7up-bundt-cake--c8f87a948ada",
+      "slug": "7up-bundt-cake",
+      "recipeTitle": "Easy Moist 7Up Bundt Cake",
+      "productTitle": "Nordic Ware Anniversary Bundt Pan",
+      "affiliateUrl": "https://link.amazon/B0iDsrUis",
+      "referenceImage": "/affiliates/nordic-ware-anniversary-bundt-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "oreo-bundt-cake--737be21a3891",
+      "slug": "oreo-bundt-cake",
+      "recipeTitle": "Easy Oreo Bundt Cake",
+      "productTitle": "Nordic Ware Blossom Bundt Pan",
+      "affiliateUrl": "https://link.amazon/B01RGARUa",
+      "referenceImage": "/affiliates/nordic-ware-blossom-bundt-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "lemon-bundt-cake--53650a3f5b11",
+      "slug": "lemon-bundt-cake",
+      "recipeTitle": "Moist Lemon Bundt Cake",
+      "productTitle": "Nordic Ware Brilliance Bundt Pan, 10 Cup",
+      "affiliateUrl": "https://link.amazon/B0av09X6u",
+      "referenceImage": "/affiliates/nordic-ware-brilliance-bundt-pan-10cup.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "cherry-cake--ee145525b993",
+      "slug": "cherry-cake",
+      "recipeTitle": "Cherry Cake",
+      "productTitle": "OXO Good Grips Cherry and Olive Pitter",
+      "affiliateUrl": "https://link.amazon/B02dRJDeA",
+      "referenceImage": "/affiliates/oxo-cherry-olive-pitter.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "summer-corn-salad--2bf595b230b7",
+      "slug": "summer-corn-salad",
+      "recipeTitle": "Summer Corn Salad",
+      "productTitle": "OXO Good Grips Corn Prep Peeler",
+      "affiliateUrl": "https://link.amazon/B0fRWDqgF",
+      "referenceImage": "/affiliates/oxo-corn-prep-peeler.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "garlic-butter-steak-bites--122123f23059",
+      "slug": "garlic-butter-steak-bites",
+      "recipeTitle": "Garlic Butter Steak Bites",
+      "productTitle": "Victoria 12-Inch Cast Iron Skillet",
+      "affiliateUrl": "https://link.amazon/B0htS3wqh",
+      "referenceImage": "/affiliates/victoria-12in-cast-iron-skillet.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "crock-pot-beef-and-noodles--bd769bf5e15e",
+      "slug": "crock-pot-beef-and-noodles",
+      "recipeTitle": "Crock Pot Beef and Noodles",
+      "productTitle": "Hamilton Beach 7-Quart Set & Forget Portable Programmable Slow Cooker",
+      "affiliateUrl": "https://link.amazon/B0jm8feyA",
+      "referenceImage": "/affiliates/hamilton-beach-7qt-set-forget-portable.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "orange-creamsicle-poke-cake--e09843ee7602",
+      "slug": "orange-creamsicle-poke-cake",
+      "recipeTitle": "Orange Creamsicle Poke Cake",
+      "productTitle": "Anchor Hocking 2-Piece Glass Baking Dish Set, 2 and 3 Quart",
+      "affiliateUrl": "https://link.amazon/B0g6FIfXC",
+      "referenceImage": "/affiliates/anchor-hocking-2pc-glass-baking-dish-set.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "no-bake-oreo-dessert--0c36758dab58",
+      "slug": "no-bake-oreo-dessert",
+      "recipeTitle": "No Bake Oreo Dessert",
+      "productTitle": "Pyrex 3-Quart Glass Baking Dish with Red Lid",
+      "affiliateUrl": "https://link.amazon/B0fyPQ3qW",
+      "referenceImage": "/affiliates/pyrex-3qt-glass-baking-dish-red-lid.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chicken-pot-pie-soup--3c85c061bef4",
+      "slug": "chicken-pot-pie-soup",
+      "recipeTitle": "Chicken Pot Pie Soup",
+      "productTitle": "Cuisinart Chef’s Classic Stainless 6-Quart Stockpot with Cover",
+      "affiliateUrl": "https://link.amazon/B0d1TSX7b",
+      "referenceImage": "/affiliates/cuisinart-chefs-classic-stockpot-6qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "puffy-tacos--8edd18e21ab5",
+      "slug": "puffy-tacos",
+      "recipeTitle": "Puffy Tacos",
+      "productTitle": "Lodge 5-Qt Cast Iron Dutch Oven",
+      "affiliateUrl": "https://link.amazon/B0eKcfCBE",
+      "referenceImage": "/affiliates/lodge-5qt-cast-iron-dutch-oven.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "orange-fluff--bd06d8a694af",
+      "slug": "orange-fluff",
+      "recipeTitle": "Orange Fluff Recipe",
+      "productTitle": "OXO Good Grips Silicone Balloon Whisk",
+      "affiliateUrl": "https://link.amazon/B04yTrI60",
+      "referenceImage": "/affiliates/oxo-silicone-balloon-whisk.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "oreo-lasagna--ecb0ab1b6c78",
+      "slug": "oreo-lasagna",
+      "recipeTitle": "No-Bake Oreo Lasagna",
+      "productTitle": "Hamilton Beach 10-Cup Food Processor with Bowl Scraper",
+      "affiliateUrl": "https://link.amazon/B03asgsLa",
+      "referenceImage": "/affiliates/hamilton-beach-10cup-food-processor-scraper.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "strawberry-shortcake-cake--18e08847982b",
+      "slug": "strawberry-shortcake-cake",
+      "recipeTitle": "Strawberry Shortcake Cake",
+      "productTitle": "Fat Daddio’s 8 × 2-Inch Round Cake Pan",
+      "affiliateUrl": "https://link.amazon/B02mjbgq7",
+      "referenceImage": "/affiliates/fat-daddios-8x2in-round-cake-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "mini-doughnut-hot-buttered-cheerios--dd627b7bb8e3",
+      "slug": "mini-doughnut-hot-buttered-cheerios",
+      "recipeTitle": "Mini Doughnut Hot Buttered Cheerios",
+      "productTitle": "Lodge 12-Inch Cast Iron Skillet",
+      "affiliateUrl": "https://link.amazon/B03z1sNMg",
+      "referenceImage": "/affiliates/lodge-12in-cast-iron-skillet.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "heaven-on-earth-cake--be469774f12e",
+      "slug": "heaven-on-earth-cake",
+      "recipeTitle": "Easy Heaven on Earth Cake",
+      "productTitle": "Anchor Hocking Monaco Glass Trifle Bowl",
+      "affiliateUrl": "https://link.amazon/B0ilPz6jT",
+      "referenceImage": "/affiliates/anchor-hocking-monaco-glass-trifle-bowl.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "peanut-butter-cup-pie--b85b76b172e6",
+      "slug": "peanut-butter-cup-pie",
+      "recipeTitle": "Easy Peanut Butter Cup Pie",
+      "productTitle": "Emile Henry Modern Classics 9-Inch Ceramic Pie Dish",
+      "affiliateUrl": "https://link.amazon/B03BcA9Z6",
+      "referenceImage": "/affiliates/emile-henry-modern-classics-9in-pie-dish.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "cowboy-caviar-dip--0e84ef217d26",
+      "slug": "cowboy-caviar-dip",
+      "recipeTitle": "Easy Cowboy Caviar Dip",
+      "productTitle": "Fullstar 4-in-1 Vegetable Chopper",
+      "affiliateUrl": "https://link.amazon/B0hnlkj6z",
+      "referenceImage": "/affiliates/fullstar-4in1-vegetable-chopper.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chicken-and-dumplings--94fa50f15d45",
+      "slug": "chicken-and-dumplings",
+      "recipeTitle": "Homemade Chicken and Dumplings",
+      "productTitle": "Cuisinart Chef’s Classic 12-Quart Stainless Steel Stockpot with Lid",
+      "affiliateUrl": "https://link.amazon/B03Ym236s",
+      "referenceImage": "/affiliates/cuisinart-chefs-classic-stockpot-12qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "mini-cupcakes--859e51865dfd",
+      "slug": "mini-cupcakes",
+      "recipeTitle": "Mini Cupcakes Recipe",
+      "productTitle": "Wilton Recipe Right 24-Cup Mini Muffin Pan",
+      "affiliateUrl": "https://link.amazon/B05xabtjo",
+      "referenceImage": "/affiliates/wilton-recipe-right-24cup-mini-muffin-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "dark-chocolate-cake--a622d89ab656",
+      "slug": "dark-chocolate-cake",
+      "recipeTitle": "Decadent Dark Chocolate Cake",
+      "productTitle": "USA Pan American Bakeware Classics 9-Inch Round Cake Pan",
+      "affiliateUrl": "https://link.amazon/B00F4CfTx",
+      "referenceImage": "/affiliates/usa-pan-9in-round-cake-pan-classics.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "taco-soup--ddcd4ec97609",
+      "slug": "taco-soup",
+      "recipeTitle": "Easy Taco Soup Recipe",
+      "productTitle": "Lodge Enameled Cast Iron Dutch Oven",
+      "affiliateUrl": "https://link.amazon/B05z2iWpa",
+      "referenceImage": "/affiliates/lodge-enameled-cast-iron-dutch-oven-generic.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "nashville-hot-chicken--79d2036efce9",
+      "slug": "nashville-hot-chicken",
+      "recipeTitle": "Nashville Hot Chicken",
+      "productTitle": "T-fal 3.5-Liter Deep Fryer",
+      "affiliateUrl": "https://link.amazon/B0dC6z9DA",
+      "referenceImage": "/affiliates/tfal-35l-deep-fryer.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "buffalo-chicken--c06aa2e84d0e",
+      "slug": "buffalo-chicken",
+      "recipeTitle": "Easy Buffalo Chicken",
+      "productTitle": "Instant Pot Vortex Plus 4-Quart Air Fryer",
+      "affiliateUrl": "https://link.amazon/B07kWFHbk",
+      "referenceImage": "/affiliates/instant-vortex-plus-4qt-air-fryer.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "ramen-noodle-salad--3dd472422fac",
+      "slug": "ramen-noodle-salad",
+      "recipeTitle": "Ramen Noodle Salad",
+      "productTitle": "Cuisinart 5-Quart Salad Spinner",
+      "affiliateUrl": "https://link.amazon/B02lZXuNX",
+      "referenceImage": "/affiliates/cuisinart-5qt-salad-spinner.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "peanut-butter-banana-cookies--06ef1e30282f",
+      "slug": "peanut-butter-banana-cookies",
+      "recipeTitle": "Peanut Butter Banana Cookies",
+      "productTitle": "Nordic Ware Naturals Half Sheet Pan",
+      "affiliateUrl": "https://link.amazon/B03XDNqFR",
+      "referenceImage": "/affiliates/nordic-ware-naturals-half-sheet-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "philly-cheese-steak-pizza--4e133d89be7c",
+      "slug": "philly-cheese-steak-pizza",
+      "recipeTitle": "Easy Philly Cheese Steak Pizza",
+      "productTitle": "Old Stone 14 × 16-Inch Rectangular Pizza Stone",
+      "affiliateUrl": "https://link.amazon/B01Dpx7mD",
+      "referenceImage": "/affiliates/old-stone-14x16-pizza-stone.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pepper-steak--54c0c1fcd4b2",
+      "slug": "pepper-steak",
+      "recipeTitle": "Easy Pepper Steak Recipe",
+      "productTitle": "YOSUKATA 13.5-Inch Carbon Steel Wok",
+      "affiliateUrl": "https://link.amazon/B01gjLQyV",
+      "referenceImage": "/affiliates/yosukata-135in-carbon-steel-wok-pepper-steak.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "deviled-egg-pasta-salad--03a39bb1f955",
+      "slug": "deviled-egg-pasta-salad",
+      "recipeTitle": "Easy Deviled Egg Pasta Salad",
+      "productTitle": "OXO Good Grips Egg Slicer",
+      "affiliateUrl": "https://link.amazon/B0hAXAvUN",
+      "referenceImage": "/affiliates/oxo-egg-slicer.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "cloud-bread--a188c3b044db",
+      "slug": "cloud-bread",
+      "recipeTitle": "Fluffy Cloud Bread",
+      "productTitle": "Breville Handy Mix Scraper 9-Speed Hand Mixer",
+      "affiliateUrl": "https://link.amazon/B0fx0moao",
+      "referenceImage": "/affiliates/breville-handy-mix-scraper-hand-mixer.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "biscoff-butter-cookies--ff82c434eabb",
+      "slug": "biscoff-butter-cookies",
+      "recipeTitle": "Biscoff Butter Cookies",
+      "productTitle": "OXO Good Grips Medium Silicone Cookie Scoop and Small Spatula Set",
+      "affiliateUrl": "https://link.amazon/B0eXmsEOx",
+      "referenceImage": "/affiliates/oxo-cookie-scoop-spatula-set.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pineapple-upside-down-cake--640c5d1501cf",
+      "slug": "pineapple-upside-down-cake",
+      "recipeTitle": "Pineapple Upside Down Cake",
+      "productTitle": "Nordic Ware 8-Cup Pineapple Upside Down Cake Pan",
+      "affiliateUrl": "https://link.amazon/B00dFOL6K",
+      "referenceImage": "/affiliates/nordic-ware-8cup-pineapple-upside-down-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "focaccia--eee1dc8211fe",
+      "slug": "focaccia",
+      "recipeTitle": "Homemade Focaccia Recipe",
+      "productTitle": "LloydPans 10 × 14-Inch Deep Baking Pan",
+      "affiliateUrl": "https://link.amazon/B06sFzIXq",
+      "referenceImage": "/affiliates/lloydpans-10x14-deep-baking-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "shells-and-cheese--65dfbd274d53",
+      "slug": "shells-and-cheese",
+      "recipeTitle": "Easy Creamy Shells and Cheese",
+      "productTitle": "Tramontina Signature Tri-Ply Stainless Steel Saucepan",
+      "affiliateUrl": "https://link.amazon/B0f45uKEr",
+      "referenceImage": "/affiliates/tramontina-signature-triply-saucepan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "blueberry-pie--0dba315bd9df",
+      "slug": "blueberry-pie",
+      "recipeTitle": "Best Blueberry Pie",
+      "productTitle": "Emile Henry 9-Inch Ceramic Pie Dish",
+      "affiliateUrl": "https://link.amazon/B0gA3Vy54",
+      "referenceImage": "/affiliates/emile-henry-9in-ceramic-pie-dish.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chicken-patty-sandwich--875b1e293616",
+      "slug": "chicken-patty-sandwich",
+      "recipeTitle": "Crispy Chicken Patty Sandwich",
+      "productTitle": "Ninja Air Fryer Pro 5-Quart AF141",
+      "affiliateUrl": "https://link.amazon/B0bHIj3iB",
+      "referenceImage": "/affiliates/ninja-air-fryer-pro-5qt-af141.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "german-cake--5729b7fb67fe",
+      "slug": "german-cake",
+      "recipeTitle": "Authentic German Cake Recipe",
+      "productTitle": "Wilton Aluminum Round Cake Pan Set, 9 × 2 Inches",
+      "affiliateUrl": "https://link.amazon/B06ztecFY",
+      "referenceImage": "/affiliates/wilton-aluminum-round-cake-pan-set-9in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "kimchi-noodles--2aee091d10e4",
+      "slug": "kimchi-noodles",
+      "recipeTitle": "Kimchi Noodles Recipe",
+      "productTitle": "OXO Good Grips 12-Inch Silicone Tongs",
+      "affiliateUrl": "https://link.amazon/B0eAuOBh0",
+      "referenceImage": "/affiliates/oxo-12in-silicone-tongs.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "cooked-sushi-rolls--febfcb82fa19",
+      "slug": "cooked-sushi-rolls",
+      "recipeTitle": "Easy Cooked Sushi Rolls",
+      "productTitle": "SushiQuik Sushi Making Kit",
+      "affiliateUrl": "https://link.amazon/B06mY4s4W",
+      "referenceImage": "/affiliates/sushiquik-sushi-making-kit.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "buffalo-chicken-wings--2698bfea8bfd",
+      "slug": "buffalo-chicken-wings",
+      "recipeTitle": "Crispy Buffalo Chicken Wings",
+      "productTitle": "COSORI TurboBlaze 6-Quart Air Fryer",
+      "affiliateUrl": "https://link.amazon/B01FuamZv",
+      "referenceImage": "/affiliates/cosori-turboblaze-6qt-air-fryer.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "strawberry-roses--7b42a4bc0456",
+      "slug": "strawberry-roses",
+      "recipeTitle": "Easy Strawberry Roses",
+      "productTitle": "Victorinox Swiss Classic 3.25-Inch Paring Knife",
+      "affiliateUrl": "https://link.amazon/B0eYat95G",
+      "referenceImage": "/affiliates/victorinox-swiss-classic-paring-knife.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "thai-yellow-curry--650c0e5ab61e",
+      "slug": "thai-yellow-curry",
+      "recipeTitle": "Thai Yellow Curry",
+      "productTitle": "Cuisinart MultiClad Pro Stainless 3.5-Quart Sauté Pan with Lid",
+      "affiliateUrl": "https://link.amazon/B04nLQUjM",
+      "referenceImage": "/affiliates/cuisinart-multiclad-pro-saute-35qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pollock-fish--02294931c9a4",
+      "slug": "pollock-fish",
+      "recipeTitle": "Easy Baked Pollock Fish",
+      "productTitle": "Mercer Culinary Hell’s Handle Fish Turner",
+      "affiliateUrl": "https://link.amazon/B0eKRvIlP",
+      "referenceImage": "/affiliates/mercer-hells-handle-fish-turner.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chocolate-ganache-cake--2b2ef93ba4f2",
+      "slug": "chocolate-ganache-cake",
+      "recipeTitle": "Chocolate Ganache Cake",
+      "productTitle": "Ateco 4.5-Inch Offset Spatula",
+      "affiliateUrl": "https://link.amazon/B04SrIHdO",
+      "referenceImage": "/affiliates/ateco-45in-offset-spatula.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "whipped-yogurt--0770586dcbe8",
+      "slug": "whipped-yogurt",
+      "recipeTitle": "Easy Whipped Yogurt",
+      "productTitle": "OXO Good Grips 11-Inch Stainless Steel Balloon Whisk",
+      "affiliateUrl": "https://link.amazon/B0gS1Nc1d",
+      "referenceImage": "/affiliates/oxo-11in-stainless-balloon-whisk.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pull-apart-garlic-bread--5d86a92d982e",
+      "slug": "pull-apart-garlic-bread",
+      "recipeTitle": "Cheesy Pull Apart Garlic Bread",
+      "productTitle": "USA Pan 1-Pound Loaf Pan Set",
+      "affiliateUrl": "https://link.amazon/B0djH1TjY",
+      "referenceImage": "/affiliates/usa-pan-1lb-loaf-pan-set.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "seed-crackers--c1e461a035a0",
+      "slug": "seed-crackers",
+      "recipeTitle": "Homemade Seed Crackers",
+      "productTitle": "Amazon Basics Silicone Half Sheet Baking Mats, 2 Pack",
+      "affiliateUrl": "https://link.amazon/B0ebf3rf4",
+      "referenceImage": "/affiliates/amazon-basics-silicone-half-sheet-mats-2pk.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "angus-beef-steak--5b6137099843",
+      "slug": "angus-beef-steak",
+      "recipeTitle": "Juicy Angus Beef Steak",
+      "productTitle": "MEATER Pro Wireless Meat Thermometer",
+      "affiliateUrl": "https://link.amazon/B06g1FhwU",
+      "referenceImage": "/affiliates/meater-pro-wireless-thermometer-steak.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "hibachi-noodles--47b9c3b7be1b",
+      "slug": "hibachi-noodles",
+      "recipeTitle": "Easy Hibachi Noodles",
+      "productTitle": "Cuisinart MultiClad Pro Nonstick Double Burner Griddle, 10 × 18 Inches",
+      "affiliateUrl": "https://link.amazon/B0hDL5E2k",
+      "referenceImage": "/affiliates/cuisinart-multiclad-pro-double-burner-griddle.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "salmon-meal-prep--63a804c2f74f",
+      "slug": "salmon-meal-prep",
+      "recipeTitle": "Salmon Meal Prep",
+      "productTitle": "PrepNaturals Glass Meal Prep Containers",
+      "affiliateUrl": "https://link.amazon/B0gKaE8zT",
+      "referenceImage": "/affiliates/prepnaturals-glass-meal-prep-containers.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "3-ingredient-brownies--2c56b0edd650",
+      "slug": "3-ingredient-brownies",
+      "recipeTitle": "Easy 3-Ingredient Brownies",
+      "productTitle": "Wilton Perfect Results 8-Inch Nonstick Square Cake Pan Set, 2 Pack",
+      "affiliateUrl": "https://link.amazon/B0c4gilov",
+      "referenceImage": "/affiliates/wilton-perfect-results-8in-square-pan-set.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "korean-mango-ice-cream--9ac67872fd2b",
+      "slug": "korean-mango-ice-cream",
+      "recipeTitle": "Korean Mango Ice Cream",
+      "productTitle": "Cuisinart ICE-21 1.5-Quart Ice Cream Maker",
+      "affiliateUrl": "https://link.amazon/B07POpXK8",
+      "referenceImage": "/affiliates/cuisinart-ice-21-ice-cream-maker.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "beef-short-ribs--2f9128ae16de",
+      "slug": "beef-short-ribs",
+      "recipeTitle": "Braised Beef Short Ribs",
+      "productTitle": "Staub 5.5-Quart Round Cast Iron Cocotte, Grenadine",
+      "affiliateUrl": "https://link.amazon/B08jKme45",
+      "referenceImage": "/affiliates/staub-55qt-cocotte-grenadine.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "broccoli-soup--da1e67cb4a81",
+      "slug": "broccoli-soup",
+      "recipeTitle": "Easy Homemade Broccoli Soup",
+      "productTitle": "Braun MultiQuick 7 Immersion Blender",
+      "affiliateUrl": "https://link.amazon/B09qWQlrm",
+      "referenceImage": "/affiliates/braun-multiquick-7-immersion-blender.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "granola-peanut-butter-bars--95e2a8446d0e",
+      "slug": "granola-peanut-butter-bars",
+      "recipeTitle": "Easy Granola Peanut Butter Bars",
+      "productTitle": "Nordic Ware 9-Inch Square Cake Pan",
+      "affiliateUrl": "https://link.amazon/B07kq4Cl9",
+      "referenceImage": "/affiliates/nordic-ware-9in-square-cake-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "fried-dough--5baa45f62acd",
+      "slug": "fried-dough",
+      "recipeTitle": "Homemade Fried Dough",
+      "productTitle": "Presto FryDaddy Electric Deep Fryer",
+      "affiliateUrl": "https://link.amazon/B0a2eqNnN",
+      "referenceImage": "/affiliates/presto-frydaddy-electric-deep-fryer.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "thai-papaya-salad--9e15d41177b2",
+      "slug": "thai-papaya-salad",
+      "recipeTitle": "Thai Papaya Salad (Som Tum)",
+      "productTitle": "Kiwi Pro Slice Thai Julienne Peeler",
+      "affiliateUrl": "https://link.amazon/B0fSp6cF1",
+      "referenceImage": "/affiliates/kiwi-pro-slice-thai-julienne-peeler.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chicken-tenders--f75e81210260",
+      "slug": "chicken-tenders",
+      "recipeTitle": "Homemade Chicken Tenders",
+      "productTitle": "Dreo ChefMaker Combi Fryer",
+      "affiliateUrl": "https://link.amazon/B0j9FjPFJ",
+      "referenceImage": "/affiliates/dreo-chefmaker-combi-fryer.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "catfish-fillets--49c99c3251a4",
+      "slug": "catfish-fillets",
+      "recipeTitle": "Crispy Cajun Catfish Fillets",
+      "productTitle": "Lodge 10.25-Inch Cast Iron Skillet with Silicone Handle Holder",
+      "affiliateUrl": "https://link.amazon/B02Go8lVc",
+      "referenceImage": "/affiliates/lodge-1025in-skillet-silicone-holder.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "nut-bar--200d7e01d38e",
+      "slug": "nut-bar",
+      "recipeTitle": "No-Bake Nut Bars Recipe",
+      "productTitle": "Webake Silicone Snack Bar Mold Set",
+      "affiliateUrl": "https://link.amazon/B040bY3hs",
+      "referenceImage": "/affiliates/webake-silicone-snack-bar-mold-set.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "hamburger-buns--56377f9d9922",
+      "slug": "hamburger-buns",
+      "recipeTitle": "Homemade Hamburger Buns",
+      "productTitle": "Six-Cavity Silicone Hamburger Bun Pan",
+      "affiliateUrl": "https://link.amazon/B0bQTrTMf",
+      "referenceImage": "/affiliates/silicone-hamburger-bun-pan-6cavity.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "beef-strips--541fa62a511d",
+      "slug": "beef-strips",
+      "recipeTitle": "Easy Beef Strips Recipe",
+      "productTitle": "de Buyer Mineral B Carbon Steel Fry Pan",
+      "affiliateUrl": "https://link.amazon/B069dtHaa",
+      "referenceImage": "/affiliates/de-buyer-mineral-b-carbon-steel-fry-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "hawaiian-chicken-sheet-pan--d9eae0d8da57",
+      "slug": "hawaiian-chicken-sheet-pan",
+      "recipeTitle": "Hawaiian Chicken Sheet Pan Dinner",
+      "productTitle": "OXO Good Grips Nonstick Pro Half Sheet Pan",
+      "affiliateUrl": "https://link.amazon/B00OQ2SlP",
+      "referenceImage": "/affiliates/oxo-nonstick-pro-half-sheet-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "beef-chuck-steak--1130dd8323ef",
+      "slug": "beef-chuck-steak",
+      "recipeTitle": "Slow-Cooked Beef Chuck Steak",
+      "productTitle": "ThermoPro TP620 Instant Read Meat Thermometer",
+      "affiliateUrl": "https://link.amazon/B0fPnrZJV",
+      "referenceImage": "/affiliates/thermopro-tp620-instant-read.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "cheeseburger-macaroni--783f200c3110",
+      "slug": "cheeseburger-macaroni",
+      "recipeTitle": "Easy Cheeseburger Macaroni",
+      "productTitle": "Calphalon Classic Hard-Anodized Nonstick 5-Quart Sauté Pan with Cover",
+      "affiliateUrl": "https://link.amazon/B04m50exq",
+      "referenceImage": "/affiliates/calphalon-classic-saute-5qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "ginger-ale-bread--2ee080a0cf2b",
+      "slug": "ginger-ale-bread",
+      "recipeTitle": "Easy Ginger Ale Bread",
+      "productTitle": "USA Pan 1145LF 1.25-lb Aluminized Steel Loaf Pan",
+      "affiliateUrl": "https://link.amazon/B0h5vY0R6",
+      "referenceImage": "/affiliates/usa-pan-125lb-aluminized-loaf-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pineapple-soft-serve--64fc50c75d99",
+      "slug": "pineapple-soft-serve",
+      "recipeTitle": "Homemade Pineapple Soft Serve",
+      "productTitle": "Ninja Professional Plus BN701 Blender",
+      "affiliateUrl": "https://link.amazon/B0bG7gr5D",
+      "referenceImage": "/affiliates/ninja-professional-plus-bn701-blender.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "big-mac-sauce--53b172ad6f2c",
+      "slug": "big-mac-sauce",
+      "recipeTitle": "Big Mac Sauce Recipe",
+      "productTitle": "OXO Good Grips Chef’s Squeeze Bottle Set",
+      "affiliateUrl": "https://link.amazon/B03ifUk1k",
+      "referenceImage": "/affiliates/oxo-chefs-squeeze-bottle-set.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "strawberry-eclair-cake--eb24c5685b8e",
+      "slug": "strawberry-eclair-cake",
+      "recipeTitle": "Strawberry Eclair Cake",
+      "productTitle": "Pyrex Deep 5.2-Qt 9 × 13-Inch Glass Baking Dish with Glass Lid",
+      "affiliateUrl": "https://link.amazon/B0aGeQrbK",
+      "referenceImage": "/affiliates/pyrex-deep-52qt-9x13-glass-baking-dish-lid.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chocolate-peanut-butter-no-bake-cookies--61ad91e5a973",
+      "slug": "chocolate-peanut-butter-no-bake-cookies",
+      "recipeTitle": "Chocolate Peanut Butter No Bake Cookies",
+      "productTitle": "Reynolds Kitchens Parchment Paper Sheets",
+      "affiliateUrl": "https://link.amazon/B04xlZ7qW",
+      "referenceImage": "/affiliates/reynolds-kitchens-parchment-paper-sheets.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "cherry-cheesecake-brownies--3c86796213ba",
+      "slug": "cherry-cheesecake-brownies",
+      "recipeTitle": "Cherry Cheesecake Brownies",
+      "productTitle": "USA Pan 9 × 13-Inch Nonstick Rectangular Cake Pan",
+      "affiliateUrl": "https://link.amazon/B08TtEefH",
+      "referenceImage": "/affiliates/usa-pan-9x13-nonstick-rectangular-cake-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pull-apart-pizza-bread--f8107c7b4f5c",
+      "slug": "pull-apart-pizza-bread",
+      "recipeTitle": "Pull Apart Pizza Bread",
+      "productTitle": "Nordic Ware 12-Cup Formed Bundt Pan",
+      "affiliateUrl": "https://link.amazon/B00Yx2LMw",
+      "referenceImage": "/affiliates/nordic-ware-12cup-formed-bundt-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "valentine-cookie--8d960fd65906",
+      "slug": "valentine-cookie",
+      "recipeTitle": "Heart-Shaped Valentine Cookies",
+      "productTitle": "Ann Clark 3⅜-Inch Heart Cookie Cutter",
+      "affiliateUrl": "https://link.amazon/B0cKw2gmF",
+      "referenceImage": "/affiliates/ann-clark-338in-heart-cookie-cutter.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "buttermilk-pie--9347dd675a89",
+      "slug": "buttermilk-pie",
+      "recipeTitle": "Southern Buttermilk Pie",
+      "productTitle": "Emile Henry 9-Inch Deep Ceramic Pie Dish",
+      "affiliateUrl": "https://link.amazon/B0dSdOPjj",
+      "referenceImage": "/affiliates/emile-henry-9in-deep-ceramic-pie-dish.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "bow-tie-pasta-salad--196deea7e1c8",
+      "slug": "bow-tie-pasta-salad",
+      "recipeTitle": "Creamy Bow Tie Pasta Salad",
+      "productTitle": "Tramontina Signature 8-Quart Tri-Ply Stainless Steel Stockpot",
+      "affiliateUrl": "https://link.amazon/B0dUCesqI",
+      "referenceImage": "/affiliates/tramontina-signature-8qt-triply-stockpot.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "millionaire-shortbread--62ba8c8ffa43",
+      "slug": "millionaire-shortbread",
+      "recipeTitle": "Easy Millionaire Shortbread Recipe",
+      "productTitle": "USA Pan 8-Inch Square Cake Pan",
+      "affiliateUrl": "https://link.amazon/B0bIg2KaG",
+      "referenceImage": "/affiliates/usa-pan-8in-square-cake-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "lemon-pretzel-dessert--3f868ce38468",
+      "slug": "lemon-pretzel-dessert",
+      "recipeTitle": "No-Bake Lemon Pretzel Dessert",
+      "productTitle": "OXO Good Grips 8-Inch Glass Baking Dish with Lid",
+      "affiliateUrl": "https://link.amazon/B00Iontyk",
+      "referenceImage": "/affiliates/oxo-8in-glass-baking-dish-lid.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "wheat-waffles--2d948e4ccc5e",
+      "slug": "wheat-waffles",
+      "recipeTitle": "Whole Wheat Waffles Recipe",
+      "productTitle": "Cuisinart Double Flip Belgian Waffle Maker",
+      "affiliateUrl": "https://link.amazon/B0fHP7mvI",
+      "referenceImage": "/affiliates/cuisinart-double-flip-belgian-waffle-maker.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "broccoli-potato-soup--bdb1da4bc8a7",
+      "slug": "broccoli-potato-soup",
+      "recipeTitle": "Creamy Broccoli Potato Soup",
+      "productTitle": "Breville Control Grip Immersion Blender",
+      "affiliateUrl": "https://link.amazon/B0a1bUMhx",
+      "referenceImage": "/affiliates/breville-control-grip-immersion-blender.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chicken-chorizo--890720287337",
+      "slug": "chicken-chorizo",
+      "recipeTitle": "Easy Chicken Chorizo Recipe",
+      "productTitle": "Tramontina Professional 12-Inch Nonstick Fry Pan",
+      "affiliateUrl": "https://link.amazon/B09i8nNNV",
+      "referenceImage": "/affiliates/tramontina-professional-12in-nonstick-fry-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "antipasto-salad--646fb644e251",
+      "slug": "antipasto-salad",
+      "recipeTitle": "Easy Antipasto Salad Recipe",
+      "productTitle": "Rubbermaid Brilliance 9.6-Cup Food Storage Containers, 2-Pack",
+      "affiliateUrl": "https://link.amazon/B09jAkOcM",
+      "referenceImage": "/affiliates/rubbermaid-brilliance-96cup-containers-2pk.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "butterfly-cupcakes--2abad42c9a8e",
+      "slug": "butterfly-cupcakes",
+      "recipeTitle": "Butterfly Cupcakes Recipe",
+      "productTitle": "Wilton Gold Nonstick 12-Cup Muffin Pan",
+      "affiliateUrl": "https://link.amazon/B0cRd7hXK",
+      "referenceImage": "/affiliates/wilton-gold-nonstick-12cup-muffin-pan.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "bone-in-chuck-roast--e90ebaaf5d9c",
+      "slug": "bone-in-chuck-roast",
+      "recipeTitle": "Bone In Chuck Roast",
+      "productTitle": "Tramontina 6.5-Quart Enameled Cast Iron Dutch Oven",
+      "affiliateUrl": "https://link.amazon/B02wnBZZQ",
+      "referenceImage": "/affiliates/tramontina-65qt-enameled-cast-iron-dutch-oven.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "vanilla-cake-chocolate-frosting--366624f4ce20",
+      "slug": "vanilla-cake-chocolate-frosting",
+      "recipeTitle": "Vanilla Cake Chocolate Frosting",
+      "productTitle": "KitchenAid 7-Speed Hand Mixer, Contour Silver",
+      "affiliateUrl": "https://link.amazon/B0fzu3ZT5",
+      "referenceImage": "/affiliates/kitchenaid-7speed-hand-mixer-contour-silver.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "beef-cubes--4ee3d074ae06",
+      "slug": "beef-cubes",
+      "recipeTitle": "Beef Cubes Recipe",
+      "productTitle": "Lodge 12-Inch Dual-Handle Cast Iron Skillet",
+      "affiliateUrl": "https://link.amazon/B06DnQ2qj",
+      "referenceImage": "/affiliates/lodge-12in-dual-handle-cast-iron-skillet.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pad-thai--e06ba4aa0bcb",
+      "slug": "pad-thai",
+      "recipeTitle": "Pad Thai Recipe",
+      "productTitle": "Craft Wok 14-Inch Flat-Bottom Carbon Steel Wok",
+      "affiliateUrl": "https://link.amazon/B03DO5Tgz",
+      "referenceImage": "/affiliates/craft-wok-14in-flat-bottom-carbon-steel.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "whole-brisket--6b2c09a21cad",
+      "slug": "whole-brisket",
+      "recipeTitle": "Whole Brisket",
+      "productTitle": "TempPro TP829 Wireless Four-Probe Meat Thermometer",
+      "affiliateUrl": "https://link.amazon/B05EewRdR",
+      "referenceImage": "/affiliates/temppro-tp829-wireless-four-probe-thermometer.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pizza-sub--791c5f5fc417",
+      "slug": "pizza-sub",
+      "recipeTitle": "Homemade Pizza Sub",
+      "productTitle": "Cuisinart 5-in-1 Griddler and Panini Press",
+      "affiliateUrl": "https://link.amazon/B0fIpPbM3",
+      "referenceImage": "/affiliates/cuisinart-5in1-griddler-panini-press.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "trout-fillet--f0095fe09b8e",
+      "slug": "trout-fillet",
+      "recipeTitle": "Lemon Herb Trout Fillet",
+      "productTitle": "All-Clad D3 Stainless Steel Fry Pan with Lid (10 in)",
+      "affiliateUrl": "https://link.amazon/B0eWy3uz5",
+      "referenceImage": "/affiliates/all-clad-d3-stainless-fry-pan-lid-10in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "shrimp-salad--a910a07bbb62",
+      "slug": "shrimp-salad",
+      "recipeTitle": "Healthy Shrimp Salad Recipe",
+      "productTitle": "OXO Good Grips Glass Salad Spinner",
+      "affiliateUrl": "https://link.amazon/B01LM8Lcy",
+      "referenceImage": "/affiliates/oxo-good-grips-glass-salad-spinner.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "birria-tacos--81626e37c53a",
+      "slug": "birria-tacos",
+      "recipeTitle": "Birria Tacos Recipe",
+      "productTitle": "Le Creuset Signature Round Dutch Oven (5.5 qt, Cerise)",
+      "affiliateUrl": "https://link.amazon/B08FcRDQb",
+      "referenceImage": "/affiliates/le-creuset-signature-dutch-oven-55qt-cerise.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "tartlet--503fb98c4cf7",
+      "slug": "tartlet",
+      "recipeTitle": "Mini Tartlet Recipe",
+      "productTitle": "CHEFMADE Mini Tart Pans with Removable Bottoms (4 in, 4-pack)",
+      "affiliateUrl": "https://link.amazon/B0cj3ZdSS",
+      "referenceImage": "/affiliates/chefmade-mini-tart-pans-4in-4pack.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chicken-bone-broth--0667eed4c3ff",
+      "slug": "chicken-bone-broth",
+      "recipeTitle": "Easy Homemade Chicken Bone Broth",
+      "productTitle": "Instant Pot Pro Electric Pressure Cooker (8 qt)",
+      "affiliateUrl": "https://link.amazon/B0gCdSWjA",
+      "referenceImage": "/affiliates/instant-pot-pro-pressure-cooker-8qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "primavera-pizza--b509f86eec3c",
+      "slug": "primavera-pizza",
+      "recipeTitle": "Homemade Primavera Pizza",
+      "productTitle": "Breville Smart Oven Pizzaiolo (BPZ820BSS)",
+      "affiliateUrl": "https://link.amazon/B0gDemOlb",
+      "referenceImage": "/affiliates/breville-smart-oven-pizzaiolo-bpz820bss.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "hanoi-pho--8b83df99a89e",
+      "slug": "hanoi-pho",
+      "recipeTitle": "Hanoi Pho Recipe",
+      "productTitle": "Viking 3-Ply Stainless Steel Stockpot with Lid (12 qt)",
+      "affiliateUrl": "https://link.amazon/B0em5jSiz",
+      "referenceImage": "/affiliates/viking-3ply-stainless-stockpot-12qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "movie-popcorn--734f94d7fcf1",
+      "slug": "movie-popcorn",
+      "recipeTitle": "Movie Popcorn Recipe",
+      "productTitle": "Whirley Pop Stainless Steel Stovetop Popcorn Maker (6 qt)",
+      "affiliateUrl": "https://link.amazon/B084kyX5T",
+      "referenceImage": "/affiliates/whirley-pop-stainless-popcorn-maker-6qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "sub-rolls--293a12f78f39",
+      "slug": "sub-rolls",
+      "recipeTitle": "Homemade Sub Rolls",
+      "productTitle": "KitchenAid Artisan Tilt-Head Stand Mixer (5 qt, Empire Red)",
+      "affiliateUrl": "https://link.amazon/B09iiQe43",
+      "referenceImage": "/affiliates/kitchenaid-artisan-mixer-5qt-empire-red.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "egg-patties--6243cb53bd98",
+      "slug": "egg-patties",
+      "recipeTitle": "Easy Egg Patties",
+      "productTitle": "Dash Deluxe Everyday Electric Griddle with Removable Plate",
+      "affiliateUrl": "https://link.amazon/B02ZYpHed",
+      "referenceImage": "/affiliates/dash-deluxe-everyday-electric-griddle.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "seafood-mix--d1000600bd9f",
+      "slug": "seafood-mix",
+      "recipeTitle": "Easy Seafood Mix Recipe",
+      "productTitle": "Made In Stainless Clad Sauté Pan (3.5 qt)",
+      "affiliateUrl": "https://link.amazon/B04ekVu31",
+      "referenceImage": "/affiliates/made-in-stainless-saute-pan-35qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "alfredos-italian-kitchen--092bbb802b8e",
+      "slug": "alfredos-italian-kitchen",
+      "recipeTitle": "Alfredos Italian Kitchen : Fettuccine Alfredo",
+      "productTitle": "MARCATO Atlas 150 Manual Pasta Machine",
+      "affiliateUrl": "https://link.amazon/B09gbDHeJ",
+      "referenceImage": "/affiliates/marcato-atlas-150-manual-pasta-machine.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "thin-crispy-chocolate-chip-cookies--eb2723794644",
+      "slug": "thin-crispy-chocolate-chip-cookies",
+      "recipeTitle": "Easy Thin Crispy Chocolate Chip Cookies",
+      "productTitle": "Nordic Ware Naturals Baking Sheets (3-piece set)",
+      "affiliateUrl": "https://link.amazon/B0fKz50nX",
+      "referenceImage": "/affiliates/nordic-ware-naturals-baking-sheets-3piece.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "honey-hot-chicken--be7c218dbdde",
+      "slug": "honey-hot-chicken",
+      "recipeTitle": "Honey Hot Chicken",
+      "productTitle": "Ninja Foodi DualZone Air Fryer (8 qt, DZ201)",
+      "affiliateUrl": "https://link.amazon/B0hybE49d",
+      "referenceImage": "/affiliates/ninja-foodi-dualzone-air-fryer-8qt-dz201.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "lamb-leg-steak--3bcbf0f840cd",
+      "slug": "lamb-leg-steak",
+      "recipeTitle": "Easy Garlic Herb Lamb Leg Steak",
+      "productTitle": "Le Creuset Signature Cast Iron Skillet (11.75 in, Caribbean)",
+      "affiliateUrl": "https://link.amazon/B0exJd0sP",
+      "referenceImage": "/affiliates/le-creuset-signature-skillet-1175-caribbean.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "taco-gringo--7cb120b7f119",
+      "slug": "taco-gringo",
+      "recipeTitle": "Easy Taco Gringo Recipe",
+      "productTitle": "Lodge Pre-Seasoned Cast Iron Skillet (15 in)",
+      "affiliateUrl": "https://link.amazon/B0eRN1CEO",
+      "referenceImage": "/affiliates/lodge-cast-iron-skillet-15in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "cinnamon-raisin-sourdough--1c7a252eed7d",
+      "slug": "cinnamon-raisin-sourdough",
+      "recipeTitle": "Cinnamon Raisin Sourdough Bread",
+      "productTitle": "Emile Henry Ceramic Bread Cloche (Charcoal)",
+      "affiliateUrl": "https://link.amazon/B06GcjM0g",
+      "referenceImage": "/affiliates/emile-henry-ceramic-bread-cloche-charcoal.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "jalapeno-cheese--9a5b2419eb69",
+      "slug": "jalapeno-cheese",
+      "recipeTitle": "Creamy Jalapeno Cheese Spread",
+      "productTitle": "DOWAN Ceramic Baking Dish (8 × 8 in, 2 qt, White)",
+      "affiliateUrl": "https://link.amazon/B039H3rm7",
+      "referenceImage": "/affiliates/dowan-ceramic-baking-dish-8x8-white.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "beef-lo-mein--d4c7156f6daf",
+      "slug": "beef-lo-mein",
+      "recipeTitle": "Beef Lo Mein Recipe",
+      "productTitle": "Babish Flat-Bottom Carbon Steel Wok (14 in)",
+      "affiliateUrl": "https://link.amazon/B0e60FIS3",
+      "referenceImage": "/affiliates/babish-flat-bottom-carbon-steel-wok-14in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "honey-garlic-wings--e67da3e22bce",
+      "slug": "honey-garlic-wings",
+      "recipeTitle": "Crispy Honey Garlic Wings",
+      "productTitle": "Ninja Foodi DualZone XL Air Fryer (10 qt, DZ401)",
+      "affiliateUrl": "https://link.amazon/B0hEVEOAr",
+      "referenceImage": "/affiliates/ninja-foodi-dualzone-xl-air-fryer-10qt-dz401.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "beef-brisket-flat--3b8e4d5e1440",
+      "slug": "beef-brisket-flat",
+      "recipeTitle": "Slow-Cooked Beef Brisket Flat Recipe",
+      "productTitle": "TempPro TempSync TP930 Bluetooth Meat Thermometer (4 wired probes)",
+      "affiliateUrl": "https://link.amazon/B04FwskGD",
+      "referenceImage": "/affiliates/temppro-tempsync-tp930-bluetooth-4probe.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "poke-sushi-bowl--fb0aa61ff6a5",
+      "slug": "poke-sushi-bowl",
+      "recipeTitle": "Poke Sushi Bowl Recipe",
+      "productTitle": "CUCKOO High Pressure Rice Cooker (20 cups cooked, CRP-P1009SW)",
+      "affiliateUrl": "https://link.amazon/B0eXLQrnZ",
+      "referenceImage": "/affiliates/cuckoo-pressure-rice-cooker-crpp1009sw.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "thai-chilli--d629437e421f",
+      "slug": "thai-chilli",
+      "recipeTitle": "Thai Chilli Sauce Recipe",
+      "productTitle": "Vitamix 5-Speed Immersion Blender (625 W)",
+      "affiliateUrl": "https://link.amazon/B0bIbEwta",
+      "referenceImage": "/affiliates/vitamix-5speed-immersion-blender-625w.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "cocktail-sausages--3b4dfd3f3640",
+      "slug": "cocktail-sausages",
+      "recipeTitle": "Cocktail Sausages Recipe",
+      "productTitle": "All-Clad Programmable Electric Slow Cooker (7 qt)",
+      "affiliateUrl": "https://link.amazon/B04UZfbVV",
+      "referenceImage": "/affiliates/all-clad-programmable-slow-cooker-7qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "thai-coconut-curry--6f3d463b9ded",
+      "slug": "thai-coconut-curry",
+      "recipeTitle": "Thai Coconut Curry Recipe",
+      "productTitle": "Made In Stainless Clad Rondeau with Lid (6 qt)",
+      "affiliateUrl": "https://link.amazon/B0bBxNWXe",
+      "referenceImage": "/affiliates/made-in-stainless-rondeau-lid-6qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "boneless-ribeye-roast--8ae5b2ff0c49",
+      "slug": "boneless-ribeye-roast",
+      "recipeTitle": "Roasted Boneless Ribeye Roast",
+      "productTitle": "Shun Classic Hollow-Ground Brisket Knife (12 in)",
+      "affiliateUrl": "https://link.amazon/B07C2HYsl",
+      "referenceImage": "/affiliates/shun-classic-brisket-slicing-knife-12in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "striploin-roast--173c2100e9e3",
+      "slug": "striploin-roast",
+      "recipeTitle": "Perfect Striploin Roast Recipe – Juicy, Tender &#038; Flavorful",
+      "productTitle": "John Boos Maple Cutting Board (24 × 18 × 1.5 in)",
+      "affiliateUrl": "https://link.amazon/B0497kGN9",
+      "referenceImage": "/affiliates/john-boos-maple-cutting-board-24x18.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "butterflied-lamb-leg--0b1ba731dd44",
+      "slug": "butterflied-lamb-leg",
+      "recipeTitle": "Herb-Roasted Butterflied Lamb Leg",
+      "productTitle": "Ninja Woodfire ProConnect Premium XL Outdoor Grill and Smoker",
+      "affiliateUrl": "https://link.amazon/B0cN7GyXY",
+      "referenceImage": "/affiliates/ninja-woodfire-proconnect-premium-xl-grill.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "strip-loin-roast--9943adcfd1b3",
+      "slug": "strip-loin-roast",
+      "recipeTitle": "Perfect Strip Loin Roast Recipe",
+      "productTitle": "Breville Smart Oven Air Fryer Pro (BOV900BSS)",
+      "affiliateUrl": "https://link.amazon/B0aVk5wFn",
+      "referenceImage": "/affiliates/breville-smart-oven-air-fryer-pro-bov900bss.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chocolate-torte--0652dea2d40e",
+      "slug": "chocolate-torte",
+      "recipeTitle": "Chocolate Torte Recipe",
+      "productTitle": "Cuisinart Chef’s Classic Springform Pan (9 in, AMB-9SP)",
+      "affiliateUrl": "https://link.amazon/B008ZWhyS",
+      "referenceImage": "/affiliates/cuisinart-chefs-classic-springform-9in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "tuna-steak--8afe4867e60a",
+      "slug": "tuna-steak",
+      "recipeTitle": "Easy Pan-Seared Tuna Steak",
+      "productTitle": "Misen 5-Ply Stainless Steel Frying Pan (12 in)",
+      "affiliateUrl": "https://link.amazon/B03D0lyxY",
+      "referenceImage": "/affiliates/misen-5ply-stainless-frying-pan-12in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "irish-bangers--2f704195baf2",
+      "slug": "irish-bangers",
+      "recipeTitle": "Authentic Irish Bangers Recipe",
+      "productTitle": "All-Clad D3 Stainless Steel Sauté Pan with Lid (4 qt)",
+      "affiliateUrl": "https://link.amazon/B015OoLAO",
+      "referenceImage": "/affiliates/all-clad-d3-stainless-saute-pan-4qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "soybean-recipe--ff68671dc0b9",
+      "slug": "soybean-recipe",
+      "recipeTitle": "Easy Soybean Recipe",
+      "productTitle": "COSORI Electric Pressure Cooker (6 qt)",
+      "affiliateUrl": "https://link.amazon/B0eJtbp6p",
+      "referenceImage": "/affiliates/cosori-electric-pressure-cooker-6qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "boneless-chicken-thighs--a6df3e8b634c",
+      "slug": "boneless-chicken-thighs",
+      "recipeTitle": "Oven-Baked Boneless Chicken Thighs",
+      "productTitle": "HexClad Hybrid Deep Sauté Pan with Lid",
+      "affiliateUrl": "https://link.amazon/B0aZYEIrI",
+      "referenceImage": "/affiliates/hexclad-hybrid-deep-saute-pan-lid.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chop-suey--f05803b2fa20",
+      "slug": "chop-suey",
+      "recipeTitle": "Chicken Chop Suey Recipe",
+      "productTitle": "Cooks Standard Multi-Ply Stainless Steel Stir-Fry Pan with Lid (12 in)",
+      "affiliateUrl": "https://link.amazon/B02On0qtt",
+      "referenceImage": "/affiliates/cooks-standard-stainless-stir-fry-pan-lid-12in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "filet-medallions--5bff27190b11",
+      "slug": "filet-medallions",
+      "recipeTitle": "Garlic Herb Filet Medallions",
+      "productTitle": "Stargazer Seasoned Cast Iron Skillet (12 in)",
+      "affiliateUrl": "https://link.amazon/B0cFxtuUJ",
+      "referenceImage": "/affiliates/stargazer-seasoned-cast-iron-skillet-12in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "mac-and-cheese-microwave--dfd5aadfb40c",
+      "slug": "mac-and-cheese-microwave",
+      "recipeTitle": "Mac and Cheese Microwave Recipe",
+      "productTitle": "Pyrex Smart Essentials Glass Mixing Bowls with Lids (8-piece set)",
+      "affiliateUrl": "https://link.amazon/B0dPfPjL1",
+      "referenceImage": "/affiliates/pyrex-smart-essentials-glass-mixing-bowls-8piece.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "lemon-meringue-pie--3e01cec130cd",
+      "slug": "lemon-meringue-pie",
+      "recipeTitle": "Easy Lemon Meringue Pie Recipe",
+      "productTitle": "SMEG HMF01 9-Speed Hand Mixer",
+      "affiliateUrl": "https://link.amazon/B0fsxst1l",
+      "referenceImage": "/affiliates/smeg-hmf01-9speed-hand-mixer.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "bibimbowl--089f8fd01bf0",
+      "slug": "bibimbowl",
+      "recipeTitle": "Korean Bibimbowl Recipe",
+      "productTitle": "All-Clad HA1 Nonstick Fry Pan Set (2 pieces)",
+      "affiliateUrl": "https://link.amazon/B06AXF87e",
+      "referenceImage": "/affiliates/all-clad-ha1-nonstick-fry-pan-set-2piece.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "chicken-pita--241843489216",
+      "slug": "chicken-pita",
+      "recipeTitle": "Easy Grilled Chicken Pita Recipe",
+      "productTitle": "Ninja Foodi Smart Indoor Grill and Air Fryer (FG551)",
+      "affiliateUrl": "https://link.amazon/B09VhEA3R",
+      "referenceImage": "/affiliates/ninja-foodi-smart-indoor-grill-fg551.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "macs-pizza--dd6bd6a4f461",
+      "slug": "macs-pizza",
+      "recipeTitle": "Mac’s Pizza Recipe",
+      "productTitle": "Cuisinart Indoor Pizza Oven (CPZ-120)",
+      "affiliateUrl": "https://link.amazon/B00XQuM1F",
+      "referenceImage": "/affiliates/cuisinart-indoor-pizza-oven-cpz120.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "goat-biryani--0c442cb42cdd",
+      "slug": "goat-biryani",
+      "recipeTitle": "Authentic Goat Biryani",
+      "productTitle": "Staub Enameled Cast Iron Dutch Oven (3.75 qt, White)",
+      "affiliateUrl": "https://link.amazon/B04RV7TFV",
+      "referenceImage": "/affiliates/staub-cast-iron-dutch-oven-375qt-white.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "biryani--9aedc7934902",
+      "slug": "biryani",
+      "recipeTitle": "Easy Homemade Biryani",
+      "productTitle": "Le Creuset Round Wide Dutch Oven (6.75 qt, Cerise)",
+      "affiliateUrl": "https://link.amazon/B03WxmZcG",
+      "referenceImage": "/affiliates/le-creuset-round-wide-dutch-oven-675qt-cerise.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "mackerel--72f42c6e5090",
+      "slug": "mackerel",
+      "recipeTitle": "Easy Grilled Mackerel Recipe",
+      "productTitle": "Weber Large Fish Grilling Basket",
+      "affiliateUrl": "https://link.amazon/B09wQzjqM",
+      "referenceImage": "/affiliates/weber-large-fish-grilling-basket.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "rib-cap--8df9a94339a7",
+      "slug": "rib-cap",
+      "recipeTitle": "Ultimate Rib Cap Steak",
+      "productTitle": "Lodge Chef Collection Cast Iron Skillet (13.25 in)",
+      "affiliateUrl": "https://link.amazon/B0fWa9XrN",
+      "referenceImage": "/affiliates/lodge-chef-collection-cast-iron-skillet-1325in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "refried-beans--7e5be61aa610",
+      "slug": "refried-beans",
+      "recipeTitle": "Easy Homemade Refried Beans",
+      "productTitle": "OXO Good Grips Stainless Steel Food Mill",
+      "affiliateUrl": "https://link.amazon/B0bLvD2ue",
+      "referenceImage": "/affiliates/oxo-good-grips-stainless-food-mill.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "oxtail-pho--db0b24dc2a10",
+      "slug": "oxtail-pho",
+      "recipeTitle": "Oxtail Pho Recipe",
+      "productTitle": "Tramontina Gourmet Stainless Steel Stockpot with Lid (12 qt)",
+      "affiliateUrl": "https://link.amazon/B00d4z4Af",
+      "referenceImage": "/affiliates/tramontina-gourmet-stainless-stockpot-12qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "tuna-belly--48e5049f197f",
+      "slug": "tuna-belly",
+      "recipeTitle": "Glazed Tuna Belly Recipe",
+      "productTitle": "Cuisinart Chef’s Classic Enameled Cast Iron Grill Pan (9.25 in)",
+      "affiliateUrl": "https://link.amazon/B0c2NZQvC",
+      "referenceImage": "/affiliates/cuisinart-enameled-cast-iron-grill-pan-925in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "flapjacks--8ba956a7857d",
+      "slug": "flapjacks",
+      "recipeTitle": "Easy Homemade Flapjacks Recipe",
+      "productTitle": "Parrish Magic Line Square Baking Pan (9 × 9 × 3 in)",
+      "affiliateUrl": "https://link.amazon/B02Ai6wBR",
+      "referenceImage": "/affiliates/parrish-magic-line-square-baking-pan-9x9x3.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "buttermilk-pancake-mix--6c3594770691",
+      "slug": "buttermilk-pancake-mix",
+      "recipeTitle": "Homemade Buttermilk Pancake Mix",
+      "productTitle": "Presto Ceramic Electric Griddle (22 in, 07062)",
+      "affiliateUrl": "https://link.amazon/B0hiFDlqB",
+      "referenceImage": "/affiliates/presto-ceramic-electric-griddle-22in-07062.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "cake-bar--ce52b39a0d33",
+      "slug": "cake-bar",
+      "recipeTitle": "Best Cake Bar Recipe",
+      "productTitle": "Fat Daddio’s Anodized Aluminum Square Cake Pan (8 × 2 in)",
+      "affiliateUrl": "https://link.amazon/B0fvy4Uyp",
+      "referenceImage": "/affiliates/fat-daddios-square-cake-pan-8x2-psq882.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "beef-burritos--bdf95ef4ce3a",
+      "slug": "beef-burritos",
+      "recipeTitle": "Beef Burritos Recipe",
+      "productTitle": "Tramontina Signature Tri-Ply Stainless Steel Sauté Pan (3 qt)",
+      "affiliateUrl": "https://link.amazon/B01QBQhyk",
+      "referenceImage": "/affiliates/tramontina-signature-triply-saute-pan-3qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "prime-beef-brisket--564b48eaa0b8",
+      "slug": "prime-beef-brisket",
+      "recipeTitle": "Easy Prime Beef Brisket Recipe",
+      "productTitle": "Weber Smokey Mountain Charcoal Smoker (18 in)",
+      "affiliateUrl": "https://link.amazon/B04wIaeNx",
+      "referenceImage": "/affiliates/weber-smokey-mountain-charcoal-smoker-18in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "aloha-chicken--fdbc012f8fe6",
+      "slug": "aloha-chicken",
+      "recipeTitle": "Easy Aloha Chicken Recipe",
+      "productTitle": "Weber Q 1400 Outdoor Electric Grill",
+      "affiliateUrl": "https://link.amazon/B0cuezJQ7",
+      "referenceImage": "/affiliates/weber-q1400-outdoor-electric-grill.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "spinach-ricotta-ravioli--f2576821735b",
+      "slug": "spinach-ricotta-ravioli",
+      "recipeTitle": "Spinach Ricotta Ravioli Recipe",
+      "productTitle": "KitchenAid Pasta Roller and Cutter Attachments (KSMPRA, 3 pieces)",
+      "affiliateUrl": "https://link.amazon/B07JE9qvc",
+      "referenceImage": "/affiliates/kitchenaid-pasta-roller-cutter-ksmpra.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "whiting-fish--90c7061d44bc",
+      "slug": "whiting-fish",
+      "recipeTitle": "Easy Pan-Fried Whiting Fish",
+      "productTitle": "T-fal Experience Nonstick Frying Pan (12 in)",
+      "affiliateUrl": "https://link.amazon/B0iLcWj3o",
+      "referenceImage": "/affiliates/tfal-experience-nonstick-frying-pan-12in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "ciabatta-bread--588af2bcabc7",
+      "slug": "ciabatta-bread",
+      "recipeTitle": "Homemade Ciabatta Bread Recipe",
+      "productTitle": "Baking Steel Original (14 × 16 in)",
+      "affiliateUrl": "https://link.amazon/B0bEfGNRT",
+      "referenceImage": "/affiliates/baking-steel-original-14x16.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "shaved-ribeye--7083e2aad23c",
+      "slug": "shaved-ribeye",
+      "recipeTitle": "Shaved Ribeye Steak",
+      "productTitle": "BESWOOD Electric Meat Slicer (10 in, BESWOOD250)",
+      "affiliateUrl": "https://link.amazon/B0hHR3Cxg",
+      "referenceImage": "/affiliates/beswood-electric-meat-slicer-10in-250.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "puff-pastry-hot-dogs--eec8630cd91b",
+      "slug": "puff-pastry-hot-dogs",
+      "recipeTitle": "Puff Pastry Hot Dogs",
+      "productTitle": "Chicago Metallic Jelly Roll Pans with Cooling Rack",
+      "affiliateUrl": "https://link.amazon/B03IFkECk",
+      "referenceImage": "/affiliates/chicago-metallic-jelly-roll-pans-cooling-rack.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "christmas-fruit-kabobs--06f622f11c93",
+      "slug": "christmas-fruit-kabobs",
+      "recipeTitle": "Christmas Fruit Kabobs",
+      "productTitle": "WÜSTHOF Classic Chef’s Knife (8 in, Black)",
+      "affiliateUrl": "https://link.amazon/B05chOqzk",
+      "referenceImage": "/affiliates/wusthof-classic-chefs-knife-8in-black.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "reindeer-rice-krispies-treats--3938d1f1762e",
+      "slug": "reindeer-rice-krispies-treats",
+      "recipeTitle": "Reindeer Rice Krispies Treats",
+      "productTitle": "OXO Non-Stick Pro Ceramic Cake Pan (9 × 13 in, Storm Blue)",
+      "affiliateUrl": "https://link.amazon/B0cwHJUUw",
+      "referenceImage": "/affiliates/oxo-nonstick-pro-ceramic-cake-pan-9x13-blue.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "pizza-faces--d13db530369d",
+      "slug": "pizza-faces",
+      "recipeTitle": "Pizza Faces",
+      "productTitle": "Chicago Metallic Deep Dish Pizza Pan Set (7 in)",
+      "affiliateUrl": "https://link.amazon/B0iMU6opd",
+      "referenceImage": "/affiliates/chicago-metallic-deep-dish-pizza-pans-7in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "white-pudding--113639c86ddf",
+      "slug": "white-pudding",
+      "recipeTitle": "Homemade White Pudding with Turkey and Beef Suet",
+      "productTitle": "Hakka Vertical Sausage Stuffer (3 L / 7 lb)",
+      "affiliateUrl": "https://link.amazon/B0cFQTa27",
+      "referenceImage": "/affiliates/hakka-vertical-sausage-stuffer-3l-7lb.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "flourless-chocolate-cake--18acd2d7b123",
+      "slug": "flourless-chocolate-cake",
+      "recipeTitle": "Flourless Chocolate Cake Gluten-Free",
+      "productTitle": "USA Pan Nonstick Round Cake Pan (8 in)",
+      "affiliateUrl": "https://link.amazon/B03s7Lwn1",
+      "referenceImage": "/affiliates/usa-pan-round-cake-pan-8in.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "roasted-beef--d3e11ebce19d",
+      "slug": "roasted-beef",
+      "recipeTitle": "Roasted Beef",
+      "productTitle": "HexClad Hybrid Roasting Pan with Rack (14 × 10 in)",
+      "affiliateUrl": "https://link.amazon/B0iUokfq0",
+      "referenceImage": "/affiliates/hexclad-hybrid-roasting-pan-rack-14x10.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "gluten-free-cookies--ed7476c58cc8",
+      "slug": "gluten-free-cookies",
+      "recipeTitle": "Gluten Free Cookies",
+      "productTitle": "Stainless Steel Cooling Rack Set (11.5 × 16.5 in, 2 pieces)",
+      "affiliateUrl": "https://link.amazon/B02OacmL1",
+      "referenceImage": "/affiliates/stainless-cooling-rack-set-115x165-2piece.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "rice-stuffing--3fe01ed3bb8d",
+      "slug": "rice-stuffing",
+      "recipeTitle": "Rice Stuffing",
+      "productTitle": "Demeyere 5-Plus Stainless Steel Saucier (3.5 qt)",
+      "affiliateUrl": "https://link.amazon/B0bMnhfFz",
+      "referenceImage": "/affiliates/demeyere-5plus-stainless-saucier-35qt.jpg",
+      "imageReady": false
+    },
+    {
+      "key": "vegan-gravy--60e8cc9d7e92",
+      "slug": "vegan-gravy",
+      "recipeTitle": "Vegan Gravy",
+      "productTitle": "All-Clad D3 Stainless Steel Saucier with Lid (2 qt)",
+      "affiliateUrl": "https://link.amazon/B08ZngeqQ",
+      "referenceImage": "/affiliates/all-clad-d3-stainless-saucier-lid-2qt.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "chocolate-mousse--8aba1fc14b6a",
+      "slug": "chocolate-mousse",
+      "recipeTitle": "Chocolate Mousse",
+      "productTitle": "SMEG SMF04 Classico Stand Mixer (5 qt, Black)",
+      "affiliateUrl": "https://link.amazon/B0cqTsOFJ",
+      "referenceImage": "/affiliates/smeg-smf04-classico-stand-mixer-5qt-black.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "vegan-mashed-potatoes--9d454f0af200",
+      "slug": "vegan-mashed-potatoes",
+      "recipeTitle": "Vegan Mashed Potatoes",
+      "productTitle": "OXO Good Grips Stainless Steel Potato Ricer",
+      "affiliateUrl": "https://link.amazon/B06pNAtvb",
+      "referenceImage": "/affiliates/oxo-good-grips-stainless-potato-ricer.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "balsamic-roasted-vegetables--c465a0999d49",
+      "slug": "balsamic-roasted-vegetables",
+      "recipeTitle": "Balsamic Roasted Vegetables",
+      "productTitle": "Epicurean Gourmet Series Cutting Board (17.5 × 13 in)",
+      "affiliateUrl": "https://link.amazon/B03adPVur",
+      "referenceImage": "/affiliates/epicurean-gourmet-cutting-board-175x13-nutmeg.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "mushroom-lentil-loaf--b53f4953c93c",
+      "slug": "mushroom-lentil-loaf",
+      "recipeTitle": "Mushroom Lentil Loaf",
+      "productTitle": "Caraway Ceramic-Coated Loaf Pan (1 lb)",
+      "affiliateUrl": "https://link.amazon/B0793F92E",
+      "referenceImage": "/affiliates/caraway-ceramic-coated-loaf-pan-1lb.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "roasted-squash--01f544f05673",
+      "slug": "roasted-squash",
+      "recipeTitle": "Roasted Squash",
+      "productTitle": "Shun Classic Chef’s Knife (8 in)",
+      "affiliateUrl": "https://link.amazon/B01bDfXG2",
+      "referenceImage": "/affiliates/shun-classic-chefs-knife-8in.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "cranberry-juice-cocktail--c7ffc3b60167",
+      "slug": "cranberry-juice-cocktail",
+      "recipeTitle": "Cranberry Juice Cocktail",
+      "productTitle": "ZWIESEL GLAS Paris Iceberg Drinking Glasses (16.5 oz, 6 pieces)",
+      "affiliateUrl": "https://link.amazon/B013mVZq4",
+      "referenceImage": "/affiliates/zwiesel-paris-iceberg-drinking-glasses-165oz-6piece.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "iced-peppermint-latte--81e17e31ac2b",
+      "slug": "iced-peppermint-latte",
+      "recipeTitle": "Iced Peppermint Latte",
+      "productTitle": "De’Longhi Rivelia Automatic Espresso Machine (White)",
+      "affiliateUrl": "https://link.amazon/B0h3sSiF8",
+      "referenceImage": "/affiliates/delonghi-rivelia-espresso-machine-white.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "spiced-apple-cider--801bbb87f2d1",
+      "slug": "spiced-apple-cider",
+      "recipeTitle": "Spiced Apple Cider",
+      "productTitle": "All-Clad D5 Stainless Steel Soup Pot with Lid (4 qt)",
+      "affiliateUrl": "https://link.amazon/B0fa5sEVS",
+      "referenceImage": "/affiliates/all-clad-d5-stainless-soup-pot-lid-4qt.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "hot-chocolate-bar--237248495697",
+      "slug": "hot-chocolate-bar",
+      "recipeTitle": "Hot Chocolate Bar",
+      "productTitle": "Breville Milk Café Electric Milk Frother (BMF600XL)",
+      "affiliateUrl": "https://link.amazon/B0j9foKUB",
+      "referenceImage": "/affiliates/breville-milk-cafe-frother-bmf600xl.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "yogurt-parfaits-with-granola-and-fruit--77d513d573fd",
+      "slug": "yogurt-parfaits-with-granola-and-fruit",
+      "recipeTitle": "Yogurt parfaits with granola and fruit",
+      "productTitle": "Libbey Fountain Shoppe Tall Dessert Glasses (6 pieces)",
+      "affiliateUrl": "https://link.amazon/B03o85CP3",
+      "referenceImage": "/affiliates/libbey-fountain-shoppe-dessert-glasses-6piece.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "peanut-butter-chocolate-bars--376a21f1783f",
+      "slug": "peanut-butter-chocolate-bars",
+      "recipeTitle": "Peanut Butter Chocolate Bars",
+      "productTitle": "Nordic Ware Naturals Square Cake Pan (8 × 8 in)",
+      "affiliateUrl": "https://link.amazon/B07z3rYVt",
+      "referenceImage": "/affiliates/nordic-ware-naturals-square-cake-pan-8x8.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "no-bake-oreo-cheesecake--075a99dcedf3",
+      "slug": "no-bake-oreo-cheesecake",
+      "recipeTitle": "No Bake Oreo Cheesecake",
+      "productTitle": "Cuisinart Food Processor (14 cups, DFP-14BCNY)",
+      "affiliateUrl": "https://link.amazon/B09MnH4qa",
+      "referenceImage": "/affiliates/cuisinart-food-processor-14cup-dfp14bcny.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "rice-krispies-christmas-trees--21c120c93ae2",
+      "slug": "rice-krispies-christmas-trees",
+      "recipeTitle": "Rice Krispies Christmas Trees",
+      "productTitle": "GIR Ultimate Silicone Spatula Set (3 pieces, Slate)",
+      "affiliateUrl": "https://link.amazon/B0boWxNOV",
+      "referenceImage": "/affiliates/gir-ultimate-silicone-spatula-set-slate-3piece.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "chocolate-cocoa-truffles--eec732ec6236",
+      "slug": "chocolate-cocoa-truffles",
+      "recipeTitle": "Chocolate Cocoa Truffles",
+      "productTitle": "Fat Daddio’s Stainless Steel Cookie Scoop (No. 100, 0.64 tbsp)",
+      "affiliateUrl": "https://link.amazon/B04HF1bwW",
+      "referenceImage": "/affiliates/fat-daddios-cookie-scoop-no100-sctp100.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "christmas-sugar-cookies--a8ef2fb8e133",
+      "slug": "christmas-sugar-cookies",
+      "recipeTitle": "Christmas Sugar Cookies",
+      "productTitle": "Joseph Joseph PrecisionPin Adjustable Rolling Pin",
+      "affiliateUrl": "https://link.amazon/B0dhxwtzk",
+      "referenceImage": "/affiliates/joseph-joseph-precisionpin-adjustable-rolling-pin.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "no-bake-cheesecake-cup--7f58ab052ee4",
+      "slug": "no-bake-cheesecake-cup",
+      "recipeTitle": "No Bake Cheesecake Cup",
+      "productTitle": "Bormioli Rocco Essential Glass Tumblers (7.5 oz, 12 pieces)",
+      "affiliateUrl": "https://link.amazon/B00bJUoPs",
+      "referenceImage": "/affiliates/bormioli-rocco-essential-glass-tumblers-75oz-12piece.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "gingerbread-cookies-royal-icing--81f6a8f23661",
+      "slug": "gingerbread-cookies-royal-icing",
+      "recipeTitle": "Gingerbread Cookies Royal Icing",
+      "productTitle": "Wilton Master Cake Decorating Piping Tip Set (55 pieces)",
+      "affiliateUrl": "https://link.amazon/B09b3wvfy",
+      "referenceImage": "/affiliates/wilton-master-piping-tip-set-55piece.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "yule-log-cake--b250c60b6995",
+      "slug": "yule-log-cake",
+      "recipeTitle": "Yule Log Cake",
+      "productTitle": "KitchenAid Nonstick Baking Sheet (10 × 15 in)",
+      "affiliateUrl": "https://link.amazon/B0cdlejHG",
+      "referenceImage": "/affiliates/kitchenaid-nonstick-baking-sheet-10x15.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "one-pan-roasted-chicken-and-vegetables--29e03ff226b4",
+      "slug": "one-pan-roasted-chicken-and-vegetables",
+      "recipeTitle": "One Pan Roasted Chicken",
+      "productTitle": "Made In Aluminum Sheet Pan",
+      "affiliateUrl": "https://link.amazon/B0i7R8f8l",
+      "referenceImage": "/affiliates/made-in-aluminum-sheet-pan.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "easy-vegetable-pasta-bake--9afc7fb989b3",
+      "slug": "easy-vegetable-pasta-bake",
+      "recipeTitle": "Easy Vegetable Pasta Bake",
+      "productTitle": "Le Creuset Cast Iron Rectangular Roaster (5.25 qt, Cerise)",
+      "affiliateUrl": "https://link.amazon/B0gc8unEX",
+      "referenceImage": "/affiliates/le-creuset-cast-iron-rectangular-roaster-525qt-cerise.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "sausage-peppers-potatoe-baked--603cddcd6ea0",
+      "slug": "sausage-peppers-potatoe-baked",
+      "recipeTitle": "Sausage peppers potatoe baked",
+      "productTitle": "Circulon Nonstick Baking Sheet (11 × 17 in)",
+      "affiliateUrl": "https://link.amazon/B03Wldqvp",
+      "referenceImage": "/affiliates/circulon-nonstick-baking-sheet-11x17.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "sheet-pan-salmon--7facc819d646",
+      "slug": "sheet-pan-salmon",
+      "recipeTitle": "Sheet Pan Salmon",
+      "productTitle": "ThermoWorks Thermapen ONE Instant-Read Thermometer (Cayenne Red)",
+      "affiliateUrl": "https://link.amazon/B07xusOKt",
+      "referenceImage": "/affiliates/thermoworks-thermapen-one-cayenne-red.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "homemade-gravy--68df42d95726",
+      "slug": "homemade-gravy",
+      "recipeTitle": "Homemade Gravy",
+      "productTitle": "All-Clad Copper Core Stainless Steel Saucepan with Lid (3 qt)",
+      "affiliateUrl": "https://link.amazon/B07u8vi6t",
+      "referenceImage": "/affiliates/all-clad-copper-core-saucepan-lid-3qt.jpg",
+      "imageReady": true
+    },
+    {
+      "key": "green-beans-garlic-almonds--dcf59c429201",
+      "slug": "green-beans-garlic-almonds",
+      "recipeTitle": "Green beans garlic almonds",
+      "productTitle": "All-Clad Copper Core Stainless Steel Fry Pan (12 in)",
+      "affiliateUrl": "https://link.amazon/B071zJxLs",
+      "referenceImage": "/affiliates/all-clad-copper-core-fry-pan-12in.jpg",
+      "imageReady": true
     }
-  ],
-  "readyPins": 4,
-  "remainingAwaitingImages": 0
+  ]
 }

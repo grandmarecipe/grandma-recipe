@@ -1,0 +1,20 @@
+BOARD
+Grandma snack recipe
+
+BOARD_ID
+1137229412095892593
+
+IMAGE FILE
+product-pin.jpg
+
+TITLE
+Cranberry Juice Cocktail + ZWIESEL GLAS Paris Iceberg Drinking Glasses (16.5 oz, 6 pieces)
+
+DESCRIPTION
+#ad | Discover Cranberry Juice Cocktail with ZWIESEL GLAS Paris Iceberg Drinking Glasses (16.5 oz, 6 pieces) as the featured kitchen pick. Open the recipe for ingredients, cooking directions and the Amazon product link. Affiliate links: I may earn a commission from qualifying purchases. Get the full recipe on Grandma Recipe.
+
+DESTINATION LINK
+https://www.grandmarecipe.com/cranberry-juice-cocktail/
+
+ALT TEXT
+AI-generated illustration showing ZWIESEL GLAS Paris Iceberg Drinking Glasses (16.5 oz, 6 pieces) in use for Cranberry Juice Cocktail.
